@@ -1,7 +1,8 @@
-import React from 'react';
+// Components
+import BVCanvas from '../components/baklavegan-menu/BVCanvas';
 
 const BaklaHome = () => {
-  return <h1>Baklavegan</h1>;
+  return <BVCanvas />;
 };
 
 export default BaklaHome;
