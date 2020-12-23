@@ -27,14 +27,14 @@ const Menu: React.FC = () => {
         }: MenuData) => (
           <MenuRip
             key={id}
+            name={name}
             link={name}
-            label={name}
             scale={scale}
             imgFront={`/menurips/front/${name}.png`}
             imgBack={`/menurips/back/${name}-back.png`}
-            pos={position}
-            frontRotate={frontRotation}
-            backRotate={backRotation}
+            position={position}
+            frontRotation={frontRotation}
+            backRotation={backRotation}
           />
         )
       )}

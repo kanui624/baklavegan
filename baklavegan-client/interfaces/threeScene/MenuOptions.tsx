@@ -1,16 +1,16 @@
-import {
-  Euler,
-  Vector3,
-  PlaneBufferGeometryProps,
-} from 'react-three-fiber/three-types';
+import { Euler, Vector3 } from 'react-three-fiber/three-types';
 
 export default interface MenuData {
-  id: number;
+  id?: number;
   name: string;
-  scale: PlaneBufferGeometryProps;
+  scale: any;
   position: Vector3;
   frontRotation: Euler;
   backRotation: Euler;
 }
 
-export default interface MenuProps {}
+export default interface MenuProps {
+  link: string;
+  imgFront: string;
+  imgBack: string;
+}

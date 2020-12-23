@@ -7,21 +7,21 @@ import Router from 'next/router';
 // Three
 import * as THREE from 'three';
 
-import { MeshBasicMaterialProps } from 'react-three-fiber';
+// R3F Types
+import { EventHandlers } from 'react-three-fiber/three-types';
 
 //Interfaces
-import RipProps from '../../interfaces/threeScene/MenuOptions';
-import { PlaneBufferGeometry } from 'three';
+import MenuProps from '../../interfaces/threeScene/MenuOptions';
 
-const MenuRip: React.FC<RipProps> = ({
+const MenuRip: React.FC<MenuProps> = ({
   link,
-  label,
+  name,
   imgFront,
   imgBack,
   scale,
-  pos,
-  frontRotate,
-  backRotate,
+  position,
+  frontRotation,
+  backRotation,
 }) => {
   const [menuRipFront, menuRipBack] = useMemo(() => {
     const loader = new THREE.TextureLoader();
@@ -49,16 +49,16 @@ const MenuRip: React.FC<RipProps> = ({
 
   return (
     <group>
-      <mesh position={pos} rotation={backRotate}>
+      <mesh position={position} rotation={backRotation}>
         <planeBufferGeometry attach="geometry" args={scale} />
         <meshStandardMaterial attach="material" transparent>
           <primitive attach="map" object={menuRipBack} />
         </meshStandardMaterial>
       </mesh>
       <mesh
-        name={label}
-        position={pos}
-        rotation={frontRotate}
+        name={name}
+        position={position}
+        rotation={frontRotation}
         onPointerDown={(e) => handlePointerDown(e)}
         onPointerUp={() => handlePointerUp()}
         onPointerOver={(e) => handleHover(e, true)}
