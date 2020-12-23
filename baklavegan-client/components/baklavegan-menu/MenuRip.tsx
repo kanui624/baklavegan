@@ -7,9 +7,13 @@ import Router from 'next/router';
 // Three
 import * as THREE from 'three';
 
-//
+import { MeshBasicMaterialProps } from 'react-three-fiber';
 
-const MenuRip = ({
+//Interfaces
+import RipProps from '../../interfaces/threeScene/MenuOptions';
+import { PlaneBufferGeometry } from 'three';
+
+const MenuRip: React.FC<RipProps> = ({
   link,
   label,
   imgFront,
@@ -24,17 +28,17 @@ const MenuRip = ({
     return [loader.load(imgFront), loader.load(imgBack)];
   }, [imgFront, imgBack]);
 
-  const handlePointerDown = (e) => {
+  const handlePointerDown = (e: any) => {
     e.stopPropagation();
   };
 
-  const handlePointerUp = (e) => {
+  const handlePointerUp = () => {
     setTimeout(() => {
       Router.push(`/${link}`);
     }, 500);
   };
 
-  const handleHover = (e, cursor) => {
+  const handleHover = (e: any, cursor: boolean) => {
     e.stopPropagation();
     if (cursor) {
       document.body.style.cursor = 'pointer';
@@ -56,7 +60,7 @@ const MenuRip = ({
         position={pos}
         rotation={frontRotate}
         onPointerDown={(e) => handlePointerDown(e)}
-        onPointerUp={(e) => handlePointerUp(e)}
+        onPointerUp={() => handlePointerUp()}
         onPointerOver={(e) => handleHover(e, true)}
         onPointerOut={(e) => handleHover(e, false)}
       >

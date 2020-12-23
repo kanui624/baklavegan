@@ -1,5 +1,5 @@
-const Lights = () => {
-  return <ambientLight intensity={0.75} />;
-};
+// const Lights = () => {
+//   return <ambientLight intensity={0.75} />;
+// };
 
-export default Lights;
+// export default Lights;

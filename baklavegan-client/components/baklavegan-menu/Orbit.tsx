@@ -1,7 +1,7 @@
 // Drei
 import { OrbitControls } from '@react-three/drei';
 
-const Orbit = () => {
+const Orbit: React.FC = () => {
   return (
     <OrbitControls
       enableZoom={false}
