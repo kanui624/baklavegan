@@ -50,7 +50,7 @@
             "alphaCutoff" : 0.5,
             "alphaMode" : "MASK",
             "doubleSided" : true,
-            "name" : "less",
+            "name" : "Half",
             "normalTexture" : {
                 "index" : 2,
                 "texCoord" : 0
@@ -103,7 +103,7 @@
     ],
     "meshes" : [
         {
-            "name" : "tree.005",
+            "name" : "Sapling",
             "primitives" : [
                 {
                     "attributes" : {
