@@ -1,6 +1,6 @@
 import { Euler, Vector3 } from 'react-three-fiber/three-types';
 
-export default interface MenuData {
+export default interface MenuDataProps {
   id?: number;
   name: string;
   scale: any;

@@ -1,22 +1,22 @@
 // Components
-// import Orbit from './Orbit';
-// import Lights from './Lights';
-// import Plant from './Plant';
+import Orbit from './Orbit';
+import Lights from './Lights';
+import Plant from './Plant';
 import MenuRip from './MenuRip';
 
 // Interfaces
-import MenuData from '../../interfaces/threeScene/MenuOptions';
+import MenuDataProps from '../../interfaces/threeScene/Menu-Interfaces';
 
 // Data
-import { menuOptions } from './MenuOptions-Data';
+import { menuData } from './MenuOptions-Data';
 
 const Menu: React.FC = () => {
   return (
     <group position={[0, 0, 0]}>
-      {/* <Orbit /> */}
-      {/* <Lights />
-      <Plant /> */}
-      {menuOptions.map(
+      <Orbit />
+      <Lights />
+      <Plant />
+      {menuData.map(
         ({
           id,
           name,
@@ -24,7 +24,7 @@ const Menu: React.FC = () => {
           position,
           frontRotation,
           backRotation,
-        }: MenuData) => (
+        }: MenuDataProps) => (
           <MenuRip
             key={id}
             name={name}

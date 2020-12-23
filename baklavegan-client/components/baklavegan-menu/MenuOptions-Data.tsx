@@ -1,4 +1,4 @@
-export const menuOptions: any = [
+export const menuData: any = [
   {
     id: 0,
     name: 'baklava',

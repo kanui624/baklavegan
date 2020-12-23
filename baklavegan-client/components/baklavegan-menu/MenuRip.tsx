@@ -7,11 +7,8 @@ import Router from 'next/router';
 // Three
 import * as THREE from 'three';
 
-// R3F Types
-import { EventHandlers } from 'react-three-fiber/three-types';
-
 //Interfaces
-import MenuProps from '../../interfaces/threeScene/MenuOptions';
+import MenuProps from '../../interfaces/threeScene/Menu-Interfaces';
 
 const MenuRip: React.FC<MenuProps> = ({
   link,
@@ -50,8 +47,8 @@ const MenuRip: React.FC<MenuProps> = ({
   return (
     <group>
       <mesh position={position} rotation={backRotation}>
-        <planeBufferGeometry attach="geometry" args={scale} />
-        <meshStandardMaterial attach="material" transparent>
+        <planeBufferGeometry args={scale} />
+        <meshStandardMaterial transparent>
           <primitive attach="map" object={menuRipBack} />
         </meshStandardMaterial>
       </mesh>
@@ -64,8 +61,8 @@ const MenuRip: React.FC<MenuProps> = ({
         onPointerOver={(e) => handleHover(e, true)}
         onPointerOut={(e) => handleHover(e, false)}
       >
-        <planeBufferGeometry attach="geometry" args={scale} />
-        <meshStandardMaterial attach="material" transparent>
+        <planeBufferGeometry args={scale} />
+        <meshStandardMaterial transparent>
           <primitive attach="map" object={menuRipFront} />
         </meshStandardMaterial>
       </mesh>
