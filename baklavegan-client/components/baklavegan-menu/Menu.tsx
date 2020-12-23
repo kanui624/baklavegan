@@ -1,7 +1,7 @@
 // Components
 import Orbit from './Orbit';
 import Lights from './Lights';
-import Plant from './Plant';
+import Sapling from './Sapling';
 import MenuRip from './MenuRip';
 
 // Interfaces
@@ -15,7 +15,7 @@ const Menu: React.FC = () => {
     <group position={[0, 0, 0]}>
       <Orbit />
       <Lights />
-      <Plant />
+      <Sapling />
       {menuData.map(
         ({
           id,
