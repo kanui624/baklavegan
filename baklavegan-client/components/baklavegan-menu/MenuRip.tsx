@@ -29,13 +29,14 @@ const MenuRip: React.FC<MenuProps> = ({
     e.stopPropagation();
   };
 
-  const handlePointerUp = () => {
+  const handlePointerUp = (e: any) => {
     setTimeout(() => {
       Router.push(`/${link}`);
     }, 500);
   };
 
   const handleHover = (e: any, cursor: boolean) => {
+    console.log(e);
     e.stopPropagation();
     if (cursor) {
       document.body.style.cursor = 'pointer';
@@ -57,7 +58,7 @@ const MenuRip: React.FC<MenuProps> = ({
         position={position}
         rotation={frontRotation}
         onPointerDown={(e) => handlePointerDown(e)}
-        onPointerUp={() => handlePointerUp()}
+        onPointerUp={(e) => handlePointerUp(e)}
         onPointerOver={(e) => handleHover(e, true)}
         onPointerOut={(e) => handleHover(e, false)}
       >
