@@ -20,21 +20,26 @@ const Menu: React.FC = () => {
         ({
           id,
           name,
-          scale,
-          position,
+          ripPosition,
+          labelPosition,
           frontRotation,
           backRotation,
+          ripScale,
+          labelScale,
         }: MenuDataProps) => (
           <MenuRip
             key={id}
             name={name}
             link={name}
-            scale={scale}
-            imgFront={`/menurips/front/${name}.png`}
-            imgBack={`/menurips/back/${name}-back.png`}
-            position={position}
+            ripPosition={ripPosition}
+            labelPosition={labelPosition}
             frontRotation={frontRotation}
             backRotation={backRotation}
+            ripScale={ripScale}
+            labelScale={labelScale}
+            imgFront={`/menurips/0-front/${id}-${name}-f.png`}
+            imgBack={`/menurips/1-back/${id}-${name}-b.png`}
+            imgLabel={`/menurips/2-label/${id}-${name}-l.png`}
           />
         )
       )}

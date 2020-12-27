@@ -15,24 +15,27 @@ const MenuRip: React.FC<MenuProps> = ({
   name,
   imgFront,
   imgBack,
-  scale,
-  position,
+  imgLabel,
+  ripScale,
+  labelScale,
+  ripPosition,
+  labelPosition,
   frontRotation,
   backRotation,
 }) => {
-  const [menuRipFront, menuRipBack] = useMemo(() => {
+  const [menuRipFront, menuRipBack, menuRipLabel] = useMemo(() => {
     const loader = new THREE.TextureLoader();
-    return [loader.load(imgFront), loader.load(imgBack)];
-  }, [imgFront, imgBack]);
+    return [loader.load(imgFront), loader.load(imgBack), loader.load(imgLabel)];
+  }, [imgFront, imgBack, imgLabel]);
 
   const handlePointerDown = (e: any) => {
     e.stopPropagation();
   };
 
   const handlePointerUp = (e: any) => {
-    setTimeout(() => {
-      Router.push(`/${link}`);
-    }, 500);
+    // setTimeout(() => {
+    //   Router.push(`/${link}`);
+    // }, 500);
   };
 
   const handleHover = (e: any, cursor: boolean) => {
@@ -47,24 +50,29 @@ const MenuRip: React.FC<MenuProps> = ({
 
   return (
     <group>
-      <mesh position={position} rotation={backRotation}>
-        <planeBufferGeometry args={scale} />
+      <mesh position={ripPosition} rotation={backRotation}>
+        <planeBufferGeometry args={ripScale} />
         <meshStandardMaterial transparent>
           <primitive attach="map" object={menuRipBack} />
         </meshStandardMaterial>
       </mesh>
+      <mesh name={name} position={ripPosition} rotation={frontRotation}>
+        <planeBufferGeometry args={ripScale} />
+        <meshStandardMaterial transparent>
+          <primitive attach="map" object={menuRipFront} />
+        </meshStandardMaterial>
+      </mesh>
       <mesh
-        name={name}
-        position={position}
+        position={labelPosition}
         rotation={frontRotation}
         onPointerDown={(e) => handlePointerDown(e)}
         onPointerUp={(e) => handlePointerUp(e)}
         onPointerOver={(e) => handleHover(e, true)}
         onPointerOut={(e) => handleHover(e, false)}
       >
-        <planeBufferGeometry args={scale} />
+        <planeBufferGeometry args={labelScale} />
         <meshStandardMaterial transparent>
-          <primitive attach="map" object={menuRipFront} />
+          <primitive attach="map" object={menuRipLabel} />
         </meshStandardMaterial>
       </mesh>
     </group>

@@ -10,7 +10,7 @@ const Orbit: React.FC = () => {
       minPolarAngle={Math.PI / 2 - 0.4}
       maxPolarAngle={Math.PI / 2 - 0.4}
       autoRotateSpeed={-1.5}
-      autoRotate
+      // autoRotate
     />
   );
 };

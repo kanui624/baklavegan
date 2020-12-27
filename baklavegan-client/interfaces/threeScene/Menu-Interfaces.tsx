@@ -4,8 +4,10 @@ import * as THREE from 'three';
 export default interface MenuDataProps {
   id?: number;
   name: string;
-  scale: any;
-  position: Vector3;
+  ripScale: any;
+  labelScale: any;
+  ripPosition: Vector3;
+  labelPosition: Vector3;
   frontRotation: Euler;
   backRotation: Euler;
 }
@@ -14,4 +16,5 @@ export default interface MenuProps {
   link: string;
   imgFront: string;
   imgBack: string;
+  imgLabel: string;
 }
