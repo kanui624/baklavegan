@@ -8,7 +8,7 @@ import MenuRip from './MenuRip';
 import MenuDataProps from '../../interfaces/threeScene/Menu-Interfaces';
 
 // Data
-import { menuData } from './MenuOptions-Data';
+import { menuData } from './MenuData';
 
 const Menu: React.FC = () => {
   return (
