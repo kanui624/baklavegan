@@ -4,6 +4,9 @@ import { useMemo } from 'react';
 // Next
 import Router from 'next/router';
 
+// react-three-fiber
+import { useThree } from 'react-three-fiber';
+
 // Three
 import * as THREE from 'three';
 
@@ -23,6 +26,10 @@ const MenuRip: React.FC<MenuProps> = ({
   frontRotation,
   backRotation,
 }) => {
+  const { gl } = useThree();
+
+  gl.sortObjects = false;
+
   const [menuRipFront, menuRipBack, menuRipLabel] = useMemo(() => {
     const loader = new THREE.TextureLoader();
     return [loader.load(imgFront), loader.load(imgBack), loader.load(imgLabel)];
@@ -52,13 +59,13 @@ const MenuRip: React.FC<MenuProps> = ({
     <group>
       <mesh position={ripPosition} rotation={backRotation}>
         <planeBufferGeometry args={ripScale} />
-        <meshStandardMaterial transparent>
+        <meshStandardMaterial transparent={true}>
           <primitive attach="map" object={menuRipBack} />
         </meshStandardMaterial>
       </mesh>
       <mesh name={name} position={ripPosition} rotation={frontRotation}>
         <planeBufferGeometry args={ripScale} />
-        <meshStandardMaterial transparent>
+        <meshStandardMaterial transparent={true} depthWrite={false}>
           <primitive attach="map" object={menuRipFront} />
         </meshStandardMaterial>
       </mesh>
@@ -71,7 +78,7 @@ const MenuRip: React.FC<MenuProps> = ({
         onPointerOut={(e) => handleHover(e, false)}
       >
         <planeBufferGeometry args={labelScale} />
-        <meshStandardMaterial transparent>
+        <meshStandardMaterial transparent={true} side={THREE.DoubleSide}>
           <primitive attach="map" object={menuRipLabel} />
         </meshStandardMaterial>
       </mesh>
