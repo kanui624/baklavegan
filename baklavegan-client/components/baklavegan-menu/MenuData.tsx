@@ -2,8 +2,8 @@ export const menuData: any = [
   {
     id: 0,
     name: 'baklava',
-    ripPosition: [0.2, 0.09, 0.08],
-    labelPosition: [0.21, 0.093, 0.085],
+    ripPosition: [0.2, 0.075, 0.07],
+    labelPosition: [0.21, 0.077, 0.075],
     frontRotation: [0, 1.2, 0],
     backRotation: [0, Math.PI + 1.2, 0],
     ripScale: [0.21, 0.2],

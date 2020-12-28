@@ -33,9 +33,10 @@ const MenuRip: React.FC<MenuProps> = ({
   };
 
   const handlePointerUp = (e: any) => {
-    setTimeout(() => {
-      Router.push(`/${link}`);
-    }, 500);
+    Router.push(`/${link}`);
+    // setTimeout(() => {
+    //   Router.push(`/${link}`);
+    // }, 500);
   };
 
   const handleHover = (e: any, cursor: boolean) => {
