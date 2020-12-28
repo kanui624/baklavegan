@@ -15,7 +15,7 @@ const BVCanvas: React.FC = () => {
     <Canvas
       className={styles.canvas}
       style={{ position: 'fixed' }}
-      camera={{ position: [1, 1, 1], fov: 13 }}
+      camera={{ position: [1, 1, 1], fov: 14 }}
       pixelRatio={2}
     >
       <Suspense fallback={null}>

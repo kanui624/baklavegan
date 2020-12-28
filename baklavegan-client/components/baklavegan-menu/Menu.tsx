@@ -12,7 +12,7 @@ import { menuData } from './MenuOptions-Data';
 
 const Menu: React.FC = () => {
   return (
-    <group position={[0, 0, 0]}>
+    <group position={[0, 0.02, 0]}>
       <Orbit />
       <Lights />
       <Sapling />
@@ -37,9 +37,9 @@ const Menu: React.FC = () => {
             backRotation={backRotation}
             ripScale={ripScale}
             labelScale={labelScale}
-            imgFront={`/menurips/0-front/${id}-${name}-f.png`}
-            imgBack={`/menurips/1-back/${id}-${name}-b.png`}
-            imgLabel={`/menurips/2-label/${id}-${name}-l.png`}
+            imgFront={`/2-menuops/0-front/${id}-${name}-f.png`}
+            imgBack={`/2-menuops/1-back/${id}-${name}-b.png`}
+            imgLabel={`/2-menuops/2-label/${id}-${name}-l.png`}
           />
         )
       )}
