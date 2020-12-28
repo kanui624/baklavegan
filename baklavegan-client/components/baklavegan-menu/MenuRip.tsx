@@ -72,6 +72,16 @@ const MenuRip: React.FC<MenuProps> = ({
           <primitive attach="map" object={menuRipFront} />
         </meshStandardMaterial>
       </mesh>
+      <mesh position={labelPosition} rotation={frontRotation} renderOrder={3}>
+        <planeBufferGeometry args={labelScale} />
+        <meshStandardMaterial
+          transparent
+          depthWrite={false}
+          side={THREE.DoubleSide}
+        >
+          <primitive attach="map" object={menuRipLabel} />
+        </meshStandardMaterial>
+      </mesh>
       <mesh
         position={labelPosition}
         rotation={frontRotation}
@@ -79,14 +89,10 @@ const MenuRip: React.FC<MenuProps> = ({
         onPointerUp={(e) => handlePointerUp(e)}
         onPointerOver={(e) => handleHover(e, true)}
         onPointerOut={(e) => handleHover(e, false)}
-        renderOrder={3}
+        renderOrder={4}
       >
         <planeBufferGeometry args={labelScale} />
-        <meshStandardMaterial
-          transparent
-          depthWrite={false}
-          side={THREE.DoubleSide}
-        >
+        <meshStandardMaterial transparent depthWrite={false}>
           <primitive attach="map" object={menuRipLabel} />
         </meshStandardMaterial>
       </mesh>
