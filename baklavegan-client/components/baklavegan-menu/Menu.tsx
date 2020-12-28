@@ -12,7 +12,7 @@ import { menuData } from './MenuData';
 
 const Menu: React.FC = () => {
   return (
-    <group position={[0, 0.02, 0]}>
+    <group position={[0, 0.035, 0]}>
       <Orbit />
       <Lights />
       <Sapling />

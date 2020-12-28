@@ -32,8 +32,8 @@ export const menuData: any = [
   {
     id: 3,
     name: 'contact',
-    ripPosition: [-0.17, 0.06, 0.06],
-    labelPosition: [-0.177, 0.063, 0.073],
+    ripPosition: [-0.17, 0.05, 0.06],
+    labelPosition: [-0.177, 0.053, 0.073],
     frontRotation: [0, Math.PI + 1.9, 0],
     backRotation: [0, Math.PI * 2 + 1.9, 0],
     ripScale: [0.23, 0.21],
