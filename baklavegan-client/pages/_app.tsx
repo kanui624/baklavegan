@@ -9,7 +9,12 @@ import '../styles/tailwind.css';
 import BVCanvas from '../components/baklavegan-menu/BVCanvas';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <BVCanvas />
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default MyApp;
