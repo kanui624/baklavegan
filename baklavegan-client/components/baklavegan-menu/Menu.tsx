@@ -1,3 +1,6 @@
+// React
+import { useState } from 'react';
+
 // Components
 import Orbit from './Orbit';
 import Lights from './Lights';
@@ -11,9 +14,15 @@ import MenuDataProps from '../../interfaces/threeScene/Menu-Interfaces';
 import { menuData } from './MenuData';
 
 const Menu: React.FC = () => {
+  const [oRotation, setOrotation] = useState(-1.6);
+
+  const stopRotation = (stopit: number) => {
+    setOrotation(stopit);
+  };
+
   return (
     <group position={[0, 0.035, 0]}>
-      <Orbit />
+      <Orbit stopParam={oRotation} />
       <Lights />
       <Sapling />
       {menuData.map(
@@ -40,6 +49,7 @@ const Menu: React.FC = () => {
             imgFront={`/2-menuops/0-front/${id}-${name}-f.png`}
             imgBack={`/2-menuops/1-back/${id}-${name}-b.png`}
             imgLabel={`/2-menuops/2-label/${id}-${name}-l.png`}
+            stop={stopRotation}
           />
         )
       )}

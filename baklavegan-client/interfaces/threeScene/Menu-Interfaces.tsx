@@ -1,5 +1,4 @@
 import { Euler, Vector3 } from 'react-three-fiber/three-types';
-import * as THREE from 'three';
 
 export default interface MenuDataProps {
   id?: number;
@@ -17,4 +16,9 @@ export default interface MenuProps {
   imgFront: string;
   imgBack: string;
   imgLabel: string;
+  stop: (stopit: number) => void;
+}
+
+export default interface OrbitProps {
+  stopParam?: number;
 }

@@ -4,11 +4,15 @@ import { useMemo } from 'react';
 // Next
 import Router from 'next/router';
 
+// React-Three-Fiber
+import { useThree } from 'react-three-fiber';
+
 // Three
 import * as THREE from 'three';
 
 //Interfaces
 import MenuProps from '../../interfaces/threeScene/Menu-Interfaces';
+import { OrbitControls } from '@react-three/drei';
 
 const MenuRip: React.FC<MenuProps> = ({
   link,
@@ -22,6 +26,7 @@ const MenuRip: React.FC<MenuProps> = ({
   labelPosition,
   frontRotation,
   backRotation,
+  stop,
 }) => {
   const [menuRipFront, menuRipBack, menuRipLabel] = useMemo(() => {
     const loader = new THREE.TextureLoader();
@@ -33,18 +38,18 @@ const MenuRip: React.FC<MenuProps> = ({
   };
 
   const handlePointerUp = (e: any) => {
-    Router.push(`/${link}`);
-    // setTimeout(() => {
-    //   Router.push(`/${link}`);
-    // }, 500);
+    setTimeout(() => {
+      Router.push(`/${link}`);
+    }, 500);
   };
 
   const handleHover = (e: any, cursor: boolean) => {
-    console.log(e);
     e.stopPropagation();
     if (cursor) {
+      stop(0);
       document.body.style.cursor = 'pointer';
     } else {
+      stop(-1.6);
       document.body.style.cursor = 'default';
     }
   };
@@ -64,7 +69,7 @@ const MenuRip: React.FC<MenuProps> = ({
         renderOrder={2}
       >
         <planeBufferGeometry args={ripScale} />
-        <meshStandardMaterial transparent={true} depthWrite={false}>
+        <meshStandardMaterial transparent={true}>
           <primitive attach="map" object={menuRipFront} />
         </meshStandardMaterial>
       </mesh>
@@ -75,10 +80,10 @@ const MenuRip: React.FC<MenuProps> = ({
         onPointerUp={(e) => handlePointerUp(e)}
         onPointerOver={(e) => handleHover(e, true)}
         onPointerOut={(e) => handleHover(e, false)}
-        renderOrder={4}
+        renderOrder={3}
       >
         <planeBufferGeometry args={labelScale} />
-        <meshStandardMaterial transparent depthWrite={false}>
+        <meshStandardMaterial transparent>
           <primitive attach="map" object={menuRipLabel} />
         </meshStandardMaterial>
       </mesh>

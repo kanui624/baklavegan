@@ -1,15 +1,23 @@
+// React
+import React, { useRef } from 'react';
+
 // Drei
 import { OrbitControls } from '@react-three/drei';
 
-import React, { useRef } from 'react';
+// Interfaces
+import OrbitProps from '../../interfaces/threeScene/Menu-Interfaces';
 
-const Orbit: React.FC = () => {
+interface sp {
+  stopParam: number;
+}
+
+const Orbit: React.FC<sp> = ({ stopParam }) => {
   return (
     <OrbitControls
       enableZoom={false}
       minPolarAngle={Math.PI / 2 - 0.4}
       maxPolarAngle={Math.PI / 2 - 0.4}
-      autoRotateSpeed={-1.5}
+      autoRotateSpeed={stopParam}
       autoRotate
     />
   );
