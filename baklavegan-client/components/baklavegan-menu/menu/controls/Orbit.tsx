@@ -4,6 +4,7 @@ import React from 'react';
 // Drei
 import { OrbitControls } from '@react-three/drei';
 
+// Types
 interface startStopParam {
   startStop: number;
 }

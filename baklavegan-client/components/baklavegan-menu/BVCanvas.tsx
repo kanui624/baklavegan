@@ -5,7 +5,7 @@ import { Suspense } from 'react';
 import { Canvas } from 'react-three-fiber';
 
 // Components
-import Menu from './Menu';
+import Menu from './menu/Menu';
 
 // Styles
 import styles from '../../styles/BVCanvas/BVCanvas.module.scss';

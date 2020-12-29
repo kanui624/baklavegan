@@ -1,4 +1,4 @@
-const Lights = () => {
+const Lights: React.FC = () => {
   return <ambientLight intensity={0.62} />;
 };
 

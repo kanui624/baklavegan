@@ -13,6 +13,7 @@ import * as THREE from 'three';
 // React-Three-Fiber Types
 import { Euler, Vector3 } from 'react-three-fiber/three-types';
 
+// Types
 interface MenuProps {
   link: string;
   name: string;
@@ -25,7 +26,7 @@ interface MenuProps {
   labelPosition: Vector3;
   frontRotation: Euler;
   backRotation: Euler;
-  startStopRotation: (startStop: number) => void;
+  setOrbit: (set: number) => void;
 }
 
 const MenuRip: React.FC<MenuProps> = ({
@@ -40,7 +41,7 @@ const MenuRip: React.FC<MenuProps> = ({
   labelPosition,
   frontRotation,
   backRotation,
-  startStopRotation,
+  setOrbit,
 }) => {
   const [menuRipFront, menuRipBack, menuRipLabel] = useMemo(() => {
     const loader = new THREE.TextureLoader();
@@ -54,16 +55,16 @@ const MenuRip: React.FC<MenuProps> = ({
   const handlePointerUp = (e: any) => {
     setTimeout(() => {
       Router.push(`/${link}`);
-    }, 500);
+    }, 1000);
   };
 
   const handleHover = (e: any, cursor: boolean) => {
     e.stopPropagation();
     if (cursor) {
-      startStopRotation(0);
+      setOrbit(0);
       document.body.style.cursor = 'pointer';
     } else {
-      startStopRotation(-1.6);
+      setOrbit(-1.6);
       document.body.style.cursor = 'default';
     }
   };
