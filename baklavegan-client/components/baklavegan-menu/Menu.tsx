@@ -7,22 +7,33 @@ import Lights from './Lights';
 import Sapling from './Sapling';
 import MenuRip from './MenuRip';
 
-// Interfaces
-import MenuDataProps from '../../interfaces/threeScene/Menu-Interfaces';
+// React-Three-Fiber Types
+import { Euler, Vector3 } from 'react-three-fiber/three-types';
 
 // Data
 import { menuData } from './MenuData';
 
-const Menu: React.FC = () => {
-  const [oRotation, setOrotation] = useState(-1.6);
+interface MenuDataProps {
+  id?: number;
+  name: string;
+  ripScale: any;
+  labelScale: any;
+  ripPosition: Vector3;
+  labelPosition: Vector3;
+  frontRotation: Euler;
+  backRotation: Euler;
+}
 
-  const stopRotation = (stopit: number) => {
-    setOrotation(stopit);
+const Menu: React.FC = () => {
+  const [orbit, setOrbit] = useState(-1.6);
+
+  const startStopRotation = (startStop: number) => {
+    setOrbit(startStop);
   };
 
   return (
     <group position={[0, 0.035, 0]}>
-      <Orbit stopParam={oRotation} />
+      <Orbit startStop={orbit} />
       <Lights />
       <Sapling />
       {menuData.map(
@@ -49,7 +60,7 @@ const Menu: React.FC = () => {
             imgFront={`/2-menuops/0-front/${id}-${name}-f.png`}
             imgBack={`/2-menuops/1-back/${id}-${name}-b.png`}
             imgLabel={`/2-menuops/2-label/${id}-${name}-l.png`}
-            stop={stopRotation}
+            startStopRotation={startStopRotation}
           />
         )
       )}

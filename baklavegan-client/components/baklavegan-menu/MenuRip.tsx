@@ -10,9 +10,23 @@ import { useThree } from 'react-three-fiber';
 // Three
 import * as THREE from 'three';
 
-//Interfaces
-import MenuProps from '../../interfaces/threeScene/Menu-Interfaces';
-import { OrbitControls } from '@react-three/drei';
+// React-Three-Fiber Types
+import { Euler, Vector3 } from 'react-three-fiber/three-types';
+
+interface MenuProps {
+  link: string;
+  name: string;
+  imgFront: string;
+  imgBack: string;
+  imgLabel: string;
+  ripScale: any;
+  labelScale: any;
+  ripPosition: Vector3;
+  labelPosition: Vector3;
+  frontRotation: Euler;
+  backRotation: Euler;
+  startStopRotation: (startStop: number) => void;
+}
 
 const MenuRip: React.FC<MenuProps> = ({
   link,
@@ -26,7 +40,7 @@ const MenuRip: React.FC<MenuProps> = ({
   labelPosition,
   frontRotation,
   backRotation,
-  stop,
+  startStopRotation,
 }) => {
   const [menuRipFront, menuRipBack, menuRipLabel] = useMemo(() => {
     const loader = new THREE.TextureLoader();
@@ -46,10 +60,10 @@ const MenuRip: React.FC<MenuProps> = ({
   const handleHover = (e: any, cursor: boolean) => {
     e.stopPropagation();
     if (cursor) {
-      stop(0);
+      startStopRotation(0);
       document.body.style.cursor = 'pointer';
     } else {
-      stop(-1.6);
+      startStopRotation(-1.6);
       document.body.style.cursor = 'default';
     }
   };
