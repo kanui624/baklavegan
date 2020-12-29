@@ -1,11 +1,13 @@
 // React
 import { useState } from 'react';
 
-// Components
-import Orbit from './controls/Orbit';
-import Lights from './controls/Lights';
+// Objects
 import Sapling from './objects/Sapling';
 import MenuRip from './objects/MenuRip';
+
+// Controls
+import Orbit from './controls/Orbit';
+import Lights from './controls/Lights';
 
 // React-Three-Fiber Types
 import { Euler, Vector3 } from 'react-three-fiber/three-types';

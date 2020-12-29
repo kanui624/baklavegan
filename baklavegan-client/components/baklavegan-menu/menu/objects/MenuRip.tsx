@@ -4,9 +4,6 @@ import { useMemo } from 'react';
 // Next
 import Router from 'next/router';
 
-// React-Three-Fiber
-import { useThree } from 'react-three-fiber';
-
 // Three
 import * as THREE from 'three';
 
@@ -54,8 +51,9 @@ const MenuRip: React.FC<MenuProps> = ({
 
   const handlePointerUp = (e: any) => {
     setTimeout(() => {
-      Router.push(`/${link}`);
+      Router.push(`/baklavegan/${link}`);
     }, 1000);
+    e;
   };
 
   const handleHover = (e: any, cursor: boolean) => {
@@ -73,7 +71,7 @@ const MenuRip: React.FC<MenuProps> = ({
     <group>
       <mesh position={ripPosition} rotation={backRotation} renderOrder={1}>
         <planeBufferGeometry args={ripScale} />
-        <meshStandardMaterial transparent={true}>
+        <meshStandardMaterial transparent>
           <primitive attach="map" object={menuRipBack} />
         </meshStandardMaterial>
       </mesh>
@@ -84,7 +82,7 @@ const MenuRip: React.FC<MenuProps> = ({
         renderOrder={2}
       >
         <planeBufferGeometry args={ripScale} />
-        <meshStandardMaterial transparent={true}>
+        <meshStandardMaterial transparent>
           <primitive attach="map" object={menuRipFront} />
         </meshStandardMaterial>
       </mesh>
