@@ -1,9 +1,14 @@
-import * as THREE from 'three';
-import React, { useRef } from 'react';
-import { useGLTF } from '@react-three/drei/useGLTF';
+// React
+import { useRef } from 'react';
 
+// THREE
+import * as THREE from 'three';
 import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader';
 
+// Drei
+import { useGLTF } from '@react-three/drei/useGLTF';
+
+// Types
 type SaplingType = GLTF & {
   nodes: {
     Sapling_1: THREE.Mesh;

@@ -1,12 +1,6 @@
 // React
 import { FC } from 'react';
 
-// Redux
-import { useSelector } from 'react-redux';
-
-// Redux Types
-import { RootState } from '../../../../redux/rootReducer';
-
 // Drei
 import { OrbitControls } from '@react-three/drei';
 

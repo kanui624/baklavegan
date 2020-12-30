@@ -1,5 +1,5 @@
 // React
-import { useState, FC } from 'react';
+import { FC } from 'react';
 
 // Objects
 import Sapling from './objects/Sapling';

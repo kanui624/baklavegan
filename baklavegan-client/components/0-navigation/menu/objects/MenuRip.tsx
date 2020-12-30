@@ -10,9 +10,6 @@ import * as THREE from 'three';
 // React-Three-Fiber Types
 import { Euler, Vector3 } from 'react-three-fiber/three-types';
 
-//Redux
-import { useSelector, useDispatch } from 'react-redux';
-
 // Types
 interface MenuProps {
   link: string;
