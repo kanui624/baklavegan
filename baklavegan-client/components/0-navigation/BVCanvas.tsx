@@ -1,5 +1,5 @@
 // React
-import { Suspense, useState } from 'react';
+import { Suspense, FC } from 'react';
 
 // React-Three-Fiber
 import { Canvas } from 'react-three-fiber';
@@ -10,7 +10,7 @@ import Menu from './menu/Menu';
 // Styles
 import styles from '../../styles/BVCanvas/BVCanvas.module.scss';
 
-const BVCanvas: React.FC = () => {
+const BVCanvas = () => {
   return (
     <Canvas
       className={styles.canvas}

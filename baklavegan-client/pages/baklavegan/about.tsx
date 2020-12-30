@@ -1,6 +1,10 @@
+// React
+import { FC } from 'react';
+
+// Next
 import Link from 'next/link';
 
-const about = () => {
+const about: FC = () => {
   return (
     <Link href="/">
       <a>You're on about link page click to go back</a>

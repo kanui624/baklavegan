@@ -1,5 +1,5 @@
 // React
-import { useState } from 'react';
+import { useState, FC } from 'react';
 
 // Objects
 import Sapling from './objects/Sapling';
@@ -27,12 +27,10 @@ interface MenuDataProps {
   backRotation: Euler;
 }
 
-const Menu: React.FC = () => {
-  const [orbit, setOrbit] = useState(-1.6);
-
+const Menu: FC = () => {
   return (
     <group position={[0, 0.035, 0]}>
-      <Orbit startStop={orbit} />
+      <Orbit />
       <Lights />
       <Sapling />
       {menuData.map(
@@ -59,7 +57,6 @@ const Menu: React.FC = () => {
             imgFront={`/2-menuops/0-front/${id}-${name}-f.png`}
             imgBack={`/2-menuops/1-back/${id}-${name}-b.png`}
             imgLabel={`/2-menuops/2-label/${id}-${name}-l.png`}
-            setOrbit={setOrbit}
           />
         )
       )}

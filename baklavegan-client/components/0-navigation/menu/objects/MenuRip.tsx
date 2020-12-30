@@ -1,5 +1,5 @@
 // React
-import { useMemo } from 'react';
+import { useMemo, FC } from 'react';
 
 // Next
 import Router from 'next/router';
@@ -9,6 +9,9 @@ import * as THREE from 'three';
 
 // React-Three-Fiber Types
 import { Euler, Vector3 } from 'react-three-fiber/three-types';
+
+//Redux
+import { useSelector, useDispatch } from 'react-redux';
 
 // Types
 interface MenuProps {
@@ -23,10 +26,9 @@ interface MenuProps {
   labelPosition: Vector3;
   frontRotation: Euler;
   backRotation: Euler;
-  setOrbit: (set: number) => void;
 }
 
-const MenuRip: React.FC<MenuProps> = ({
+const MenuRip: FC<MenuProps> = ({
   link,
   name,
   imgFront,
@@ -38,7 +40,6 @@ const MenuRip: React.FC<MenuProps> = ({
   labelPosition,
   frontRotation,
   backRotation,
-  setOrbit,
 }) => {
   const [menuRipFront, menuRipBack, menuRipLabel] = useMemo(() => {
     const loader = new THREE.TextureLoader();
@@ -59,10 +60,8 @@ const MenuRip: React.FC<MenuProps> = ({
   const handleHover = (e: any, cursor: boolean) => {
     e.stopPropagation();
     if (cursor) {
-      setOrbit(0);
       document.body.style.cursor = 'pointer';
     } else {
-      setOrbit(-1.6);
       document.body.style.cursor = 'default';
     }
   };

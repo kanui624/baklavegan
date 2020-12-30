@@ -1,21 +1,22 @@
 // React
-import React from 'react';
+import { FC } from 'react';
+
+// Redux
+import { useSelector } from 'react-redux';
+
+// Redux Types
+import { RootState } from '../../../../redux/rootReducer';
 
 // Drei
 import { OrbitControls } from '@react-three/drei';
 
-// Types
-interface startStopParam {
-  startStop: number;
-}
-
-const Orbit: React.FC<startStopParam> = ({ startStop }) => {
+const Orbit: FC = () => {
   return (
     <OrbitControls
       enableZoom={false}
       minPolarAngle={Math.PI / 2 - 0.4}
       maxPolarAngle={Math.PI / 2 - 0.4}
-      autoRotateSpeed={startStop}
+      autoRotateSpeed={-1.6}
       autoRotate
     />
   );

@@ -1,11 +1,12 @@
-// React Redux
-import { Provider } from 'react-redux';
+// React
+import { FC } from 'react';
 
 // Store
-import store from '../redux/store';
+import { wrapper } from '../redux/store';
 
 // Global Components
-import BVCanvas from '../components/baklavegan-menu/BVCanvas';
+import Layout from '../components/1-layout/Layout';
+import BVCanvas from '../components/0-navigation/BVCanvas';
 
 // Next Types
 import type { AppProps } from 'next/app';
@@ -14,13 +15,13 @@ import type { AppProps } from 'next/app';
 import '../styles/globals.scss';
 import '../styles/tailwind.css';
 
-const Baklavegan = ({ Component, pageProps }: AppProps) => {
+const Baklavegan: FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <Provider store={store}>
+    <>
       <BVCanvas />
       <Component {...pageProps} />
-    </Provider>
+    </>
   );
 };
 
-export default Baklavegan;
+export default wrapper.withRedux(Baklavegan);
