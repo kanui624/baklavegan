@@ -1,10 +1,22 @@
 // React
 import { FC } from 'react';
 
+// Redux
+import { useSelector } from 'react-redux';
+
+// Next Redux Wrapper
+import { wrapper } from '../../../../redux/store';
+
 // Drei
 import { OrbitControls } from '@react-three/drei';
+import { autoRotate } from '../../../../redux/slices/orbitControlSlice';
 
-const Orbit: FC = () => {
+// Types
+interface OrbitProps {
+  staticProps: number;
+}
+
+const Orbit: FC<OrbitProps> = () => {
   return (
     <OrbitControls
       enableZoom={false}
