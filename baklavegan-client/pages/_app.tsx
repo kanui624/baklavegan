@@ -15,13 +15,8 @@ import type { AppProps } from 'next/app';
 import '../styles/globals.scss';
 import '../styles/tailwind.css';
 
-const Baklavegan: FC<AppProps> = ({ Component, pageProps }) => {
-  return (
-    <>
-      <BVCanvas />
-      <Component {...pageProps} />
-    </>
-  );
+const BaklaVegan: FC<AppProps> = ({ Component, pageProps }) => {
+  return <Component {...pageProps} />;
 };
 
-export default wrapper.withRedux(Baklavegan);
+export default wrapper.withRedux(BaklaVegan);

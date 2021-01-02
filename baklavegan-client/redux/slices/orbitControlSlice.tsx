@@ -4,28 +4,29 @@ import { createSlice, PayloadAction, createAction } from '@reduxjs/toolkit';
 // Next Redux Wrapper
 import { HYDRATE } from 'next-redux-wrapper';
 
+// Redux Types
+import { AppState } from '../store';
+
 // Types
 interface OrbitParams {
   speed: number;
 }
 
-const initialState = { speed: -1.7 } as OrbitParams;
-
-const hydrate = createAction(HYDRATE);
+const hydrate = createAction<AppState>(HYDRATE);
 
 const orbitControl = createSlice({
   name: 'orbitControl',
-  initialState,
+  initialState: { speed: -1.7 } as OrbitParams,
   reducers: {
-    autoRotate(state, action: PayloadAction<OrbitParams>) {
+    autoRotate: (state, action: PayloadAction<OrbitParams>) => {
       const { speed } = action.payload;
       state.speed = speed;
     },
-    stopRotate(state, action: PayloadAction<OrbitParams>) {
+    stopRotate: (state, action: PayloadAction<OrbitParams>) => {
       const { speed } = action.payload;
       state.speed = speed;
     },
-    animateRotate(state, action: PayloadAction<OrbitParams>) {
+    animateRotate: (state, action: PayloadAction<OrbitParams>) => {
       const { speed } = action.payload;
       state.speed = speed;
     },
@@ -35,7 +36,7 @@ const orbitControl = createSlice({
       console.log('HYDRATE', state, action.payload);
       return {
         ...state,
-        ...(action.payload as any)[orbitControl.name],
+        ...action.payload[orbitControl.name],
       };
     });
   },

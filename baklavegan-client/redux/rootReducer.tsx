@@ -5,7 +5,7 @@ import { combineReducers } from '@reduxjs/toolkit';
 import orbitControl from './slices/orbitControlSlice';
 
 const rootReducer = combineReducers({
-  orbit: orbitControl.reducer,
+  [orbitControl.name]: orbitControl.reducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;
