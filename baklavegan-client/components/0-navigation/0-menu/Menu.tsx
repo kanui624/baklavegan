@@ -2,46 +2,30 @@
 import { useState } from 'react';
 
 // Objects
-import Sapling from './objects/Sapling';
-import MenuOption from './objects/MenuOption';
+import Sapling from './2-objects/Sapling';
+import MenuOption from './2-objects/MenuOption';
 
 // Controls
-import Orbit from './controls/Orbit';
-import Lights from './controls/Lights';
+import Orbit from './1-controls/Orbit';
+import Lights from './1-controls/Lights';
 
 // Data
-import { menuData } from './objects/MenuData';
-
-// React-Three-Fiber Types
-import { Euler, Vector3 } from 'react-three-fiber/three-types';
+import { menuData } from './2-objects/MenuData';
 
 // React Types
 import { FC } from 'react';
 
 // Component Level Types
-interface MenuDataProps {
-  id: number;
-  name: string;
-  ripScale: number[];
-  labelScale: number[];
-  ripPosition: Vector3;
-  labelPosition: Vector3;
-  frontRotation: Euler;
-  backRotation: Euler;
-}
+import { MenuDataProps } from './0-types/MenuDataProps';
 
 const Menu: FC = () => {
   // Orbit Speed State
   const [orbitSpeed, setOrbitSpeed] = useState(-1.6);
   return (
     <group position={[0, 0.035, 0]}>
-      // Orbit Controls
       <Orbit orbitSpeed={orbitSpeed} />
-      // Lights
       <Lights />
-      // Sapling Object
       <Sapling />
-      // Menu Options
       {menuData.map(
         ({
           id,

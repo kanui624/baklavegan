@@ -5,7 +5,7 @@ import { Suspense } from 'react';
 import { Canvas } from 'react-three-fiber';
 
 // Components
-import Menu from './menu/Menu';
+import Menu from './0-menu/Menu';
 
 // React Types
 import { FC } from 'react';

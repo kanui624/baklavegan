@@ -7,27 +7,11 @@ import Router from 'next/router';
 // Three
 import * as THREE from 'three';
 
-// React-Three-Fiber Types
-import { Euler, Vector3 } from 'react-three-fiber/three-types';
-
 // React Types
 import { FC } from 'react';
 
 // Component Level Types
-interface MenuProps {
-  link: string;
-  name: string;
-  imgFront: string;
-  imgBack: string;
-  imgLabel: string;
-  ripScale: any;
-  labelScale: any;
-  ripPosition: Vector3;
-  labelPosition: Vector3;
-  frontRotation: Euler;
-  backRotation: Euler;
-  setOrbitSpeed: (orbitSpeed: number) => void;
-}
+import { MenuProps } from '../0-types/MenuProps';
 
 const MenuOption: FC<MenuProps> = ({
   link,
@@ -43,18 +27,15 @@ const MenuOption: FC<MenuProps> = ({
   backRotation,
   setOrbitSpeed,
 }) => {
-  // Load Textures
   const [menuRipFront, menuRipBack, menuRipLabel] = useMemo(() => {
     const loader = new THREE.TextureLoader();
     return [loader.load(imgFront), loader.load(imgBack), loader.load(imgLabel)];
   }, [imgFront, imgBack, imgLabel]);
 
-  // On Pointer/Click Down
   const handlePointerDown = (e: any) => {
     e.stopPropagation();
   };
 
-  // On Pointer/Click Release
   const handlePointerUp = (e: any) => {
     setTimeout(() => {
       Router.push(`/baklavegan/${link}`);
@@ -62,7 +43,6 @@ const MenuOption: FC<MenuProps> = ({
     e;
   };
 
-  // On Hover
   const handleHover = (e: any, cursor: boolean) => {
     e.stopPropagation();
     if (cursor) {
@@ -76,14 +56,12 @@ const MenuOption: FC<MenuProps> = ({
 
   return (
     <group>
-      // Menu Option Back Texture Plane
       <mesh position={ripPosition} rotation={backRotation} renderOrder={1}>
         <planeBufferGeometry args={ripScale} />
         <meshStandardMaterial transparent>
           <primitive attach="map" object={menuRipBack} />
         </meshStandardMaterial>
       </mesh>
-      // Menu Option Front Texture Plane
       <mesh
         name={name}
         position={ripPosition}
@@ -95,7 +73,6 @@ const MenuOption: FC<MenuProps> = ({
           <primitive attach="map" object={menuRipFront} />
         </meshStandardMaterial>
       </mesh>
-      // Menu Option Label Texture Plane
       <mesh
         position={labelPosition}
         rotation={frontRotation}
