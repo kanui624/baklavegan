@@ -7,22 +7,27 @@ import { Canvas } from 'react-three-fiber';
 // Components
 import Menu from './0-menu/Menu';
 
-// React Types
-import { FC } from 'react';
-
 // Styles
 import styles from '../../styles/BVCanvas/BVCanvas.module.scss';
 
-const BVCanvas: FC = () => {
+// React Types
+import { FC } from 'react';
+
+// Component Level Types
+import { CanvasProps } from './0-menu/0-types/CanvasProps';
+
+const BVCanvas: FC<CanvasProps> = ({ clicked, setClicked }) => {
+  const width = '100%';
+
   return (
     <Canvas
       className={styles.canvas}
-      style={{ position: 'fixed' }}
+      style={{ position: 'fixed', width: width }}
       camera={{ position: [1, 1, 1], fov: 14 }}
       pixelRatio={2}
     >
       <Suspense fallback={null}>
-        <Menu />
+        <Menu clicked={clicked} setClicked={setClicked} />
       </Suspense>
     </Canvas>
   );

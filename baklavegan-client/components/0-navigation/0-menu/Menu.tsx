@@ -1,6 +1,9 @@
 // React
 import { useState } from 'react';
 
+// React Spring
+import { useSpring, a } from 'react-spring/three';
+
 // Objects
 import Sapling from './2-objects/Sapling';
 import MenuOption from './2-objects/MenuOption';
@@ -16,13 +19,19 @@ import { menuData } from './2-objects/MenuData';
 import { FC } from 'react';
 
 // Component Level Types
+import { MenuProps } from './0-types/MenuProps';
 import { MenuDataProps } from './0-types/MenuDataProps';
 
-const Menu: FC = () => {
-  // Orbit Speed State
+const Menu: FC<MenuProps> = ({ clicked, setClicked }) => {
   const [orbitSpeed, setOrbitSpeed] = useState(-1.6);
+
+  const { position, rotation }: any = useSpring({
+    position: !clicked ? [0, -1, 0] : [0, 0.035, 0],
+    rotation: !clicked ? [0, -4, 0] : [0, 0, 0],
+  });
+
   return (
-    <group position={[0, 0.035, 0]}>
+    <a.group position={position} rotation={rotation}>
       <Orbit orbitSpeed={orbitSpeed} />
       <Lights />
       <Sapling />
@@ -51,10 +60,12 @@ const Menu: FC = () => {
             imgBack={`/2-menuops/1-back/${id}-${name}-b.png`}
             imgLabel={`/2-menuops/2-label/${id}-${name}-l.png`}
             setOrbitSpeed={setOrbitSpeed}
+            clicked={clicked}
+            setClicked={setClicked}
           />
         )
       )}
-    </group>
+    </a.group>
   );
 };
 

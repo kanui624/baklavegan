@@ -14,10 +14,9 @@ import { useSpring, a } from 'react-spring/three';
 import { FC } from 'react';
 
 // Component Level Types
-import { MenuProps } from '../0-types/MenuProps';
-import { Vector3 } from 'react-three-fiber';
+import { MenuOptionProps } from '../0-types/MenuOptionProps';
 
-const MenuOption: FC<MenuProps> = ({
+const MenuOption: FC<MenuOptionProps> = ({
   link,
   name,
   imgFront,
@@ -30,16 +29,18 @@ const MenuOption: FC<MenuProps> = ({
   frontRotation,
   backRotation,
   setOrbitSpeed,
+  clicked,
+  setClicked,
 }) => {
   const [menuRipFront, menuRipBack, menuRipLabel] = useMemo(() => {
     const loader = new THREE.TextureLoader();
     return [loader.load(imgFront), loader.load(imgBack), loader.load(imgLabel)];
   }, [imgFront, imgBack, imgLabel]);
 
-  const [labelScaleState, setLabelScaleState] = useState(false);
+  const [scaleState, setScaleState] = useState(false);
 
   const { scale }: any = useSpring({
-    scale: labelScaleState ? [1.1, 1.1, 1.1] : [1, 1, 1],
+    scale: scaleState ? [1.08, 1.08, 1.08] : [1, 1, 1],
   });
 
   const handlePointerDown = (e: any) => {
@@ -47,15 +48,15 @@ const MenuOption: FC<MenuProps> = ({
   };
 
   const handlePointerUp = (e: any) => {
+    setClicked(false);
     setTimeout(() => {
       Router.push(`/baklavegan/${link}`);
     }, 1000);
-    e;
   };
 
   const handleHover = (e: any, cursor: boolean) => {
     e.stopPropagation();
-    setLabelScaleState(!labelScaleState);
+    setScaleState(!scaleState);
     if (cursor) {
       setOrbitSpeed(0);
       document.body.style.cursor = 'pointer';
