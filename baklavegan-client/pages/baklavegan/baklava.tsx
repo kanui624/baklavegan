@@ -1,6 +1,10 @@
+// Next
 import Link from 'next/link';
 
-const baklava = () => {
+// React Types
+import { FC } from 'react';
+
+const baklava: FC = () => {
   return (
     <Link href="/">
       <a>You're on baklava link page click to go back</a>

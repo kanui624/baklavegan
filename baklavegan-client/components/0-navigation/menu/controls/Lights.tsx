@@ -1,4 +1,4 @@
-// React
+// React Types
 import { FC } from 'react';
 
 const Lights: FC = () => {

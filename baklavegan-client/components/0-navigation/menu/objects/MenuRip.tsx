@@ -1,5 +1,5 @@
 // React
-import { useMemo, FC } from 'react';
+import { useMemo } from 'react';
 
 // Next
 import Router from 'next/router';
@@ -10,7 +10,10 @@ import * as THREE from 'three';
 // React-Three-Fiber Types
 import { Euler, Vector3 } from 'react-three-fiber/three-types';
 
-// Types
+// React Types
+import { FC } from 'react';
+
+// Component Level Types
 interface MenuProps {
   link: string;
   name: string;

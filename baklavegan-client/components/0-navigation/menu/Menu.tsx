@@ -1,6 +1,3 @@
-// React
-import { FC } from 'react';
-
 // Objects
 import Sapling from './objects/Sapling';
 import MenuRip from './objects/MenuRip';
@@ -9,13 +6,16 @@ import MenuRip from './objects/MenuRip';
 import Orbit from './controls/Orbit';
 import Lights from './controls/Lights';
 
-// React-Three-Fiber Types
-import { Euler, Vector3 } from 'react-three-fiber/three-types';
-
 // Data
 import { menuData } from './objects/MenuData';
 
-// Types
+// React-Three-Fiber Types
+import { Euler, Vector3 } from 'react-three-fiber/three-types';
+
+// React Types
+import { FC } from 'react';
+
+// Component Level Types
 interface MenuDataProps {
   id: number;
   name: string;

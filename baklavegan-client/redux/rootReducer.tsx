@@ -1,5 +1,5 @@
 // Redux Toolkit
-import { combineReducers } from '@reduxjs/toolkit';
+import { combineReducers } from 'redux';
 
 // Reducers
 import orbitControl from './slices/orbitControlSlice';

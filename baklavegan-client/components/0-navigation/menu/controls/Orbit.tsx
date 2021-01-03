@@ -1,20 +1,10 @@
-// Next
-import { NextPage } from 'next';
-
-import { connect } from 'react-redux';
-
-// Redux
-import { useSelector, useStore } from 'react-redux';
-
-// Next Redux Wrapper
-import { wrapper } from '../../../../redux/store';
-import { RootState } from '../../../../redux/rootReducer';
-import orbitControl from '../../../../redux/slices/orbitControlSlice';
-
 // Drei
 import { OrbitControls } from '@react-three/drei';
 
-const Orbit: NextPage = () => {
+// React Types
+import { FC } from 'react';
+
+const Orbit: FC = () => {
   return (
     <OrbitControls
       enableZoom={false}

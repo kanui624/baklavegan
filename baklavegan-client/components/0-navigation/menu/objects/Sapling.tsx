@@ -8,7 +8,7 @@ import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader';
 // Drei
 import { useGLTF } from '@react-three/drei/useGLTF';
 
-// Types
+// Component Level Types
 type SaplingType = GLTF & {
   nodes: {
     Sapling_1: THREE.Mesh;
