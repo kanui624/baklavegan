@@ -5,7 +5,7 @@ import { OrbitControls } from '@react-three/drei';
 import { FC } from 'react';
 
 // Component Level Types
-import { OrbitProps } from '../0-menutypes/OrbitProps';
+import { OrbitProps } from '../0-types/OrbitProps';
 
 const Orbit: FC<OrbitProps> = ({ orbitSpeed }) => {
   return (

@@ -1,5 +1,5 @@
 // React
-import { useMemo } from 'react';
+import { useState, useMemo } from 'react';
 
 // Next
 import Router from 'next/router';
@@ -7,11 +7,15 @@ import Router from 'next/router';
 // Three
 import * as THREE from 'three';
 
+// React Spring
+import { useSpring, a } from 'react-spring/three';
+
 // React Types
 import { FC } from 'react';
 
 // Component Level Types
 import { MenuProps } from '../0-types/MenuProps';
+import { Vector3 } from 'react-three-fiber';
 
 const MenuOption: FC<MenuProps> = ({
   link,
@@ -32,6 +36,12 @@ const MenuOption: FC<MenuProps> = ({
     return [loader.load(imgFront), loader.load(imgBack), loader.load(imgLabel)];
   }, [imgFront, imgBack, imgLabel]);
 
+  const [labelScaleState, setLabelScaleState] = useState(false);
+
+  const { scale }: any = useSpring({
+    scale: labelScaleState ? [1.1, 1.1, 1.1] : [1, 1, 1],
+  });
+
   const handlePointerDown = (e: any) => {
     e.stopPropagation();
   };
@@ -45,6 +55,7 @@ const MenuOption: FC<MenuProps> = ({
 
   const handleHover = (e: any, cursor: boolean) => {
     e.stopPropagation();
+    setLabelScaleState(!labelScaleState);
     if (cursor) {
       setOrbitSpeed(0);
       document.body.style.cursor = 'pointer';
@@ -55,7 +66,7 @@ const MenuOption: FC<MenuProps> = ({
   };
 
   return (
-    <group>
+    <a.group scale={scale}>
       <mesh position={ripPosition} rotation={backRotation} renderOrder={1}>
         <planeBufferGeometry args={ripScale} />
         <meshStandardMaterial transparent>
@@ -87,7 +98,7 @@ const MenuOption: FC<MenuProps> = ({
           <primitive attach="map" object={menuRipLabel} />
         </meshStandardMaterial>
       </mesh>
-    </group>
+    </a.group>
   );
 };
 
