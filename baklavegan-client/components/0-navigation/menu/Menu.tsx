@@ -1,6 +1,9 @@
+// React
+import { useState } from 'react';
+
 // Objects
 import Sapling from './objects/Sapling';
-import MenuRip from './objects/MenuRip';
+import MenuOption from './objects/MenuOption';
 
 // Controls
 import Orbit from './controls/Orbit';
@@ -28,11 +31,17 @@ interface MenuDataProps {
 }
 
 const Menu: FC = () => {
+  // Orbit Speed State
+  const [orbitSpeed, setOrbitSpeed] = useState(-1.6);
   return (
     <group position={[0, 0.035, 0]}>
-      <Orbit />
+      // Orbit Controls
+      <Orbit orbitSpeed={orbitSpeed} />
+      // Lights
       <Lights />
+      // Sapling Object
       <Sapling />
+      // Menu Options
       {menuData.map(
         ({
           id,
@@ -44,7 +53,7 @@ const Menu: FC = () => {
           ripScale,
           labelScale,
         }: MenuDataProps) => (
-          <MenuRip
+          <MenuOption
             key={id}
             name={name}
             link={name}
@@ -57,6 +66,7 @@ const Menu: FC = () => {
             imgFront={`/2-menuops/0-front/${id}-${name}-f.png`}
             imgBack={`/2-menuops/1-back/${id}-${name}-b.png`}
             imgLabel={`/2-menuops/2-label/${id}-${name}-l.png`}
+            setOrbitSpeed={setOrbitSpeed}
           />
         )
       )}

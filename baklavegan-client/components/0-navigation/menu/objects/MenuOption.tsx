@@ -26,9 +26,10 @@ interface MenuProps {
   labelPosition: Vector3;
   frontRotation: Euler;
   backRotation: Euler;
+  setOrbitSpeed: (orbitSpeed: number) => void;
 }
 
-const MenuRip: FC<MenuProps> = ({
+const MenuOption: FC<MenuProps> = ({
   link,
   name,
   imgFront,
@@ -40,16 +41,20 @@ const MenuRip: FC<MenuProps> = ({
   labelPosition,
   frontRotation,
   backRotation,
+  setOrbitSpeed,
 }) => {
+  // Load Textures
   const [menuRipFront, menuRipBack, menuRipLabel] = useMemo(() => {
     const loader = new THREE.TextureLoader();
     return [loader.load(imgFront), loader.load(imgBack), loader.load(imgLabel)];
   }, [imgFront, imgBack, imgLabel]);
 
+  // On Pointer/Click Down
   const handlePointerDown = (e: any) => {
     e.stopPropagation();
   };
 
+  // On Pointer/Click Release
   const handlePointerUp = (e: any) => {
     setTimeout(() => {
       Router.push(`/baklavegan/${link}`);
@@ -57,23 +62,28 @@ const MenuRip: FC<MenuProps> = ({
     e;
   };
 
+  // On Hover
   const handleHover = (e: any, cursor: boolean) => {
     e.stopPropagation();
     if (cursor) {
+      setOrbitSpeed(0);
       document.body.style.cursor = 'pointer';
     } else {
+      setOrbitSpeed(-1.6);
       document.body.style.cursor = 'default';
     }
   };
 
   return (
     <group>
+      // Menu Option Back Texture Plane
       <mesh position={ripPosition} rotation={backRotation} renderOrder={1}>
         <planeBufferGeometry args={ripScale} />
         <meshStandardMaterial transparent>
           <primitive attach="map" object={menuRipBack} />
         </meshStandardMaterial>
       </mesh>
+      // Menu Option Front Texture Plane
       <mesh
         name={name}
         position={ripPosition}
@@ -85,6 +95,7 @@ const MenuRip: FC<MenuProps> = ({
           <primitive attach="map" object={menuRipFront} />
         </meshStandardMaterial>
       </mesh>
+      // Menu Option Label Texture Plane
       <mesh
         position={labelPosition}
         rotation={frontRotation}
@@ -103,4 +114,4 @@ const MenuRip: FC<MenuProps> = ({
   );
 };
 
-export default MenuRip;
+export default MenuOption;
