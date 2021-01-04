@@ -1,5 +1,5 @@
 // React
-import { Suspense, useEffect } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 
 // React-Three-Fiber
 import { Canvas } from 'react-three-fiber';
@@ -20,20 +20,26 @@ import { FC } from 'react';
 import { CanvasProps } from './0-menu/0-types/CanvasProps';
 
 const BVCanvas: FC<CanvasProps> = ({ clicked, setClicked }) => {
+  const [pR, setPR] = useState(0);
+  // const tlOut = gsap.timeline();
+
+  // useEffect(() => {
+  //   if (!clicked) {
+  //     tlOut.to('.canvasopacity', { opacity: '0%', duration: 2 });
+  //     tlOut.to('.canvasopacity', { display: 'none' });
+  //   } else {
+  //     tlOut.reverse();
+  //   }
+  // }, [clicked]);
+
   useEffect(() => {
-    if (!clicked) {
-      setTimeout(() => {
-        gsap.to('.hey', { height: '0%' });
-      }, 700);
-    } else {
-      gsap.to('.hey', { height: '100%' });
-    }
-  }, [clicked]);
+    setPR(window.devicePixelRatio);
+  }, []);
 
   return (
     <Canvas
-      className={`${styles.canvas} hey`}
-      style={{ position: 'fixed' }}
+      className={`${styles.canvas} canvasopacity`}
+      style={{ position: 'absolute' }}
       camera={{ position: [1, 1, 1], fov: 14 }}
       pixelRatio={2}
     >

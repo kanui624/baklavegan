@@ -16,11 +16,7 @@ interface LayoutProps {
 }
 
 const Layout: FC<LayoutProps> = ({ children }) => {
-  const [clicked, setClicked] = useState(true);
-
-  useEffect(() => {
-    console.log(clicked);
-  }, [clicked]);
+  const [clicked, setClicked] = useState(false);
 
   return (
     <Fragment>

@@ -32,7 +32,7 @@ const Menu: FC<MenuProps> = ({ clicked, setClicked }) => {
       mass: 7,
       clamp: true,
     },
-    position: !clicked ? [0, -1, 0] : [0, 0.035, 0],
+    position: !clicked ? [0, -1.5, 0] : [0, 0.035, 0],
     rotation: !clicked ? [0, 3, 0] : [0, 0, 0],
   });
 
