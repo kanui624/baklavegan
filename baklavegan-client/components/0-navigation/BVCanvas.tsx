@@ -17,12 +17,10 @@ import { FC } from 'react';
 import { CanvasProps } from './0-menu/0-types/CanvasProps';
 
 const BVCanvas: FC<CanvasProps> = ({ clicked, setClicked }) => {
-  const width = '100%';
-
   return (
     <Canvas
       className={styles.canvas}
-      style={{ position: 'fixed', width: width }}
+      style={{ position: 'fixed' }}
       camera={{ position: [1, 1, 1], fov: 14 }}
       pixelRatio={2}
     >
