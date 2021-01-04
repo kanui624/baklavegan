@@ -29,7 +29,6 @@ const MenuOption: FC<MenuOptionProps> = ({
   frontRotation,
   backRotation,
   setOrbitSpeed,
-  clicked,
   setClicked,
 }) => {
   const [menuRipFront, menuRipBack, menuRipLabel] = useMemo(() => {

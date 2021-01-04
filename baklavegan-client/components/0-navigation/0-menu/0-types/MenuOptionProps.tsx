@@ -14,6 +14,5 @@ export interface MenuOptionProps {
   frontRotation: Euler;
   backRotation: Euler;
   setOrbitSpeed: (orbitSpeed: number) => void;
-  clicked: boolean;
   setClicked: (clicked: boolean) => void;
 }

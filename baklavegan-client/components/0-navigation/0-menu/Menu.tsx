@@ -27,14 +27,13 @@ const Menu: FC<MenuProps> = ({ clicked, setClicked }) => {
 
   const { position, rotation }: any = useSpring({
     config: {
-      tension: 80,
-      precision: 0,
-      friction: 60,
-      mass: 5,
+      velocity: 0,
+      friction: 100,
+      mass: 7,
       clamp: true,
     },
     position: !clicked ? [0, -1, 0] : [0, 0.035, 0],
-    rotation: !clicked ? [0, 4, 0] : [0, 0, 0],
+    rotation: !clicked ? [0, 3, 0] : [0, 0, 0],
   });
 
   return (
@@ -67,7 +66,6 @@ const Menu: FC<MenuProps> = ({ clicked, setClicked }) => {
             imgBack={`/2-menuops/1-back/${id}-${name}-b.png`}
             imgLabel={`/2-menuops/2-label/${id}-${name}-l.png`}
             setOrbitSpeed={setOrbitSpeed}
-            clicked={clicked}
             setClicked={setClicked}
           />
         )

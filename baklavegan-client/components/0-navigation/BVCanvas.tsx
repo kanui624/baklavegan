@@ -1,8 +1,11 @@
 // React
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 
 // React-Three-Fiber
 import { Canvas } from 'react-three-fiber';
+
+// Gsap
+import { gsap } from 'gsap';
 
 // Components
 import Menu from './0-menu/Menu';
@@ -17,9 +20,19 @@ import { FC } from 'react';
 import { CanvasProps } from './0-menu/0-types/CanvasProps';
 
 const BVCanvas: FC<CanvasProps> = ({ clicked, setClicked }) => {
+  useEffect(() => {
+    if (!clicked) {
+      setTimeout(() => {
+        gsap.to('.hey', { height: '0%' });
+      }, 700);
+    } else {
+      gsap.to('.hey', { height: '100%' });
+    }
+  }, [clicked]);
+
   return (
     <Canvas
-      className={styles.canvas}
+      className={`${styles.canvas} hey`}
       style={{ position: 'fixed' }}
       camera={{ position: [1, 1, 1], fov: 14 }}
       pixelRatio={2}
