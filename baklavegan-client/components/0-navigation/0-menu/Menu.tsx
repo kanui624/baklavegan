@@ -26,8 +26,15 @@ const Menu: FC<MenuProps> = ({ clicked, setClicked }) => {
   const [orbitSpeed, setOrbitSpeed] = useState(-1.6);
 
   const { position, rotation }: any = useSpring({
+    config: {
+      tension: 80,
+      precision: 0,
+      friction: 60,
+      mass: 5,
+      clamp: true,
+    },
     position: !clicked ? [0, -1, 0] : [0, 0.035, 0],
-    rotation: !clicked ? [0, -4, 0] : [0, 0, 0],
+    rotation: !clicked ? [0, 4, 0] : [0, 0, 0],
   });
 
   return (

@@ -49,9 +49,7 @@ const MenuOption: FC<MenuOptionProps> = ({
 
   const handlePointerUp = (e: any) => {
     setClicked(false);
-    setTimeout(() => {
-      Router.push(`/baklavegan/${link}`);
-    }, 1000);
+    Router.push(`/baklavegan/${link}`);
   };
 
   const handleHover = (e: any, cursor: boolean) => {
