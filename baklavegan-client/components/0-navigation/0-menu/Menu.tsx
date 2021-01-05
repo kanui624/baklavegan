@@ -1,12 +1,12 @@
 // React
-import { useState } from 'react';
+import { Suspense, useState, lazy } from 'react';
 
 // React Spring
 import { useSpring, a } from 'react-spring/three';
 
 // Objects
-import Sapling from './2-objects/Sapling';
-import MenuOption from './2-objects/MenuOption';
+const Sapling = lazy(() => import('./2-objects/Sapling'));
+const MenuOption = lazy(() => import('./2-objects/MenuOption'));
 
 // Controls
 import Orbit from './1-controls/Orbit';
@@ -22,7 +22,7 @@ import { FC } from 'react';
 import { MenuProps } from './0-types/MenuProps';
 import { MenuDataProps } from './0-types/MenuDataProps';
 
-const Menu: FC<MenuProps> = ({ clicked, setClicked }) => {
+const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
   const [orbitSpeed, setOrbitSpeed] = useState(-1.6);
 
   const { position, rotation }: any = useSpring({
@@ -32,14 +32,15 @@ const Menu: FC<MenuProps> = ({ clicked, setClicked }) => {
       mass: 7,
       clamp: true,
     },
-    position: !clicked ? [0, -1.5, 0] : [0, 0.035, 0],
-    rotation: !clicked ? [0, 3, 0] : [0, 0, 0],
+    position: clicked ? [0, -1.5, 0] : [0, 0.035, 0],
+    rotation: clicked ? [0, 3, 0] : [0, 0, 0],
   });
 
   return (
     <a.group position={position} rotation={rotation}>
       <Orbit orbitSpeed={orbitSpeed} />
       <Lights />
+
       <Sapling />
       {menuData.map(
         ({
@@ -66,7 +67,7 @@ const Menu: FC<MenuProps> = ({ clicked, setClicked }) => {
             imgBack={`/2-menuops/1-back/${id}-${name}-b.png`}
             imgLabel={`/2-menuops/2-label/${id}-${name}-l.png`}
             setOrbitSpeed={setOrbitSpeed}
-            setClicked={setClicked}
+            toggleClick={toggleClick}
           />
         )
       )}

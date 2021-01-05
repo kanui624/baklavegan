@@ -1,14 +1,11 @@
 // React
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, lazy } from 'react';
 
 // React-Three-Fiber
 import { Canvas } from 'react-three-fiber';
 
-// Gsap
-import { gsap } from 'gsap';
-
 // Components
-import Menu from './0-menu/Menu';
+const Menu = lazy(() => import('./0-menu/Menu'));
 
 // Styles
 import styles from '../../styles/BVCanvas/BVCanvas.module.scss';
@@ -19,32 +16,16 @@ import { FC } from 'react';
 // Component Level Types
 import { CanvasProps } from './0-menu/0-types/CanvasProps';
 
-const BVCanvas: FC<CanvasProps> = ({ clicked, setClicked }) => {
-  const [pR, setPR] = useState(0);
-  // const tlOut = gsap.timeline();
-
-  // useEffect(() => {
-  //   if (!clicked) {
-  //     tlOut.to('.canvasopacity', { opacity: '0%', duration: 2 });
-  //     tlOut.to('.canvasopacity', { display: 'none' });
-  //   } else {
-  //     tlOut.reverse();
-  //   }
-  // }, [clicked]);
-
-  useEffect(() => {
-    setPR(window.devicePixelRatio);
-  }, []);
-
+const BVCanvas: FC<CanvasProps> = ({ clicked, toggleClick }) => {
   return (
     <Canvas
-      className={`${styles.canvas} canvasopacity`}
+      className={`${styles.canvas}`}
       style={{ position: 'absolute' }}
       camera={{ position: [1, 1, 1], fov: 14 }}
-      pixelRatio={2}
+      pixelRatio={[1, 2]}
     >
       <Suspense fallback={null}>
-        <Menu clicked={clicked} setClicked={setClicked} />
+        <Menu clicked={clicked} toggleClick={toggleClick} />
       </Suspense>
     </Canvas>
   );

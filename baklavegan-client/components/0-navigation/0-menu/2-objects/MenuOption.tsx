@@ -29,7 +29,7 @@ const MenuOption: FC<MenuOptionProps> = ({
   frontRotation,
   backRotation,
   setOrbitSpeed,
-  setClicked,
+  toggleClick,
 }) => {
   const [menuRipFront, menuRipBack, menuRipLabel] = useMemo(() => {
     const loader = new THREE.TextureLoader();
@@ -47,7 +47,7 @@ const MenuOption: FC<MenuOptionProps> = ({
   };
 
   const handlePointerUp = (e: any) => {
-    setClicked(false);
+    toggleClick();
     Router.push(`/baklavegan/${link}`);
   };
 
