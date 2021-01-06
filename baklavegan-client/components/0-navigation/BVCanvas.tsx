@@ -1,5 +1,5 @@
 // React
-import { Suspense, lazy, useLayoutEffect, memo } from 'react';
+import { Suspense, useLayoutEffect, memo, lazy } from 'react';
 
 // React-Three-Fiber
 import { Canvas, useThree } from 'react-three-fiber';
@@ -19,8 +19,10 @@ const Precompile = ({ onCompile = () => {} }) => {
   const { gl, scene, camera } = useThree();
   useLayoutEffect(() => {
     gl.compile(scene, camera);
-    setTimeout(onCompile, 100);
-    console.log('ready');
+    setTimeout(() => {
+      onCompile();
+      console.log('ready');
+    }, 100);
   }, []);
   return null;
 };

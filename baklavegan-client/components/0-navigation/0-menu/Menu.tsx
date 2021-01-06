@@ -33,8 +33,9 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
     config: {
       tension: 100,
       friction: 100,
+      precision: -0.002,
     },
-    position: clicked ? [0, 0.035, 0] : [0, -1.5, 0],
+    position: clicked ? [0, 0.035, 0] : [0, -0.72, 0],
     rotation: clicked ? [0, 0, 0] : [0, 3, 0],
   });
 

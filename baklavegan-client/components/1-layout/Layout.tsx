@@ -23,28 +23,46 @@ interface LayoutProps {
 const Layout: FC<LayoutProps> = ({ children }) => {
   const [clicked, setClicked] = useState(false);
   const [ready, setReady] = useState(false);
+  const [disabled, setDisabled] = useState(false);
+
   const tl = gsap.timeline();
+
+  const animateIn = () => {
+    gsap.to('.canvas', { display: 'block' });
+    tl.to('.canvasbg', { display: 'block' });
+    tl.to('.canvasbg', { opacity: 1 });
+  };
+
+  const animateOut = () => {
+    tl.to('.canvasbg', { opacity: 0 });
+    tl.to('.canvasbg', { display: 'none' });
+    setTimeout(() => {
+      gsap.to('.canvas', { display: 'none' });
+    }, 1000);
+  };
 
   useEffect(() => {
     if (ready && clicked) {
-      gsap.to('.canvas', { display: 'block' });
-      tl.to('.canvasbg', { display: 'block' });
-      tl.to('.canvasbg', { opacity: 1 });
+      animateIn();
     } else {
-      gsap.to('.canvas', { display: 'none' });
-      tl.to('.canvasbg', { opacity: 0 });
-      tl.to('.canvasbg', { display: 'none' });
+      animateOut();
     }
   }, [clicked, ready]);
 
-  const toggleClick = () => setClicked(!clicked);
+  const toggleClick = () => {
+    setClicked(!clicked);
+    setDisabled(true);
+    setTimeout(() => {
+      setDisabled(false);
+    }, 2000);
+  };
 
   return (
     <Fragment>
       <button
         className="fixed z-50"
         onClick={() => toggleClick()}
-        disabled={!ready}
+        disabled={disabled}
       >
         open
       </button>
