@@ -1,5 +1,5 @@
 // React
-import { useState, useEffect, Fragment } from 'react';
+import { useState, Fragment, useEffect, useMemo } from 'react';
 
 // Next
 import Link from 'next/link';
@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { gsap } from 'gsap';
 
 // Components
-import BVCanvas from '../0-navigation/BVCanvas';
+import MemoBVCanvas from '../0-navigation/BVCanvas';
 
 // React Types
 import { ReactNode, FC } from 'react';
@@ -22,31 +22,34 @@ interface LayoutProps {
 }
 
 const Layout: FC<LayoutProps> = ({ children }) => {
-  const [clicked, setClicked] = useState(true);
+  const [clicked, setClicked] = useState(false);
+  const [ready, setReady] = useState(false);
 
-  const toggleClick = () => {
-    const tl = gsap.timeline();
-    setClicked(!clicked);
-    if (clicked) {
-      tl.to('.canvasanimation', { display: 'block' });
-      tl.to('.canvasanimation', { opacity: 1, duration: 0.4 });
+  useEffect(() => {
+    if (!clicked && ready) {
+      gsap.to('.canvasanimation', { display: 'none' });
     } else {
-      tl.to('.canvasanimation', { opacity: 0, duration: 0.5, delay: 0.2 });
-      tl.to('.canvasanimation', { display: 'none' });
+      gsap.to('.canvasanimation', { display: 'block' });
     }
-  };
+  }, [clicked, ready]);
+
+  const toggleClick = () => setClicked(!clicked);
 
   return (
     <Fragment>
-      <div className="fixed z-50">
-        <button onClick={() => toggleClick()}>
-          <Link href="/">
+      <button className="fixed z-50" onClick={() => toggleClick()}>
+        hey
+        {/* <Link href="/">
             <a>Home</a>
-          </Link>
-        </button>
-      </div>
+          </Link> */}
+      </button>
+
       <div className={`${styles.canvascontainer} canvasanimation`}>
-        <BVCanvas clicked={clicked} toggleClick={toggleClick} />
+        <MemoBVCanvas
+          clicked={clicked}
+          toggleClick={toggleClick}
+          onCompile={() => setReady(true)}
+        />
       </div>
       {children}
     </Fragment>

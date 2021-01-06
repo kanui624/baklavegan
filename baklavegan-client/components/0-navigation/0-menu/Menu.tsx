@@ -1,5 +1,8 @@
 // React
-import { Suspense, useState, lazy } from 'react';
+import { Suspense, lazy, useState } from 'react';
+
+// React Three Fiber
+import { useFrame } from 'react-three-fiber';
 
 // React Spring
 import { useSpring, a } from 'react-spring/three';
@@ -32,45 +35,46 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
       mass: 7,
       clamp: true,
     },
-    position: clicked ? [0, -1.5, 0] : [0, 0.035, 0],
-    rotation: clicked ? [0, 3, 0] : [0, 0, 0],
+    position: clicked ? [0, 0.035, 0] : [0, -1.5, 0],
+    rotation: clicked ? [0, 0, 0] : [0, 3, 0],
   });
 
   return (
     <a.group position={position} rotation={rotation}>
       <Orbit orbitSpeed={orbitSpeed} />
       <Lights />
-
-      <Sapling />
-      {menuData.map(
-        ({
-          id,
-          name,
-          ripPosition,
-          labelPosition,
-          frontRotation,
-          backRotation,
-          ripScale,
-          labelScale,
-        }: MenuDataProps) => (
-          <MenuOption
-            key={id}
-            name={name}
-            link={name}
-            ripPosition={ripPosition}
-            labelPosition={labelPosition}
-            frontRotation={frontRotation}
-            backRotation={backRotation}
-            ripScale={ripScale}
-            labelScale={labelScale}
-            imgFront={`/2-menuops/0-front/${id}-${name}-f.png`}
-            imgBack={`/2-menuops/1-back/${id}-${name}-b.png`}
-            imgLabel={`/2-menuops/2-label/${id}-${name}-l.png`}
-            setOrbitSpeed={setOrbitSpeed}
-            toggleClick={toggleClick}
-          />
-        )
-      )}
+      <group>
+        <Sapling />
+        {menuData.map(
+          ({
+            id,
+            name,
+            ripPosition,
+            labelPosition,
+            frontRotation,
+            backRotation,
+            ripScale,
+            labelScale,
+          }: MenuDataProps) => (
+            <MenuOption
+              key={id}
+              name={name}
+              link={name}
+              ripPosition={ripPosition}
+              labelPosition={labelPosition}
+              frontRotation={frontRotation}
+              backRotation={backRotation}
+              ripScale={ripScale}
+              labelScale={labelScale}
+              imgFront={`/2-menuops/0-front/${id}-${name}-f.png`}
+              imgBack={`/2-menuops/1-back/${id}-${name}-b.png`}
+              imgLabel={`/2-menuops/2-label/${id}-${name}-l.png`}
+              setOrbitSpeed={setOrbitSpeed}
+              toggleClick={toggleClick}
+            />
+          )
+        )}
+      </group>
     </a.group>
   );
 };
