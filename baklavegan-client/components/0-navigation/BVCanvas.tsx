@@ -22,7 +22,7 @@ const Precompile = ({ onCompile = () => {} }) => {
     setTimeout(() => {
       onCompile();
       console.log('ready');
-    }, 100);
+    }, 1000);
   }, []);
   return null;
 };

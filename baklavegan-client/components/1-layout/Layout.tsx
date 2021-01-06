@@ -41,13 +41,13 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 
   const buttonTl = gsap.timeline();
 
-  const initialLoad = () => {
+  const initialButtonLoad = () => {
     buttonTl.to('#menubutton', { display: 'block', delay: 2 });
     buttonTl.to('#menubutton', { opacity: 1, duration: 0.5 });
   };
 
   useEffect(() => {
-    initialLoad();
+    initialButtonLoad();
   }, []);
 
   useEffect(() => {

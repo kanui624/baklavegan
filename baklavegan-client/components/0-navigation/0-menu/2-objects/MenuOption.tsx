@@ -1,5 +1,5 @@
 // React
-import { useState, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 // Next
 import Router from 'next/router';
@@ -31,6 +31,10 @@ const MenuOption: FC<MenuOptionProps> = ({
   setOrbitSpeed,
   toggleClick,
 }) => {
+  useEffect(() => {
+    Router.prefetch(`/baklavegan/${link}`);
+  }, [link]);
+
   const [menuRipFront, menuRipBack, menuRipLabel] = useMemo(() => {
     const loader = new THREE.TextureLoader();
     return [loader.load(imgFront), loader.load(imgBack), loader.load(imgLabel)];
