@@ -1,5 +1,5 @@
 // React
-import { lazy, useState, useRef, useEffect } from 'react';
+import { lazy, useState, useRef } from 'react';
 
 // React Three Fiber
 import { useFrame } from 'react-three-fiber';
@@ -41,16 +41,16 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
     rotation: clicked ? [0, 0, 0] : [0, 3, 0],
   });
 
-  useFrame((state) => {
-    (scene as any).current.position.y =
-      Math.sin(state.clock.getElapsedTime()) * 0.005;
-  });
+  // useFrame((state) => {
+  //   (scene as any).current.position.y =
+  //     Math.sin(state.clock.getElapsedTime()) * 0.005;
+  // });
 
   return (
-    <a.group position={position} rotation={rotation}>
+    <group>
       <Orbit orbitSpeed={orbitSpeed} />
       <Lights />
-      <group ref={scene}>
+      <a.group position={position} rotation={rotation}>
         <Sapling />
         {menuData.map(
           ({
@@ -81,8 +81,8 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
             />
           )
         )}
-      </group>
-    </a.group>
+      </a.group>
+    </group>
   );
 };
 
