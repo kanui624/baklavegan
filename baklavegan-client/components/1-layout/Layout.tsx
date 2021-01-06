@@ -1,8 +1,7 @@
 // React
-import { useState, Fragment, useEffect, useMemo } from 'react';
+import { useState, Fragment, useEffect } from 'react';
 
-// Next
-import Link from 'next/link';
+import { Transition } from 'react-spring/three';
 
 // GSAP
 import { gsap } from 'gsap';
@@ -24,12 +23,17 @@ interface LayoutProps {
 const Layout: FC<LayoutProps> = ({ children }) => {
   const [clicked, setClicked] = useState(false);
   const [ready, setReady] = useState(false);
+  const tl = gsap.timeline();
 
   useEffect(() => {
-    if (!clicked && ready) {
-      gsap.to('.canvasanimation', { display: 'none' });
+    if (ready && clicked) {
+      gsap.to('.canvas', { display: 'block' });
+      tl.to('.canvasbg', { display: 'block' });
+      tl.to('.canvasbg', { opacity: 1 });
     } else {
-      gsap.to('.canvasanimation', { display: 'block' });
+      gsap.to('.canvas', { display: 'none' });
+      tl.to('.canvasbg', { opacity: 0 });
+      tl.to('.canvasbg', { display: 'none' });
     }
   }, [clicked, ready]);
 
@@ -44,8 +48,8 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       >
         open
       </button>
-
-      <div className={`${styles.canvascontainer} canvasanimation`}>
+      <div className={`${styles.canvasbackground} canvasbg fixed inset-0`} />
+      <div className={`${styles.canvascontainer} canvas`}>
         <MemoBVCanvas
           clicked={clicked}
           toggleClick={toggleClick}

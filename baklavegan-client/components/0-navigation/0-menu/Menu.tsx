@@ -31,24 +31,18 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
 
   const { position, rotation }: any = useSpring({
     config: {
-      velocity: 0,
+      tension: 100,
       friction: 100,
-      mass: 7,
-      clamp: true,
     },
     position: clicked ? [0, 0.035, 0] : [0, -1.5, 0],
     rotation: clicked ? [0, 0, 0] : [0, 3, 0],
-  });
-
-  useFrame((state) => {
-    scene.current.position.y = Math.sin(state.clock.getElapsedTime()) * 0.01;
   });
 
   return (
     <a.group position={position} rotation={rotation}>
       <Orbit orbitSpeed={orbitSpeed} />
       <Lights />
-      <group ref={scene}>
+      <group>
         <Sapling />
         {menuData.map(
           ({
