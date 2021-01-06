@@ -30,15 +30,13 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   const animateIn = () => {
     gsap.to('.canvas', { display: 'block' });
     tl.to('.canvasbg', { display: 'block' });
-    tl.to('.canvasbg', { opacity: 1 });
+    tl.to('.canvasbg', { opacity: 1, duration: 1 });
   };
 
   const animateOut = () => {
-    tl.to('.canvasbg', { opacity: 0 });
+    tl.to('.canvasbg', { opacity: 0, duration: 0.8 });
     tl.to('.canvasbg', { display: 'none' });
-    setTimeout(() => {
-      gsap.to('.canvas', { display: 'none' });
-    }, 1000);
+    gsap.to('.canvas', { display: 'none', delay: 1 });
   };
 
   useEffect(() => {
