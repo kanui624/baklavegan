@@ -34,7 +34,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   };
 
   const animateOut = () => {
-    bgTl.to('#canvasbg', { opacity: 0, duration: 0.8 });
+    bgTl.to('#canvasbg', { opacity: 0, duration: 0.8, delay: 0.5 });
     bgTl.to('#canvasbg', { display: 'none' });
     gsap.to('#canvas', { display: 'none', delay: 1 });
   };

@@ -33,6 +33,7 @@ const MenuOption: FC<MenuOptionProps> = ({
 }) => {
   useEffect(() => {
     Router.prefetch(`/baklavegan/${link}`);
+    console.log('fecthed');
   }, [link]);
 
   const [menuRipFront, menuRipBack, menuRipLabel] = useMemo(() => {
@@ -51,8 +52,10 @@ const MenuOption: FC<MenuOptionProps> = ({
   };
 
   const handlePointerUp = (e: any) => {
-    toggleClick();
     Router.push(`/baklavegan/${link}`);
+    setTimeout(() => {
+      toggleClick();
+    }, 500);
   };
 
   const handleHover = (e: any, cursor: boolean) => {
