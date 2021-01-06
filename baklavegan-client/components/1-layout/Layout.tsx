@@ -37,11 +37,12 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 
   return (
     <Fragment>
-      <button className="fixed z-50" onClick={() => toggleClick()}>
-        hey
-        {/* <Link href="/">
-            <a>Home</a>
-          </Link> */}
+      <button
+        className="fixed z-50"
+        onClick={() => toggleClick()}
+        disabled={!ready}
+      >
+        open
       </button>
 
       <div className={`${styles.canvascontainer} canvasanimation`}>

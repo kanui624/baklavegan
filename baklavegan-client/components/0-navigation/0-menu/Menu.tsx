@@ -1,5 +1,5 @@
 // React
-import { Suspense, lazy, useState } from 'react';
+import { lazy, useState, useRef } from 'react';
 
 // React Three Fiber
 import { useFrame } from 'react-three-fiber';
@@ -26,6 +26,7 @@ import { MenuProps } from './0-types/MenuProps';
 import { MenuDataProps } from './0-types/MenuDataProps';
 
 const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
+  const scene = useRef(null);
   const [orbitSpeed, setOrbitSpeed] = useState(-1.6);
 
   const { position, rotation }: any = useSpring({
@@ -39,11 +40,15 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
     rotation: clicked ? [0, 0, 0] : [0, 3, 0],
   });
 
+  useFrame((state) => {
+    scene.current.position.y = Math.sin(state.clock.getElapsedTime()) * 0.01;
+  });
+
   return (
     <a.group position={position} rotation={rotation}>
       <Orbit orbitSpeed={orbitSpeed} />
       <Lights />
-      <group>
+      <group ref={scene}>
         <Sapling />
         {menuData.map(
           ({
