@@ -1,8 +1,6 @@
 // React
 import { useState, Fragment, useEffect } from 'react';
 
-import { Transition } from 'react-spring/three';
-
 // GSAP
 import { gsap } from 'gsap';
 
@@ -25,19 +23,32 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   const [ready, setReady] = useState(false);
   const [disabled, setDisabled] = useState(false);
 
-  const tl = gsap.timeline();
+  const bgTl = gsap.timeline();
+  const canvasTl = gsap.timeline();
 
   const animateIn = () => {
-    gsap.to('.canvas', { display: 'block' });
-    tl.to('.canvasbg', { display: 'block' });
-    tl.to('.canvasbg', { opacity: 1, duration: 1 });
+    canvasTl.to('#canvas', { display: 'block' });
+    canvasTl.to('#canvas', { opacity: '1', duration: 0.7 });
+    bgTl.to('#canvasbg', { display: 'block' });
+    bgTl.to('#canvasbg', { opacity: 1, duration: 1 });
   };
 
   const animateOut = () => {
-    tl.to('.canvasbg', { opacity: 0, duration: 0.8 });
-    tl.to('.canvasbg', { display: 'none' });
-    gsap.to('.canvas', { display: 'none', delay: 1 });
+    bgTl.to('#canvasbg', { opacity: 0, duration: 0.8 });
+    bgTl.to('#canvasbg', { display: 'none' });
+    gsap.to('#canvas', { display: 'none', delay: 1 });
   };
+
+  const buttonTl = gsap.timeline();
+
+  const initialLoad = () => {
+    buttonTl.to('#menubutton', { display: 'block', delay: 2 });
+    buttonTl.to('#menubutton', { opacity: 1, duration: 0.5 });
+  };
+
+  useEffect(() => {
+    initialLoad();
+  }, []);
 
   useEffect(() => {
     if (ready && clicked) {
@@ -58,14 +69,18 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <Fragment>
       <button
-        className="fixed z-50"
+        id="menubutton"
+        className={`${styles.menubuttonload} fixed z-50`}
         onClick={() => toggleClick()}
         disabled={disabled}
       >
         open
       </button>
-      <div className={`${styles.canvasbackground} canvasbg fixed inset-0`} />
-      <div className={`${styles.canvascontainer} canvas`}>
+      <div
+        id="canvasbg"
+        className={`${styles.canvasbackground}  fixed inset-0`}
+      />
+      <div id="canvas" className={`${styles.canvascontainer} `}>
         <MemoBVCanvas
           clicked={clicked}
           toggleClick={toggleClick}

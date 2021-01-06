@@ -31,6 +31,7 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
 
   const { position, rotation }: any = useSpring({
     config: {
+      velocity: 0,
       tension: 100,
       friction: 100,
       precision: -0.002,

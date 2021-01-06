@@ -8,12 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "@emotion/react": "^11.1.4",
-    "@emotion/styled": "^11.0.0",
     "@react-three/drei": "^2.2.12",
     "@reduxjs/toolkit": "^1.5.0",
     "autoprefixer": "^10.1.0",
-    "d3-ease": "^2.0.0",
     "gsap": "^3.5.1",
     "next": "10.0.3",
     "next-redux-wrapper": "^7.0.0-rc.1",
