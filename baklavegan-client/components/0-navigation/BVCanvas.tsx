@@ -19,7 +19,6 @@ const Precompile = ({ onCompile = () => {} }) => {
     gl.compile(scene, camera);
     setTimeout(() => {
       onCompile();
-      console.log('ready');
     }, 1000);
   }, []);
   return null;
