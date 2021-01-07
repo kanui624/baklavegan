@@ -84,7 +84,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       </div>
       <button
         id="menubutton"
-        className={`${styles.menubuttonload} object-bottom`}
+        className={`${styles.menubuttonload} fixed`}
         onClick={() => toggleClick()}
         disabled={disabled}
       >
