@@ -8,7 +8,7 @@ import Router from 'next/router';
 import * as THREE from 'three';
 
 // React Spring
-import { useSpring, a } from 'react-spring/three';
+import { useSpring, a, config } from 'react-spring/three';
 
 // React Types
 import { FC } from 'react';
@@ -48,6 +48,9 @@ const MenuOption: FC<MenuOptionProps> = ({
   });
 
   const { push }: any = useSpring({
+    config: {
+      friction: 15,
+    },
     push: pushed ? [1, 1, 1] : [1.08, 1.08, 1.08],
   });
 
@@ -61,7 +64,7 @@ const MenuOption: FC<MenuOptionProps> = ({
     Router.push(`/baklavegan/${link}`);
     setTimeout(() => {
       toggleClick();
-    }, 400);
+    }, 200);
   };
 
   const handleHover = (e: any, cursor: boolean) => {
