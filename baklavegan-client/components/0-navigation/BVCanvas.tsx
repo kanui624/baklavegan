@@ -4,8 +4,6 @@ import { Suspense, useLayoutEffect, memo, lazy } from 'react';
 // React-Three-Fiber
 import { Canvas, useThree } from 'react-three-fiber';
 
-import * as THREE from 'three';
-
 // Components
 const Menu = lazy(() => import('./0-menu/Menu'));
 

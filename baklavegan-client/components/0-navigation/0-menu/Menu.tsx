@@ -1,8 +1,5 @@
 // React
-import { lazy, useState, useRef } from 'react';
-
-// React Three Fiber
-import { useFrame } from 'react-three-fiber';
+import { lazy, useState } from 'react';
 
 // React Spring
 import { useSpring, a } from 'react-spring/three';
@@ -28,8 +25,6 @@ import { MenuDataProps } from './0-types/MenuDataProps';
 const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
   const [orbitSpeed, setOrbitSpeed] = useState(-1.6);
 
-  const scene = useRef(null);
-
   const { position, rotation }: any = useSpring({
     config: {
       velocity: 0,
@@ -41,13 +36,8 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
     rotation: clicked ? [0, 0, 0] : [0, 3, 0],
   });
 
-  // useFrame((state) => {
-  //   (scene as any).current.position.y =
-  //     Math.sin(state.clock.getElapsedTime()) * 0.005;
-  // });
-
   return (
-    <group>
+    <>
       <Orbit orbitSpeed={orbitSpeed} />
       <Lights />
       <a.group position={position} rotation={rotation}>
@@ -82,7 +72,7 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
           )
         )}
       </a.group>
-    </group>
+    </>
   );
 };
 

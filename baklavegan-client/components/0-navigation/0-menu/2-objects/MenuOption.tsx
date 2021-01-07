@@ -42,16 +42,23 @@ const MenuOption: FC<MenuOptionProps> = ({
   }, [imgFront, imgBack, imgLabel]);
 
   const [scaleState, setScaleState] = useState(false);
+  const [pushed, setPushed] = useState(false);
 
   const { scale }: any = useSpring({
     scale: scaleState ? [1.08, 1.08, 1.08] : [1, 1, 1],
   });
 
+  const { push }: any = useSpring({
+    push: pushed ? [1, 1, 1] : [1.08, 1.08, 1.08],
+  });
+
   const handlePointerDown = (e: any) => {
     e.stopPropagation();
+    setPushed(true);
   };
 
   const handlePointerUp = (e: any) => {
+    setPushed(false);
     Router.push(`/baklavegan/${link}`);
     setTimeout(() => {
       toggleClick();
@@ -72,37 +79,39 @@ const MenuOption: FC<MenuOptionProps> = ({
 
   return (
     <a.group scale={scale}>
-      <mesh position={ripPosition} rotation={backRotation} renderOrder={1}>
-        <planeBufferGeometry args={ripScale} />
-        <meshStandardMaterial transparent>
-          <primitive attach="map" object={menuRipBack} />
-        </meshStandardMaterial>
-      </mesh>
-      <mesh
-        name={name}
-        position={ripPosition}
-        rotation={frontRotation}
-        renderOrder={2}
-      >
-        <planeBufferGeometry args={ripScale} />
-        <meshStandardMaterial transparent>
-          <primitive attach="map" object={menuRipFront} />
-        </meshStandardMaterial>
-      </mesh>
-      <mesh
-        position={labelPosition}
-        rotation={frontRotation}
-        onPointerDown={(e) => handlePointerDown(e)}
-        onPointerUp={(e) => handlePointerUp(e)}
-        onPointerOver={(e) => handleHover(e, true)}
-        onPointerOut={(e) => handleHover(e, false)}
-        renderOrder={3}
-      >
-        <planeBufferGeometry args={labelScale} />
-        <meshStandardMaterial transparent>
-          <primitive attach="map" object={menuRipLabel} />
-        </meshStandardMaterial>
-      </mesh>
+      <a.group scale={push}>
+        <mesh position={ripPosition} rotation={backRotation} renderOrder={1}>
+          <planeBufferGeometry args={ripScale} />
+          <meshStandardMaterial transparent>
+            <primitive attach="map" object={menuRipBack} />
+          </meshStandardMaterial>
+        </mesh>
+        <mesh
+          name={name}
+          position={ripPosition}
+          rotation={frontRotation}
+          renderOrder={2}
+        >
+          <planeBufferGeometry args={ripScale} />
+          <meshStandardMaterial transparent>
+            <primitive attach="map" object={menuRipFront} />
+          </meshStandardMaterial>
+        </mesh>
+        <mesh
+          position={labelPosition}
+          rotation={frontRotation}
+          onPointerDown={(e) => handlePointerDown(e)}
+          onPointerUp={(e) => handlePointerUp(e)}
+          onPointerOver={(e) => handleHover(e, true)}
+          onPointerOut={(e) => handleHover(e, false)}
+          renderOrder={3}
+        >
+          <planeBufferGeometry args={labelScale} />
+          <meshStandardMaterial transparent>
+            <primitive attach="map" object={menuRipLabel} />
+          </meshStandardMaterial>
+        </mesh>
+      </a.group>
     </a.group>
   );
 };
