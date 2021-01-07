@@ -33,14 +33,13 @@ const BVCanvas: FC<CanvasProps> = ({
 }) => {
   return (
     <Canvas
-      style={{ position: 'absolute' }}
       camera={{ position: [1, 1, 1], fov: 14 }}
       pixelRatio={[1, 2]}
       concurrent
     >
       <Suspense fallback={null}>
-        <Menu clicked={clicked} toggleClick={toggleClick} />
         <MemoPrecompile onCompile={onCompile} />
+        <Menu clicked={clicked} toggleClick={toggleClick} />
       </Suspense>
     </Canvas>
   );

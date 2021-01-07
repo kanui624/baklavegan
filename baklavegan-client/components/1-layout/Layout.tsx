@@ -68,26 +68,28 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 
   return (
     <Fragment>
-      <button
-        id="menubutton"
-        className={`${styles.menubuttonload} fixed z-50`}
-        onClick={() => toggleClick()}
-        disabled={disabled}
-      >
-        open
-      </button>
+      <div className="fixed inset-0 h-full max-w-full">
+        <div className="container mx-auto h-full">{children}</div>
+      </div>
       <div
         id="canvasbg"
-        className={`${styles.canvasbackground}  fixed inset-0`}
+        className={`${styles.canvasbackground} fixed inset-0`}
       />
-      <div id="canvas" className={`${styles.canvascontainer} `}>
+      <div id="canvas" className={`${styles.canvascontainer} absolute`}>
         <MemoBVCanvas
           clicked={clicked}
           toggleClick={toggleClick}
           onCompile={() => setReady(true)}
         />
       </div>
-      {children}
+      <button
+        id="menubutton"
+        className={`${styles.menubuttonload} object-bottom`}
+        onClick={() => toggleClick()}
+        disabled={disabled}
+      >
+        open
+      </button>
     </Fragment>
   );
 };

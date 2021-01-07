@@ -1,8 +1,5 @@
 // React
-import { useState, useRef, lazy, Fragment } from 'react';
-
-// React Three Fiber
-import { useFrame } from 'react-three-fiber';
+import { useState, lazy, Fragment, memo } from 'react';
 
 // React Spring
 import { useSpring, a } from 'react-spring/three';
@@ -36,56 +33,50 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
       friction: clicked ? 120 : 100,
       precision: -0.002,
     },
-    position: clicked ? [0, 0.035, 0] : [0, -0.72, 0],
+    position: clicked ? [0, 0.031, 0] : [0, -0.72, 0],
     rotation: clicked ? [0, 0, 0] : [0, 3, 0],
-  });
-
-  const objFloat = useRef();
-  useFrame((state) => {
-    (objFloat as any).current.position.y =
-      Math.sin(state.clock.getElapsedTime()) * 0.005;
   });
 
   return (
     <Fragment>
       <Orbit orbitSpeed={orbitSpeed} />
       <Lights />
-      <group ref={objFloat}>
-        <a.group position={position} rotation={rotation}>
-          <Sapling />
-          {menuData.map(
-            ({
-              id,
-              name,
-              ripPosition,
-              labelPosition,
-              frontRotation,
-              backRotation,
-              ripScale,
-              labelScale,
-            }: MenuDataProps) => (
-              <MenuOption
-                key={id}
-                name={name}
-                link={name}
-                ripPosition={ripPosition}
-                labelPosition={labelPosition}
-                frontRotation={frontRotation}
-                backRotation={backRotation}
-                ripScale={ripScale}
-                labelScale={labelScale}
-                imgFront={`/2-menuops/0-front/${id}-${name}-f.png`}
-                imgBack={`/2-menuops/1-back/${id}-${name}-b.png`}
-                imgLabel={`/2-menuops/2-label/${id}-${name}-l.png`}
-                setOrbitSpeed={setOrbitSpeed}
-                toggleClick={toggleClick}
-              />
-            )
-          )}
-        </a.group>
-      </group>
+      <a.group position={position} rotation={rotation}>
+        <Sapling />
+        {menuData.map(
+          ({
+            id,
+            name,
+            ripPosition,
+            labelPosition,
+            frontRotation,
+            backRotation,
+            ripScale,
+            labelScale,
+          }: MenuDataProps) => (
+            <MenuOption
+              key={id}
+              name={name}
+              link={name}
+              ripPosition={ripPosition}
+              labelPosition={labelPosition}
+              frontRotation={frontRotation}
+              backRotation={backRotation}
+              ripScale={ripScale}
+              labelScale={labelScale}
+              imgFront={`/2-menuops/0-front/${id}-${name}-f.png`}
+              imgBack={`/2-menuops/1-back/${id}-${name}-b.png`}
+              imgLabel={`/2-menuops/2-label/${id}-${name}-l.png`}
+              setOrbitSpeed={setOrbitSpeed}
+              toggleClick={toggleClick}
+            />
+          )
+        )}
+      </a.group>
     </Fragment>
   );
 };
 
-export default Menu;
+const MemoMenu = memo(Menu);
+
+export default MemoMenu;

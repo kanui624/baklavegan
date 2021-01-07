@@ -2,7 +2,7 @@
 import { OrbitControls } from '@react-three/drei';
 
 // React Types
-import { FC, useState, useEffect } from 'react';
+import { FC } from 'react';
 
 // Component Level Types
 import { OrbitProps } from '../0-types/OrbitProps';
