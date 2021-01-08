@@ -44,6 +44,9 @@ const MenuOption: FC<MenuOptionProps> = ({
   const [pushed, setPushed] = useState(false);
 
   const { scale }: any = useSpring({
+    config: {
+      friction: 15,
+    },
     scale: scaleState ? [1.08, 1.08, 1.08] : [1, 1, 1],
   });
 

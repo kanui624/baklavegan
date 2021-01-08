@@ -33,7 +33,7 @@ const BVCanvas: FC<CanvasProps> = ({
 }) => {
   return (
     <Canvas
-      camera={{ position: [1, 1, 1], fov: 14 }}
+      camera={{ position: [1, 1, 1], fov: 15 }}
       pixelRatio={[1, 2]}
       concurrent
     >

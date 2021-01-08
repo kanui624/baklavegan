@@ -36,7 +36,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   const animateOut = () => {
     bgTl.to('#canvasbg', { opacity: 0, duration: 0.8, delay: 0.5 });
     bgTl.to('#canvasbg', { display: 'none' });
-    gsap.to('#canvas', { display: 'none', delay: 1 });
+    gsap.to('#canvas', { display: 'none', delay: 1.1 });
   };
 
   const buttonTl = gsap.timeline();
@@ -68,8 +68,10 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 
   return (
     <Fragment>
-      <div className="fixed inset-0 h-full max-w-full">
-        <div className="container mx-auto h-full">{children}</div>
+      <div className="fixed inset-0 h-full max-w-full border-green-500 border-4">
+        <div className="flex justify-center items-center container mx-auto h-full border-yellow-500 border-4">
+          {children}
+        </div>
       </div>
       <div
         id="canvasbg"

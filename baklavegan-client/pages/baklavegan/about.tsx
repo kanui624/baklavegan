@@ -1,15 +1,27 @@
 // Next
-import Link from 'next/link';
+import Image from 'next/image';
 
 // React Types
 import { FC } from 'react';
 
-const about: FC = () => {
+const About: FC = () => {
   return (
-    <Link href="/">
-      <a>You're on about link page click to go back</a>
-    </Link>
+    <Image
+      src="/2-menuops/1-back/4-animalrights-b.png"
+      alt="temp"
+      width={500}
+      height={500}
+    />
   );
 };
 
-export default about;
+export default About;
+
+// <div className="relative border-4 border-black">
+//   <p className="flex">
+//     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
+//     omnis veniam magni ullam, dolor eius? Ex commodi assumenda neque
+//     corrupti iure velit laborum id beatae, laudantium consequuntur eaque
+//     quisquam suscipit.
+//   </p>
+// </div>;
