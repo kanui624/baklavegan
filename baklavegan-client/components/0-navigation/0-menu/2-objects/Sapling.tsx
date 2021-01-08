@@ -29,6 +29,8 @@ const Sapling = (props: JSX.IntrinsicElements['group']) => {
       dispose={null}
       position={[0, -0.73, 0]}
       rotation={[0, 3.5, 0]}
+      receiveShadow
+      castShadow
     >
       <group rotation={[0.52, 0.23, -0.72]} scale={[0.23, 0.23, 0.23]}>
         <mesh
