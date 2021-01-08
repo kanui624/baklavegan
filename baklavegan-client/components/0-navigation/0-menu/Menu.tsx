@@ -41,7 +41,6 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
     <Fragment>
       <Orbit orbitSpeed={orbitSpeed} />
       <Lights />
-      {/* <fog attach="fog" args={['white', 1, 4]} /> */}
       <a.group position={position} rotation={rotation}>
         <Sapling />
         {menuData.map(

@@ -1,18 +1,8 @@
-// Next
-import Image from 'next/image';
-
 // React Types
 import { FC } from 'react';
 
 const About: FC = () => {
-  return (
-    <Image
-      src="/2-menuops/1-back/4-animalrights-b.png"
-      alt="temp"
-      width={500}
-      height={500}
-    />
-  );
+  return <p className="about">baklavegan</p>;
 };
 
 export default About;
@@ -25,3 +15,12 @@ export default About;
 //     quisquam suscipit.
 //   </p>
 // </div>;
+
+// Next
+// import Image from 'next/image';
+//     <Image
+//   src="/2-menuops/1-back/4-animalrights-b.png"
+//   alt="temp"
+//   width={500}
+//   height={500}
+// />

@@ -43,20 +43,6 @@ const MenuOption: FC<MenuOptionProps> = ({
   const [scaleState, setScaleState] = useState(false);
   const [pushed, setPushed] = useState(false);
 
-  const { scale }: any = useSpring({
-    config: {
-      friction: 15,
-    },
-    scale: scaleState ? [1.08, 1.08, 1.08] : [1, 1, 1],
-  });
-
-  const { push }: any = useSpring({
-    config: {
-      friction: 15,
-    },
-    push: pushed ? [1, 1, 1] : [1.08, 1.08, 1.08],
-  });
-
   const handlePointerDown = (e: any) => {
     e.stopPropagation();
     setPushed(true);
@@ -70,6 +56,13 @@ const MenuOption: FC<MenuOptionProps> = ({
     }, 200);
   };
 
+  const { push }: any = useSpring({
+    config: {
+      friction: 15,
+    },
+    push: pushed ? [1, 1, 1] : [1.08, 1.08, 1.08],
+  });
+
   const handleHover = (e: any, cursor: boolean) => {
     e.stopPropagation();
     setScaleState(!scaleState);
@@ -81,6 +74,13 @@ const MenuOption: FC<MenuOptionProps> = ({
       document.body.style.cursor = 'default';
     }
   };
+
+  const { scale }: any = useSpring({
+    config: {
+      friction: 15,
+    },
+    scale: scaleState ? [1.08, 1.08, 1.08] : [1, 1, 1],
+  });
 
   return (
     <a.group scale={scale}>
