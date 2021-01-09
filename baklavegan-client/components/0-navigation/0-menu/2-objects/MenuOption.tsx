@@ -30,6 +30,7 @@ const MenuOption: FC<MenuOptionProps> = ({
   backRotation,
   setOrbitSpeed,
   toggleClick,
+  clicked,
 }) => {
   useEffect(() => {
     Router.prefetch(`/baklavegan/${link}`);
@@ -49,12 +50,14 @@ const MenuOption: FC<MenuOptionProps> = ({
   };
 
   const handlePointerUp = (e: any) => {
-    console.log(e);
+    console.log('hey');
     setPushed(false);
-    Router.push(`/baklavegan/${link}`);
-    setTimeout(() => {
-      toggleClick();
-    }, 200);
+    if (clicked) {
+      Router.push(`/baklavegan/${link}`);
+      setTimeout(() => {
+        toggleClick();
+      }, 100);
+    }
   };
 
   const { push }: any = useSpring({

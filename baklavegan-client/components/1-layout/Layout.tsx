@@ -36,7 +36,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   const animateOut = () => {
     bgTl.to('#canvasbg', { opacity: 0, duration: 0.8, delay: 0.5 });
     bgTl.to('#canvasbg', { display: 'none' });
-    gsap.to('#canvas', { display: 'none', delay: 1.1 });
+    gsap.to('#canvas', { display: 'none', delay: 1.5 });
   };
 
   const buttonTl = gsap.timeline();
@@ -51,6 +51,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   }, []);
 
   useEffect(() => {
+    console.log(clicked);
     if (ready && clicked) {
       animateIn();
     } else {
@@ -61,11 +62,11 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   const toggleClick = () => {
     if (!disabled) {
       setClicked(!clicked);
+      setDisabled(true);
+      setTimeout(() => {
+        setDisabled(false);
+      }, 2000);
     }
-    setDisabled(true);
-    setTimeout(() => {
-      setDisabled(false);
-    }, 2000);
   };
 
   return (

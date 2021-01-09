@@ -30,7 +30,7 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
       mass: 35,
       velocity: 0,
       tension: 100,
-      friction: clicked ? 120 : 100,
+      friction: clicked ? 120 : 127,
       precision: -0.002,
     },
     position: clicked ? [0, 0.031, 0] : [0, -0.72, 0],
@@ -69,6 +69,7 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
               imgLabel={`/2-menuops/2-label/${id}-${name}-l.png`}
               setOrbitSpeed={setOrbitSpeed}
               toggleClick={toggleClick}
+              clicked={clicked}
             />
           )
         )}
