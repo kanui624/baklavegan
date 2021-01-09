@@ -404,8 +404,8 @@
   ],
   "samplers": [
     {
-      "magFilter": 1000,
-      "minFilter": 1000,
+      "magFilter": 1006,
+      "minFilter": 1008,
       "wrapS": 33071,
       "wrapT": 33071
     }

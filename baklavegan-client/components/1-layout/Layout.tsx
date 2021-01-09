@@ -59,7 +59,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   }, [clicked, ready]);
 
   const toggleClick = () => {
-    setClicked(!clicked);
+    if (!disabled) {
+      setClicked(!clicked);
+    }
     setDisabled(true);
     setTimeout(() => {
       setDisabled(false);
