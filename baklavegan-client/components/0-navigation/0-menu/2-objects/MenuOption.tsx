@@ -50,7 +50,6 @@ const MenuOption: FC<MenuOptionProps> = ({
   };
 
   const handlePointerUp = (e: any) => {
-    console.log('hey');
     setPushed(false);
     if (clicked) {
       Router.push(`/baklavegan/${link}`);
