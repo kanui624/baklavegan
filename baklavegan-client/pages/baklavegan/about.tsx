@@ -2,7 +2,7 @@
 import { FC } from 'react';
 
 const About: FC = () => {
-  return <p className="about">baklavegan</p>;
+  return <h1 className="about">baklavegan</h1>;
 };
 
 export default About;
