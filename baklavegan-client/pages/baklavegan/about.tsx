@@ -1,8 +1,26 @@
 // React Types
 import { FC } from 'react';
 
+// Styles
+import styles from '../../styles/Pages/about.module.scss';
+
 const About: FC = () => {
-  return <h1 className="about">baklavegan</h1>;
+  return (
+    <p className={styles.about}>
+      Baklavegan Recipe:
+      <br />
+      - 1 vegan istanbulite
+      <br />
+      - 1 vegan austinite
+      <br />
+      - 1 passion for food
+      <br />
+      - 1 fiery romance (optional)
+      <br />
+      - 1 animal rights activism (not optional)
+      <br />
+    </p>
+  );
 };
 
 export default About;
