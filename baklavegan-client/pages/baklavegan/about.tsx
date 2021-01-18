@@ -1,3 +1,6 @@
+// Next
+import Image from 'next/image';
+
 // React Types
 import { FC } from 'react';
 
@@ -6,20 +9,31 @@ import styles from '../../styles/Pages/about.module.scss';
 
 const About: FC = () => {
   return (
-    <p className={styles.about}>
-      Baklavegan Recipe:
-      <br />
-      - 1 vegan istanbulite
-      <br />
-      - 1 vegan austinite
-      <br />
-      - 1 passion for food
-      <br />
-      - 1 fiery romance (optional)
-      <br />
-      - 1 animal rights activism (not optional)
-      <br />
-    </p>
+    <>
+      <Image
+        className="fixed"
+        src="/1-menuops/1-back/4-animalrights-b.png"
+        alt="temp"
+        width={500}
+        height={500}
+      />
+      <div className="fixed">
+        <h3 className={`${styles.about}`}>Baklavegan Recipe:</h3>
+        <br />
+        <p className={`${styles.about} ${styles.aboutingrdients}`}>
+          - 1 vegan istanbulite
+          <br />
+          - 1 vegan austinite
+          <br />
+          - 1 passion for food
+          <br />
+          - 1 love for animals
+          <br />
+          - 1 fiery romance (optional)
+          <br />
+        </p>
+      </div>
+    </>
   );
 };
 
@@ -35,7 +49,7 @@ export default About;
 // </div>;
 
 // Next
-// import Image from 'next/image';
+
 //     <Image
 //   src="/2-menuops/1-back/4-animalrights-b.png"
 //   alt="temp"

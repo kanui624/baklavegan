@@ -11,7 +11,7 @@ import MemoBVCanvas from '../0-navigation/BVCanvas';
 import { ReactNode, FC } from 'react';
 
 // Styles
-import styles from '../../styles/BVCanvas/CanvasContainer.module.scss';
+import styles from '../../styles/Pages/layout.module.scss';
 
 // Component Level Types
 interface LayoutProps {
@@ -26,14 +26,14 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   const bgTl = gsap.timeline();
   const canvasTl = gsap.timeline();
 
-  const animateIn = () => {
+  const animateMenuIn = () => {
     canvasTl.to('#canvas', { display: 'block' });
     canvasTl.to('#canvas', { opacity: '1', duration: 0.7 });
     bgTl.to('#canvasbg', { display: 'block' });
     bgTl.to('#canvasbg', { opacity: 1, duration: 1 });
   };
 
-  const animateOut = () => {
+  const animateMenuOut = () => {
     bgTl.to('#canvasbg', { opacity: 0, duration: 0.8, delay: 0.5 });
     bgTl.to('#canvasbg', { display: 'none' });
     gsap.to('#canvas', { display: 'none', delay: 1.5 });
@@ -51,11 +51,10 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    console.log(clicked);
     if (ready && clicked) {
-      animateIn();
+      animateMenuIn();
     } else {
-      animateOut();
+      animateMenuOut();
     }
   }, [clicked, ready]);
 

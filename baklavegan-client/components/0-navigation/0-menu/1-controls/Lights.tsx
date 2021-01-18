@@ -2,7 +2,7 @@
 import { FC } from 'react';
 
 const Lights: FC = () => {
-  return <ambientLight intensity={0.75} />;
+  return <ambientLight intensity={0.68} />;
 };
 
 export default Lights;

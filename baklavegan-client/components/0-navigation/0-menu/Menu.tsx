@@ -64,9 +64,9 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
               backRotation={backRotation}
               ripScale={ripScale}
               labelScale={labelScale}
-              imgFront={`/2-menuops/0-front/${id}-${name}-f.png`}
-              imgBack={`/2-menuops/1-back/${id}-${name}-b.png`}
-              imgLabel={`/2-menuops/2-label/${id}-${name}-l.png`}
+              imgFront={`/1-menuops/0-front/${id}-${name}-f.png`}
+              imgBack={`/1-menuops/1-back/${id}-${name}-b.png`}
+              imgLabel={`/1-menuops/2-label/${id}-${name}-l.png`}
               setOrbitSpeed={setOrbitSpeed}
               toggleClick={toggleClick}
               clicked={clicked}
