@@ -6,11 +6,16 @@
   opacity: 0;
 }
 
+.enterimage {
+  transform: translateY(20rem);
+}
+
 .entertext {
   font-family: 'Annie Use Your Telescope', cursive;
-  font-size: 4rem;
+  font-size: 4.3rem;
   color: white;
-  letter-spacing: 0.3rem;
-  bottom: 11rem;
+  letter-spacing: 0.5rem;
+  padding-left: 0.6rem;
+  padding-bottom: 0.6rem;
   opacity: 0.8;
 }
