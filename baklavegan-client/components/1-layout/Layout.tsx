@@ -70,8 +70,8 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 
   return (
     <Fragment>
-      <div className="fixed inset-0 h-full max-w-full border-green-500 border-4">
-        <div className="flex justify-center items-center container mx-auto h-full border-yellow-500 border-4">
+      <div className="fixed inset-0 h-full max-w-full">
+        <div className="flex justify-center items-center container mx-auto h-full">
           {children}
         </div>
       </div>
