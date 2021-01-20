@@ -3,16 +3,14 @@ import { useState, Fragment, useEffect } from 'react';
 
 // Next
 import { useRouter } from 'next/router';
-import Image from 'next/image';
-
-// React Spring
-import { useSpring, animated } from 'react-spring';
 
 // GSAP
 import { gsap } from 'gsap';
 
 // Components
 import MemoBVCanvas from '../0-navigation/BVCanvas';
+import MenuButtonRoot from './MenuButtonRoot';
+import MenuButtonPage from './MenuButtonPage';
 
 // React Types
 import { ReactNode, FC } from 'react';
@@ -26,11 +24,10 @@ interface LayoutProps {
 }
 
 const Layout: FC<LayoutProps> = ({ children }) => {
-  const router = useRouter();
-  const [clicked, setClicked] = useState(false);
-  const [menuClicked, setMenuClicked] = useState(false);
   const [ready, setReady] = useState(false);
+  const [clicked, setClicked] = useState(false);
   const [disabled, setDisabled] = useState(false);
+  const root = useRouter().pathname === '/' ? true : false;
 
   const bgTl = gsap.timeline();
   const canvasTl = gsap.timeline();
@@ -48,14 +45,6 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     gsap.to('#canvas', { display: 'none', delay: 1.5 });
   };
 
-  const initialButtonLoad = () => {
-    gsap.to('#menubutton', { opacity: 1, duration: 4, delay: 2 });
-  };
-
-  const { y } = useSpring({
-    y: menuClicked ? '20rem' : '0rem',
-  });
-
   const toggleClick = () => {
     if (!disabled) {
       setClicked(!clicked);
@@ -65,18 +54,6 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       }, 2000);
     }
   };
-
-  const handleMenuClick = () => {
-    setMenuClicked(true);
-    setTimeout(() => {
-      toggleClick();
-    }, 1.2);
-  };
-
-  useEffect(() => {
-    initialButtonLoad();
-    console.log(router.pathname);
-  }, []);
 
   useEffect(() => {
     if (ready && clicked) {
@@ -91,31 +68,11 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       <div className="fixed inset-0 h-full max-w-full">
         <div className="flex justify-center items-center container mx-auto h-full">
           <div className="absolute">{children}</div>
-          <button
-            id="menubutton"
-            className={`${styles.enterbtn} flex justify-center items-center opacity-0`}
-            onClick={() => {
-              handleMenuClick();
-            }}
-          >
-            <animated.div
-              className={`${styles.enterimage} absolute bottom-24`}
-              style={{ transform: y.to((y) => `translateY(${y})`) }}
-            >
-              <Image
-                src="/2-images/1-index/1-enter-btn.png"
-                alt="enter"
-                width={175}
-                height={219}
-              />
-            </animated.div>
-            <animated.div
-              className={`${styles.entertext} absolute bottom-40`}
-              style={{ transform: y.to((y) => `translateY(${y})`) }}
-            >
-              <h3>enter</h3>
-            </animated.div>
-          </button>
+          {root ? (
+            <MenuButtonRoot disabled={disabled} toggleClick={toggleClick} />
+          ) : (
+            <MenuButtonPage disabled={disabled} toggleClick={toggleClick} />
+          )}
         </div>
       </div>
       <div
@@ -134,14 +91,3 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;
-
-{
-  /* <button
-  id="menubutton"
-  className={`${styles.menubuttonload} fixed`}
-  onClick={() => toggleClick()}
-  disabled={disabled}
->
-  open
-</button>; */
-}
