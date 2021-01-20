@@ -61,6 +61,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     } else {
       animateMenuOut();
     }
+    console.log(`Clicked: ${clicked}`);
   }, [clicked, ready]);
 
   return (
@@ -71,7 +72,11 @@ const Layout: FC<LayoutProps> = ({ children }) => {
           {root ? (
             <MenuButtonRoot disabled={disabled} toggleClick={toggleClick} />
           ) : (
-            <MenuButtonPage disabled={disabled} toggleClick={toggleClick} />
+            <MenuButtonPage
+              clicked={clicked}
+              disabled={disabled}
+              toggleClick={toggleClick}
+            />
           )}
         </div>
       </div>

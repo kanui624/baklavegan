@@ -82,7 +82,7 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
           transform: y
             .to({
               range: [0, 0.5, 1],
-              output: ['0rem', '-2rem', '40rem'],
+              output: ['0rem', '-1rem', '35rem'],
             })
             .to((y) => `translateY(${y})`),
         }}

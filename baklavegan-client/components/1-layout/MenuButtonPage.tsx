@@ -7,9 +7,6 @@ import Image from 'next/image';
 // React Spring
 import { useSpring, animated } from 'react-spring';
 
-// GSAP
-import { gsap } from 'gsap';
-
 // React Types
 import { FC } from 'react';
 
@@ -18,27 +15,46 @@ import styles from '../../styles/Components/menubuttonpage.module.scss';
 
 // Component Level Types
 interface MenuButtonPageProps {
-  toggleClick: () => void;
+  clicked: boolean;
   disabled: boolean;
+  toggleClick: () => void;
 }
 
-const MenuButtonPage: FC<MenuButtonPageProps> = ({ disabled, toggleClick }) => {
-  const [menuClicked, setMenuClicked] = useState(false);
+const MenuButtonPage: FC<MenuButtonPageProps> = ({
+  disabled,
+  toggleClick,
+  clicked,
+}) => {
+  const [menuPlaced, setMenuPlaced] = useState(false);
+  const [hovered, setHovered] = useState(false);
+  const [delay, setDelay] = useState(false);
 
   const { y } = useSpring({
     config: {
-      friction: 100,
-      mass: 3,
+      friction: menuPlaced ? 150 : 250,
+      mass: menuPlaced ? 10 : 3,
+      clamp: true,
     },
     from: { y: 0 },
-    y: menuClicked ? 1 : 0,
+    y: menuPlaced ? 1 : 0,
+    delay: delay ? 0 : 800,
   });
 
+  useEffect(() => {
+    if (clicked) {
+      setMenuPlaced(false);
+    } else {
+      setMenuPlaced(true);
+      setDelay(false);
+    }
+  }, [clicked]);
+
   const handleMenuClick = () => {
-    setMenuClicked(true);
+    setMenuPlaced(!menuPlaced);
+    setDelay(true);
     setTimeout(() => {
       toggleClick();
-    }, 650);
+    }, 800);
   };
 
   return (
@@ -49,14 +65,15 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({ disabled, toggleClick }) => {
       onClick={() => {
         handleMenuClick();
       }}
+      onPointerOver={() => setHovered(true)}
     >
       <animated.div
-        className={`${styles.menuimage} absolute bottom-24`}
+        className={`${styles.menuimage} absolute`}
         style={{
           transform: y
             .to({
-              range: [0, 0.5, 1],
-              output: ['0rem', '-2rem', '40rem'],
+              range: [0, 0.5, 0.75, 1],
+              output: ['0rem', '2rem', '-22rem', '-20rem'],
             })
             .to((y) => `translateY(${y})`),
         }}
@@ -69,12 +86,12 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({ disabled, toggleClick }) => {
         />
       </animated.div>
       <animated.div
-        className={`${styles.menutext} absolute bottom-40`}
+        className={`${styles.menutext} absolute `}
         style={{
           transform: y
             .to({
-              range: [0, 0.5, 1],
-              output: ['0rem', '-2rem', '40rem'],
+              range: [0, 0.5, 0.75, 1],
+              output: ['0rem', '3rem', '-18.8rem', '-16rem'],
             })
             .to((y) => `translateY(${y})`),
         }}
@@ -82,11 +99,6 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({ disabled, toggleClick }) => {
         <h3>menu</h3>
       </animated.div>
     </button>
-    // <p>
-    //   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos aliquam
-    //   perferendis nisi architecto ut minus beatae ipsa, nemo maiores fugit,
-    //   veniam officiis sint? Aperiam provident magnam itaque odio quisquam sunt.
-    // </p>
   );
 };
 
