@@ -4,6 +4,10 @@ import { useState, useEffect } from 'react';
 // Next
 import Image from 'next/image';
 
+// Redux
+import { useDispatch } from 'react-redux';
+import { enterMenu, exitMenu } from '../../redux/slices/MenuTransitionSlice';
+
 // React Spring
 import { useSpring, animated } from 'react-spring';
 
@@ -25,6 +29,7 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
   disabled,
   toggleClick,
 }) => {
+  const dispatch = useDispatch();
   const [menuPlaced, setMenuPlaced] = useState(false);
   const [delay, setDelay] = useState(false);
 
@@ -39,6 +44,15 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
     delay: delay ? 0 : 800,
   });
 
+  const handleMenuClick = () => {
+    setMenuPlaced(!menuPlaced);
+    setDelay(true);
+
+    setTimeout(() => {
+      toggleClick();
+    }, 800);
+  };
+
   useEffect(() => {
     if (clicked) {
       setMenuPlaced(false);
@@ -48,13 +62,13 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
     }
   }, [clicked]);
 
-  const handleMenuClick = () => {
-    setMenuPlaced(!menuPlaced);
-    setDelay(true);
-    setTimeout(() => {
-      toggleClick();
-    }, 800);
-  };
+  useEffect(() => {
+    if (!menuPlaced) {
+      dispatch(enterMenu({ transition: true }));
+    } else {
+      dispatch(exitMenu({ transition: false }));
+    }
+  }, [menuPlaced]);
 
   return (
     <button

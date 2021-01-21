@@ -4,10 +4,6 @@ import { useState, Fragment, useEffect } from 'react';
 // Next
 import { useRouter } from 'next/router';
 
-// Redux
-import { useDispatch } from 'react-redux';
-import { enterMenu, exitMenu } from '../../redux/slices/MenuTransitionSlice';
-
 // GSAP
 import { gsap } from 'gsap';
 
@@ -29,8 +25,6 @@ interface LayoutProps {
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   const root = useRouter().pathname === '/' ? true : false;
-
-  const dispatch = useDispatch();
 
   const [ready, setReady] = useState(false);
   const [clicked, setClicked] = useState(false);
@@ -65,12 +59,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   useEffect(() => {
     if (ready && clicked) {
       animateMenuIn();
-      dispatch(enterMenu({ transition: true }));
     } else {
       animateMenuOut();
-      dispatch(exitMenu({ transition: false }));
     }
-    console.log(ready);
   }, [clicked, ready]);
 
   return (

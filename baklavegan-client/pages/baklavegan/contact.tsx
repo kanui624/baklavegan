@@ -5,6 +5,9 @@ import { Fragment, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+// Redux
+import { useSelector } from 'react-redux';
+
 // GSAP
 import gsap from 'gsap';
 
@@ -17,6 +20,9 @@ import styles from '../../styles/Pages/contact.module.scss';
 // React Types
 import { FC } from 'react';
 
+// Redux Types
+import { AppState } from '../../redux/store';
+
 // Component level Types
 interface SocialDataProps {
   id: number;
@@ -27,13 +33,30 @@ interface SocialDataProps {
 }
 
 const Contact: FC = () => {
+  const {
+    MenuTransition: { transition },
+  } = useSelector<AppState, AppState>((state) => state);
+
   const animateSocialsIn = () => {
-    gsap.from('.social', { y: 200, delay: 1.1, stagger: 0.2 });
+    gsap.to('.social', { y: -200, delay: 1.1, stagger: 0.2 });
+  };
+
+  const animateSocialsOut = () => {
+    gsap.to('.social', {
+      y: 200,
+      stagger: 0.2,
+      delay: 0.5,
+    });
   };
 
   useEffect(() => {
-    animateSocialsIn();
-  }, []);
+    console.log(transition);
+    if (transition) {
+      animateSocialsOut();
+    } else {
+      animateSocialsIn();
+    }
+  }, [transition]);
 
   return (
     <Fragment>
@@ -87,7 +110,9 @@ const Contact: FC = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-24 -inset-x-0 container mx-auto">
+      <div
+        className={`${styles.socials} absolute -inset-x-0 container mx-auto`}
+      >
         <div className="flex flex-row justify-evenly">
           {socialData.map(
             ({ id, link, image, width, height }: SocialDataProps) => (

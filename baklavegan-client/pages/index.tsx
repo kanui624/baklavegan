@@ -29,7 +29,7 @@ const BaklaHome: FC = () => {
   };
 
   const animateLogoOut = () => {
-    gsap.to('#animatelogo', { y: 3000, duration: 2 });
+    gsap.to('#animatelogo', { opacity: 0, duration: 1.2 });
   };
 
   useEffect(() => {
