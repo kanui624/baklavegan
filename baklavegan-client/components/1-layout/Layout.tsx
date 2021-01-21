@@ -61,13 +61,12 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     } else {
       animateMenuOut();
     }
-    console.log(`Clicked: ${clicked}`);
   }, [clicked, ready]);
 
   return (
     <Fragment>
       <div className="fixed inset-0 h-full max-w-full">
-        <div className="flex justify-center items-center container mx-auto h-full border-4 border-pink-700">
+        <div className="flex justify-center items-center container mx-auto h-full">
           {children}
           {root ? (
             <MenuButtonRoot disabled={disabled} toggleClick={toggleClick} />

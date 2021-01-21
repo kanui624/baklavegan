@@ -21,9 +21,9 @@ interface MenuButtonPageProps {
 }
 
 const MenuButtonPage: FC<MenuButtonPageProps> = ({
+  clicked,
   disabled,
   toggleClick,
-  clicked,
 }) => {
   const [menuPlaced, setMenuPlaced] = useState(false);
   const [delay, setDelay] = useState(false);

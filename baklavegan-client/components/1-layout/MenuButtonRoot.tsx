@@ -18,12 +18,12 @@ import styles from '../../styles/Components/menubuttoninit.module.scss';
 
 // Component Level Types
 interface MenuButtonRootProps {
-  toggleClick: () => void;
   disabled: boolean;
+  toggleClick: () => void;
 }
 
 const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
-  const [enterClicked, setEnterClicked] = useState(false);
+  const [enterPlaced, setEnterPlaced] = useState(false);
 
   const initialEnterButtonLoad = () => {
     gsap.to('#enterbutton', { opacity: 1, duration: 4, delay: 1.5 });
@@ -35,18 +35,18 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
 
   const { y } = useSpring({
     config: {
-      friction: 100,
-      mass: 3,
+      friction: 150,
+      mass: 10,
     },
     from: { y: 0 },
-    y: enterClicked ? 1 : 0,
+    y: enterPlaced ? 1 : 0,
   });
 
   const handleEnterClick = () => {
-    setEnterClicked(true);
+    setEnterPlaced(true);
     setTimeout(() => {
       toggleClick();
-    }, 800);
+    }, 900);
   };
 
   return (
@@ -82,7 +82,7 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
           transform: y
             .to({
               range: [0, 0.5, 1],
-              output: ['0rem', '-1rem', '35rem'],
+              output: ['0rem', '-3rem', '45rem'],
             })
             .to((y) => `translateY(${y})`),
         }}
