@@ -61,6 +61,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     } else {
       animateMenuOut();
     }
+    console.log(ready);
   }, [clicked, ready]);
 
   return (

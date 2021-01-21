@@ -35,8 +35,8 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
 
   const { y } = useSpring({
     config: {
-      friction: 150,
-      mass: 10,
+      friction: 100,
+      mass: 6,
     },
     from: { y: 0 },
     y: enterPlaced ? 1 : 0,
@@ -46,7 +46,7 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
     setEnterPlaced(true);
     setTimeout(() => {
       toggleClick();
-    }, 900);
+    }, 500);
   };
 
   return (

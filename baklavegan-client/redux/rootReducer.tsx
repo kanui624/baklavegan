@@ -2,10 +2,10 @@
 import { combineReducers } from 'redux';
 
 // Reducers
-import orbitControl from './slices/orbitControlSlice';
+import MenuTransition from './slices/MenuTransitionSlice';
 
 const rootReducer = combineReducers({
-  [orbitControl.name]: orbitControl.reducer,
+  [MenuTransition.name]: MenuTransition.reducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

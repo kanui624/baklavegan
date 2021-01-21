@@ -38,33 +38,36 @@ const Contact: FC = () => {
   return (
     <Fragment>
       <div className="fixed">
-        <div className="grid grid-rows-3 gap-10 px-4">
+        <div className={`grid grid-rows-4 gap-10 px-4`}>
           <div className={styles.questions}>
             <p className="text-center text-4xl">have a question?</p>
             <p className="text-center text-4xl">
-              maybe it's already been answered on our{' '}
+              check out our{' '}
               <Link href="/baklavegan/faq">
                 <a>
                   <u>faq</u>
                 </a>
               </Link>{' '}
-              page
+              page!
+            </p>
+          </div>
+          <div>
+            <p className="text-center text-4xl">
+              can't find what you're looking for?
             </p>
             <p className="text-center text-4xl">
-              if not, shoot us an email at{' '}
+              shoot us an email at{' '}
               <Link href="/baklavegan/faq">
                 <a>
                   <u>info@baklavegan.com</u>
                 </a>
               </Link>
             </p>
-            <p className="text-center text-4xl">we'll be glad to help!</p>
           </div>
           <div className={styles.business}>
             <p className="text-center text-4xl">
-              wanna put us in your dessert boxes?
+              wanna partner up and do some baklabusiness?
             </p>
-            <p className="text-center text-4xl">we'd love to partner up!</p>
             <p className="text-center text-4xl">
               reach out to{' '}
               <Link href="/baklavegan/faq">
@@ -73,14 +76,13 @@ const Contact: FC = () => {
                 </a>
               </Link>
             </p>
-            <p className="text-center text-4xl">let's do some baklabusiness!</p>
           </div>
           <div className={styles.followus}>
             <p className="text-center text-4xl">
-              just wanna stay posted with what we're up to?
+              just wanna see what we're up to?
             </p>
             <p className="text-center text-4xl">
-              follow us on any or all of our socials below!
+              follow any of our socials below!
             </p>
           </div>
         </div>
