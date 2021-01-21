@@ -23,14 +23,16 @@ const BaklaHome: FC = () => {
   }, []);
 
   return (
-    <Image
-      id="animatelogo"
-      className={styles.bvlogo}
-      src="/2-images/1-index/0-bv-logo.png"
-      alt="baklavegan"
-      width={1400}
-      height={343}
-    />
+    <div className="fixed">
+      <Image
+        id="animatelogo"
+        className={styles.bvlogo}
+        src="/2-images/1-index/0-bv-logo.png"
+        alt="baklavegan"
+        width={1400}
+        height={343}
+      />
+    </div>
   );
 };
 

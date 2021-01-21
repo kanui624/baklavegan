@@ -26,12 +26,11 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
   clicked,
 }) => {
   const [menuPlaced, setMenuPlaced] = useState(false);
-  const [hovered, setHovered] = useState(false);
   const [delay, setDelay] = useState(false);
 
   const { y } = useSpring({
     config: {
-      friction: menuPlaced ? 150 : 250,
+      friction: menuPlaced ? 170 : 250,
       mass: menuPlaced ? 10 : 3,
       clamp: true,
     },
@@ -65,7 +64,6 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
       onClick={() => {
         handleMenuClick();
       }}
-      onPointerOver={() => setHovered(true)}
     >
       <animated.div
         className={`${styles.menuimage} absolute`}
@@ -73,7 +71,7 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
           transform: y
             .to({
               range: [0, 0.5, 0.75, 1],
-              output: ['0rem', '2rem', '-22rem', '-20rem'],
+              output: ['0rem', '2rem', '-21rem', '-20rem'],
             })
             .to((y) => `translateY(${y})`),
         }}
@@ -91,7 +89,7 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
           transform: y
             .to({
               range: [0, 0.5, 0.75, 1],
-              output: ['0rem', '3rem', '-18.8rem', '-16rem'],
+              output: ['0rem', '3rem', '-18rem', '-16rem'],
             })
             .to((y) => `translateY(${y})`),
         }}

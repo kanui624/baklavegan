@@ -67,8 +67,8 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <Fragment>
       <div className="fixed inset-0 h-full max-w-full">
-        <div className="flex justify-center items-center container mx-auto h-full">
-          <div className="absolute">{children}</div>
+        <div className="flex justify-center items-center container mx-auto h-full border-4 border-pink-700">
+          {children}
           {root ? (
             <MenuButtonRoot disabled={disabled} toggleClick={toggleClick} />
           ) : (
