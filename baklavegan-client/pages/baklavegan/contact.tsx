@@ -11,6 +11,9 @@ import { useSelector } from 'react-redux';
 // GSAP
 import gsap from 'gsap';
 
+// Components
+import ContactInfo from '../../components/6-contact/ContactInfo';
+
 // Data
 import { socialData } from '../../components/6-contact/SocialData';
 
@@ -37,9 +40,24 @@ const Contact: FC = () => {
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
 
+  const bgIn = gsap.timeline();
+
   const animateSocialsIn = () => {
     gsap.to('.social', { y: -200, delay: 1, stagger: 0.15 });
+    bgIn.to('.contact-bg-animation', {
+      opacity: 0.7,
+      y: -860,
+      duration: 1,
+      delay: 0.7,
+    });
+    bgIn.to('.contact-bg-animation', {
+      opacity: 1,
+      y: -847,
+      duration: 1,
+    });
   };
+
+  const bgOut = gsap.timeline();
 
   const animateSocialsOut = () => {
     gsap.to('.social', {
@@ -47,6 +65,17 @@ const Contact: FC = () => {
       stagger: 0.1,
       delay: 0.5,
       ease: 'power1.out',
+    });
+
+    bgOut.to('.contact-bg-animation', {
+      y: -860,
+      opacity: 0.8,
+    });
+
+    bgOut.to('.contact-bg-animation', {
+      y: 0,
+      opacity: 0,
+      duration: 1.5,
     });
   };
 
@@ -61,54 +90,17 @@ const Contact: FC = () => {
 
   return (
     <Fragment>
-      <div className="fixed">
-        <div className={`grid grid-rows-4 gap-10 px-4`}>
-          <div className={styles.questions}>
-            <p className="text-center text-4xl">have a question?</p>
-            <p className="text-center text-4xl">
-              check out our{' '}
-              <Link href="/baklavegan/faq">
-                <a>
-                  <u>faq</u>
-                </a>
-              </Link>{' '}
-              page!
-            </p>
-          </div>
-          <div>
-            <p className="text-center text-4xl">
-              can't find what you're looking for?
-            </p>
-            <p className="text-center text-4xl">
-              shoot us an email at{' '}
-              <Link href="/baklavegan/faq">
-                <a>
-                  <u>info@baklavegan.com</u>
-                </a>
-              </Link>
-            </p>
-          </div>
-          <div className={styles.business}>
-            <p className="text-center text-4xl">wanna do some baklabusiness?</p>
-            <p className="text-center text-4xl">
-              reach out to{' '}
-              <Link href="/baklavegan/faq">
-                <a>
-                  <u>sales@baklavegan.com</u>
-                </a>
-              </Link>
-            </p>
-          </div>
-          <div className={styles.followus}>
-            <p className="text-center text-4xl">
-              just wanna see what we're up to?
-            </p>
-            <p className="text-center text-4xl">
-              follow any of our socials below!
-            </p>
-          </div>
-        </div>
+      <div
+        className={`${styles.contactbg} fixed contact-bg-animation opacity-0`}
+      >
+        <Image
+          src={`/2-images/5-contact/1-bg/0-contactbg.png`}
+          alt={'Contact Page'}
+          width={650}
+          height={587}
+        />
       </div>
+      <ContactInfo />
       <div
         className={`${styles.socials} absolute -inset-x-0 container mx-auto`}
       >
@@ -118,7 +110,7 @@ const Contact: FC = () => {
               <Link key={id} href={link}>
                 <a className="social">
                   <Image
-                    src={`/2-images/5-contact/${image}.png`}
+                    src={`/2-images/5-contact/0-socials/${image}.png`}
                     alt={image}
                     width={width}
                     height={height}

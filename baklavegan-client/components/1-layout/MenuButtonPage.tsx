@@ -32,6 +32,7 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
   const dispatch = useDispatch();
   const [menuPlaced, setMenuPlaced] = useState(false);
   const [delay, setDelay] = useState(false);
+  const [trans, setTrans] = useState(false);
 
   const { y } = useSpring({
     config: {
@@ -47,6 +48,7 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
   const handleMenuClick = () => {
     setMenuPlaced(!menuPlaced);
     setDelay(true);
+    setTrans(true);
     setTimeout(() => {
       toggleClick();
     }, 800);
@@ -58,11 +60,12 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
     } else {
       setMenuPlaced(true);
       setDelay(false);
+      setTrans(false);
     }
   }, [clicked]);
 
   useEffect(() => {
-    if (!menuPlaced) {
+    if (trans) {
       dispatch(enterMenu({ transition: true }));
     } else {
       dispatch(exitMenu({ transition: false }));
