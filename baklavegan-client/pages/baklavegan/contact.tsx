@@ -70,7 +70,7 @@ const Contact: FC = () => {
     bgOut.to('.contact-bg-animation', {
       y: -900,
       opacity: 0,
-      duration: 0.5,
+      duration: 0.7,
     });
 
     bgOut.to('.contact-bg-animation', {
@@ -86,7 +86,6 @@ const Contact: FC = () => {
     } else {
       animateSocialsIn();
     }
-    console.log(`contact: ${transition}`);
   }, [transition]);
 
   return (
