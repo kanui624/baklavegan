@@ -38,14 +38,15 @@ const Contact: FC = () => {
   } = useSelector<AppState, AppState>((state) => state);
 
   const animateSocialsIn = () => {
-    gsap.to('.social', { y: -200, delay: 1.1, stagger: 0.2 });
+    gsap.to('.social', { y: -200, delay: 1, stagger: 0.15 });
   };
 
   const animateSocialsOut = () => {
     gsap.to('.social', {
       y: 200,
-      stagger: 0.2,
+      stagger: 0.1,
       delay: 0.5,
+      ease: 'power1.out',
     });
   };
 
@@ -88,9 +89,7 @@ const Contact: FC = () => {
             </p>
           </div>
           <div className={styles.business}>
-            <p className="text-center text-4xl">
-              wanna partner up and do some baklabusiness?
-            </p>
+            <p className="text-center text-4xl">wanna do some baklabusiness?</p>
             <p className="text-center text-4xl">
               reach out to{' '}
               <Link href="/baklavegan/faq">
