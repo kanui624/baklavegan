@@ -25,12 +25,14 @@ const ContactInfo: FC = () => {
   } = useSelector<AppState, AppState>((state) => state);
 
   const animateInfoIn = () => {
-    gsap.to('.a', { opacity: 1, delay: 2.3, stagger: 0.1 });
+    gsap.to('.a', { opacity: 1, delay: 1.7, stagger: 0.2 });
   };
 
   const animateInfoOut = () => {
     gsap.to('.a', {
       opacity: 0,
+      reversed: true,
+      stagger: 0.11,
     });
   };
 

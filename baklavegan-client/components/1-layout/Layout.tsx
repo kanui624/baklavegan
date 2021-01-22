@@ -4,6 +4,10 @@ import { useState, Fragment, useEffect } from 'react';
 // Next
 import { useRouter } from 'next/router';
 
+// Redux
+import { useDispatch, useSelector } from 'react-redux';
+import { exitMenu } from '../../redux/slices/MenuTransitionSlice';
+
 // Components
 import MemoBVCanvas from '../0-navigation/BVCanvas';
 import MenuButtonRoot from './MenuButtonRoot';
@@ -18,12 +22,19 @@ import styles from '../../styles/Pages/layout.module.scss';
 // React Types
 import { ReactNode, FC } from 'react';
 
+// Redux Types
+import { AppState } from '../../redux/store';
+
 // Component Level Types
 interface LayoutProps {
   children: ReactNode;
 }
 
 const Layout: FC<LayoutProps> = ({ children }) => {
+  const dispatch = useDispatch();
+  const {
+    MenuTransition: { transition },
+  } = useSelector<AppState, AppState>((state) => state);
   const root = useRouter().pathname === '/' ? true : false;
 
   const [ready, setReady] = useState(false);
@@ -54,6 +65,10 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         setDisabled(false);
       }, 2000);
     }
+  };
+
+  const handleTransition = () => {
+    dispatch(exitMenu({ transition: false }));
   };
 
   useEffect(() => {
@@ -88,6 +103,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         <MemoBVCanvas
           clicked={clicked}
           toggleClick={toggleClick}
+          handleTransition={handleTransition}
           onCompile={() => setReady(true)}
         />
       </div>

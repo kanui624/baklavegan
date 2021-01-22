@@ -64,12 +64,13 @@ const Contact: FC = () => {
       y: 200,
       stagger: 0.1,
       delay: 0.5,
-      ease: 'power1.out',
+      ease: 'bounce.out',
     });
 
     bgOut.to('.contact-bg-animation', {
-      y: -860,
-      opacity: 0.8,
+      y: -900,
+      opacity: 0,
+      duration: 0.5,
     });
 
     bgOut.to('.contact-bg-animation', {
@@ -80,12 +81,12 @@ const Contact: FC = () => {
   };
 
   useEffect(() => {
-    console.log(transition);
     if (transition) {
       animateSocialsOut();
     } else {
       animateSocialsIn();
     }
+    console.log(`contact: ${transition}`);
   }, [transition]);
 
   return (

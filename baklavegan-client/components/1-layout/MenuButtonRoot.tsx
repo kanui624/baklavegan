@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 // Redux
 import { useDispatch } from 'react-redux';
-import { enterMenu, exitMenu } from '../../redux/slices/MenuTransitionSlice';
+import { enterMenu } from '../../redux/slices/MenuTransitionSlice';
 
 // React Spring
 import { useSpring, animated } from 'react-spring';
@@ -28,7 +28,7 @@ interface MenuButtonRootProps {
 
 const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
   const dispatch = useDispatch();
-  const [enterPlaced, setEnterPlaced] = useState(false);
+  const [enterPlaced, setEnterPlaced] = useState(true);
 
   const initialEnterButtonLoad = () => {
     gsap.to('#enterbutton', { opacity: 1, duration: 4, delay: 1.5 });
@@ -40,11 +40,12 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
       mass: 6,
     },
     from: { y: 0 },
-    y: enterPlaced ? 1 : 0,
+    y: enterPlaced ? 0 : 1,
   });
 
   const handleEnterClick = () => {
-    setEnterPlaced(true);
+    setEnterPlaced(false);
+    dispatch(enterMenu({ transition: true }));
     setTimeout(() => {
       toggleClick();
     }, 500);
@@ -53,14 +54,6 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
   useEffect(() => {
     initialEnterButtonLoad();
   }, []);
-
-  useEffect(() => {
-    if (enterPlaced) {
-      dispatch(enterMenu({ transition: true }));
-    } else {
-      dispatch(exitMenu({ transition: false }));
-    }
-  }, [enterPlaced]);
 
   return (
     <button

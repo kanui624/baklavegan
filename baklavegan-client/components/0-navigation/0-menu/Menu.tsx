@@ -22,7 +22,7 @@ import { FC } from 'react';
 import { MenuProps } from './0-types/MenuProps';
 import { MenuDataProps } from './0-types/MenuDataProps';
 
-const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
+const Menu: FC<MenuProps> = ({ clicked, toggleClick, handleTransition }) => {
   const [orbitSpeed, setOrbitSpeed] = useState(-1.6);
 
   const { position, rotation }: any = useSpring({
@@ -69,6 +69,7 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick }) => {
               imgLabel={`/1-menuops/2-label/${id}-${name}-l.png`}
               setOrbitSpeed={setOrbitSpeed}
               toggleClick={toggleClick}
+              handleTransition={handleTransition}
               clicked={clicked}
             />
           )

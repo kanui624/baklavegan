@@ -30,6 +30,7 @@ const MenuOption: FC<MenuOptionProps> = ({
   backRotation,
   setOrbitSpeed,
   toggleClick,
+  handleTransition,
   clicked,
 }) => {
   useEffect(() => {
@@ -51,6 +52,7 @@ const MenuOption: FC<MenuOptionProps> = ({
 
   const handlePointerUp = (e: any) => {
     setPushed(false);
+    handleTransition();
     if (clicked) {
       Router.push(`/baklavegan/${link}`);
       setTimeout(() => {

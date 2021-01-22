@@ -29,13 +29,18 @@ const MemoPrecompile = memo(Precompile);
 const BVCanvas: FC<CanvasProps> = ({
   clicked,
   toggleClick,
+  handleTransition,
   onCompile = () => {},
 }) => {
   return (
     <Canvas camera={{ position: [1, 1, 1], fov: 15 }} pixelRatio={2}>
       <Suspense fallback={null}>
         <MemoPrecompile onCompile={onCompile} />
-        <Menu clicked={clicked} toggleClick={toggleClick} />
+        <Menu
+          clicked={clicked}
+          toggleClick={toggleClick}
+          handleTransition={handleTransition}
+        />
       </Suspense>
     </Canvas>
   );

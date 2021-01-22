@@ -30,25 +30,24 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
   toggleClick,
 }) => {
   const dispatch = useDispatch();
-  const [menuPlaced, setMenuPlaced] = useState(false);
+  const [menuPlaced, setMenuPlaced] = useState(true);
   const [delay, setDelay] = useState(false);
-  const [trans, setTrans] = useState(false);
 
   const { y } = useSpring({
     config: {
-      friction: menuPlaced ? 170 : 250,
-      mass: menuPlaced ? 10 : 3,
+      friction: menuPlaced ? 250 : 170,
+      mass: menuPlaced ? 3 : 10,
       clamp: true,
     },
     from: { y: 0 },
-    y: menuPlaced ? 1 : 0,
+    y: menuPlaced ? 0 : 1,
     delay: delay ? 0 : 800,
   });
 
   const handleMenuClick = () => {
     setMenuPlaced(!menuPlaced);
+    dispatch(enterMenu({ transition: true }));
     setDelay(true);
-    setTrans(true);
     setTimeout(() => {
       toggleClick();
     }, 800);
@@ -56,21 +55,12 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
 
   useEffect(() => {
     if (clicked) {
-      setMenuPlaced(false);
-    } else {
       setMenuPlaced(true);
+    } else {
+      setMenuPlaced(false);
       setDelay(false);
-      setTrans(false);
     }
   }, [clicked]);
-
-  useEffect(() => {
-    if (trans) {
-      dispatch(enterMenu({ transition: true }));
-    } else {
-      dispatch(exitMenu({ transition: false }));
-    }
-  }, [menuPlaced]);
 
   return (
     <button
