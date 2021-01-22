@@ -11,11 +11,11 @@ import { enterMenu, exitMenu } from '../../redux/slices/MenuTransitionSlice';
 // React Spring
 import { useSpring, animated } from 'react-spring';
 
-// React Types
-import { FC } from 'react';
-
 // Styles
 import styles from '../../styles/Components/menubuttonpage.module.scss';
+
+// React Types
+import { FC } from 'react';
 
 // Component Level Types
 interface MenuButtonPageProps {
@@ -47,7 +47,6 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
   const handleMenuClick = () => {
     setMenuPlaced(!menuPlaced);
     setDelay(true);
-
     setTimeout(() => {
       toggleClick();
     }, 800);

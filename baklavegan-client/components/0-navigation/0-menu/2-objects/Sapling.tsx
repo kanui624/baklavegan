@@ -1,8 +1,12 @@
-import * as THREE from 'three';
-import { useRef, useEffect } from 'react';
-import { useGLTF } from '@react-three/drei/useGLTF';
+// React
+import { useRef } from 'react';
 
+// Three
+import * as THREE from 'three';
 import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader';
+
+// Drei
+import { useGLTF } from '@react-three/drei/useGLTF';
 
 // Component Level Types
 type Sapling = GLTF & {
@@ -19,6 +23,7 @@ type Sapling = GLTF & {
     ['3-None']: THREE.MeshStandardMaterial;
   };
 };
+
 const Sapling = (props: JSX.IntrinsicElements['group']) => {
   const group = useRef<THREE.Group>();
   const { nodes, materials } = useGLTF('/0-gltf/sapling.gltf') as Sapling;

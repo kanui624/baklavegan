@@ -14,11 +14,11 @@ import { useSpring, animated } from 'react-spring';
 // GSAP
 import { gsap } from 'gsap';
 
-// React Types
-import { FC } from 'react';
-
 // Styles
 import styles from '../../styles/Components/menubuttoninit.module.scss';
+
+// React Types
+import { FC } from 'react';
 
 // Component Level Types
 interface MenuButtonRootProps {

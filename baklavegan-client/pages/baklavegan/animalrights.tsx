@@ -4,7 +4,7 @@ import Link from 'next/link';
 // React Types
 import { FC } from 'react';
 
-const animalrights: FC = () => {
+const AnimalRights: FC = () => {
   return (
     <Link href="/">
       <a>You're on animalrights link page click to go back</a>
@@ -12,4 +12,4 @@ const animalrights: FC = () => {
   );
 };
 
-export default animalrights;
+export default AnimalRights;

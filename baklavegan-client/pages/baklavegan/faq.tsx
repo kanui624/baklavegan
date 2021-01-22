@@ -1,7 +1,8 @@
-import React from 'react';
+// React Types
+import { FC } from 'react';
 
-const faq = () => {
+const Faq: FC = () => {
   return <div>faq</div>;
 };
 
-export default faq;
+export default Faq;

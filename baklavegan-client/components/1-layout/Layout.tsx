@@ -4,19 +4,19 @@ import { useState, Fragment, useEffect } from 'react';
 // Next
 import { useRouter } from 'next/router';
 
-// GSAP
-import { gsap } from 'gsap';
-
 // Components
 import MemoBVCanvas from '../0-navigation/BVCanvas';
 import MenuButtonRoot from './MenuButtonRoot';
 import MenuButtonPage from './MenuButtonPage';
 
-// React Types
-import { ReactNode, FC } from 'react';
+// GSAP
+import { gsap } from 'gsap';
 
 // Styles
 import styles from '../../styles/Pages/layout.module.scss';
+
+// React Types
+import { ReactNode, FC } from 'react';
 
 // Component Level Types
 interface LayoutProps {
