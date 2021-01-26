@@ -39,16 +39,16 @@ const Contact: FC = () => {
   } = useSelector<AppState, AppState>((state) => state);
 
   const animateIn = () => {
-    gsap.to('.socials', { y: -200, delay: 1, stagger: 0.15 });
+    gsap.to('.socials', { y: -200, delay: 2, stagger: 0.15 });
     gsap.to(['.questionsfrom', '.businessfrom'], {
       x: 1000,
-      delay: 1.5,
+      delay: 1,
       stagger: 0.15,
       duration: 1,
     });
     gsap.to(['.infofrom', '.socialsfrom'], {
-      x: -100,
-      delay: 1.5,
+      x: -1000,
+      delay: 1,
       stagger: 0.15,
       duration: 1,
     });
@@ -62,14 +62,16 @@ const Contact: FC = () => {
       ease: 'bounce.out',
     });
     gsap.to(['.questionsfrom', '.businessfrom'], {
-      x: -1000,
+      x: -100,
       stagger: 0.15,
       duration: 1,
+      delay: 0.5,
     });
     gsap.to(['.infofrom', '.socialsfrom'], {
-      x: 1000,
+      x: 100,
       stagger: 0.15,
       duration: 1,
+      delay: 0.5,
     });
   };
 
