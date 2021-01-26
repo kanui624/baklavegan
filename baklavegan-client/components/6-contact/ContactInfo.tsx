@@ -12,52 +12,38 @@ import { FC } from 'react';
 import { ContactInfoCardProps } from './0-types/ContactProps';
 
 const ContactInfo: FC<ContactInfoCardProps> = ({
-  id,
   name,
+  image,
+  link = null,
   textOne,
   textTwo,
-  textThree,
-  link = null,
-  image,
-  initialBgPos,
-  textOnePos,
-  textTwoPos,
-  textThreePos,
-  linkPos,
-  animateFrom,
+  textThree = null,
 }) => {
   return (
     <Fragment>
-      <div className={`fixed ${initialBgPos} ${animateFrom}`}>
+      <div className={`${name}bgpos ${name}from fixed`}>
         <Image src={image} alt={name} width={624} height={125} />
       </div>
-      <div className={`fixed ${animateFrom}`}>
-        <p className={`fixed ${textOnePos}`}>{textOne}</p>
-        <p className={`fixed ${textTwoPos}`}>{textTwo}</p>
-        {link && (
-          <p className={`fixed ${linkPos}`}>
-            <Link href="/baklavegan/faq">
-              <a>
-                <u>{link}</u>
-              </a>
-            </Link>
+      <div className={`${name}textpos ${name}from  fixed`}>
+        <div
+          className={`${name}textstyle flex flex-col justify-center items-center`}
+        >
+          <p>{textOne}</p>
+          <p>
+            {textTwo && textTwo}{' '}
+            {link && (
+              <Link href="/baklavegan/faq">
+                <a>
+                  <u>{link}</u>
+                </a>
+              </Link>
+            )}{' '}
+            {textThree && textThree}
           </p>
-        )}
-        {textThree && <p className={`fixed ${textThreePos}`}>{textThree}</p>}
+        </div>
       </div>
     </Fragment>
   );
 };
 
 export default ContactInfo;
-
-//   <div className={`fixed ${initialTextPosition} ${animateFrom}`}>
-//     <p>
-//       {textOne} {textTwo}{' '}
-//       <Link href="/baklavegan/faq">
-//         <a>
-//           <u>{link}</u>
-//         </a>
-//       </Link>
-//     </p>
-//   </div>;

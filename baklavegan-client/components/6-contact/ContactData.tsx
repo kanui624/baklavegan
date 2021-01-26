@@ -7,4 +7,22 @@ export const contactData: any = [
     textThree: 'page!',
     link: 'FAQ',
   },
+  {
+    id: 1,
+    name: 'info',
+    textOne: 'Need help? Email us at',
+    link: 'info@baklavegan.com',
+  },
+  {
+    id: 2,
+    name: 'business',
+    textOne: 'Wanna partner up?',
+    link: 'sales@baklavegan.com',
+  },
+  {
+    id: 3,
+    name: 'socials',
+    textOne: 'Wanna keep up with us?',
+    textTwo: 'Follow our socials below!',
+  },
 ];

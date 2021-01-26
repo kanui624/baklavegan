@@ -40,8 +40,14 @@ const Contact: FC = () => {
 
   const animateIn = () => {
     gsap.to('.socials', { y: -200, delay: 1, stagger: 0.15 });
-    gsap.to(['.questions'], {
+    gsap.to(['.questionsfrom', '.businessfrom'], {
       x: 1000,
+      delay: 1.5,
+      stagger: 0.15,
+      duration: 1,
+    });
+    gsap.to(['.infofrom', '.socialsfrom'], {
+      x: -100,
       delay: 1.5,
       stagger: 0.15,
       duration: 1,
@@ -55,6 +61,16 @@ const Contact: FC = () => {
       delay: 0.5,
       ease: 'bounce.out',
     });
+    gsap.to(['.questionsfrom', '.businessfrom'], {
+      x: -1000,
+      stagger: 0.15,
+      duration: 1,
+    });
+    gsap.to(['.infofrom', '.socialsfrom'], {
+      x: 1000,
+      stagger: 0.15,
+      duration: 1,
+    });
   };
 
   useEffect(() => {
@@ -67,31 +83,24 @@ const Contact: FC = () => {
 
   return (
     <Fragment>
-      <div className="absolute">
+      <div className="fixed">
         {contactData.map(
           ({
             id,
             name,
+            link,
             textOne,
             textTwo,
             textThree,
-            link,
           }: ContactInfoDataProps) => (
             <ContactInfo
               key={id}
-              id={id}
               name={name}
+              image={`/2-images/5-contact/1-bg/${id}-${name}.jpg`}
+              link={link}
               textOne={textOne}
               textTwo={textTwo}
               textThree={textThree}
-              link={link}
-              image={`/2-images/5-contact/1-bg/${id}-${name}.jpg`}
-              initialBgPos={`${name}bg`}
-              textOnePos={`${name}textone`}
-              textTwoPos={`${name}texttwo`}
-              textThreePos={`${name}textthree`}
-              linkPos={`${name}link`}
-              animateFrom={name}
             />
           )
         )}

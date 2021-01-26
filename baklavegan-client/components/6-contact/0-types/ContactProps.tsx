@@ -17,17 +17,10 @@ export interface ContactInfoDataProps {
 }
 
 export interface ContactInfoCardProps {
-  id: number;
   name: string;
+  image: string;
+  link?: string;
   textOne: string;
   textTwo: string;
   textThree?: string;
-  link?: string;
-  image: string;
-  initialBgPos: string;
-  textOnePos: string;
-  textTwoPos: string;
-  textThreePos?: string;
-  linkPos?: string;
-  animateFrom: string;
 }

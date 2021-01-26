@@ -1,47 +1,82 @@
-.questionsbg {
-  bottom: 35rem;
+// Question Card
+.questionsfrom {
   left: -76rem;
 }
 
-.questionstextone {
-  left: -68.2rem;
-  bottom: 16.5rem;
-  font-size: 3.4rem;
-  text-shadow: 3px 2px #39311d;
+.questionsbgpos {
+  bottom: 36rem;
+}
+
+.questionstextpos {
+  bottom: 36.8rem;
+  left: -61.7rem;
+}
+
+.questionstextstyle {
+  font-size: 2.7rem;
+  text-shadow: 3.5px 2.5px 3px #39311d;
   letter-spacing: 0.05rem;
 }
 
-.questionstexttwo {
-  left: -75rem;
-  bottom: 13.5rem;
-  font-size: 3rem;
-  text-shadow: 4px 3px #39311d;
+// Info Card
+
+.infofrom {
+  right: -19.8rem;
 }
 
-.questionslink {
-  left: -59.7rem;
-  bottom: 13.5rem;
-  font-size: 3rem;
-  text-shadow: 4px 3px #39311d;
+.infobgpos {
+  bottom: 27rem;
 }
 
-.questionstextthree {
-  left: -55rem;
-  bottom: 13.5rem;
-  font-size: 3rem;
-  text-shadow: 4px 3px #39311d;
+.infotextpos {
+  bottom: 27.7rem;
+  right: -4.8rem;
 }
 
-// .questionstext {
-//   bottom: 42.2rem;
-//   left: -39.5rem;
-//   font-size: 3rem;
-//   text-shadow: 4px 3px 3px #39311d;
-//   letter-spacing: 0.005rem;
-// }
+.infotextstyle {
+  font-size: 2.7rem;
+  text-shadow: 3.5px 2.5px 3px #39311d;
+  letter-spacing: 0.05rem;
+}
 
-// @media (max-width: 576px) {
-//   .questionsbg {
-//     left: -80rem;
-//   }
-// }
+// Business Card
+
+.businessfrom {
+  left: -76rem;
+}
+
+.businessbgpos {
+  bottom: 18rem;
+}
+
+.businesstextpos {
+  bottom: 18.7rem;
+  left: -60rem;
+}
+
+.businesstextstyle {
+  font-size: 2.7rem;
+  text-shadow: 3.5px 2.5px 3px #39311d;
+  letter-spacing: 0.05rem;
+}
+
+// Socials Card
+
+.socialsfrom {
+  right: -19.8rem;
+}
+
+.socialsbgpos {
+  bottom: 9rem;
+}
+
+.socialstextpos {
+  bottom: 9.7rem;
+  right: -4.8rem;
+}
+
+.socialstextstyle {
+  font-size: 2.5rem;
+  text-shadow: 3.5px 2.5px 3px #39311d;
+  letter-spacing: 0.05rem;
+}
