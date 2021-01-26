@@ -39,35 +39,37 @@ const Contact: FC = () => {
   } = useSelector<AppState, AppState>((state) => state);
 
   const animateIn = () => {
-    gsap.to('.socials', { y: -200, delay: 2, stagger: 0.15 });
-    gsap.to(['.questionsfrom', '.businessfrom'], {
+    gsap.to('.sociallinkanimate', { y: -200, delay: 1.5, stagger: 0.15 });
+    gsap.to('.cardopacity', { opacity: 1 });
+    gsap.to(['.questionsto', '.businessto'], {
       x: 1000,
-      delay: 1,
+      delay: 0.6,
       stagger: 0.15,
       duration: 1,
     });
-    gsap.to(['.infofrom', '.socialsfrom'], {
+    gsap.to(['.infoto', '.socialsto'], {
       x: -1000,
-      delay: 1,
+      delay: 0.6,
       stagger: 0.15,
       duration: 1,
     });
   };
 
   const animateOut = () => {
-    gsap.to('.socials', {
+    gsap.to('.sociallinkanimate', {
       y: 200,
       stagger: 0.1,
       delay: 0.5,
       ease: 'bounce.out',
     });
-    gsap.to(['.questionsfrom', '.businessfrom'], {
+    gsap.to('.cardopacity', { opacity: 0, delay: 0.4, stagger: 0.1 });
+    gsap.to(['.questionsto', '.businessto'], {
       x: -100,
       stagger: 0.15,
       duration: 1,
       delay: 0.5,
     });
-    gsap.to(['.infofrom', '.socialsfrom'], {
+    gsap.to(['.infoto', '.socialsto'], {
       x: 100,
       stagger: 0.15,
       duration: 1,
@@ -107,14 +109,12 @@ const Contact: FC = () => {
           )
         )}
       </div>
-      <div
-        className={`${styles.socials} absolute -inset-x-0 container mx-auto`}
-      >
-        <div className="flex flex-row justify-evenly">
+      <div className={`sociallinks absolute -inset-x-0 container mx-auto`}>
+        <div className="flex flex-row justify-between">
           {socialData.map(
             ({ id, link, image, width, height }: SocialDataProps) => (
               <Link key={id} href={link}>
-                <a className="socials">
+                <a className="sociallinkanimate px-1">
                   <Image
                     src={`/2-images/5-contact/0-socials/${image}.png`}
                     alt={image}

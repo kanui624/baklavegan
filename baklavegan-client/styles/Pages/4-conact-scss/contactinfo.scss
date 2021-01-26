@@ -1,5 +1,5 @@
 // Question Card
-.questionsfrom {
+.questionsto {
   left: -76rem;
 }
 
@@ -8,19 +8,19 @@
 }
 
 .questionstextpos {
-  bottom: 36.8rem;
-  left: -61.7rem;
+  bottom: 37rem;
+  left: -60rem;
 }
 
 .questionstextstyle {
-  font-size: 2.7rem;
+  font-size: 2.3rem;
   text-shadow: 3.5px 2.5px 3px #39311d;
   letter-spacing: 0.05rem;
 }
 
 // Info Card
 
-.infofrom {
+.infoto {
   right: -76rem;
 }
 
@@ -29,19 +29,19 @@
 }
 
 .infotextpos {
-  bottom: 27.7rem;
-  right: -60.8rem;
+  bottom: 28.2rem;
+  right: -61.8rem;
 }
 
 .infotextstyle {
-  font-size: 2.7rem;
+  font-size: 2.25rem;
   text-shadow: 3.5px 2.5px 3px #39311d;
   letter-spacing: 0.05rem;
 }
 
 // Business Card
 
-.businessfrom {
+.businessto {
   left: -76rem;
 }
 
@@ -50,19 +50,19 @@
 }
 
 .businesstextpos {
-  bottom: 18.7rem;
-  left: -60rem;
+  bottom: 19rem;
+  left: -62.2rem;
 }
 
 .businesstextstyle {
-  font-size: 2.7rem;
+  font-size: 2.3rem;
   text-shadow: 3.5px 2.5px 3px #39311d;
   letter-spacing: 0.05rem;
 }
 
 // Socials Card
 
-.socialsfrom {
+.socialsto {
   right: -76rem;
 }
 
@@ -71,12 +71,17 @@
 }
 
 .socialstextpos {
-  bottom: 9.7rem;
-  right: -60.8rem;
+  bottom: 10rem;
+  right: -62.3rem;
 }
 
 .socialstextstyle {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   text-shadow: 3.5px 2.5px 3px #39311d;
   letter-spacing: 0.05rem;
+}
+
+// Social Links
+.sociallinks {
+  bottom: -8rem;
 }

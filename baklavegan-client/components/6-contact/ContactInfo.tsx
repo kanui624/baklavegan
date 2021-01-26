@@ -21,10 +21,10 @@ const ContactInfo: FC<ContactInfoCardProps> = ({
 }) => {
   return (
     <Fragment>
-      <div className={`${name}bgpos ${name}from fixed`}>
+      <div className={`${name}bgpos ${name}to fixed`}>
         <Image src={image} alt={name} width={624} height={125} />
       </div>
-      <div className={`${name}textpos ${name}from  fixed`}>
+      <div className={`${name}textpos ${name}to fixed opacity-0 cardopacity`}>
         <div
           className={`${name}textstyle flex flex-col justify-center items-center`}
         >
