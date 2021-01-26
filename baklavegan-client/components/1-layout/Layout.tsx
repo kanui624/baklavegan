@@ -17,7 +17,7 @@ import MenuButtonPage from './MenuButtonPage';
 import { gsap } from 'gsap';
 
 // Styles
-import styles from '../../styles/Pages/layout.module.scss';
+import styles from '../../styles/Pages/0-layout-scss/layout.module.scss';
 
 // React Types
 import { ReactNode, FC } from 'react';

@@ -16,9 +16,10 @@ import ContactInfo from '../../components/6-contact/ContactInfo';
 
 // Data
 import { socialData } from '../../components/6-contact/SocialData';
+import { contactData } from '../../components/6-contact/ContactData';
 
 // Styles
-import styles from '../../styles/Pages/contact.module.scss';
+import styles from '../../styles/Pages/4-conact-scss/contact.module.scss';
 
 // React Types
 import { FC } from 'react';
@@ -27,80 +28,74 @@ import { FC } from 'react';
 import { AppState } from '../../redux/store';
 
 // Component level Types
-interface SocialDataProps {
-  id: number;
-  link: string;
-  image: string;
-  width: number;
-  height: number;
-}
+import {
+  SocialDataProps,
+  ContactInfoDataProps,
+} from '../../components/6-contact/0-types/ContactProps';
 
 const Contact: FC = () => {
   const {
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
 
-  const bgIn = gsap.timeline();
-
-  const animateSocialsIn = () => {
-    gsap.to('.social', { y: -200, delay: 1, stagger: 0.15 });
-    bgIn.to('.contact-bg-animation', {
-      opacity: 0.7,
-      y: -860,
-      duration: 1,
-      delay: 0.7,
-    });
-    bgIn.to('.contact-bg-animation', {
-      opacity: 1,
-      y: -847,
+  const animateIn = () => {
+    gsap.to('.socials', { y: -200, delay: 1, stagger: 0.15 });
+    gsap.to(['.questions'], {
+      x: 1000,
+      delay: 1.5,
+      stagger: 0.15,
       duration: 1,
     });
   };
 
-  const bgOut = gsap.timeline();
-
-  const animateSocialsOut = () => {
-    gsap.to('.social', {
+  const animateOut = () => {
+    gsap.to('.socials', {
       y: 200,
       stagger: 0.1,
       delay: 0.5,
       ease: 'bounce.out',
     });
-
-    bgOut.to('.contact-bg-animation', {
-      y: -900,
-      opacity: 0,
-      duration: 0.7,
-    });
-
-    bgOut.to('.contact-bg-animation', {
-      y: 0,
-      opacity: 0,
-      duration: 1.5,
-    });
   };
 
   useEffect(() => {
     if (transition) {
-      animateSocialsOut();
+      animateOut();
     } else {
-      animateSocialsIn();
+      animateIn();
     }
   }, [transition]);
 
   return (
     <Fragment>
-      <div
-        className={`${styles.contactbg} fixed contact-bg-animation opacity-0`}
-      >
-        <Image
-          src={`/2-images/5-contact/1-bg/0-contactbg.png`}
-          alt={'Contact Page'}
-          width={650}
-          height={587}
-        />
+      <div className="absolute">
+        {contactData.map(
+          ({
+            id,
+            name,
+            textOne,
+            textTwo,
+            textThree,
+            link,
+          }: ContactInfoDataProps) => (
+            <ContactInfo
+              key={id}
+              id={id}
+              name={name}
+              textOne={textOne}
+              textTwo={textTwo}
+              textThree={textThree}
+              link={link}
+              image={`/2-images/5-contact/1-bg/${id}-${name}.jpg`}
+              initialBgPos={`${name}bg`}
+              textOnePos={`${name}textone`}
+              textTwoPos={`${name}texttwo`}
+              textThreePos={`${name}textthree`}
+              linkPos={`${name}link`}
+              animateFrom={name}
+            />
+          )
+        )}
       </div>
-      <ContactInfo />
       <div
         className={`${styles.socials} absolute -inset-x-0 container mx-auto`}
       >
@@ -108,7 +103,7 @@ const Contact: FC = () => {
           {socialData.map(
             ({ id, link, image, width, height }: SocialDataProps) => (
               <Link key={id} href={link}>
-                <a className="social">
+                <a className="socials">
                   <Image
                     src={`/2-images/5-contact/0-socials/${image}.png`}
                     alt={image}

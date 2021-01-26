@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 import { gsap } from 'gsap';
 
 // Styles
-import styles from '../styles/Pages/index.module.scss';
+import styles from '../styles/Pages/1-index-scss/index.module.scss';
 
 // React Types
 import { FC } from 'react';
@@ -44,7 +44,7 @@ const BaklaHome: FC = () => {
     <div className="fixed">
       <Image
         id="animatelogo"
-        className={styles.bvlogo}
+        className="opacity-0"
         src="/2-images/1-index/0-bv-logo.png"
         alt="baklavegan"
         width={1400}

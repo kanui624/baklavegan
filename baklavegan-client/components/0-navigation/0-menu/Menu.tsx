@@ -72,7 +72,7 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick, handleTransition }) => {
               handleTransition={handleTransition}
               clicked={clicked}
             />
-          )
+          ) 
         )}
       </a.group>
     </Fragment>

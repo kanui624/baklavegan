@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { FC } from 'react';
 
 // Styles
-import styles from '../../styles/Pages/about.module.scss';
+import styles from '../../styles/Pages/3-about-scss/about.module.scss';
 
 const About: FC = () => {
   return (
