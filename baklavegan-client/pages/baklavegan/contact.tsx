@@ -15,8 +15,8 @@ import gsap from 'gsap';
 import ContactInfo from '../../components/6-contact/ContactInfo';
 
 // Data
-import { socialData } from '../../components/6-contact/SocialData';
-import { contactData } from '../../components/6-contact/ContactData';
+import { socialData } from '../../components/6-contact/1-data/SocialData';
+import { contactData } from '../../components/6-contact/1-data/ContactData';
 
 // Styles
 import styles from '../../styles/Pages/4-conact-scss/contact.module.scss';
@@ -40,15 +40,16 @@ const Contact: FC = () => {
 
   const animateIn = () => {
     gsap.to('.sociallinkanimate', { y: -200, delay: 1.5, stagger: 0.15 });
-    gsap.to('.cardopacity', { opacity: 1 });
     gsap.to(['.questionsto', '.businessto'], {
       x: 1000,
+      opacity: 1,
       delay: 0.6,
       stagger: 0.15,
       duration: 1,
     });
     gsap.to(['.infoto', '.socialto'], {
       x: -1000,
+      opacity: 1,
       delay: 0.6,
       stagger: 0.15,
       duration: 1,
@@ -64,13 +65,15 @@ const Contact: FC = () => {
     });
     gsap.to('.cardopacity', { opacity: 0, delay: 0.4, stagger: 0.1 });
     gsap.to(['.questionsto', '.businessto'], {
-      x: -800,
+      x: -500,
+      opacity: 0,
       stagger: 0.15,
       duration: 1,
       delay: 0.5,
     });
     gsap.to(['.infoto', '.socialto'], {
-      x: 800,
+      x: 500,
+      opacity: 0,
       stagger: 0.15,
       duration: 1,
       delay: 0.5,

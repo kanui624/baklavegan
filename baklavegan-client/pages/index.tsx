@@ -25,11 +25,11 @@ const BaklaHome: FC = () => {
   } = useSelector<AppState, AppState>((state) => state);
 
   const animateLogoIn = () => {
-    gsap.to('#animatelogo', { opacity: 1, duration: 4, delay: 1 });
+    gsap.to('.animatelogo', { opacity: 1, duration: 4, delay: 1 });
   };
 
   const animateLogoOut = () => {
-    gsap.to('#animatelogo', { opacity: 0, duration: 1.2 });
+    gsap.to('.animatelogo', { opacity: 0, duration: 1 });
   };
 
   useEffect(() => {
@@ -43,8 +43,7 @@ const BaklaHome: FC = () => {
   return (
     <div className="fixed">
       <Image
-        id="animatelogo"
-        className="opacity-0"
+        className="opacity-0 animatelogo"
         src="/2-images/1-index/0-bv-logo.png"
         alt="baklavegan"
         width={1400}

@@ -31,7 +31,12 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
   const [enterPlaced, setEnterPlaced] = useState(true);
 
   const initialEnterButtonLoad = () => {
-    gsap.to('#enterbutton', { opacity: 1, duration: 4, delay: 1.5 });
+    gsap.to('.enterbutton', {
+      opacity: 1,
+      duration: 4,
+      delay: 2,
+      stagger: 0.2,
+    });
   };
 
   const { y } = useSpring({
@@ -57,15 +62,14 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
 
   return (
     <button
-      id="enterbutton"
       disabled={disabled}
-      className={`${styles.enterbtn} flex justify-center items-center opacity-0`}
+      className={`${styles.enterbtn} enterbutton flex justify-center items-center opacity-0`}
       onClick={() => {
         handleEnterClick();
       }}
     >
       <animated.div
-        className={`${styles.enterimage} absolute bottom-24`}
+        className={`${styles.enterimage} absolute bottom-36`}
         style={{
           transform: y
             .to({
@@ -78,12 +82,12 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
         <Image
           src="/2-images/1-index/1-enter-btn.png"
           alt="enter"
-          width={175}
-          height={219}
+          width={135}
+          height={169}
         />
       </animated.div>
       <animated.div
-        className={`${styles.entertext} absolute bottom-40`}
+        className={`${styles.entertext} absolute`}
         style={{
           transform: y
             .to({
@@ -93,7 +97,7 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
             .to((y) => `translateY(${y})`),
         }}
       >
-        <h3>enter</h3>
+        <h3 className="enterbutton opacity-0">enter</h3>
       </animated.div>
     </button>
   );

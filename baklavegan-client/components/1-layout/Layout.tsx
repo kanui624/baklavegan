@@ -8,13 +8,19 @@ import { useRouter } from 'next/router';
 import { useDispatch, useSelector } from 'react-redux';
 import { exitMenu } from '../../redux/slices/MenuTransitionSlice';
 
+// GSAP
+import { gsap } from 'gsap';
+
+// React Use Measure
+import useMeasure from 'react-use-measure';
+
+// Resize Observer
+import { ResizeObserver } from '@juggle/resize-observer';
+
 // Components
 import MemoBVCanvas from '../0-navigation/BVCanvas';
 import MenuButtonRoot from './MenuButtonRoot';
 import MenuButtonPage from './MenuButtonPage';
-
-// GSAP
-import { gsap } from 'gsap';
 
 // Styles
 import styles from '../../styles/Pages/0-layout-scss/layout.module.scss';
@@ -31,15 +37,16 @@ interface LayoutProps {
 }
 
 const Layout: FC<LayoutProps> = ({ children }) => {
+  const root = useRouter().pathname === '/' ? true : false;
+  const [measure, bounds] = useMeasure({ polyfill: ResizeObserver });
   const dispatch = useDispatch();
   const {
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
-  const root = useRouter().pathname === '/' ? true : false;
 
   const [ready, setReady] = useState(false);
   const [clicked, setClicked] = useState(false);
-  const [disabled, setDisabled] = useState(false);
+  const [disabled, setDisabled] = useState(true);
 
   const bgTl = gsap.timeline();
   const canvasTl = gsap.timeline();
@@ -71,6 +78,16 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     dispatch(exitMenu({ transition: false }));
   };
 
+  const initialDisableStatus = () => {
+    setTimeout(() => {
+      setDisabled(false);
+    }, 4000);
+  };
+
+  useEffect(() => {
+    initialDisableStatus();
+  }, []);
+
   useEffect(() => {
     if (ready && clicked) {
       animateMenuIn();
@@ -99,7 +116,11 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         id="canvasbg"
         className={`${styles.canvasbackground} fixed inset-0`}
       />
-      <div id="canvas" className={`${styles.canvascontainer} absolute`}>
+      <div
+        id="canvas"
+        ref={measure}
+        className={`${styles.canvascontainer} absolute`}
+      >
         <MemoBVCanvas
           clicked={clicked}
           toggleClick={toggleClick}
