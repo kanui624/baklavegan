@@ -21,7 +21,7 @@ export const contactData: any = [
   },
   {
     id: 3,
-    name: 'socials',
+    name: 'social',
     textOne: 'just wanna keep up with us?',
     textTwo: 'follow our socials below!',
   },

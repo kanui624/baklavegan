@@ -60,22 +60,22 @@
   letter-spacing: 0.05rem;
 }
 
-// Socials Card
+// Social Card
 
-.socialsto {
+.socialto {
   right: -76rem;
 }
 
-.socialsbgpos {
+.socialbgpos {
   bottom: 9rem;
 }
 
-.socialstextpos {
+.socialtextpos {
   bottom: 10rem;
   right: -62.3rem;
 }
 
-.socialstextstyle {
+.socialtextstyle {
   font-size: 2.25rem;
   text-shadow: 3.5px 2.5px 3px #39311d;
   letter-spacing: 0.05rem;
@@ -85,3 +85,6 @@
 .sociallinks {
   bottom: -8rem;
 }
+
+// Media Queries
+@import './1-contact-responsive.scss';

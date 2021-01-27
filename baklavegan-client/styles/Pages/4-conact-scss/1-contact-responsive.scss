@@ -1,0 +1,501 @@
+// Portrait
+// IPAD MINI PORTRAIT
+@media (min-width: 768.98px) and (orientation: portrait) {
+  // Question Card
+  .questionsto {
+    left: -60rem;
+  }
+
+  .questionsbgpos {
+    bottom: 45rem;
+  }
+
+  .questionstextpos {
+    bottom: 45.5rem;
+    left: -53rem;
+  }
+
+  .questionstextstyle {
+    font-size: 2.9rem;
+  }
+
+  // Info Card
+  .infoto {
+    right: -60rem;
+  }
+
+  .infobgpos {
+    bottom: 35rem;
+  }
+
+  .infotextpos {
+    bottom: 35.3rem;
+    right: -56rem;
+  }
+
+  .infotextstyle {
+    font-size: 2.9rem;
+  }
+
+  // Business Card
+  .businessto {
+    left: -60rem;
+  }
+
+  .businessbgpos {
+    bottom: 25rem;
+  }
+
+  .businesstextpos {
+    bottom: 25.3rem;
+    left: -56rem;
+  }
+
+  .businesstextstyle {
+    font-size: 2.9rem;
+  }
+
+  // Social Card
+  .socialto {
+    right: -60rem;
+  }
+
+  .socialbgpos {
+    bottom: 15rem;
+  }
+
+  .socialtextpos {
+    bottom: 15rem;
+    right: -56rem;
+  }
+
+  .socialtextstyle {
+    font-size: 2.9rem;
+  }
+
+  // Social Links
+  .sociallinks {
+    bottom: -8rem;
+  }
+}
+
+// Landscape
+// Original
+@media (orientation: landscape) {
+  // Question Card
+  .questionsto {
+    left: -76.7rem;
+  }
+
+  .questionsbgpos {
+    bottom: 12.15rem;
+  }
+
+  .questionstextpos {
+    bottom: 13rem;
+    left: -60rem;
+  }
+
+  .questionstextstyle {
+    font-size: 2.35rem;
+    letter-spacing: 0rem;
+  }
+
+  // Info Card
+  .infoto {
+    right: -76.7rem;
+  }
+
+  .infobgpos {
+    bottom: 12.15rem;
+  }
+
+  .infotextpos {
+    bottom: 13rem;
+    right: -62.1rem;
+  }
+
+  .infotextstyle {
+    font-size: 2.35rem;
+    letter-spacing: 0rem;
+  }
+
+  // Business Card
+  .businessto {
+    left: -76.7rem;
+  }
+
+  .businessbgpos {
+    bottom: 4rem;
+  }
+
+  .businesstextpos {
+    bottom: 5rem;
+    left: -62.3rem;
+  }
+
+  .businesstextstyle {
+    font-size: 2.35rem;
+    letter-spacing: 0rem;
+  }
+
+  // Social Card
+  .socialto {
+    right: -76.7rem;
+  }
+
+  .socialbgpos {
+    bottom: 4rem;
+  }
+
+  .socialtextpos {
+    bottom: 5rem;
+    right: -62.3rem;
+  }
+
+  .socialtextstyle {
+    font-size: 2.35rem;
+    letter-spacing: 0rem;
+  }
+  // Social Links
+  .sociallinks {
+    bottom: -12rem;
+  }
+
+  //  Social Links container
+  .socialcontainer {
+    justify-content: space-between;
+  }
+}
+
+// IPAD MINI LANDSCAPE
+@media (min-width: 1024.98px) and (orientation: landscape) {
+  // Question Card
+  .questionsto {
+    left: -60rem;
+  }
+
+  .questionsbgpos {
+    bottom: 33rem;
+  }
+
+  .questionstextpos {
+    bottom: 33.5rem;
+    left: -53rem;
+  }
+
+  .questionstextstyle {
+    font-size: 2.9rem;
+    letter-spacing: 0rem;
+  }
+
+  // Info Card
+  .infoto {
+    right: -60rem;
+  }
+
+  .infobgpos {
+    bottom: 24.5rem;
+  }
+
+  .infotextpos {
+    bottom: 24.9rem;
+    right: -55rem;
+  }
+
+  .infotextstyle {
+    font-size: 2.9rem;
+    letter-spacing: 0rem;
+  }
+
+  // Business Card
+  .businessto {
+    left: -60rem;
+  }
+
+  .businessbgpos {
+    bottom: 16rem;
+  }
+
+  .businesstextpos {
+    bottom: 16.4rem;
+    left: -55rem;
+  }
+
+  .businesstextstyle {
+    font-size: 2.9rem;
+    letter-spacing: 0rem;
+  }
+
+  // Social Card
+  .socialto {
+    right: -60rem;
+  }
+
+  .socialbgpos {
+    bottom: 7.5rem;
+  }
+
+  .socialtextpos {
+    bottom: 7.5rem;
+    right: -56rem;
+  }
+
+  .socialtextstyle {
+    font-size: 2.9rem;
+    letter-spacing: 0rem;
+  }
+  // Social Links
+  .sociallinks {
+    bottom: -9rem;
+  }
+}
+
+// MACBOOK PRO 15"
+@media (min-width: 1440px) and (orientation: landscape) {
+  // Question Card
+  .questionsto {
+    left: -40rem;
+  }
+
+  .questionsbgpos {
+    bottom: 40.5rem;
+  }
+
+  .questionstextpos {
+    bottom: 41.1rem;
+    left: -34rem;
+  }
+
+  .questionstextstyle {
+    font-size: 2.9rem;
+    letter-spacing: 0.1rem;
+  }
+
+  // Info Card
+  .infoto {
+    right: -40rem;
+  }
+
+  .infobgpos {
+    bottom: 30.5rem;
+  }
+
+  .infotextpos {
+    bottom: 30.9rem;
+    right: -35rem;
+  }
+
+  .infotextstyle {
+    font-size: 2.9rem;
+    letter-spacing: 0rem;
+  }
+
+  // Business Card
+  .businessto {
+    left: -40rem;
+  }
+
+  .businessbgpos {
+    bottom: 20.5rem;
+  }
+
+  .businesstextpos {
+    bottom: 20.9rem;
+    left: -35rem;
+  }
+
+  .businesstextstyle {
+    font-size: 2.9rem;
+    letter-spacing: 0rem;
+  }
+
+  // Social Card
+  .socialto {
+    right: -40rem;
+  }
+
+  .socialbgpos {
+    bottom: 10.5rem;
+  }
+
+  .socialtextpos {
+    bottom: 10.5rem;
+    right: -36rem;
+  }
+
+  .socialtextstyle {
+    font-size: 2.9rem;
+    letter-spacing: 0rem;
+  }
+  // Social Links
+  .sociallinks {
+    bottom: -7.5rem;
+  }
+}
+
+// 32 INCH MONITOR
+@media (min-width: 1920px) and (orientation: landscape) {
+  // Question Card
+  .questionsto {
+    left: -30rem;
+  }
+
+  .questionsbgpos {
+    bottom: 48.5rem;
+  }
+
+  .questionstextpos {
+    bottom: 49.1rem;
+    left: -24rem;
+  }
+
+  .questionstextstyle {
+    font-size: 2.9rem;
+    letter-spacing: 0.1rem;
+  }
+
+  // Info Card
+  .infoto {
+    right: -30rem;
+  }
+
+  .infobgpos {
+    bottom: 37.5rem;
+  }
+
+  .infotextpos {
+    bottom: 37.9rem;
+    right: -25rem;
+  }
+
+  .infotextstyle {
+    font-size: 2.9rem;
+    letter-spacing: 0rem;
+  }
+
+  // Business Card
+  .businessto {
+    left: -30rem;
+  }
+
+  .businessbgpos {
+    bottom: 26.5rem;
+  }
+
+  .businesstextpos {
+    bottom: 26.9rem;
+    left: -25rem;
+  }
+
+  .businesstextstyle {
+    font-size: 2.9rem;
+    letter-spacing: 0rem;
+  }
+
+  // Social Card
+  .socialto {
+    right: -30rem;
+  }
+
+  .socialbgpos {
+    bottom: 15.5rem;
+  }
+
+  .socialtextpos {
+    bottom: 15.5rem;
+    right: -26rem;
+  }
+
+  .socialtextstyle {
+    font-size: 2.9rem;
+    letter-spacing: 0rem;
+  }
+  // Social Links
+  .sociallinks {
+    bottom: -6rem;
+  }
+}
+
+// IMAC
+@media (min-width: 2560px) and (orientation: landscape) {
+  // Question Card
+  .questionsto {
+    left: -5rem;
+  }
+
+  .questionsbgpos {
+    bottom: 58.5rem;
+  }
+
+  .questionstextpos {
+    bottom: 59.1rem;
+    left: 0rem;
+  }
+
+  .questionstextstyle {
+    font-size: 2.9rem;
+    letter-spacing: 0.2rem;
+  }
+
+  // Info Card
+  .infoto {
+    right: -5rem;
+  }
+
+  .infobgpos {
+    bottom: 47.5rem;
+  }
+
+  .infotextpos {
+    bottom: 47.9rem;
+    right: -3rem;
+  }
+
+  .infotextstyle {
+    font-size: 2.9rem;
+    letter-spacing: 0.2rem;
+  }
+
+  // Business Card
+  .businessto {
+    left: -5rem;
+  }
+
+  .businessbgpos {
+    bottom: 36.5rem;
+  }
+
+  .businesstextpos {
+    bottom: 36.9rem;
+    left: -3rem;
+  }
+
+  .businesstextstyle {
+    font-size: 2.9rem;
+    letter-spacing: 0.2rem;
+  }
+
+  // Social Card
+  .socialto {
+    right: -5rem;
+  }
+
+  .socialbgpos {
+    bottom: 25.5rem;
+  }
+
+  .socialtextpos {
+    bottom: 25.5rem;
+    right: -3.5rem;
+  }
+
+  .socialtextstyle {
+    font-size: 2.9rem;
+    letter-spacing: 0.2rem;
+  }
+  // Social Links
+  .sociallinks {
+    bottom: -6rem;
+  }
+}

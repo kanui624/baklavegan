@@ -47,7 +47,7 @@ const Contact: FC = () => {
       stagger: 0.15,
       duration: 1,
     });
-    gsap.to(['.infoto', '.socialsto'], {
+    gsap.to(['.infoto', '.socialto'], {
       x: -1000,
       delay: 0.6,
       stagger: 0.15,
@@ -64,13 +64,13 @@ const Contact: FC = () => {
     });
     gsap.to('.cardopacity', { opacity: 0, delay: 0.4, stagger: 0.1 });
     gsap.to(['.questionsto', '.businessto'], {
-      x: -100,
+      x: -800,
       stagger: 0.15,
       duration: 1,
       delay: 0.5,
     });
-    gsap.to(['.infoto', '.socialsto'], {
-      x: 100,
+    gsap.to(['.infoto', '.socialto'], {
+      x: 800,
       stagger: 0.15,
       duration: 1,
       delay: 0.5,
@@ -110,11 +110,11 @@ const Contact: FC = () => {
         )}
       </div>
       <div className={`sociallinks absolute -inset-x-0 container mx-auto`}>
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-evenly socialcontainer">
           {socialData.map(
             ({ id, link, image, width, height }: SocialDataProps) => (
               <Link key={id} href={link}>
-                <a className="sociallinkanimate px-1">
+                <a className="sociallinkanimate">
                   <Image
                     src={`/2-images/5-contact/0-socials/${image}.png`}
                     alt={image}
