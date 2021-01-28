@@ -1,6 +1,12 @@
 // Store
 import { wrapper } from '../redux/store';
 
+// React Use Measure
+import useMeasure from 'react-use-measure';
+
+// Resize Observer
+import { ResizeObserver } from '@juggle/resize-observer';
+
 // Global Components
 import Layout from '../components/1-layout/Layout';
 
@@ -18,9 +24,10 @@ import '../styles/tailwind.css';
 import '../styles/Pages/4-conact-scss/0-contact.scss';
 
 const BaklaVegan: FC<AppProps> = ({ Component, pageProps }) => {
+  const [measure, bounds] = useMeasure({ polyfill: ResizeObserver });
   return (
     <Layout>
-      <Component {...pageProps} />
+      <Component ref={measure} {...pageProps} />
     </Layout>
   );
 };

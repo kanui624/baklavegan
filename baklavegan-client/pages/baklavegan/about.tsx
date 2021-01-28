@@ -1,61 +1,58 @@
+// React
+import { useEffect } from 'react';
+
 // Next
 import Image from 'next/image';
 
+// Redux
+import { useSelector } from 'react-redux';
+
+// GSAP
+import gsap from 'gsap';
+
 // React Types
 import { FC } from 'react';
+
+// Redux Types
+import { AppState } from '../../redux/store';
 
 // Styles
 import styles from '../../styles/Pages/3-about-scss/about.module.scss';
 
 const About: FC = () => {
+  const {
+    MenuTransition: { transition },
+  } = useSelector<AppState, AppState>((state) => state);
+
+  const animateIn = () => {};
+  const animateOut = () => {};
+  const startAttribRotation = () => {
+    gsap.to('.attribanimation', {
+      rotationZ: 360,
+      transformOrigin: '50%, 50%',
+      repeat: -1,
+      duration: 15,
+      ease: 'none',
+    });
+  };
+
+  useEffect(() => {
+    if (transition) {
+      animateOut();
+    } else {
+      animateIn();
+      startAttribRotation();
+    }
+  }, []);
   return (
-    <>
-      <Image
-        className="fixed"
-        src="/1-menuops/1-back/4-animalrights-b.png"
-        alt="temp"
-        width={500}
-        height={500}
-      />
-      <div className="fixed">
-        <h3 className={`${styles.about}`}>Baklavegan Recipe:</h3>
-        <br />
-        <p className={`${styles.about} ${styles.aboutingrdients}`}>
-          - 1 vegan istanbulite
-          <br />
-          - 1 vegan austinite
-          <br />
-          - 1 passion for food
-          <br />
-          - 1 love for animals
-          <br />
-          - 1 fiery romance (optional)
-          <br />
-        </p>
-      </div>
-    </>
+    <Image
+      className={`${styles.attribs} attribanimation fixed`}
+      src="/2-images/3-about/0-rotate-attrib/0-attribs.png"
+      alt="baklavegan product attributes"
+      width={1000}
+      height={846}
+    />
   );
 };
 
 export default About;
-
-// <div className="relative border-4 border-black">
-//   <p className="flex">
-//     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
-//     omnis veniam magni ullam, dolor eius? Ex commodi assumenda neque
-//     corrupti iure velit laborum id beatae, laudantium consequuntur eaque
-//     quisquam suscipit.
-//   </p>
-// </div>;
-
-// Next
-
-//     <Image
-//   src="/2-menuops/1-back/4-animalrights-b.png"
-//   alt="temp"
-//   width={500}
-//   height={500}
-// />
-
-//
-//

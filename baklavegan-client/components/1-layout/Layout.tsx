@@ -11,12 +11,6 @@ import { exitMenu } from '../../redux/slices/MenuTransitionSlice';
 // GSAP
 import { gsap } from 'gsap';
 
-// React Use Measure
-import useMeasure from 'react-use-measure';
-
-// Resize Observer
-import { ResizeObserver } from '@juggle/resize-observer';
-
 // Components
 import MemoBVCanvas from '../0-navigation/BVCanvas';
 import MenuButtonRoot from './MenuButtonRoot';
@@ -38,7 +32,6 @@ interface LayoutProps {
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   const root = useRouter().pathname === '/' ? true : false;
-  const [measure, bounds] = useMeasure({ polyfill: ResizeObserver });
   const dispatch = useDispatch();
   const {
     MenuTransition: { transition },
@@ -116,11 +109,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         id="canvasbg"
         className={`${styles.canvasbackground} fixed inset-0`}
       />
-      <div
-        id="canvas"
-        ref={measure}
-        className={`${styles.canvascontainer} absolute`}
-      >
+      <div id="canvas" className={`${styles.canvascontainer} absolute`}>
         <MemoBVCanvas
           clicked={clicked}
           toggleClick={toggleClick}
