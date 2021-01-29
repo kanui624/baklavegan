@@ -24,7 +24,9 @@ const About: FC = () => {
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
 
-  const animateIn = () => {};
+  const animateIn = () => {
+    gsap.to('.treeattribs', { y: -1000, delay: 1, duration: 1.5 });
+  };
   const animateOut = () => {};
   const startAttribRotation = () => {
     gsap.to('.attribanimation', {
@@ -67,21 +69,11 @@ const About: FC = () => {
           height={850}
         />
       </div>
-      <div className={`${styles.walnut} fixed`}>
-        <Image
-          src="/2-images/1-index/1-enter-btn.png"
-          alt="baklatreegan tree"
-          width={749}
-          height={850}
-        />
-      </div>
-      {/* <div className={`${styles.abouttext} fixed text-center`}>
+      {/* <div className={`${styles.abouttext} fixed text-justify`}>
         <p>
-          When an Austinite met an Istanbulite, they soon realized that thier
-          passion for both food an animal rights could be turned into something
-          special... Baklavegan! At BV we're only here to serve you nothing less
-          than thoughtfully crafted gourmet dessert and advocate for the well
-          being of all species on earth in the process!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          laudantium hic odio laborum soluta nam voluptas repellendus, earum
+          architecto id quod porro optio dolores harumx
         </p>
       </div> */}
     </>
@@ -91,3 +83,8 @@ const About: FC = () => {
 export default About;
 
 // Baklavegan was founded in Austin Texas when a native Austinite met a native Istanbulite and shorlty after realized that thier shared passion for food and animal rights could be turned into something special! Thus Baklavegan was born!
+// When an Austinite met an Istanbulite, they soon realized that thier
+// passion for both food an animal rights could be turned into something
+// special... Baklavegan! At BV we're only here to serve you nothing less
+// than thoughtfully crafted gourmet dessert and advocate for the well
+// being of all species on earth in the process!

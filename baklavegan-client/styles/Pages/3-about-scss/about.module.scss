@@ -1,19 +1,10 @@
-.about {
-  text-align: center;
-  font-size: 1.8rem;
-}
-
-.aboutingrdients {
-  text-align: left;
-}
-
 .parent {
   width: 700px;
   height: 700px;
   overflow: hidden;
   position: relative;
-  right: 28rem;
-  bottom: -17rem;
+  right: 21.3rem;
+  bottom: -79rem;
 }
 
 .child {
@@ -25,18 +16,20 @@
 }
 
 .tree {
-  right: 42.7rem;
+  right: 36rem;
+  bottom: -56.9rem;
 }
 
 .abouttext {
-  width: 26rem;
-  bottom: 5.5rem;
-  right: 38rem;
-  font-size: 1.7rem;
+  width: 33rem;
+  bottom: 37.5rem;
+  right: 42rem;
+  font-size: 2rem;
   text-shadow: 3.5px 2.5px 3px #39311d;
-  background-color: #cbaf8760;
-  border-radius: 30rem;
-  box-shadow: 0rem 0rem 5rem 4rem #cbaf8760;
+  border-radius: 10rem;
+  // box-shadow: 0rem 0rem 2rem #cbaf87af;
+  // background-color: #cbaf8750;
+  color: #cbaf87;
 }
 
 // .about {
