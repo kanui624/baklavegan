@@ -44,25 +44,50 @@ const About: FC = () => {
     }
   }, []);
   return (
-    <div className="fixed">
-      <div className={`${styles.parent}`}>
-        <div className={`${styles.child}`}>
-          <div className={`attribanimation`}>
-            <Image
-              src="/2-images/3-about/0-rotate-attrib/0-attribs.png"
-              alt="baklavegan product attributes"
-              width={800}
-              height={677}
-            />
+    <>
+      <div className="fixed treeattribs">
+        <div className={`${styles.parent} `}>
+          <div className={`${styles.child}`}>
+            <div className={`attribanimation`}>
+              <Image
+                src="/2-images/3-about/0-attribs.png"
+                alt="baklavegan product attributes"
+                width={700}
+                height={592}
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <div className={`${styles.tree} fixed treeattribs`}>
+        <Image
+          src="/2-images/3-about/1-about-tree.png"
+          alt="baklatreegan tree"
+          width={749}
+          height={850}
+        />
+      </div>
+      <div className={`${styles.walnut} fixed`}>
+        <Image
+          src="/2-images/1-index/1-enter-btn.png"
+          alt="baklatreegan tree"
+          width={749}
+          height={850}
+        />
+      </div>
+      {/* <div className={`${styles.abouttext} fixed text-center`}>
+        <p>
+          When an Austinite met an Istanbulite, they soon realized that thier
+          passion for both food an animal rights could be turned into something
+          special... Baklavegan! At BV we're only here to serve you nothing less
+          than thoughtfully crafted gourmet dessert and advocate for the well
+          being of all species on earth in the process!
+        </p>
+      </div> */}
+    </>
   );
 };
 
 export default About;
 
-{
-  /* <div className={`${styles.attribs} fixed`} />; */
-}
+// Baklavegan was founded in Austin Texas when a native Austinite met a native Istanbulite and shorlty after realized that thier shared passion for food and animal rights could be turned into something special! Thus Baklavegan was born!
