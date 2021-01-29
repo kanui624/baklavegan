@@ -28,11 +28,10 @@ const About: FC = () => {
   const animateOut = () => {};
   const startAttribRotation = () => {
     gsap.to('.attribanimation', {
-      rotationZ: 360,
-      transformOrigin: '50%, 50%',
-      repeat: -1,
-      duration: 15,
+      rotationZ: -360,
+      duration: 20,
       ease: 'none',
+      repeat: -1,
     });
   };
 
@@ -45,14 +44,25 @@ const About: FC = () => {
     }
   }, []);
   return (
-    <Image
-      className={`${styles.attribs} attribanimation fixed`}
-      src="/2-images/3-about/0-rotate-attrib/0-attribs.png"
-      alt="baklavegan product attributes"
-      width={1000}
-      height={846}
-    />
+    <div className="fixed">
+      <div className={`${styles.parent}`}>
+        <div className={`${styles.child}`}>
+          <div className={`attribanimation`}>
+            <Image
+              src="/2-images/3-about/0-rotate-attrib/0-attribs.png"
+              alt="baklavegan product attributes"
+              width={800}
+              height={677}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
 export default About;
+
+{
+  /* <div className={`${styles.attribs} fixed`} />; */
+}

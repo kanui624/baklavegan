@@ -24,10 +24,10 @@ import '../styles/tailwind.css';
 import '../styles/Pages/4-conact-scss/0-contact.scss';
 
 const BaklaVegan: FC<AppProps> = ({ Component, pageProps }) => {
-  const [measure, bounds] = useMeasure({ polyfill: ResizeObserver });
+  // const [measure, bounds] = useMeasure({ polyfill: ResizeObserver });
   return (
     <Layout>
-      <Component ref={measure} {...pageProps} />
+      <Component {...pageProps} />
     </Layout>
   );
 };
