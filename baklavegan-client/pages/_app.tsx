@@ -21,6 +21,7 @@ import '../styles/globals.scss';
 import '../styles/tailwind.css';
 
 // Page Styles
+import '../styles/Pages/3-about-scss/0-about.scss';
 import '../styles/Pages/4-conact-scss/0-contact.scss';
 
 const BaklaVegan: FC<AppProps> = ({ Component, pageProps }) => {
