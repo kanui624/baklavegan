@@ -5,7 +5,7 @@ import { useState, useEffect, useMemo } from 'react';
 import Router from 'next/router';
 
 // Three
-import * as THREE from 'three';
+import { TextureLoader } from 'three';
 
 // React Spring
 import { useSpring, a } from 'react-spring/three';
@@ -38,7 +38,7 @@ const MenuOption: FC<MenuOptionProps> = ({
   }, [link]);
 
   const [menuRipFront, menuRipBack, menuRipLabel] = useMemo(() => {
-    const loader = new THREE.TextureLoader();
+    const loader = new TextureLoader();
     return [loader.load(imgFront), loader.load(imgBack), loader.load(imgLabel)];
   }, [imgFront, imgBack, imgLabel]);
 

@@ -39,20 +39,27 @@ const Contact: FC = () => {
   } = useSelector<AppState, AppState>((state) => state);
 
   const animateIn = () => {
-    gsap.to('.sociallinkanimate', { y: -200, delay: 1.5, stagger: 0.15 });
+    gsap.to('.sociallinkanimate', {
+      y: -200,
+      delay: 1.6,
+      stagger: 0.15,
+      ease: 'back.out(1.02)',
+    });
     gsap.to(['.questionsto', '.businessto'], {
       x: 1000,
       opacity: 1,
       delay: 0.6,
       stagger: 0.15,
-      duration: 1,
+      duration: 1.5,
+      ease: 'back.out(1.02)',
     });
     gsap.to(['.infoto', '.socialto'], {
       x: -1000,
       opacity: 1,
       delay: 0.6,
       stagger: 0.15,
-      duration: 1,
+      duration: 1.5,
+      ease: 'back.out(1.02)',
     });
   };
 
@@ -61,7 +68,7 @@ const Contact: FC = () => {
       y: 200,
       stagger: 0.1,
       delay: 0.5,
-      ease: 'bounce.out',
+      ease: 'back.in(1.02)',
     });
     gsap.to('.cardopacity', { opacity: 0, delay: 0.4, stagger: 0.1 });
     gsap.to(['.questionsto', '.businessto'], {
@@ -69,14 +76,16 @@ const Contact: FC = () => {
       opacity: 0,
       stagger: 0.15,
       duration: 1,
-      delay: 0.5,
+      delay: 0.3,
+      ease: 'back.in(1.02)',
     });
     gsap.to(['.infoto', '.socialto'], {
       x: 500,
       opacity: 0,
       stagger: 0.15,
       duration: 1,
-      delay: 0.5,
+      delay: 0.3,
+      ease: 'back.in(1.02)',
     });
   };
 
@@ -103,7 +112,7 @@ const Contact: FC = () => {
             <ContactInfo
               key={id}
               name={name}
-              image={`/2-images/5-contact/1-bg/${id}-${name}.jpg`}
+              image={`/2-images/0-global/1-infocards/${id}-info-card.jpg`}
               link={link}
               textOne={textOne}
               textTwo={textTwo}

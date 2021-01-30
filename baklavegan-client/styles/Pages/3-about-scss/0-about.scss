@@ -3,7 +3,7 @@
   height: 700px;
   overflow: hidden;
   position: relative;
-  right: 21.3rem;
+  right: 25.3rem;
   bottom: -79rem;
 }
 
@@ -16,49 +16,69 @@
 }
 
 .abouttree {
-  right: 36rem;
+  right: 40rem;
   bottom: -57rem;
 }
 
 .bwzero {
-  right: 72rem;
-  bottom: 36rem;
+  right: 76rem;
+  bottom: -28rem;
+  transform: rotateZ(30deg);
+  display: block;
 }
 .bwone {
-  right: 68rem;
-  bottom: 50rem;
+  right: 73rem;
+  bottom: -14rem;
+  transform: rotateZ(-30deg);
+  display: block;
 }
 .bwtwo {
-  right: 68rem;
-  bottom: 42rem;
+  right: 72rem;
+  bottom: -21rem;
+  transform: rotateZ(-10deg);
+  display: block;
 }
 .bwthree {
-  right: 63rem;
-  bottom: 36rem;
+  right: 68rem;
+  bottom: -27rem;
+  transform: rotateZ(20deg);
+  display: block;
 }
 .bwfour {
-  right: 61rem;
-  bottom: 46rem;
+  right: 64rem;
+  bottom: -17rem;
+  transform: rotateZ(10deg);
+  display: block;
 }
 .bwfive {
-  right: 55rem;
-  bottom: 40rem;
+  right: 60rem;
+  bottom: -23rem;
+  transform: rotateZ(-40deg);
+  display: block;
 }
 .bwsix {
-  right: 52rem;
-  bottom: 50rem;
+  right: 56rem;
+  bottom: -13rem;
+  transform: rotateZ(-30deg);
+  display: block;
 }
 .bwseven {
-  right: 47rem;
-  bottom: 41rem;
+  right: 51rem;
+  bottom: -22rem;
+  transform: rotateZ(5deg);
+  display: block;
 }
 .bweight {
-  right: 43rem;
-  bottom: 47rem;
+  right: 47rem;
+  bottom: -16rem;
+  transform: rotateZ(-10deg);
+  display: block;
 }
 .bwnine {
-  right: 41rem;
-  bottom: 36rem;
+  right: 45rem;
+  bottom: -27rem;
+  transform: rotateZ(-30deg);
+  display: block;
 }
 
 // .abouttext {

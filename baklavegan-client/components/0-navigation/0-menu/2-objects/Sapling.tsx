@@ -2,7 +2,7 @@
 import { useRef } from 'react';
 
 // Three
-import * as THREE from 'three';
+import { Mesh, MeshStandardMaterial, Group } from 'three';
 import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader';
 
 // Drei
@@ -11,21 +11,21 @@ import { useGLTF } from '@react-three/drei/useGLTF';
 // Component Level Types
 type Sapling = GLTF & {
   nodes: {
-    Sapling_1: THREE.Mesh;
-    Sapling_2: THREE.Mesh;
-    Sapling_3: THREE.Mesh;
-    Sapling_4: THREE.Mesh;
+    Sapling_1: Mesh;
+    Sapling_2: Mesh;
+    Sapling_3: Mesh;
+    Sapling_4: Mesh;
   };
   materials: {
-    ['0-Stem']: THREE.MeshStandardMaterial;
-    ['2-Half']: THREE.MeshStandardMaterial;
-    ['1-Full']: THREE.MeshStandardMaterial;
-    ['3-None']: THREE.MeshStandardMaterial;
+    ['0-Stem']: MeshStandardMaterial;
+    ['2-Half']: MeshStandardMaterial;
+    ['1-Full']: MeshStandardMaterial;
+    ['3-None']: MeshStandardMaterial;
   };
 };
 
 const Sapling = (props: JSX.IntrinsicElements['group']) => {
-  const group = useRef<THREE.Group>();
+  const group = useRef<Group>();
   const { nodes, materials } = useGLTF('/0-gltf/sapling.gltf') as Sapling;
   return (
     <group

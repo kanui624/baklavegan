@@ -24,13 +24,13 @@ const About: FC = () => {
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
 
-  const aboutTreeTl = gsap.timeline();
+  const treeWalnutTl = gsap.timeline();
   const animateIn = () => {
-    gsap.to('.treeattribs', {
+    treeWalnutTl.to(['.treeattribs', '.babywalnuts'], {
       y: -1000,
       delay: 1,
       duration: 2.3,
-      ease: 'elastic.out(1, 2.5)',
+      ease: 'back.out(1.07)',
     });
     gsap.fromTo(
       '.babywalnuts',
@@ -39,25 +39,16 @@ const About: FC = () => {
         scale: 1,
         duration: 1,
         stagger: 0.1,
-        delay: 1.9,
+        delay: 3,
         ease: 'bounce.out',
       }
     );
   };
   const animateOut = () => {
-    gsap.fromTo(
-      '.babywalnuts',
-      { scale: 1 },
-      {
-        scale: 0,
-        stagger: 0.05,
-        ease: 'bounce.out',
-      }
-    );
-    gsap.to('.treeattribs', {
+    gsap.to(['.treeattribs', '.babywalnuts'], {
       y: 100,
       duration: 2,
-      delay: 0.5,
+      ease: 'back.in(1.1)',
     });
   };
 
@@ -68,6 +59,13 @@ const About: FC = () => {
       ease: 'none',
       repeat: -1,
     });
+
+    return () => {
+      gsap.to('.attribanimation', {
+        rotationZ: 0,
+        ease: 'none',
+      });
+    };
   }, []);
 
   useEffect(() => {
