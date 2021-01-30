@@ -38,7 +38,7 @@ const About: FC = () => {
       {
         scale: 1,
         duration: 1,
-        stagger: 0.1,
+        stagger: 0.2,
         delay: 3,
         ease: 'bounce.out',
       }
@@ -84,7 +84,7 @@ const About: FC = () => {
             <div className="attribanimation">
               <Image
                 src="/2-images/3-about/0-attribs.png"
-                alt="baklavegan product attributes"
+                alt="Baklavegan Product Attributes"
                 width={700}
                 height={592}
               />
@@ -95,28 +95,14 @@ const About: FC = () => {
       <div className="fixed abouttree treeattribs">
         <Image
           src="/2-images/3-about/1-about-tree.png"
-          alt="baklatreegan tree"
+          alt="Baklatreegan Tree"
           width={749}
           height={850}
         />
       </div>
       <BabyWalnut />
-      {/* <div className={`${styles.abouttext} fixed text-justify`}>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-          laudantium hic odio laborum soluta nam voluptas repellendus, earum
-          architecto id quod porro optio dolores harumx
-        </p>
-      </div> */}
     </Fragment>
   );
 };
 
 export default About;
-
-// Baklavegan was founded in Austin Texas when a native Austinite met a native Istanbulite and shorlty after realized that thier shared passion for food and animal rights could be turned into something special! Thus Baklavegan was born!
-// When an Austinite met an Istanbulite, they soon realized that thier
-// passion for both food an animal rights could be turned into something
-// special... Baklavegan! At BV we're only here to serve you nothing less
-// than thoughtfully crafted gourmet dessert and advocate for the well
-// being of all species on earth in the process!

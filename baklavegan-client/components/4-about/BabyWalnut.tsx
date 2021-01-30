@@ -26,7 +26,7 @@ const BabyWalnut: any = () => {
         {/* <h1>{id}</h1> */}
         <Image
           src="/2-images/3-about/2-babywalnut.png"
-          alt="babywalnut"
+          alt="Babywalnut"
           width={40}
           height={53}
         />

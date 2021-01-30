@@ -45,7 +45,7 @@ const BaklaHome: FC = () => {
       <Image
         className="opacity-0 animatelogo"
         src="/2-images/1-index/0-bv-logo.png"
-        alt="baklavegan"
+        alt="Baklavegan"
         width={1400}
         height={343}
       />
