@@ -12,6 +12,7 @@ import gsap from 'gsap';
 
 // Components
 import BabyWalnut from '../../components/4-about/BabyWalnut';
+import AboutInfo from '../../components/4-about/AboutInfo';
 
 // React Types
 import { FC } from 'react';
@@ -43,12 +44,31 @@ const About: FC = () => {
         ease: 'bounce.out',
       }
     );
+    gsap.to('.about', {
+      y: -490,
+      delay: 1.5,
+      duration: 1.7,
+      ease: 'back.out(1)',
+    });
+    gsap.to('.abouttext', {
+      opacity: 1,
+      delay: 3,
+      duration: 2,
+    });
   };
   const animateOut = () => {
     gsap.to(['.treeattribs', '.babywalnuts'], {
       y: 100,
       duration: 2,
       ease: 'back.in(1.1)',
+    });
+    gsap.to('.about', {
+      y: 100,
+      duration: 1.73,
+      ease: 'back.in(1.5)',
+    });
+    gsap.to('.abouttext', {
+      opacity: 0,
     });
   };
 
@@ -101,6 +121,7 @@ const About: FC = () => {
         />
       </div>
       <BabyWalnut />
+      <AboutInfo />
     </Fragment>
   );
 };
