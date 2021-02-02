@@ -9,10 +9,13 @@ import Link from 'next/link';
 // @ts-ignore
 import HTMLFlipBook from 'react-pageflip';
 
+// Data
+import { aboutPageData } from './AboutPageData';
 // React Types
 import { FC } from 'react';
 
-const AboutPages = () => {};
+// Component Level Types
+import { AboutPageProps } from './0-types/AboutProps';
 
 const AboutBook: FC = () => {
   return (
@@ -20,32 +23,64 @@ const AboutBook: FC = () => {
       className="aboutbook fixed"
       width={250}
       height={334}
-      showCover={true}
       drawShadow={false}
     >
-      <div className="aboutpage pageone text-center">
-        <div className="flex justify-center items-center h-full">hey</div>
-      </div>
-      <div className="aboutpage pagetwo">
-        <div className="flex justify-center items-center h-full">hey</div>
-      </div>
-      <div className="aboutpage">
-        <div className="flex justify-center items-center h-full">hey</div>
-      </div>
-      <div className="aboutpage">
-        <div className="flex justify-center items-center h-full">hey</div>
-      </div>
-      <div className="aboutpage">
-        <div className="flex justify-center items-center h-full">hey</div>
-      </div>
-      <div className="aboutpage">
-        <div className="flex justify-center items-center h-full">hey</div>
-      </div>
+      {aboutPageData.map(({ id, text, image, link }: AboutPageProps) => {
+        return (
+          <div key={id} className={`aboutpage page${id}`}>
+            <div className="flex justify-center items-center h-full">
+              {text}
+            </div>
+          </div>
+        );
+      })}
     </HTMLFlipBook>
   );
 };
 
 export default AboutBook;
+
+{
+  /* <div className="aboutpage pagetwo">
+        <div className="flex justify-center items-center h-full">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
+          eos dolor perferendis velit eligendi unde quia quaerat ab nihil nulla
+          deserunt excepturi ea atque rerum culpa, placeat necessitatibus
+          delectus animi?
+        </div>
+      </div>
+      <div className="aboutpage">
+        <div className="flex justify-center items-center h-full">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas non
+          blanditiis nesciunt consequuntur quod aliquam quos a molestiae
+          repudiandae pariatur laboriosam voluptate soluta et autem ducimus,
+          repellendus id est tenetur!
+        </div>
+      </div>
+      <div className="aboutpage">
+        <div className="flex justify-center items-center h-full">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+          voluptate quidem officiis odit quae id! Atque hic laborum, modi
+          laudantium, porro ut quas temporibus ad unde earum ex quis itaque.
+        </div>
+      </div>
+      <div className="aboutpage">
+        <div className="flex justify-center items-center h-full">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero,
+          eligendi ratione ex nobis, quia hic iure inventore delectus numquam
+          libero modi neque minus provident possimus error a, voluptates
+          sapiente unde.
+        </div>
+      </div>
+      <div className="aboutpage">
+        <div className="flex justify-center items-center h-full">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+          blanditiis porro iusto maiores minima, nam laborum, voluptates
+          asperiores perferendis et praesentium impedit accusamus dicta?
+          Pariatur sequi officiis saepe explicabo iste?
+        </div>
+      </div> */
+}
 
 // <div className="aboutinfopages fixed about">
 //   <Image
