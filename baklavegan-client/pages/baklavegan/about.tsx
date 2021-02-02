@@ -11,8 +11,8 @@ import { useSelector } from 'react-redux';
 import gsap from 'gsap';
 
 // Components
+import AboutBook from '../../components/4-about/AboutBook';
 import BabyWalnut from '../../components/4-about/BabyWalnut';
-import AboutInfo from '../../components/4-about/AboutInfo';
 
 // React Types
 import { FC } from 'react';
@@ -44,17 +44,17 @@ const About: FC = () => {
         ease: 'bounce.out',
       }
     );
-    gsap.to('.about', {
-      y: -490,
-      delay: 1.5,
-      duration: 1.7,
-      ease: 'back.out(1)',
-    });
-    gsap.to('.abouttext', {
-      opacity: 1,
-      delay: 3,
-      duration: 2,
-    });
+    // gsap.to('.about', {
+    //   y: -490,
+    //   delay: 1.5,
+    //   duration: 1.7,
+    //   ease: 'back.out(1)',
+    // });
+    // gsap.to('.abouttext', {
+    //   opacity: 1,
+    //   delay: 3,
+    //   duration: 2,
+    // });
   };
   const animateOut = () => {
     gsap.to(['.treeattribs', '.babywalnuts'], {
@@ -62,14 +62,14 @@ const About: FC = () => {
       duration: 2,
       ease: 'back.in(1.1)',
     });
-    gsap.to('.about', {
-      y: 100,
-      duration: 1.73,
-      ease: 'back.in(1.5)',
-    });
-    gsap.to('.abouttext', {
-      opacity: 0,
-    });
+    // gsap.to('.about', {
+    //   y: 100,
+    //   duration: 1.73,
+    //   ease: 'back.in(1.5)',
+    // });
+    // gsap.to('.abouttext', {
+    //   opacity: 0,
+    // });
   };
 
   useEffect(() => {
@@ -121,7 +121,7 @@ const About: FC = () => {
         />
       </div>
       <BabyWalnut />
-      <AboutInfo />
+      <AboutBook />
     </Fragment>
   );
 };
