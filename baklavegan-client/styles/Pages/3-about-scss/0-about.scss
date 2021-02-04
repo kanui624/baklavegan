@@ -1,160 +1,17 @@
-.spinnerparent {
-  width: 700px;
-  height: 700px;
-  overflow: hidden;
-  position: relative;
-  right: 25.3rem;
-  bottom: -79rem;
-}
-
-.spinnerchild {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 20rem;
-  bottom: 12rem;
-}
-
-.abouttree {
-  right: 40rem;
-  bottom: -57rem;
-}
-
-.bwzero {
-  right: 76rem;
-  bottom: -28rem;
-  transform: rotateZ(30deg);
-  display: block;
-}
-.bwone {
-  right: 64rem;
-  bottom: -17rem;
-  transform: rotateZ(10deg);
-  display: block;
-}
-.bwtwo {
-  right: 47rem;
-  bottom: -16rem;
-  transform: rotateZ(-10deg);
-  display: block;
-}
-.bwthree {
-  right: 73rem;
-  bottom: -14rem;
-  transform: rotateZ(-30deg);
-  display: block;
-}
-.bwfour {
-  right: 51rem;
-  bottom: -22rem;
-  transform: rotateZ(5deg);
-  display: block;
-}
-.bwfive {
-  right: 72rem;
-  bottom: -21rem;
-  transform: rotateZ(-10deg);
-  display: block;
-}
-.bwsix {
-  right: 56rem;
-  bottom: -13rem;
-  transform: rotateZ(-30deg);
-  display: block;
-}
-.bwseven {
-  right: 68rem;
-  bottom: -27rem;
-  transform: rotateZ(20deg);
-  display: block;
-}
-.bweight {
-  right: 45rem;
-  bottom: -27rem;
-  transform: rotateZ(-30deg);
-  display: block;
-}
-.bwnine {
-  right: 60rem;
-  bottom: -23rem;
-  transform: rotateZ(-40deg);
-  display: block;
-}
-
-// .aboutinfopages {
-//   bottom: -25rem;
-//   right: 30rem;
-// }
-
-// .aboutinfo {
-//   width: 21rem;
-//   bottom: -23rem;
-//   right: 36.6rem;
-//   font-size: 1.65rem;
-//   text-shadow: 3.5px 2.5px 3px #39311d;
-// }
-
 .stf__parent {
   position: fixed !important;
-  right: 28rem;
-  bottom: 6rem;
 }
 
 .aboutpage {
   background: url('/2-images/3-about/3-about-info.png');
-  font-size: 1.5rem;
-  text-shadow: 3.5px 2.5px 3px #39311d;
-  padding: 0.5rem;
 }
 
-// .abouttext {
-//   width: 33rem;
-//   bottom: 37.5rem;
-//   right: 42rem;
-//   font-size: 2rem;
-//   text-shadow: 3.5px 2.5px 3px #39311d;
-//   border-radius: 10rem;
-//   // box-shadow: 0rem 0rem 2rem #cbaf87af;
-//   // background-color: #cbaf8750;
-//   color: #cbaf87;
-// }
+.page0texta {
+  font-size: 5rem;
+  text-shadow: 3.5px 2.5px 3px #39311d;
+}
 
-// .about {
-//   text-align: center;
-//   font-size: 1.8rem;
-// }
-
-// .aboutingrdients {
-//   text-align: left;
-// }
-
-// .parent {
-//   width: 700px;
-//   height: 700px;
-//   overflow: hidden;
-//   position: relative;
-//   right: 6rem;
-//   bottom: -17rem;
-// }
-
-// .child {
-//   width: 100%;
-//   height: 100%;
-//   position: absolute;
-//   left: 20rem;
-//   bottom: 12rem;
-// }
-
-// .tree {
-//   right: -25rem;
-//   bottom: -2rem;
-// }
-
-// .abouttext {
-//   height: 18rem;
-//   width: 22rem;
-//   bottom: 11rem;
-//   right: 40rem;
-//   background-color: rgba(119, 136, 153, 0.479);
-//   font-size: 1.7rem;
-// }
+.page0textb {
+  font-size: 2rem;
+  text-shadow: 3.5px 2.5px 3px #39311d;
+}

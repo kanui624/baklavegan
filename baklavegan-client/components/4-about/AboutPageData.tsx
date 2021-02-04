@@ -1,37 +1,42 @@
 export const aboutPageData: any = [
   {
     id: 0,
-    text: 'page one',
+    texta: 'baklavegan',
     image: 'page one image',
     link: 'page one link',
   },
   {
     id: 1,
-    text: 'page one',
+    texta:
+      'One day this really cool Turkish girl decided she wanted to go visit America',
     image: 'page one image',
     link: 'page one link',
   },
   {
     id: 2,
-    text: 'page one',
+    texta:
+      'So she packed her bags and bought a plane ticket from Istanbul to Austin, Texas',
     image: 'page one image',
     link: 'page one link',
   },
   {
     id: 3,
-    text: 'page one',
+    texta:
+      'When she got there she met this really cool skater dude and they became friends :)',
     image: 'page one image',
     link: 'page one link',
   },
   {
     id: 4,
-    text: 'page one',
+    texta:
+      'They soon realized that they had a lot in common like their love for animals and passion for making food!',
     image: 'page one image',
     link: 'page one link',
   },
   {
     id: 5,
-    text: 'page one',
+    texta: 'page one',
+    textb: 'baklavegan about us',
     image: 'page one image',
     link: 'page one link',
   },

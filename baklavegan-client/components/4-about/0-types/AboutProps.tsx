@@ -1,6 +1,7 @@
 export interface AboutPageProps {
   id: number;
-  text: string;
+  texta: string;
+  textb?: string;
   image?: string;
   link?: string;
 }
