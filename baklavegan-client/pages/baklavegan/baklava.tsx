@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 import gsap from 'gsap';
 
 // Components
-import BabyWalnut from '../../components/4-about/BabyWalnut';
+import BabyWalnut from '../../components/3-baklava/BabyWalnut';
 
 // React Types
 import { FC } from 'react';
@@ -82,7 +82,7 @@ const Baklava: FC = () => {
           <div className="spinnerchild">
             <div className="attribanimation">
               <Image
-                src="/2-images/3-about/0-attribs.png"
+                src="/2-images/2-baklava/0-attribs.png"
                 alt="Baklavegan Product Attributes"
                 width={700}
                 height={592}
@@ -93,7 +93,7 @@ const Baklava: FC = () => {
       </div>
       <div className="fixed baklatree treeattribs">
         <Image
-          src="/2-images/3-about/1-about-tree.png"
+          src="/2-images/2-baklava/1-baklatreegan.png"
           alt="Baklatreegan Tree"
           width={749}
           height={850}

@@ -25,7 +25,7 @@ const BabyWalnut: any = () => {
       <div key={id} className={`bw${classname} babywalnuts fixed`}>
         {/* <h1>{id}</h1> */}
         <Image
-          src="/2-images/3-about/2-babywalnut.png"
+          src="/2-images/2-baklava/2-babywalnut.png"
           alt="Babywalnut"
           width={40}
           height={53}
