@@ -21,13 +21,6 @@ const AboutBook: FC = () => {
       width={450}
       height={602}
       drawShadow={false}
-      // autoSize={true}
-      // mobileScrollSupport={true}
-      // size={'stretch'}
-      // minWidth={200}
-      // maxWidth={400}
-      // minHeight={268}
-      // maxHeight={535}
     >
       {aboutPageData.map(
         ({ id, texta, textb, image, link }: AboutPageProps) => {
