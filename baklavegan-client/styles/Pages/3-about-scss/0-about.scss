@@ -2,16 +2,46 @@
   position: fixed !important;
 }
 
+.bookparent {
+  width: 50px;
+  height: 535px;
+  left: 36rem;
+}
+
+.aboutbook {
+  transform: rotateZ(90deg) !important;
+  bottom: 14rem;
+}
 .aboutpage {
-  background: url('/2-images/3-about/0-aboutpage.png');
+  background: url('/2-images/3-about/0-aboutpage.png') no-repeat center center;
+  background-size: cover;
+}
+
+.abouttext {
+  font-size: 3rem;
+  text-shadow: 3.5px 2.5px 3px #39311d;
 }
 
 .page0texta {
-  font-size: 5rem;
+  font-size: 7rem;
   text-shadow: 3.5px 2.5px 3px #39311d;
 }
 
 .page0textb {
   font-size: 2rem;
   text-shadow: 3.5px 2.5px 3px #39311d;
+}
+
+.page1texta {
+  font-size: 2rem;
+  text-shadow: 3.5px 2.5px 3px #39311d;
+}
+
+.about-img {
+  position: fixed;
+  width: 500px !important;
+}
+
+.stf__item {
+  transform-style: unset !important;
 }

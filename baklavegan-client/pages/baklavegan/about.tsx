@@ -1,5 +1,5 @@
 // React
-import { useEffect } from 'react';
+import { useEffect, Fragment } from 'react';
 
 // Next
 import Image from 'next/image';
@@ -14,7 +14,11 @@ import { FC } from 'react';
 import { AppState } from '../../redux/store';
 
 const About: FC = () => {
-  return <AboutBook />;
+  return (
+    <Fragment>
+      <AboutBook />
+    </Fragment>
+  );
 };
 
 export default About;
