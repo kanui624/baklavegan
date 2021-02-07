@@ -14,7 +14,11 @@ import { FC } from 'react';
 import { AppState } from '../../redux/store';
 
 const About: FC = () => {
-  return <AboutBook />;
+  return (
+    <div className="bookcontainer fixed">
+      <AboutBook />
+    </div>
+  );
 };
 
 export default About;
