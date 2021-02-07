@@ -14,11 +14,7 @@ import { FC } from 'react';
 import { AppState } from '../../redux/store';
 
 const About: FC = () => {
-  return (
-    <Fragment>
-      <AboutBook />
-    </Fragment>
-  );
+  return <AboutBook />;
 };
 
 export default About;
