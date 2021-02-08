@@ -1,4 +1,4 @@
-export interface AboutPageProps {
+export interface AboutBookProps {
   id: number;
   texta: string;
   textb?: string;

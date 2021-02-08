@@ -15,7 +15,7 @@ import { AppState } from '../../redux/store';
 
 const About: FC = () => {
   return (
-    <div className="bookcontainer fixed">
+    <div className="bookcontainer fixed inset-0 h-full max-w-full">
       <AboutBook />
     </div>
   );

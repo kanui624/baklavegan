@@ -3,23 +3,30 @@
 import HTMLFlipBook from 'react-pageflip';
 
 // Data
-import { aboutPageData } from './1-data/AboutPageData';
+import { aboutBookData } from './1-data/AboutBookData';
 // React Types
 import { FC } from 'react';
 
 // Component Level Types
-import { AboutPageProps } from './0-types/AboutProps';
+import { AboutBookProps } from './0-types/AboutProps';
 
 const AboutBook: FC = () => {
   return (
     <HTMLFlipBook
-      className="aboutbook fixed transform-gpu"
-      width={450}
-      height={602}
+      className="aboutbook fixed transform-gpu inset-0 h-full max-w-full"
+      width={205}
+      height={274}
       drawShadow={false}
+      usePotrait={false}
+      // showCover={true}
+      size={'stretch'}
+      minWidth={205}
+      minHeight={274}
+      // maxWidth={250}
+      // maxHeight={334}
     >
-      {aboutPageData.map(
-        ({ id, texta, textb, image, link }: AboutPageProps) => {
+      {aboutBookData.map(
+        ({ id, texta, textb, image, link }: AboutBookProps) => {
           return (
             <div key={id} className={`aboutpage page${id} text-center`}>
               <div className="flex justify-center items-center h-full ">
