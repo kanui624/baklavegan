@@ -23,7 +23,6 @@ const BabyWalnut: any = () => {
   return babyWalnuts.map(({ id, classname }: BabyWalnutProps) => {
     return (
       <div key={id} className={`bw${classname} babywalnuts fixed`}>
-        {/* <h1>{id}</h1> */}
         <Image
           src="/2-images/2-baklava/2-babywalnut.png"
           alt="Babywalnut"

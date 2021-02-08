@@ -12,12 +12,12 @@ import { exitMenu } from '../../redux/slices/MenuTransitionSlice';
 import { gsap } from 'gsap';
 
 // Components
-import MemoBVCanvas from '../0-navigation/BVCanvas';
-import MenuButtonRoot from './MenuButtonRoot';
-import MenuButtonPage from './MenuButtonPage';
+import MemoBVCanvas from '../0-navigation/0-menu/5-canvas/BVCanvas';
+import MenuButtonRoot from '../0-navigation/1-menubutton/MenuButtonRoot';
+import MenuButtonPage from '../0-navigation/1-menubutton/MenuButtonPage';
 
 // Styles
-import styles from '../../styles/Pages/0-layout-scss/layout.module.scss';
+import styles from '../../styles/1-layout-scss/layout.module.scss';
 
 // React Types
 import { ReactNode, FC } from 'react';

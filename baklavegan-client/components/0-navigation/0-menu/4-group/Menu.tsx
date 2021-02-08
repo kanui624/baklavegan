@@ -5,22 +5,22 @@ import { useState, lazy, Fragment, memo } from 'react';
 import { useSpring, a } from 'react-spring/three';
 
 // Objects
-const Sapling = lazy(() => import('./2-objects/Sapling'));
-const MenuOption = lazy(() => import('./2-objects/MenuOption'));
+const Sapling = lazy(() => import('../3-objects/Sapling'));
+const MenuOption = lazy(() => import('../3-objects/MenuOption'));
 
 // Controls
-import Orbit from './1-controls/Orbit';
-import Lights from './1-controls/Lights';
+import Orbit from '../2-controls/Orbit';
+import Lights from '../2-controls/Lights';
 
 // Data
-import { menuData } from './2-objects/MenuData';
+import { menuData } from '../1-data/MenuData';
 
 // React Types
 import { FC } from 'react';
 
 // Component Level Types
-import { MenuProps } from './0-types/MenuProps';
-import { MenuDataProps } from './0-types/MenuDataProps';
+import { MenuProps } from '../0-types/MenuProps';
+import { MenuDataProps } from '../0-types/MenuDataProps';
 
 const Menu: FC<MenuProps> = ({ clicked, toggleClick, handleTransition }) => {
   const [orbitSpeed, setOrbitSpeed] = useState(-1.6);
@@ -72,7 +72,7 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick, handleTransition }) => {
               handleTransition={handleTransition}
               clicked={clicked}
             />
-          ) 
+          )
         )}
       </a.group>
     </Fragment>

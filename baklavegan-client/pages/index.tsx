@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 import { gsap } from 'gsap';
 
 // Styles
-import styles from '../styles/Pages/1-index-scss/index.module.scss';
+import styles from '../styles/2-index-scss/index.module.scss';
 
 // React Types
 import { FC } from 'react';

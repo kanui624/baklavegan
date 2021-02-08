@@ -4,14 +4,18 @@ import { Suspense, useLayoutEffect, memo, lazy } from 'react';
 // React-Three-Fiber
 import { Canvas, useThree } from 'react-three-fiber';
 
+// Resize Observer
+import { ResizeObserver } from '@juggle/resize-observer';
+
 // Components
-const Menu = lazy(() => import('./0-menu/Menu'));
+const Menu = lazy(() => import('../4-group/Menu'));
 
 // React Types
 import { FC } from 'react';
 
 // Component Level Types
-import { CanvasProps } from './0-menu/0-types/CanvasProps';
+import { CanvasProps } from '../0-types/CanvasProps';
+import { ResizeOptions } from 'react-three-fiber/canvas';
 
 const Precompile = ({ onCompile = () => {} }) => {
   const { gl, scene, camera } = useThree();
@@ -33,7 +37,11 @@ const BVCanvas: FC<CanvasProps> = ({
   onCompile = () => {},
 }) => {
   return (
-    <Canvas camera={{ position: [1, 1, 1], fov: 15 }} pixelRatio={2}>
+    <Canvas
+      resize={{ polyfill: ResizeObserver } as ResizeOptions}
+      camera={{ position: [1, 1, 1], fov: 15 }}
+      pixelRatio={2}
+    >
       <Suspense fallback={null}>
         <MemoPrecompile onCompile={onCompile} />
         <Menu

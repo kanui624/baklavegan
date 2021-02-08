@@ -1,13 +1,9 @@
-// Next
-import Image from 'next/image';
-import Link from 'next/link';
-
 // Page Flip
 // @ts-ignore
 import HTMLFlipBook from 'react-pageflip';
 
 // Data
-import { aboutPageData } from './AboutPageData';
+import { aboutPageData } from './1-data/AboutPageData';
 // React Types
 import { FC } from 'react';
 

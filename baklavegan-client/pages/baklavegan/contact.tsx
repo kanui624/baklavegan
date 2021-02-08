@@ -18,9 +18,6 @@ import ContactInfo from '../../components/6-contact/ContactInfo';
 import { socialData } from '../../components/6-contact/1-data/SocialData';
 import { contactData } from '../../components/6-contact/1-data/ContactData';
 
-// Styles
-import styles from '../../styles/Pages/4-conact-scss/contact.module.scss';
-
 // React Types
 import { FC } from 'react';
 
