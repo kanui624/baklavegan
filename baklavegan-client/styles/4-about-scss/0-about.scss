@@ -45,26 +45,50 @@
 
 .stf__parent {
   position: fixed !important;
-  margin: 0 !important;
-  padding: 0 !important;
 }
 
-.stf__wrapper .--landscape {
-  margin: 0 !important;
-  padding: 0 !important;
+.aboutbookmobile {
+  left: -25.5rem;
+  bottom: 7rem;
 }
 
-.bookparent {
-  left: 36rem;
-}
-
-.aboutpage {
+.aboutpage-mobile-desktop {
   background: url('/2-images/3-about/0-aboutpage.png') no-repeat center center;
   background-size: cover;
 }
 
-.aboutbook {
-  transform: rotateZ(90deg) !important;
-  min-width: 150px !important;
-  min-height: 150px !important;
+.abouttextmobile {
+  font-size: 2.2rem;
+  text-shadow: 3.5px 2.5px 2px #39311d;
 }
+
+.page1texta {
+  font-size: 5rem;
+}
+
+.bookbtnf {
+  font-size: 2rem;
+  color: black;
+  bottom: 2rem;
+  left: 20rem;
+}
+
+.bookbtnb {
+  font-size: 2rem;
+  color: black;
+  bottom: 2rem;
+  left: 5rem;
+}
+
+// .stf__wrapper .--landscape {
+//   margin: 0 !important;
+//   padding: 0 !important;
+// }
+
+// .bookparent {
+//   left: 36rem;
+// }
+
+// .aboutbook {
+//   transform: rotateZ(90deg) !important;
+// }

@@ -5,7 +5,7 @@ import { useEffect, Fragment } from 'react';
 import Image from 'next/image';
 
 // Components
-import AboutBook from '../../components/4-about/AboutBook';
+import AboutBookMobile from '../../components/4-about/2-components/AboutBookMobile';
 
 // React Types
 import { FC } from 'react';
@@ -14,11 +14,7 @@ import { FC } from 'react';
 import { AppState } from '../../redux/store';
 
 const About: FC = () => {
-  return (
-    <div className="bookcontainer fixed inset-0 h-full max-w-full">
-      <AboutBook />
-    </div>
-  );
+  return <AboutBookMobile />;
 };
 
 export default About;

@@ -1,4 +1,4 @@
-export const aboutBookData: any = [
+export const aboutBookDesktopData: any = [
   {
     id: 0,
     texta: 'baklavegan',

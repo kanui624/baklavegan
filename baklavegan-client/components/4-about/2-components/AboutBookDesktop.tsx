@@ -3,48 +3,40 @@
 import HTMLFlipBook from 'react-pageflip';
 
 // Data
-import { aboutBookData } from './1-data/AboutBookData';
+import { aboutBookDesktopData } from '../1-data/AboutBookDesktopData';
 // React Types
 import { FC } from 'react';
 
 // Component Level Types
-import { AboutBookProps } from './0-types/AboutProps';
+import { AboutBookProps } from '../0-types/AboutProps';
 
 const AboutBook: FC = () => {
   return (
     <HTMLFlipBook
       className="aboutbook fixed transform-gpu inset-0 h-full max-w-full"
-      width={205}
-      height={274}
-      drawShadow={false}
-      usePotrait={false}
+      width={500}
+      height={669}
+      drawShadow={true}
+      // usePotrait={true}
       // showCover={true}
       size={'stretch'}
-      minWidth={205}
-      minHeight={274}
-      // maxWidth={250}
-      // maxHeight={334}
+      minWidth={300}
+      minHeight={401}
+      maxWidth={500}
+      maxHeight={669}
     >
-      {aboutBookData.map(
+      {aboutBookDesktopData.map(
         ({ id, texta, textb, image, link }: AboutBookProps) => {
           return (
             <div key={id} className={`aboutpage page${id} text-center`}>
               <div className="flex justify-center items-center h-full ">
                 {texta && (
-                  <div
-                    className={`page${id}texta abouttext transform-gpu -rotate-90`}
-                  >
-                    {texta}
-                  </div>
+                  <div className={`page${id}texta abouttext`}>{texta}</div>
                 )}
-                {textb && (
-                  <div className={`page${id}textb transform-gpu -rotate-90`}>
-                    {textb}
-                  </div>
-                )}
+                {textb && <div className={`page${id}textb`}>{textb}</div>}
                 {image && (
                   <img
-                    className="about-img transform-gpu -rotate-90 "
+                    className="about-img px-4"
                     src={`/3-svgs/about/${image}.svg`}
                     alt={image}
                   />

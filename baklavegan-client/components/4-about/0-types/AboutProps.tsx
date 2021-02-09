@@ -2,6 +2,6 @@ export interface AboutBookProps {
   id: number;
   texta: string;
   textb?: string;
-  image?: string;
+  svg?: string;
   link?: string;
 }
