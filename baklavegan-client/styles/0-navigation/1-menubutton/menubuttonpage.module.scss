@@ -11,3 +11,14 @@
   bottom: -14rem;
   text-shadow: 4px 3px #4a3f35;
 }
+
+@media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+  .menupageimage {
+    bottom: -23.7rem;
+  }
+
+  .menupagetext {
+    font-size: 3rem;
+    letter-spacing: 0.4rem;
+  }
+}

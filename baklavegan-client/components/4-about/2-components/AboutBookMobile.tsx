@@ -34,38 +34,80 @@ const AboutBookMobile: FC = () => {
 
   return (
     <Fragment>
-      <div className="mobilebookcontainer fixed inset-0 h-full max-w-full">
+      {/* <div className="smbookcontainer fixed">
         <HTMLFlipBook
-          className="aboutbookmobile fixed"
+          className="aboutbooksm fixed"
           ref={aboutBook}
           flippingTime={1500}
           drawShadow={true}
           usePortrait={false}
+          useMouseEvents={false}
+          width={320}
+          height={428}
+        >
+          {aboutBookMobileData.map(
+            ({ id, texta, textb, svg, link }: AboutBookProps) => {
+              return (
+                <div key={id} className={`aboutpage text-center `}>
+                  <div className="flex justify-center items-center h-full flex-col">
+                    {texta && (
+                      <div className={`page${id}textasm abouttextsm px-8 py-8`}>
+                        {texta}
+                      </div>
+                    )}
+                    {textb && (
+                      <div className={`page${id}textb abouttextsm`}>
+                        {textb}
+                      </div>
+                    )}
+                    {svg && (
+                      <img
+                        className="aboutmobilesvg px-4"
+                        src={`/3-svgs/about/${svg}.svg`}
+                        alt={svg}
+                      />
+                    )}
+                  </div>
+                </div>
+              );
+            }
+          )}
+        </HTMLFlipBook>
+      </div> */}
+      <div className="mobileaboutbookcontainer fixed">
+        <HTMLFlipBook
+          className="mobileaboutbook inset-0 h-full max-w-full"
+          ref={aboutBook}
+          flippingTime={1500}
+          drawShadow={true}
+          usePortrait={false}
+          useMouseEvents={false}
           size={'stretch'}
-          width={410}
-          height={548}
-          minWidth={410}
-          minHeight={548}
-          maxWidth={500}
-          maxHeight={669}
+          width={400}
+          height={535}
+          minWidth={80}
+          minHeight={107}
+          maxWidth={1000}
+          maxHeight={1337}
+          autoSize={false}
         >
           {aboutBookMobileData.map(
             ({ id, texta, textb, svg, link }: AboutBookProps) => {
               return (
                 <div
                   key={id}
-                  className={`aboutpage-mobile-desktop page${id} text-center `}
+                  className={`aboutpage inset-0 h-full max-w-full text-center `}
                 >
                   <div className="flex justify-center items-center h-full flex-col">
                     {texta && (
                       <div
-                        className={`page${id}texta abouttextmobile px-8 py-8`}
+                        className={`page${id}textamed mobileabouttext px-8 py-8`}
                       >
                         {texta}
                       </div>
                     )}
                     {textb && (
-                      <div className={`page${id}textb abouttextmobile`}>
+                      <div className={`page${id}textbmed mobileabouttext`}>
                         {textb}
                       </div>
                     )}
@@ -83,6 +125,7 @@ const AboutBookMobile: FC = () => {
           )}
         </HTMLFlipBook>
       </div>
+
       <button
         disabled={disabled}
         className="bookbtnf fixed"
