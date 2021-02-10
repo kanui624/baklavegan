@@ -1,5 +1,6 @@
 // React
 import { useState, useEffect, useRef, Fragment } from 'react';
+
 // Page Flip
 // @ts-ignore
 import HTMLFlipBook from 'react-pageflip';
@@ -12,13 +13,18 @@ import { FC } from 'react';
 // Component Level Types
 import { AboutBookProps } from '../0-types/AboutProps';
 
-const AboutBookMobile: FC = () => {
-  const [pageCount, setPageCount] = useState(0);
+interface AboutProps {
+  setPageCount: (pageCount: number) => void;
+  pageCount: number;
+}
+
+const AboutBookMobile: FC<AboutProps> = ({ setPageCount, pageCount }) => {
   const [disabled, setDisabled] = useState(false);
   const aboutBook = useRef();
 
   const handleForward = () => {
     setDisabled(true);
+    setPageCount(pageCount + 1);
     (aboutBook.current as any).pageFlip.flipNext();
     setTimeout(() => {
       setDisabled(false);
@@ -27,15 +33,12 @@ const AboutBookMobile: FC = () => {
 
   const handleBackward = () => {
     setDisabled(true);
+    setPageCount(pageCount - 1);
     (aboutBook.current as any).pageFlip.flipPrev();
     setTimeout(() => {
       setDisabled(false);
     }, 1500);
   };
-
-  useEffect(() => {
-    setPageCount((aboutBook.current as any).pageFlip.getCurrentPageIndex());
-  }, [disabled]);
 
   return (
     <Fragment>
@@ -66,13 +69,13 @@ const AboutBookMobile: FC = () => {
                   <div className="flex justify-center items-center h-full flex-col">
                     {texta && (
                       <div
-                        className={`page${id}textamed mobileabouttext px-8 py-8`}
+                        className={`page${id}textamobile mobileabouttext px-8 py-8`}
                       >
                         {texta}
                       </div>
                     )}
                     {textb && (
-                      <div className={`page${id}textbmed mobileabouttext`}>
+                      <div className={`page${id}textbmobile mobileabouttext`}>
                         {textb}
                       </div>
                     )}
@@ -90,18 +93,16 @@ const AboutBookMobile: FC = () => {
           )}
         </HTMLFlipBook>
       </div>
-      {pageCount === 14 ? null : (
-        <button
-          disabled={disabled}
-          className="storynavs booknavforward fixed"
-          onClick={() => handleForward()}
-        >
-          <img src="/3-svgs/about/story-nav.svg" alt="story-nav" />
-        </button>
-      )}
       <button
         disabled={disabled}
-        className="storynavs booknavbackward transform-gpu fixed"
+        className="storynavs booknavforward fixed opacity-0"
+        onClick={() => handleForward()}
+      >
+        <img src="/3-svgs/about/story-nav.svg" alt="story-nav" />
+      </button>
+      <button
+        disabled={disabled}
+        className="storynavs booknavbackward transform-gpu fixed opacity-0"
         onClick={() => handleBackward()}
       >
         <img src="/3-svgs/about/story-nav.svg" alt="story-nav" />

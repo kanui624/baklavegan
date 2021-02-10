@@ -30,7 +30,7 @@ export const aboutBookMobileData: any = [
   {
     id: 9,
     texta:
-      'and they soon realized they had a lot in common like their love for animals...',
+      'they soon realized they had a lot in common, like their love for animals...',
     svg: 'love-animals',
   },
   { id: 10 },
@@ -42,7 +42,7 @@ export const aboutBookMobileData: any = [
   { id: 12 },
   {
     id: 13,
-    texta: 'then one day they had this really cool idea!',
+    texta: 'and one day they had this really cool idea!',
     svg: 'the-idea',
   },
   { id: 14 },
@@ -50,8 +50,9 @@ export const aboutBookMobileData: any = [
     id: 15,
     texta: 'and the rest is History!',
   },
+  { id: 16 },
   {
-    id: 16,
-    texta: 'about extra info',
+    id: 17,
+    texta: 'extra info',
   },
 ];

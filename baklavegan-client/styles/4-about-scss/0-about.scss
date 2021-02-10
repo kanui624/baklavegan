@@ -1,60 +1,20 @@
-// .stf__item {
-//   transform-style: flat !important;
-// }
-
-// .bookparent {
-//   width: 50px;
-//   height: 535px;
-//   left: 36rem;
-// }
-
-// .bookcontainer {
-//   left: 33rem;
-// }
-
-// .aboutbook {
-//   transform: rotateZ(90deg) !important;
-//   bottom: 14rem;
-// }
-// .aboutpage {
-//   background: url('/2-images/3-about/0-aboutpage.png') no-repeat center center;
-//   background-size: cover;
-// }
-
-// .abouttext {
-//   font-size: 3rem;
-//   text-shadow: 3.5px 2.5px 3px #39311d;
-// }
-
-// .page0texta {
-//   font-size: 7rem;
-//   text-shadow: 3.5px 2.5px 3px #39311d;
-// }
-
-// .page0textb {
-//   font-size: 2rem;
-//   text-shadow: 3.5px 2.5px 3px #39311d;
-// }
-
-// .about-img {
-//   position: fixed;
-//   width: 500px !important;
-// }
-
-// #################################################
-
-// General
-// .stf__parent {
-//   position: fixed !important;
-// }
-
 .aboutpage {
   background: url('/2-images/3-about/0-aboutpage.png') no-repeat center center;
   background-size: cover;
 }
 
-.abouttextsm {
+.mobileabouttext {
   text-shadow: 3.5px 2.5px 2px #39311d;
+}
+
+.storynavs:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.mobileabouttext {
+  margin: 0rem;
+  padding: 0.2rem;
 }
 
 @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
@@ -63,108 +23,32 @@
     width: 640px;
     height: 856px;
     left: -19.95rem;
-    bottom: -10.5rem;
+    bottom: -40rem;
   }
 
   .storynavs {
     width: 80px;
     height: 27px;
-    opacity: 0.5;
   }
 
   .booknavforward {
-    bottom: 0.5rem;
+    bottom: -29rem;
     left: 14.5rem;
   }
 
   .booknavbackward {
     transform: rotateY(180deg);
-    bottom: 0.5rem;
+    bottom: -29rem;
     left: 0.5rem;
   }
+
+  .mobileabouttext {
+    font-size: 2rem;
+  }
+
+  .page1textamobile {
+    font-size: 5rem;
+    margin: 0rem;
+    padding: 0rem;
+  }
 }
-
-// @media (min-width: 320px) and (min-height: 568px) and (orientation: portrait) {
-//   .medbookcontainer {
-//     display: none;
-//   }
-
-//   .aboutbooksm {
-//     left: -20rem;
-//     bottom: 6rem;
-//   }
-
-//   .abouttextsm {
-//     font-size: 1.7rem;
-//   }
-
-//   .page1textasm {
-//     font-size: 5rem;
-//   }
-
-//   .page7textasm {
-//     font-size: 1.65rem;
-//   }
-
-//   .bookbtnf {
-//     bottom: 2rem;
-//     left: 17rem;
-//   }
-
-//   .bookbtnb {
-//     bottom: 2rem;
-//     left: 2rem;
-//   }
-// }
-
-// @media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
-// .medbookcontainer {
-//   display: block;
-//   // height: 400px !important;
-//   // width: 535px !important;
-//   height: 535px !important;
-//   width: 400px !important;
-//   background-color: lightsalmon;
-// }
-
-// .smbookcontainer {
-//   display: none;
-// }
-
-// .aboutbookmed {
-//   // left: -23.8rem;
-//   height: 535px !important;
-//   width: 400px !important;
-//   background-color: lightsalmon;
-//   left: 0rem;
-//   bottom: 20rem;
-// }
-
-// .aboutpage {
-//   height: 535px !important;
-//   width: 400px !important;
-//   background-color: lightgreen;
-// }
-// .bookbtnf {
-//   bottom: 3rem;
-//   left: 19rem;
-// }
-
-// .bookbtnb {
-//   bottom: 3.2rem;
-//   left: 4rem;
-// }
-// }
-
-// .stf__wrapper .--landscape {
-//   margin: 0 !important;
-//   padding: 0 !important;
-// }
-
-// .bookparent {
-//   left: 36rem;
-// }
-
-// .aboutbook {
-//   transform: rotateZ(90deg) !important;
-// }
