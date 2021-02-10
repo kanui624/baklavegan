@@ -1,5 +1,5 @@
 // React
-import { useState, useRef, Fragment } from 'react';
+import { useState, useEffect, useRef, Fragment } from 'react';
 // Page Flip
 // @ts-ignore
 import HTMLFlipBook from 'react-pageflip';
@@ -13,6 +13,7 @@ import { FC } from 'react';
 import { AboutBookProps } from '../0-types/AboutProps';
 
 const AboutBookMobile: FC = () => {
+  const [pageCount, setPageCount] = useState(0);
   const [disabled, setDisabled] = useState(false);
   const aboutBook = useRef();
 
@@ -32,48 +33,12 @@ const AboutBookMobile: FC = () => {
     }, 1500);
   };
 
+  useEffect(() => {
+    setPageCount((aboutBook.current as any).pageFlip.getCurrentPageIndex());
+  }, [disabled]);
+
   return (
     <Fragment>
-      {/* <div className="smbookcontainer fixed">
-        <HTMLFlipBook
-          className="aboutbooksm fixed"
-          ref={aboutBook}
-          flippingTime={1500}
-          drawShadow={true}
-          usePortrait={false}
-          useMouseEvents={false}
-          width={320}
-          height={428}
-        >
-          {aboutBookMobileData.map(
-            ({ id, texta, textb, svg, link }: AboutBookProps) => {
-              return (
-                <div key={id} className={`aboutpage text-center `}>
-                  <div className="flex justify-center items-center h-full flex-col">
-                    {texta && (
-                      <div className={`page${id}textasm abouttextsm px-8 py-8`}>
-                        {texta}
-                      </div>
-                    )}
-                    {textb && (
-                      <div className={`page${id}textb abouttextsm`}>
-                        {textb}
-                      </div>
-                    )}
-                    {svg && (
-                      <img
-                        className="aboutmobilesvg px-4"
-                        src={`/3-svgs/about/${svg}.svg`}
-                        alt={svg}
-                      />
-                    )}
-                  </div>
-                </div>
-              );
-            }
-          )}
-        </HTMLFlipBook>
-      </div> */}
       <div className="mobileaboutbookcontainer fixed">
         <HTMLFlipBook
           className="mobileaboutbook inset-0 h-full max-w-full"
@@ -125,20 +90,21 @@ const AboutBookMobile: FC = () => {
           )}
         </HTMLFlipBook>
       </div>
-
+      {pageCount === 14 ? null : (
+        <button
+          disabled={disabled}
+          className="storynavs booknavforward fixed"
+          onClick={() => handleForward()}
+        >
+          <img src="/3-svgs/about/story-nav.svg" alt="story-nav" />
+        </button>
+      )}
       <button
         disabled={disabled}
-        className="bookbtnf fixed"
-        onClick={() => handleForward()}
-      >
-        f
-      </button>
-      <button
-        disabled={disabled}
-        className="bookbtnb fixed"
+        className="storynavs booknavbackward transform-gpu fixed"
         onClick={() => handleBackward()}
       >
-        b
+        <img src="/3-svgs/about/story-nav.svg" alt="story-nav" />
       </button>
     </Fragment>
   );

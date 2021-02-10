@@ -57,36 +57,30 @@
   text-shadow: 3.5px 2.5px 2px #39311d;
 }
 
-.bookbtnf {
-  font-size: 2rem;
-  color: black;
-}
-
-.bookbtnb {
-  font-size: 2rem;
-  color: black;
-}
-
 @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
   .mobileaboutbookcontainer {
-    background-color: lightskyblue;
+    // background-color: lightskyblue;
     width: 640px;
     height: 856px;
     left: -19.95rem;
     bottom: -10.5rem;
   }
-  .bookbtnf {
-    font-size: 2rem;
-    color: black;
-    bottom: 0rem;
-    left: 17rem;
+
+  .storynavs {
+    width: 80px;
+    height: 27px;
+    opacity: 0.5;
   }
 
-  .bookbtnb {
-    font-size: 2rem;
-    color: black;
-    bottom: 0rem;
-    left: 3rem;
+  .booknavforward {
+    bottom: 0.5rem;
+    left: 14.5rem;
+  }
+
+  .booknavbackward {
+    transform: rotateY(180deg);
+    bottom: 0.5rem;
+    left: 0.5rem;
   }
 }
 
