@@ -51,6 +51,24 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
     });
   };
 
+  const onHoverIn = () => {
+    gsap.to('.pagemenubutton', {
+      y: -210,
+      stagger: 0.15,
+      duration: 0.5,
+      ease: 'back.out(2.5)',
+    });
+  };
+
+  const onHoverOut = () => {
+    gsap.to('.pagemenubutton', {
+      y: -200,
+      stagger: 0.15,
+      duration: 0.5,
+      ease: 'back.out(2.5)',
+    });
+  };
+
   const handleMenuClick = () => {
     setPageTrigger(!pageTrigger);
     dispatch(enterMenu({ transition: true }));
@@ -91,13 +109,13 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
       <button
         disabled={disabled}
         className={`${styles.menubtn} flex justify-center items-center`}
+        onPointerOver={() => (pageTrigger ? null : onHoverIn())}
+        onPointerOut={() => (pageTrigger ? null : onHoverOut())}
         onClick={() => {
           handleMenuClick();
         }}
       >
-        <div className={`${styles.invisiblemenubtn} absolute opacity-0`}>
-          <h3>invisiblemenubutton</h3>
-        </div>
+        <div className={`${styles.invisiblemenubtn} pagemenubutton absolute`} />
       </button>
     </Fragment>
   );

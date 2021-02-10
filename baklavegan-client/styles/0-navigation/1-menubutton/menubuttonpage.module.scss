@@ -1,12 +1,21 @@
 .menupagetext {
-  padding-left: 0.65rem;
+  font-size: 4rem;
+  bottom: -13.3rem;
+  padding-left: 0.4rem;
   opacity: 0.8;
   text-shadow: 4px 3px #4a3f35;
 }
 
-// .invisiblemenubtn {
-//   background-color: lime;
-// }
+.menupageimage {
+  bottom: -22rem;
+}
+
+.invisiblemenubtn {
+  height: 3rem;
+  width: 8rem;
+  bottom: -12.5rem;
+  // background-color: lime;
+}
 
 // IPHONE 4 - CHROME DEVTOOLS
 @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
