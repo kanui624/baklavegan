@@ -24,7 +24,7 @@ const About: FC = () => {
 
   const animateIn = () => {
     gsap.to(['.mobileaboutbookcontainer', '.storynavs'], {
-      y: -470,
+      y: -600,
       delay: 1,
       duration: 2.3,
       ease: 'back.out(1.07)',
@@ -54,6 +54,7 @@ const About: FC = () => {
       gsap.to('.booknavbackward', {
         opacity: 0,
         duration: 0.5,
+        delay: 0.8,
       });
       gsap.to('.booknavbackward', {
         display: 'none',
@@ -65,7 +66,7 @@ const About: FC = () => {
       });
       gsap.to('.booknavbackward', {
         opacity: 1,
-        duration: 0.5,
+        duration: 1,
       });
     }
 
@@ -73,6 +74,7 @@ const About: FC = () => {
       gsap.to('.booknavforward', {
         opacity: 0,
         duration: 0.5,
+        delay: 1,
       });
       gsap.to('.booknavforward', {
         display: 'none',
@@ -84,8 +86,8 @@ const About: FC = () => {
       });
       gsap.to('.booknavforward', {
         opacity: 1,
-        duration: 0.5,
-        delay: 1,
+        duration: 1,
+        delay: 0.8,
       });
     }
   }, [pageCount]);

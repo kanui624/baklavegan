@@ -5,8 +5,12 @@ import { useState, useEffect, useRef, Fragment } from 'react';
 // @ts-ignore
 import HTMLFlipBook from 'react-pageflip';
 
+// GSAP
+import gsap from 'gsap';
+
 // Data
 import { aboutBookMobileData } from '../1-data/AboutBookMobileData';
+
 // React Types
 import { FC } from 'react';
 
@@ -22,7 +26,35 @@ const AboutBookMobile: FC<AboutProps> = ({ setPageCount, pageCount }) => {
   const [disabled, setDisabled] = useState(false);
   const aboutBook = useRef();
 
-  const handleForward = () => {
+  const bounce = (targetNav: any) => {
+    const bounceTl = gsap.timeline();
+    if (targetNav === 'story-nav-forward') {
+      bounceTl.to('.booknavforward', {
+        scale: 0.8,
+        duration: 0.1,
+        ease: 'elastic.in(1, 0.3)',
+      });
+      bounceTl.to('.booknavforward', {
+        scale: 1,
+        duration: 1.5,
+        ease: 'elastic.out(1, 0.3)',
+      });
+    } else {
+      bounceTl.to('.booknavbackward', {
+        scale: 0.8,
+        duration: 0.1,
+        ease: 'elastic.in(1, 0.3)',
+      });
+      bounceTl.to('.booknavbackward', {
+        scale: 1,
+        duration: 1.5,
+        ease: 'elastic.out(1, 0.3)',
+      });
+    }
+  };
+
+  const handleForward = (e: any) => {
+    bounce(e.target.alt);
     setDisabled(true);
     setPageCount(pageCount + 1);
     (aboutBook.current as any).pageFlip.flipNext();
@@ -31,7 +63,8 @@ const AboutBookMobile: FC<AboutProps> = ({ setPageCount, pageCount }) => {
     }, 1500);
   };
 
-  const handleBackward = () => {
+  const handleBackward = (e: any) => {
+    bounce(e.target.alt);
     setDisabled(true);
     setPageCount(pageCount - 1);
     (aboutBook.current as any).pageFlip.flipPrev();
@@ -96,16 +129,16 @@ const AboutBookMobile: FC<AboutProps> = ({ setPageCount, pageCount }) => {
       <button
         disabled={disabled}
         className="storynavs booknavforward fixed opacity-0"
-        onClick={() => handleForward()}
+        onClick={(e) => handleForward(e)}
       >
-        <img src="/3-svgs/about/story-nav.svg" alt="story-nav" />
+        <img src="/3-svgs/about/story-nav.svg" alt="story-nav-forward" />
       </button>
       <button
         disabled={disabled}
         className="storynavs booknavbackward transform-gpu fixed opacity-0"
-        onClick={() => handleBackward()}
+        onClick={(e) => handleBackward(e)}
       >
-        <img src="/3-svgs/about/story-nav.svg" alt="story-nav" />
+        <img src="/3-svgs/about/story-nav.svg" alt="story-nav-backward" />
       </button>
     </Fragment>
   );
