@@ -26,6 +26,7 @@
 .booknavbackward {
   transform: rotateY(180deg);
 }
+
 // IPHONE 4 - CHROME DEVTOOLS
 @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
   .mobileaboutbookcontainer {
@@ -89,6 +90,42 @@
     font-size: 5rem;
     margin: 0rem;
     padding: 0rem;
+  }
+}
+
+// Galaxy S5- CHROME DEVTOOLS
+@media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
+  .mobileaboutbookcontainer {
+    width: 725px;
+    height: 969px;
+    left: -22.7rem;
+    bottom: -72rem;
+  }
+
+  .storynavs {
+    width: 120px;
+    height: 41px;
+    bottom: -60.2rem;
+  }
+
+  .booknavforward {
+    left: 14.5rem;
+  }
+
+  .booknavbackward {
+    left: 1rem;
+  }
+
+  .mobileabouttext {
+    font-size: 2.4rem;
+  }
+
+  .page1textamobile {
+    font-size: 6.3rem;
+  }
+
+  .page9textamobile {
+    font-size: 2.3rem;
   }
 }
 
@@ -333,41 +370,5 @@
   }
   .page7textamobile {
     font-size: 2.5rem;
-  }
-}
-
-// Galaxy S5- CHROME DEVTOOLS
-@media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
-  .mobileaboutbookcontainer {
-    width: 725px;
-    height: 969px;
-    left: -22.7rem;
-    bottom: -72rem;
-  }
-
-  .storynavs {
-    width: 120px;
-    height: 41px;
-    bottom: -60.2rem;
-  }
-
-  .booknavforward {
-    left: 14.5rem;
-  }
-
-  .booknavbackward {
-    left: 1rem;
-  }
-
-  .mobileabouttext {
-    font-size: 2.4rem;
-  }
-
-  .page1textamobile {
-    font-size: 6.3rem;
-  }
-
-  .page9textamobile {
-    font-size: 2.3rem;
   }
 }
