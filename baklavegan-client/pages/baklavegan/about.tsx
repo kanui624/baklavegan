@@ -24,7 +24,7 @@ const About: FC = () => {
 
   const animateIn = () => {
     gsap.to(['.mobileaboutbookcontainer', '.storynavs'], {
-      y: -600,
+      y: -1000,
       delay: 1,
       duration: 2.3,
       ease: 'back.out(1.07)',

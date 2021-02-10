@@ -1,3 +1,4 @@
+// UNIVERSAL STYLES
 .aboutpage {
   background: url('/2-images/3-about/0-aboutpage.png') no-repeat center center;
   background-size: cover;
@@ -22,18 +23,22 @@
   padding: 0rem;
 }
 
+.booknavbackward {
+  transform: rotateY(180deg);
+}
+// IPHONE 4 - CHROME DEVTOOLS
 @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
   .mobileaboutbookcontainer {
     width: 640px;
     height: 856px;
     left: -19.95rem;
-    bottom: -48rem;
+    bottom: -73rem;
   }
 
   .storynavs {
     width: 80px;
     height: 27px;
-    bottom: -36.7rem;
+    bottom: -61.7rem;
   }
 
   .booknavforward {
@@ -41,8 +46,6 @@
   }
 
   .booknavbackward {
-    transform: rotateY(180deg);
-
     left: 0.5rem;
   }
 
@@ -55,19 +58,19 @@
   }
 }
 
+// IPHONE 5-SE - CHROME DEVTOOLS
 @media (min-width: 320px) and (min-height: 568px) and (orientation: portrait) {
   .mobileaboutbookcontainer {
-    // background-color: lightskyblue;
     width: 640px;
     height: 856px;
     left: -19.95rem;
-    bottom: -45rem;
+    bottom: -69rem;
   }
 
   .storynavs {
     width: 90px;
     height: 31px;
-    bottom: -34.5rem;
+    bottom: -58.5rem;
   }
 
   .booknavforward {
@@ -75,7 +78,6 @@
   }
 
   .booknavbackward {
-    transform: rotateY(180deg);
     left: 2rem;
   }
 
@@ -90,19 +92,19 @@
   }
 }
 
+// IPHONE 6/7/8 - CHROME DEVTOOLS
 @media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
   .mobileaboutbookcontainer {
-    // background-color: lightskyblue;
     width: 750px;
     height: 1003px;
     left: -23.4rem;
-    bottom: -47rem;
+    bottom: -71.5rem;
   }
 
   .storynavs {
     width: 110px;
     height: 38px;
-    bottom: -34.7rem;
+    bottom: -59.2rem;
   }
 
   .booknavforward {
@@ -110,7 +112,6 @@
   }
 
   .booknavbackward {
-    transform: rotateY(180deg);
     left: 2.5rem;
   }
 
@@ -140,19 +141,19 @@
   }
 }
 
+// IPHONE 6/7/8 PLUS - CHROME DEVTOOLS
 @media (min-width: 414px) and (min-height: 736px) and (orientation: portrait) {
   .mobileaboutbookcontainer {
-    // background-color: lightskyblue;
     width: 825px;
     height: 1103px;
     left: -25.7rem;
-    bottom: -47rem;
+    bottom: -72rem;
   }
 
   .storynavs {
     width: 110px;
     height: 38px;
-    bottom: -34rem;
+    bottom: -59rem;
   }
 
   .booknavforward {
@@ -160,7 +161,6 @@
   }
 
   .booknavbackward {
-    transform: rotateY(180deg);
     left: 3rem;
   }
 
@@ -180,58 +180,19 @@
   }
 }
 
-@media (min-width: 414px) and (min-height: 736px) and (orientation: portrait) {
-  .mobileaboutbookcontainer {
-    width: 825px;
-    height: 1103px;
-    left: -25.7rem;
-    bottom: -47rem;
-  }
-
-  .storynavs {
-    width: 110px;
-    height: 38px;
-    bottom: -34rem;
-  }
-
-  .booknavforward {
-    left: 17rem;
-  }
-
-  .booknavbackward {
-    transform: rotateY(180deg);
-    left: 3rem;
-  }
-
-  .mobileabouttext {
-    font-size: 2.7rem;
-  }
-
-  .page1textamobile {
-    font-size: 6.5rem;
-  }
-
-  .page5textamobile {
-    font-size: 2.5rem;
-  }
-  .page9textamobile {
-    font-size: 2.6rem;
-  }
-}
-
+// IPHONE XR - TESTED W/ NGROK
 @media (min-width: 414.98px) and (min-height: 715.98px) and (orientation: portrait) {
   .mobileaboutbookcontainer {
-    // background-color: lightskyblue;
     width: 825px;
     height: 1103px;
     left: -25.65rem;
-    bottom: -49rem;
+    bottom: -73rem;
   }
 
   .storynavs {
     width: 120px;
     height: 41px;
-    bottom: -35.2rem;
+    bottom: -59.5rem;
   }
 
   .booknavforward {
@@ -239,7 +200,6 @@
   }
 
   .booknavbackward {
-    transform: rotateY(180deg);
     left: 3rem;
   }
 
@@ -256,5 +216,158 @@
   }
   .page9textamobile {
     font-size: 2.6rem;
+  }
+}
+
+// IPHONE X - CHROME DEVTOOLS
+@media (min-width: 375px) and (min-height: 812px) and (orientation: portrait) {
+  .mobileaboutbookcontainer {
+    width: 750px;
+    height: 1003px;
+    left: -23.35rem;
+    bottom: -68rem;
+  }
+
+  .storynavs {
+    width: 120px;
+    height: 41px;
+    bottom: -57.5rem;
+  }
+
+  .booknavforward {
+    left: 13.5rem;
+  }
+
+  .booknavbackward {
+    left: 3rem;
+  }
+
+  .mobileabouttext {
+    font-size: 2.6rem;
+  }
+
+  .page1textamobile {
+    font-size: 6.3rem;
+  }
+
+  .page5textamobile {
+    font-size: 2.5rem;
+  }
+  .page13textamobile {
+    font-size: 2.5rem;
+  }
+}
+
+// PIXEL 2 - CHROME DEVTOOLS
+@media (min-width: 411px) and (min-height: 731px) and (orientation: portrait) {
+  .mobileaboutbookcontainer {
+    width: 825px;
+    height: 1103px;
+    left: -25.75rem;
+    bottom: -73rem;
+  }
+
+  .storynavs {
+    width: 120px;
+    height: 41px;
+    bottom: -59.4rem;
+  }
+
+  .booknavforward {
+    left: 15.5rem;
+  }
+
+  .booknavbackward {
+    left: 3rem;
+  }
+
+  .mobileabouttext {
+    font-size: 2.6rem;
+  }
+
+  .page1textamobile {
+    font-size: 6.3rem;
+  }
+
+  .page5textamobile {
+    font-size: 2.5rem;
+  }
+  .page7textamobile {
+    font-size: 2.5rem;
+  }
+}
+
+// PIXEL 2XL- CHROME DEVTOOLS
+@media (min-width: 411px) and (min-height: 823px) and (orientation: portrait) {
+  .mobileaboutbookcontainer {
+    width: 825px;
+    height: 1103px;
+    left: -25.75rem;
+    bottom: -70rem;
+  }
+
+  .storynavs {
+    width: 120px;
+    height: 41px;
+    bottom: -58rem;
+  }
+
+  .booknavforward {
+    left: 15.5rem;
+  }
+
+  .booknavbackward {
+    left: 3rem;
+  }
+
+  .mobileabouttext {
+    font-size: 2.6rem;
+  }
+
+  .page1textamobile {
+    font-size: 6.3rem;
+  }
+
+  .page5textamobile {
+    font-size: 2.5rem;
+  }
+  .page7textamobile {
+    font-size: 2.5rem;
+  }
+}
+
+// Galaxy S5- CHROME DEVTOOLS
+@media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
+  .mobileaboutbookcontainer {
+    width: 725px;
+    height: 969px;
+    left: -22.7rem;
+    bottom: -72rem;
+  }
+
+  .storynavs {
+    width: 120px;
+    height: 41px;
+    bottom: -60.2rem;
+  }
+
+  .booknavforward {
+    left: 14.5rem;
+  }
+
+  .booknavbackward {
+    left: 1rem;
+  }
+
+  .mobileabouttext {
+    font-size: 2.4rem;
+  }
+
+  .page1textamobile {
+    font-size: 6.3rem;
+  }
+
+  .page9textamobile {
+    font-size: 2.3rem;
   }
 }
