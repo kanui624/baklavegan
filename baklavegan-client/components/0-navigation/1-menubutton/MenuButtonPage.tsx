@@ -1,5 +1,5 @@
 // React
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 
 // Next
 import Image from 'next/image';
@@ -76,14 +76,7 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
   }, [pageTrigger]);
 
   return (
-    <button
-      id="menubutton"
-      disabled={disabled}
-      className={`${styles.menubtn} flex justify-center items-center`}
-      onClick={() => {
-        handleMenuClick();
-      }}
-    >
+    <Fragment>
       <div className={`${styles.menupageimage} absolute pagemenubutton`}>
         <Image
           src="/2-images/1-index/1-enter-btn.png"
@@ -95,7 +88,18 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
       <div className={`${styles.menupagetext} absolute pagemenubutton`}>
         <h3>menu</h3>
       </div>
-    </button>
+      <button
+        disabled={disabled}
+        className={`${styles.menubtn} flex justify-center items-center`}
+        onClick={() => {
+          handleMenuClick();
+        }}
+      >
+        <div className={`${styles.invisiblemenubtn} absolute opacity-0`}>
+          <h3>invisiblemenubutton</h3>
+        </div>
+      </button>
+    </Fragment>
   );
 };
 

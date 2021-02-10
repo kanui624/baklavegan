@@ -1,17 +1,12 @@
-.menupageimage {
-  bottom: -22rem;
+.menupagetext {
+  padding-left: 0.65rem;
+  opacity: 0.8;
+  text-shadow: 4px 3px #4a3f35;
 }
 
-.menupagetext {
-  font-size: 3.7rem;
-  letter-spacing: 0.5rem;
-  padding: 0;
-  margin: 0;
-  opacity: 0.8;
-  bottom: -14rem;
-  text-shadow: 4px 3px #4a3f35;
-  background-color: lightskyblue;
-}
+// .invisiblemenubtn {
+//   background-color: lime;
+// }
 
 // IPHONE 4 - CHROME DEVTOOLS
 @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
@@ -22,6 +17,11 @@
   .menupagetext {
     font-size: 3rem;
     letter-spacing: 0.4rem;
+    bottom: -13.4rem;
+  }
+
+  .invisiblemenubtn {
+    bottom: 0.5rem;
   }
 }
 

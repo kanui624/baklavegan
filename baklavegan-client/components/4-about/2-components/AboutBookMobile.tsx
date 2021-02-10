@@ -1,6 +1,9 @@
 // React
 import { useState, useEffect, useRef, Fragment } from 'react';
 
+// Redux
+import { useSelector } from 'react-redux';
+
 // Page Flip
 // @ts-ignore
 import HTMLFlipBook from 'react-pageflip';
@@ -14,44 +17,104 @@ import { aboutBookMobileData } from '../1-data/AboutBookMobileData';
 // React Types
 import { FC } from 'react';
 
+// Redux Types
+import { AppState } from '../../../redux/store';
+
 // Component Level Types
 import { AboutBookProps } from '../0-types/AboutProps';
 
-interface AboutProps {
-  setPageCount: (pageCount: number) => void;
-  pageCount: number;
-}
-
-const AboutBookMobile: FC<AboutProps> = ({ setPageCount, pageCount }) => {
-  const [disabled, setDisabled] = useState(false);
+const AboutBookMobile: FC = () => {
   const aboutBook = useRef();
+  const [pageCount, setPageCount] = useState(0);
+  const [disabled, setDisabled] = useState(false);
+
+  const {
+    MenuTransition: { transition },
+  } = useSelector<AppState, AppState>((state) => state);
+
+  const animateIn = () => {
+    gsap.to(['.mobileaboutbookcontainer', '.storynavs'], {
+      y: -1000,
+      delay: 1,
+      duration: 2.3,
+      ease: 'back.out(1.07)',
+      stagger: 0.15,
+    });
+  };
+
+  const animateOut = () => {
+    gsap.to(['.mobileaboutbookcontainer', '.storynavs'], {
+      y: 100,
+      duration: 2,
+      ease: 'back.in(1.1)',
+      stagger: 0.15,
+    });
+  };
 
   const bounce = (targetNav: any) => {
-    const bounceTl = gsap.timeline();
+    let bounceClass;
     if (targetNav === 'story-nav-forward') {
-      bounceTl.to('.booknavforward', {
-        scale: 0.8,
-        duration: 0.1,
-        ease: 'elastic.in(1, 0.3)',
-      });
-      bounceTl.to('.booknavforward', {
-        scale: 1,
-        duration: 1.5,
-        ease: 'elastic.out(1, 0.3)',
-      });
+      bounceClass = '.booknavforward';
     } else {
-      bounceTl.to('.booknavbackward', {
-        scale: 0.8,
-        duration: 0.1,
-        ease: 'elastic.in(1, 0.3)',
-      });
-      bounceTl.to('.booknavbackward', {
-        scale: 1,
-        duration: 1.5,
-        ease: 'elastic.out(1, 0.3)',
-      });
+      bounceClass = '.booknavbackward';
     }
+    const bounceTl = gsap.timeline();
+    bounceTl.to(`${bounceClass}`, {
+      scale: 0.8,
+      duration: 0.1,
+      delay: 0.1,
+      ease: 'elastic.out(1, 0.1)',
+    });
+    bounceTl.to(`${bounceClass}`, {
+      scale: 1,
+      duration: 1.5,
+      ease: 'elastic.out(1, 0.1)',
+    });
   };
+
+  const removeNav = (removeNavClass: string) => {
+    gsap.to(`${removeNavClass}`, {
+      opacity: 0,
+      duration: 0.5,
+      delay: 1,
+    });
+    gsap.to(`${removeNavClass}`, {
+      display: 'none',
+      delay: 1,
+    });
+  };
+
+  const addNav = (addNavClass: string) => {
+    gsap.to(`${addNavClass}`, {
+      display: 'block',
+    });
+    gsap.to(`${addNavClass}`, {
+      opacity: 1,
+      duration: 1,
+      delay: 0.8,
+    });
+  };
+
+  useEffect(() => {
+    if (transition) {
+      animateOut();
+    } else {
+      animateIn();
+    }
+  }, [transition]);
+
+  useEffect(() => {
+    if (pageCount === 8) {
+      removeNav('.booknavforward');
+    } else {
+      addNav('.booknavforward');
+    }
+    if (pageCount === 0) {
+      removeNav('.booknavbackward');
+    } else {
+      addNav('.booknavbackward');
+    }
+  }, [pageCount]);
 
   const handleForward = (e: any) => {
     bounce(e.target.alt);
