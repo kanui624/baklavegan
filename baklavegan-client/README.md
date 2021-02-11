@@ -19,4 +19,6 @@ Some of the skills that were necessary to complete this were:
 - Extensive researching and googling skills (most of my time was spent doing this)
 - General Ability to stay focused, see a clear vision for what I want, and persevere through the adversity of not instantly seeing the product of my work.
 
+If you are reading this, it means this site is still in construction and has not been built or deployed to production yet. However, if you are a recruiter or employer you can view my currently written code to get a feel for what I can do. Thank you.
+
 If you are interested in my work or would like to hire me you can reach me at marley.kanui@gmail.com
