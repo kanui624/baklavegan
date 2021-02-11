@@ -23,7 +23,7 @@ import { AppState } from '../../../redux/store';
 // Component Level Types
 import { AboutBookProps } from '../0-types/AboutProps';
 
-const AboutBookMobile: FC = () => {
+const AboutBookContainer: FC = () => {
   const aboutBook = useRef();
   const [pageCount, setPageCount] = useState(0);
   const [disabled, setDisabled] = useState(false);
@@ -51,7 +51,7 @@ const AboutBookMobile: FC = () => {
     });
   };
 
-  const bounce = (targetNav: any) => {
+  const bounce = (targetNav: string) => {
     let bounceClass;
     if (targetNav === 'story-nav-forward') {
       bounceClass = '.booknavforward';
@@ -207,4 +207,4 @@ const AboutBookMobile: FC = () => {
   );
 };
 
-export default AboutBookMobile;
+export default AboutBookContainer;

@@ -5,13 +5,13 @@ import { useState, useEffect } from 'react';
 import gsap from 'gsap';
 
 // Components
-import AboutBookMobile from '../../components/4-about/2-components/AboutBookMobile';
+import AboutBookContainer from '../../components/4-about/2-components/AboutBookContainer';
 
 // React Types
 import { FC } from 'react';
 
 const About: FC = () => {
-  return <AboutBookMobile />;
+  return <AboutBookContainer />;
 };
 
 export default About;
