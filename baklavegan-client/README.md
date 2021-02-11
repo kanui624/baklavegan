@@ -14,6 +14,7 @@ Some of the skills that were necessary to complete this were:
 - Ability to create 3D objects in a third party software (blender was used for this)
 - Ability to work efficiently in all of Adobe Suite (Photoshop, Illustrator, XD, Media Encoder, Premiere, and After Effects were all used to the create content for this site)
 - Experience in creating music/foley and working with a Digital Audio Workstation. All audio samples in transitions are original and created from scratch (Ableton was used for this)
+- Experience with using git and github
 - General knowledge of working with a computer and using terminal.
 - Ability to conceptualize original creative ideas and think up alternate solutions for them when they don't work (the first ones never do)
 - Extensive problem solving skills (there were a lot to solve)
