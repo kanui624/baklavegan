@@ -15,6 +15,7 @@ Some of the skills that were necessary to complete this were:
 - Ability to work efficiently in all of Adobe Suite (Photoshop, Illustrator, XD, Media Encoder, Premiere, and After Effects were all used to the create content for this site)
 - Experience in creating music/foley and working with a Digital Audio Workstation. All audio samples in transitions are original and created from scratch (Ableton was used for this)
 - General knowledge of working with a computer and using terminal.
+- Ability to conceptualize original creative ideas and think up alternate solutions for them when they don't work (the first ones never do)
 - Extensive problem solving skills (there were a lot to solve)
 - Extensive researching and googling skills (most of my time was spent doing this)
 - General Ability to stay focused, see a clear vision for what I want, and persevere through the adversity of not instantly seeing the product of my work.
