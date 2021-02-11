@@ -1,13 +1,14 @@
+.menupageimage {
+  bottom: -22rem;
+}
+
 .menupagetext {
-  font-size: 4rem;
-  bottom: -13.3rem;
+  font-size: 3.5rem;
+  letter-spacing: 0.4rem;
+  bottom: -13rem;
   padding-left: 0.4rem;
   opacity: 0.8;
   text-shadow: 4px 3px #4a3f35;
-}
-
-.menupageimage {
-  bottom: -22rem;
 }
 
 .invisiblemenubtn {
@@ -30,7 +31,8 @@
   }
 
   .invisiblemenubtn {
-    bottom: 0.5rem;
+    height: 2.3rem;
+    width: 6rem;
   }
 }
 
@@ -41,8 +43,30 @@
   }
 
   .menupagetext {
-    font-size: 3.5rem;
-    letter-spacing: 0.4rem;
+    font-size: 3.2rem;
+    bottom: -13.1rem;
+  }
+
+  .invisiblemenubtn {
+    height: 3rem;
+    width: 8rem;
+  }
+}
+
+// Galaxy S5- CHROME DEVTOOLS
+@media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
+  .menupageimage {
+    bottom: -23.7rem;
+  }
+
+  .menupagetext {
+    font-size: 3.2rem;
+    bottom: -13.5rem;
+  }
+
+  .invisiblemenubtn {
+    height: 2rem;
+    width: 7rem;
   }
 }
 
@@ -53,7 +77,97 @@
   }
 
   .menupagetext {
-    font-size: 3rem;
-    letter-spacing: 0.4rem;
+    font-size: 3.5rem;
+    bottom: -13.2rem;
+  }
+
+  .invisiblemenubtn {
+    height: 3rem;
+    width: 7rem;
+  }
+}
+
+// IPHONE XR - TESTED W/ NGROK
+@media (min-width: 414.98px) and (min-height: 715.98px) and (orientation: portrait) {
+  .menupageimage {
+    bottom: -22.7rem;
+  }
+
+  .menupagetext {
+    font-size: 3.6rem;
+    bottom: -13.5rem;
+  }
+
+  .invisiblemenubtn {
+    height: 3rem;
+    width: 7rem;
+  }
+}
+
+// IPHONE X - CHROME DEVTOOLS
+@media (min-width: 375px) and (min-height: 812px) and (orientation: portrait) {
+  .menupageimage {
+    bottom: -21.7rem;
+  }
+
+  .menupagetext {
+    font-size: 3.8rem;
+    bottom: -13rem;
+  }
+
+  .invisiblemenubtn {
+    height: 4rem;
+    width: 8rem;
+  }
+}
+
+// PIXEL 2 - CHROME DEVTOOLS
+@media (min-width: 411px) and (min-height: 731px) and (orientation: portrait) {
+  .menupageimage {
+    bottom: -22.7rem;
+  }
+
+  .menupagetext {
+    font-size: 3.6rem;
+    bottom: -13.5rem;
+  }
+
+  .invisiblemenubtn {
+    height: 3rem;
+    width: 7rem;
+  }
+}
+
+// IPHONE 6/7/8 PLUS - CHROME DEVTOOLS
+@media (min-width: 414px) and (min-height: 736px) and (orientation: portrait) {
+  .menupageimage {
+    bottom: -21.7rem;
+  }
+
+  .menupagetext {
+    font-size: 3.8rem;
+    bottom: -13rem;
+  }
+
+  .invisiblemenubtn {
+    height: 4rem;
+    width: 8rem;
+  }
+}
+
+// PIXEL 2XL- CHROME DEVTOOLS
+@media (min-width: 411px) and (min-height: 823px) and (orientation: portrait) {
+  .menupageimage {
+    bottom: -21.7rem;
+  }
+
+  .menupagetext {
+    font-size: 3.8rem;
+    bottom: -13rem;
+  }
+
+  .invisiblemenubtn {
+    height: 4rem;
+    width: 8rem;
   }
 }

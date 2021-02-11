@@ -198,7 +198,7 @@ const AboutBookMobile: FC = () => {
       </button>
       <button
         disabled={disabled}
-        className="storynavs booknavbackward transform-gpu fixed opacity-0"
+        className="storynavs booknavbackward fixed opacity-0"
         onClick={(e) => handleBackward(e)}
       >
         <img src="/3-svgs/about/story-nav.svg" alt="story-nav-backward" />
