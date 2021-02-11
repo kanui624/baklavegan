@@ -1,30 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Baklavegan all rights reserved 2021.
 
-## Getting Started
+All creative decisions, content creation, and written code are by Marley Kanui to serve 3 purposes.
+1: Start a business
+2: Advocate for Veganism
+3: Demonstrate creative and technical competency to potential clients or employers.
 
-First, run the development server:
+Some of the skills that were necessary to complete this were:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Knowledge of various frontend and backend technologies (see package.json)
+- Experience in responsive design.
+- Ability to code clean and concise javascript, html, and css code
+- Knowledge of working with 3D objects in the browser
+- Ability to create 3D objects in a third party software (blender was used for this)
+- Ability to work efficiently in all of Adobe Suite (Photoshop, Illustrator, XD, Media Encoder, Premiere, and After Effects were all used to the create content for this site)
+- Experience in creating music/foley and working with a Digital Audio Workstation. All audio samples in transitions are original and created from scratch (Ableton was used for this)
+- General knowledge of working with a computer and using terminal.
+- Extensive problem solving skills (there were a lot to solve)
+- Extensive researching and googling skills (most of my time was spent doing this)
+- General Ability to stay focused, see a clear vision for what I want, and persevere through the adversity of not instantly seeing the product of my work.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you are interested in my work or would like to hire me you can reach me at marley.kanui@gmail.com
