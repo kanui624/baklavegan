@@ -177,7 +177,7 @@ const AboutBookMobile: FC = () => {
                     )}
                     {svg && (
                       <img
-                        className="aboutmobilesvg px-4"
+                        className={`svg${id} aboutmobilesvg px-4`}
                         src={`/3-svgs/about/${svg}.svg`}
                         alt={svg}
                       />
