@@ -55,7 +55,7 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
     gsap.to('.pagemenubutton', {
       y: -210,
       stagger: 0.15,
-      duration: 0.5,
+      duration: 0.8,
       ease: 'back.out(2.5)',
     });
   };
@@ -64,7 +64,7 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
     gsap.to('.pagemenubutton', {
       y: -200,
       stagger: 0.15,
-      duration: 0.5,
+      duration: 0.8,
       ease: 'back.out(2.5)',
     });
   };

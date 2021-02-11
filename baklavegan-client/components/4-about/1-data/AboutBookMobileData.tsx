@@ -3,7 +3,7 @@ export const aboutBookMobileData: any = [
   {
     id: 1,
     texta: 'baklavegan',
-    textb: 'an origin story',
+    svg: 'origin-story',
   },
   { id: 2 },
   {
@@ -49,6 +49,7 @@ export const aboutBookMobileData: any = [
   {
     id: 15,
     texta: 'and the rest is History!',
+    svg: 'now-open',
   },
   { id: 16 },
   {
