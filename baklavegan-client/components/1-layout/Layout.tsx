@@ -15,6 +15,7 @@ import { gsap } from 'gsap';
 import MemoBVCanvas from '../0-navigation/0-menu/5-canvas/BVCanvas';
 import MenuButtonRoot from '../0-navigation/1-menubutton/MenuButtonRoot';
 import MenuButtonPage from '../0-navigation/1-menubutton/MenuButtonPage';
+import ClientPass from './ClientPass';
 
 // Styles
 import styles from '../../styles/1-layout-scss/layout.module.scss';
@@ -93,16 +94,18 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     <Fragment>
       <div className="fixed inset-0 h-full max-w-full">
         <div className="flex justify-center items-center container mx-auto h-full">
-          {children}
-          {root ? (
-            <MenuButtonRoot disabled={disabled} toggleClick={toggleClick} />
-          ) : (
-            <MenuButtonPage
-              clicked={clicked}
-              disabled={disabled}
-              toggleClick={toggleClick}
-            />
-          )}
+          <ClientPass>{children}</ClientPass>
+          <ClientPass>
+            {root ? (
+              <MenuButtonRoot disabled={disabled} toggleClick={toggleClick} />
+            ) : (
+              <MenuButtonPage
+                clicked={clicked}
+                disabled={disabled}
+                toggleClick={toggleClick}
+              />
+            )}
+          </ClientPass>
         </div>
       </div>
       <div
@@ -110,12 +113,14 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         className={`${styles.canvasbackground} fixed inset-0`}
       />
       <div id="canvas" className={`${styles.canvascontainer} absolute`}>
-        <MemoBVCanvas
-          clicked={clicked}
-          toggleClick={toggleClick}
-          handleTransition={handleTransition}
-          onCompile={() => setReady(true)}
-        />
+        <ClientPass>
+          <MemoBVCanvas
+            clicked={clicked}
+            toggleClick={toggleClick}
+            handleTransition={handleTransition}
+            onCompile={() => setReady(true)}
+          />
+        </ClientPass>
       </div>
     </Fragment>
   );
