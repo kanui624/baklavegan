@@ -30,7 +30,7 @@ export const aboutBookMobileData: any = [
   {
     id: 9,
     texta:
-      'they soon found they had a lot in common, like their love for animals...',
+      'they soon found that they had a lot in common, like their love for animals...',
     svg: 'love-animals',
   },
   { id: 10 },

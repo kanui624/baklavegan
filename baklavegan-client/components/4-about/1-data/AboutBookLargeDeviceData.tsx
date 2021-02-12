@@ -5,12 +5,12 @@ export const aboutBookLargeDeviceData: any = [
   },
   {
     id: 1,
-    texta: 'an origin story',
+    svg: 'origin-story',
   },
   {
     id: 2,
     texta:
-      'One day this really cool Turkish girl decided she wanted to go visit America',
+      'one day this really cool Turkish girl decided she wanted to go visit America',
   },
   {
     id: 3,
@@ -19,7 +19,7 @@ export const aboutBookLargeDeviceData: any = [
   {
     id: 4,
     texta:
-      'So she packed her bags and bought a plane ticket from Istanbul to Austin, Texas',
+      'so she packed her bags and bought a plane ticket from Istanbul to Austin, Texas',
   },
   {
     id: 5,
@@ -28,7 +28,7 @@ export const aboutBookLargeDeviceData: any = [
   {
     id: 6,
     texta:
-      'When she got there she met this really cool skater dude and they became friends :)',
+      'when she got there she met this really cool skater dude and they became friends :)',
   },
   {
     id: 7,
@@ -37,7 +37,7 @@ export const aboutBookLargeDeviceData: any = [
   {
     id: 8,
     texta:
-      'They soon realized that they had a lot in common like their love for animals...',
+      'they soon found that they had a lot in common like their love for animals...',
   },
   {
     id: 9,
@@ -45,7 +45,7 @@ export const aboutBookLargeDeviceData: any = [
   },
   {
     id: 10,
-    texta: '...and their passion for making food!',
+    texta: '...and passion for making food!',
   },
   {
     id: 11,
@@ -53,7 +53,7 @@ export const aboutBookLargeDeviceData: any = [
   },
   {
     id: 12,
-    texta: 'then one day they had this really cool idea!',
+    texta: 'and one day they had this really cool idea!',
   },
   {
     id: 13,
