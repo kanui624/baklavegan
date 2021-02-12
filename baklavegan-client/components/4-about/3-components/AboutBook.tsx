@@ -27,7 +27,7 @@ const AboutBook: FC<AboutBookProps> = forwardRef(({ width }, ref) => {
   return (
     <HTMLFlipBook
       ref={ref}
-      className="mobileaboutbook inset-0 h-full max-w-full"
+      className="aboutbook inset-0 h-full max-w-full"
       useMouseEvents={false}
       flippingTime={1500}
       usePortrait={false}

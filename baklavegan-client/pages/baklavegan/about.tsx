@@ -9,8 +9,9 @@ import gsap from 'gsap';
 
 // GSAP Animations
 import {
-  removeNav,
   addNav,
+  removeNav,
+  bounceNav,
 } from '../../components/4-about/2-animations/AboutNavAnimations';
 
 // Components
@@ -28,7 +29,7 @@ const About: FC = () => {
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
 
-  const aboutBookMobile = useRef();
+  const aboutBook = useRef();
   const [pageCount, setPageCount] = useState(0);
   const [disabled, setDisabled] = useState(false);
 
@@ -51,10 +52,18 @@ const About: FC = () => {
     });
   };
 
+  const clickedNav = (targetNav: string) => {
+    if (targetNav === 'story-nav-forward') {
+      bounceNav('.booknavforward');
+    } else {
+      bounceNav('.booknavbackward');
+    }
+  };
+
   const handleForward = (e: any) => {
-    (aboutBookMobile.current as any).pageFlip.flipNext();
+    (aboutBook.current as any).pageFlip.flipNext();
     setPageCount(pageCount + 1);
-    bounce(e.target.alt);
+    clickedNav(e.target.alt);
     setDisabled(true);
     setTimeout(() => {
       setDisabled(false);
@@ -62,34 +71,13 @@ const About: FC = () => {
   };
 
   const handleBackward = (e: any) => {
-    (aboutBookMobile.current as any).pageFlip.flipPrev();
+    (aboutBook.current as any).pageFlip.flipPrev();
     setPageCount(pageCount - 1);
-    bounce(e.target.alt);
+    clickedNav(e.target.alt);
     setDisabled(true);
     setTimeout(() => {
       setDisabled(false);
     }, 1500);
-  };
-
-  const bounce = (targetNav: string) => {
-    let bounceClass;
-    if (targetNav === 'story-nav-forward') {
-      bounceClass = '.booknavforward';
-    } else {
-      bounceClass = '.booknavbackward';
-    }
-    const bounceTl = gsap.timeline();
-    bounceTl.to(`${bounceClass}`, {
-      scale: 0.8,
-      duration: 0.1,
-      delay: 0.1,
-      ease: 'elastic.out(1, 0.1)',
-    });
-    bounceTl.to(`${bounceClass}`, {
-      scale: 1,
-      duration: 1.5,
-      ease: 'elastic.out(1, 0.1)',
-    });
   };
 
   useEffect(() => {
@@ -116,7 +104,7 @@ const About: FC = () => {
   return (
     <Fragment>
       <div className="aboutbookcontainer fixed">
-        <AboutBook ref={aboutBookMobile} width={width} />
+        <AboutBook ref={aboutBook} width={width} />
       </div>
       <button
         disabled={disabled}
