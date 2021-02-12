@@ -14,7 +14,7 @@ import {
 } from '../../components/4-about/2-animations/AboutNavAnimations';
 
 // Components
-import AboutBookMobile from '../../components/4-about/3-components/AboutBookMobile';
+import AboutBook from '../../components/4-about/3-components/AboutBook';
 
 // React Types
 import { FC } from 'react';
@@ -27,14 +27,13 @@ const About: FC = () => {
     WindowSize: { width, height },
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
-  const devicePageCount = width >= 768 ? 16 : 8;
 
   const aboutBookMobile = useRef();
   const [pageCount, setPageCount] = useState(0);
   const [disabled, setDisabled] = useState(false);
 
   const animateIn = () => {
-    gsap.to(['.mobileaboutbookcontainer', '.storynavs'], {
+    gsap.to(['.aboutbookcontainer', '.storynavs'], {
       y: -1000,
       delay: 1,
       duration: 2.3,
@@ -44,7 +43,7 @@ const About: FC = () => {
   };
 
   const animateOut = () => {
-    gsap.to(['.mobileaboutbookcontainer', '.storynavs'], {
+    gsap.to(['.aboutbookcontainer', '.storynavs'], {
       y: 100,
       duration: 2,
       ease: 'back.in(1.1)',
@@ -102,7 +101,7 @@ const About: FC = () => {
   }, [transition]);
 
   useEffect(() => {
-    if (pageCount === devicePageCount) {
+    if (pageCount === 8) {
       removeNav('.booknavforward');
     } else {
       addNav('.booknavforward');
@@ -112,13 +111,12 @@ const About: FC = () => {
     } else {
       addNav('.booknavbackward');
     }
-    console.log(devicePageCount);
   }, [pageCount]);
 
   return (
     <Fragment>
-      <div className="mobileaboutbookcontainer fixed">
-        <AboutBookMobile ref={aboutBookMobile} width={width} />
+      <div className="aboutbookcontainer fixed">
+        <AboutBook ref={aboutBookMobile} width={width} />
       </div>
       <button
         disabled={disabled}
