@@ -414,3 +414,31 @@
     display: none;
   }
 }
+
+// MACBOOK PRO 15" TESTED W/ NGROK
+@media (min-width: 1440px) and (orientation: landscape) {
+  .mobileaboutbookcontainer {
+    display: none;
+  }
+}
+
+// 32 INCH MONITOR - TESTED W/ LOCAL MACHINE
+@media (min-width: 1920px) and (min-height: 1001px) and (orientation: landscape) {
+  .mobileaboutbookcontainer {
+    display: none;
+  }
+}
+
+// ULTRA-WIDESCREEN - TESTED ON LOCAL MACHINE
+@media (min-width: 2560px) and (min-height: 1001px) and (orientation: landscape) {
+  .mobileaboutbookcontainer {
+    display: none;
+  }
+}
+
+// IMAC 2015 - TESTED ON LOCAL MACHINE
+@media (min-width: 2560px) and (min-height: 1361px) and(orientation: landscape) {
+  .mobileaboutbookcontainer {
+    display: none;
+  }
+}

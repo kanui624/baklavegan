@@ -1,20 +1,29 @@
 // React
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+
+// Redux
+import { useDispatch, useSelector } from 'react-redux';
+import { setDimensions } from '../../redux/slices/WindowSizeSlice';
 
 // React Types
-import { ReactNode, FC } from 'react';
+import { FC } from 'react';
 
-// Component Level Types
-interface ClientPassProps {
-  children: ReactNode;
-}
+// Redux Types
+import { AppState } from '../../redux/store';
 
-const ClientOnly = ({ children }: any) => {
-  const [hasMounted, setHasMounted] = useState(false);
+const ClientOnly: FC = ({ children }: any) => {
+  const {
+    WindowSize: { width, height },
+  } = useSelector<AppState, AppState>((state) => state);
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    setHasMounted(true);
+    dispatch(
+      setDimensions({ width: window.innerWidth, height: window.innerHeight })
+    );
   }, []);
-  if (!hasMounted) {
+
+  if (width === 0 || height === 0) {
     return null;
   }
   return children;

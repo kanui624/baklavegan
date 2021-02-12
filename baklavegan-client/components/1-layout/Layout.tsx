@@ -12,10 +12,10 @@ import { exitMenu } from '../../redux/slices/MenuTransitionSlice';
 import { gsap } from 'gsap';
 
 // Components
+import ClientPass from './ClientPass';
 import MemoBVCanvas from '../0-navigation/0-menu/5-canvas/BVCanvas';
 import MenuButtonRoot from '../0-navigation/1-menubutton/MenuButtonRoot';
 import MenuButtonPage from '../0-navigation/1-menubutton/MenuButtonPage';
-import ClientPass from './ClientPass';
 
 // Styles
 import styles from '../../styles/1-layout-scss/layout.module.scss';
@@ -95,32 +95,29 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       <div className="fixed inset-0 h-full max-w-full">
         <div className="flex justify-center items-center container mx-auto h-full">
           <ClientPass>{children}</ClientPass>
-          <ClientPass>
-            {root ? (
-              <MenuButtonRoot disabled={disabled} toggleClick={toggleClick} />
-            ) : (
-              <MenuButtonPage
-                clicked={clicked}
-                disabled={disabled}
-                toggleClick={toggleClick}
-              />
-            )}
-          </ClientPass>
+          {root ? (
+            <MenuButtonRoot disabled={disabled} toggleClick={toggleClick} />
+          ) : (
+            <MenuButtonPage
+              clicked={clicked}
+              disabled={disabled}
+              toggleClick={toggleClick}
+            />
+          )}
         </div>
       </div>
+
       <div
         id="canvasbg"
         className={`${styles.canvasbackground} fixed inset-0`}
       />
       <div id="canvas" className={`${styles.canvascontainer} absolute`}>
-        <ClientPass>
-          <MemoBVCanvas
-            clicked={clicked}
-            toggleClick={toggleClick}
-            handleTransition={handleTransition}
-            onCompile={() => setReady(true)}
-          />
-        </ClientPass>
+        <MemoBVCanvas
+          clicked={clicked}
+          toggleClick={toggleClick}
+          handleTransition={handleTransition}
+          onCompile={() => setReady(true)}
+        />
       </div>
     </Fragment>
   );

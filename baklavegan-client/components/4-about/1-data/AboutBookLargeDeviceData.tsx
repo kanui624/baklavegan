@@ -1,4 +1,4 @@
-export const aboutBookDesktopData: any = [
+export const aboutBookLargeDeviceData: any = [
   {
     id: 0,
     texta: 'baklavegan',
@@ -14,7 +14,7 @@ export const aboutBookDesktopData: any = [
   },
   {
     id: 3,
-    image: 'visit-america',
+    svg: 'visit-america',
   },
   {
     id: 4,
@@ -23,7 +23,7 @@ export const aboutBookDesktopData: any = [
   },
   {
     id: 5,
-    image: 'leave-turkey',
+    svg: 'leave-turkey',
   },
   {
     id: 6,
@@ -32,7 +32,7 @@ export const aboutBookDesktopData: any = [
   },
   {
     id: 7,
-    image: 'meet-skater',
+    svg: 'meet-skater',
   },
   {
     id: 8,
@@ -41,7 +41,7 @@ export const aboutBookDesktopData: any = [
   },
   {
     id: 9,
-    image: 'love-animals',
+    svg: 'love-animals',
   },
   {
     id: 10,
@@ -49,7 +49,7 @@ export const aboutBookDesktopData: any = [
   },
   {
     id: 11,
-    image: 'love-baking',
+    svg: 'love-baking',
   },
   {
     id: 12,
@@ -57,7 +57,7 @@ export const aboutBookDesktopData: any = [
   },
   {
     id: 13,
-    image: 'the-idea',
+    svg: 'the-idea',
   },
   {
     id: 14,
@@ -65,8 +65,7 @@ export const aboutBookDesktopData: any = [
   },
   {
     id: 15,
-    texta: 'history picture not made yet',
-    // image: 'history',
+    svg: 'now-open',
   },
   {
     id: 16,
