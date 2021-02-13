@@ -206,6 +206,10 @@
     bottom: -59.5rem;
   }
 
+  .aboutsvg {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .booknavforward {
     left: 16.5rem;
   }
@@ -401,16 +405,16 @@
 // SURFACE DUO - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 540px) and (min-height: 720px) and (orientation: portrait) {
   .aboutbookcontainer {
-    width: 1075px;
-    height: 1438px;
-    left: -33.5rem;
-    bottom: -85rem;
+    width: 540px;
+    height: 722px;
+    left: 0rem;
+    bottom: -62rem;
   }
 
   .booknavs {
-    width: 120px;
-    height: 41px;
-    bottom: -61rem;
+    width: 100px;
+    height: 35px;
+    bottom: -55rem;
   }
 
   .booknavforward {
@@ -418,26 +422,18 @@
   }
 
   .booknavbackward {
-    left: 2rem;
+    left: 4rem;
   }
 
   .abouttext {
-    font-size: 3rem;
+    font-size: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
-  .page1texta {
-    font-size: 8rem;
-  }
-
-  .page11texta {
-    font-size: 4.2rem;
-  }
-
-  .page13texta {
-    font-size: 4.2rem;
-  }
-  .page15texta {
-    font-size: 4.2rem;
+  .page0texta {
+    font-size: 4rem;
+    padding-bottom: 1.5rem;
   }
 }
 
@@ -465,25 +461,37 @@
   }
 
   .abouttext {
-    font-size: 2rem;
+    font-size: 2.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .page1texta {
+  .page0texta {
     font-size: 5rem;
+    padding-bottom: 2rem;
   }
 
-  .page11texta {
-    font-size: 3rem;
+  .svg1 {
+    height: 150px;
   }
 
-  .page13texta {
-    font-size: 2.5rem;
-    padding: 1rem;
+  .aboutsvg {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .page15texta {
-    font-size: 3rem;
-  }
+  // .page11texta {
+  //   font-size: 3rem;
+  // }
+
+  // .page13texta {
+  //   font-size: 2.5rem;
+  //   padding: 1rem;
+  // }
+
+  // .page15texta {
+  //   font-size: 3rem;
+  // }
 }
 
 // IPAD MINI - TESTED WITH NGROK - PORTRAIT
@@ -530,7 +538,7 @@
 }
 
 // IPAD MINI - TESTED WITH NGROK - LANDSCAPE
-@media (min-width: 921px) and (min-height: 600px) and (orientation: landscape) {
+@media (min-width: 921px) and (min-height: 665.98px) and (orientation: landscape) {
   .aboutpage {
     padding: 1rem;
   }
@@ -538,13 +546,13 @@
     width: 750px;
     height: 1003px;
     left: 9rem;
-    bottom: -72rem;
+    bottom: -70rem;
   }
 
   .booknavs {
     width: 110px;
     height: 38px;
-    bottom: -60rem;
+    bottom: -58rem;
   }
 
   .booknavforward {
@@ -552,7 +560,7 @@
   }
 
   .booknavbackward {
-    left: 13rem;
+    left: 14rem;
   }
 
   .aboutsvg {
@@ -572,59 +580,125 @@
   }
 }
 
-// IPAD - CHROME DEVTOOLS
-// @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
-//   .aboutpage {
-//     padding: 1rem;
-//   }
-//   .aboutbookcontainer {
-//     width: 1510px;
-//     height: 2020px;
-//     left: -46.8rem;
-//     bottom: -94rem;
-//   }
+// IPAD - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+  .aboutpage {
+    padding: 1rem;
+  }
+  .aboutbookcontainer {
+    width: 770px;
+    height: 1030px;
+    left: 0rem;
+    bottom: -64rem;
+  }
 
-//   .booknavs {
-//     width: 200px;
-//     height: 69px;
-//     bottom: -61rem;
-//   }
+  .booknavs {
+    width: 150px;
+    height: 53px;
+    bottom: -53rem;
+  }
 
-//   .svg1 {
-//     height: 200px;
-//   }
+  .svg1 {
+    height: 200px;
+  }
 
-//   .booknavforward {
-//     left: 32rem;
-//   }
+  .booknavforward {
+    left: 34rem;
+  }
 
-//   .booknavbackward {
-//     left: 4rem;
-//   }
+  .booknavbackward {
+    left: 5rem;
+  }
 
-//   .abouttext {
-//     font-size: 4.5rem;
-//   }
+  .abouttext {
+    font-size: 3rem;
+  }
 
-//   .page1texta {
-//     font-size: 12rem;
-//   }
+  .page0texta {
+    font-size: 6rem;
+  }
+}
 
-//   .page13texta {
-//     padding-bottom: 2rem;
-//   }
-//   .page15texta {
-//     font-size: 5rem;
+// IPAD - CHROME DEV TOOLS - LANDSCAPE
+@media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+}
 
-//     padding-bottom: 4rem;
-//   }
-// }
-
-// IPAD PRO - CHROME DEVTOOLS
+// IPAD PRO - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
-  // .mobileaboutbookcontainer {
-  //   display: none;
-  // }
+  .aboutpage {
+    padding: 1rem;
+  }
+  .aboutbookcontainer {
+    width: 1025px;
+    height: 1371px;
+    left: 0rem;
+    bottom: -64rem;
+  }
+
+  .booknavs {
+    width: 200px;
+    height: 71px;
+    bottom: -51rem;
+  }
+
+  .svg1 {
+    height: 220px;
+  }
+
+  .booknavforward {
+    left: 46rem;
+  }
+
+  .booknavbackward {
+    left: 7rem;
+  }
+
+  .abouttext {
+    font-size: 4rem;
+  }
+
+  .page0texta {
+    font-size: 8rem;
+  }
+}
+
+// IPAD PRO - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
+  .aboutpage {
+    padding: 1rem;
+  }
+  .aboutbookcontainer {
+    width: 1025px;
+    height: 1371px;
+    left: 0rem;
+    bottom: -64rem;
+  }
+
+  .booknavs {
+    width: 200px;
+    height: 71px;
+    bottom: -51rem;
+  }
+
+  .svg1 {
+    height: 220px;
+  }
+
+  .booknavforward {
+    left: 46rem;
+  }
+
+  .booknavbackward {
+    left: 7rem;
+  }
+
+  .abouttext {
+    font-size: 4rem;
+  }
+
+  .page0texta {
+    font-size: 8rem;
+  }
 }
 
 // MACBOOK PRO 15" TESTED W/ NGROK

@@ -22,7 +22,7 @@ interface AboutBookProps {
 
 const AboutBook: FC<AboutBookProps> = forwardRef(({ width }, ref) => {
   const dataToMap =
-    width >= 720 ? aboutBookLargeDeviceData : aboutBookMobileData;
+    width >= 540 ? aboutBookLargeDeviceData : aboutBookMobileData;
   return (
     <HTMLFlipBook
       ref={ref}
@@ -57,7 +57,7 @@ const AboutBook: FC<AboutBookProps> = forwardRef(({ width }, ref) => {
               )}
               {svg && (
                 <img
-                  className={`svg${id} aboutsvg px-4`}
+                  className={`svg${id} aboutsvg  opacity-90`}
                   src={`/3-svgs/about/${svg}.svg`}
                   alt={svg}
                 />
