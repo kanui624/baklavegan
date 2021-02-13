@@ -1,6 +1,9 @@
 // React
 import { useState, useEffect, useRef, Fragment } from 'react';
 
+// Next
+import { useRouter } from 'next/router';
+
 // Redux
 import { useSelector } from 'react-redux';
 
@@ -32,6 +35,7 @@ const About: FC = () => {
   const aboutBook = useRef();
   const [pageCount, setPageCount] = useState(0);
   const [disabled, setDisabled] = useState(false);
+  const aboutURL = useRouter().pathname === '/baklavegan/about' ? true : false;
 
   const animateIn = () => {
     gsap.to(['.aboutbookcontainer', '.booknavs'], {
@@ -87,7 +91,7 @@ const About: FC = () => {
   useEffect(() => {
     if (transition) {
       animateOut();
-    } else {
+    } else if (!transition && aboutURL) {
       animateIn();
     }
   }, [transition]);
@@ -107,7 +111,7 @@ const About: FC = () => {
 
   return (
     <Fragment>
-      <div className="aboutbookcontainer fixed">
+      <div className="aboutbookcontainer absolute">
         <AboutBook ref={aboutBook} width={width} />
       </div>
       <button

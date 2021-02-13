@@ -5,7 +5,7 @@ import { useState, Fragment, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 // Redux
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { exitMenu } from '../../redux/slices/MenuTransitionSlice';
 
 // GSAP
@@ -23,24 +23,17 @@ import styles from '../../styles/1-layout-scss/layout.module.scss';
 // React Types
 import { ReactNode, FC } from 'react';
 
-// Redux Types
-import { AppState } from '../../redux/store';
-
 // Component Level Types
 interface LayoutProps {
   children: ReactNode;
 }
 
 const Layout: FC<LayoutProps> = ({ children }) => {
-  const root = useRouter().pathname === '/' ? true : false;
-  const dispatch = useDispatch();
-  const {
-    MenuTransition: { transition },
-  } = useSelector<AppState, AppState>((state) => state);
-
   const [ready, setReady] = useState(false);
   const [clicked, setClicked] = useState(false);
   const [disabled, setDisabled] = useState(true);
+  const root = useRouter().pathname === '/' ? true : false;
+  const dispatch = useDispatch();
 
   const bgTl = gsap.timeline();
   const canvasTl = gsap.timeline();

@@ -30,7 +30,7 @@ const AboutBook: FC<AboutBookProps> = forwardRef(({ width }, ref) => {
       useMouseEvents={false}
       flippingTime={1500}
       usePortrait={false}
-      drawShadow={true}
+      maxShadowOpacity={1}
       autoSize={false}
       size={'stretch'}
       width={400}
