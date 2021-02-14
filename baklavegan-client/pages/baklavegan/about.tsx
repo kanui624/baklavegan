@@ -1,9 +1,6 @@
 // React
 import { useState, useEffect, useRef, Fragment } from 'react';
 
-// Next
-import { useRouter } from 'next/router';
-
 // Redux
 import { useSelector } from 'react-redux';
 
@@ -35,7 +32,6 @@ const About: FC = () => {
   const aboutBook = useRef();
   const [pageCount, setPageCount] = useState(0);
   const [disabled, setDisabled] = useState(false);
-  const aboutURL = useRouter().pathname === '/baklavegan/about' ? true : false;
 
   const animateIn = () => {
     gsap.to(['.aboutbookcontainer', '.booknavs'], {
@@ -60,7 +56,7 @@ const About: FC = () => {
     }, 3000);
   };
 
-  const clickedNav = (targetNav: string) => {
+  const determineNavBounce = (targetNav: string) => {
     if (targetNav === 'book-nav-forward') {
       bounceNav('.booknavforward');
     } else {
@@ -68,15 +64,15 @@ const About: FC = () => {
     }
   };
 
-  const handleNav = (e: any, nav: boolean) => {
-    if (nav) {
+  const handleNav = (e: any, next: boolean) => {
+    if (next) {
       (aboutBook.current as any).pageFlip.flipNext();
       setPageCount(pageCount + 1);
     } else {
       (aboutBook.current as any).pageFlip.flipPrev();
       setPageCount(pageCount - 1);
     }
-    clickedNav(e.target.alt);
+    determineNavBounce(e.target.alt);
     setDisabled(true);
     setTimeout(() => {
       setDisabled(false);
@@ -86,7 +82,7 @@ const About: FC = () => {
   useEffect(() => {
     if (transition) {
       animateOut();
-    } else if (!transition && aboutURL) {
+    } else {
       animateIn();
     }
   }, [transition]);
