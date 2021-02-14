@@ -1,6 +1,9 @@
 // React
 import { forwardRef } from 'react';
 
+// Next
+import Link from 'next/link';
+
 // Page Flip
 // @ts-ignore
 import HTMLFlipBook from 'react-pageflip';
@@ -49,15 +52,20 @@ const AboutBook: FC<AboutBookProps> = forwardRef(({ width }, ref) => {
             <div className="flex justify-center items-center h-full flex-col">
               {texta && (
                 <div className={`page${id}texta abouttext px-8 py-8`}>
-                  {texta}
+                  {texta}{' '}
+                  {link && (
+                    <Link href={`/baklavegan/${link}`}>
+                      <a className="aboutbooklink">
+                        <u>{link}</u>
+                      </a>
+                    </Link>
+                  )}{' '}
+                  {textb && textb}
                 </div>
-              )}
-              {textb && (
-                <div className={`page${id}textb abouttext`}>{textb}</div>
               )}
               {svg && (
                 <img
-                  className={`svg${id} aboutsvg  opacity-90`}
+                  className={`svg${id} aboutsvg opacity-90`}
                   src={`/3-svgs/about/${svg}.svg`}
                   alt={svg}
                 />

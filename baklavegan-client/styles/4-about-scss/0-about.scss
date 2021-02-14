@@ -6,8 +6,8 @@
 
 .abouttext {
   margin: 0rem;
-  padding: 0.5rem;
-  text-shadow: 3.5px 2.5px 2px #39311d;
+  padding: 0rem;
+  text-shadow: 3.5px 2.5px 3px #39311d;
 }
 
 .booknavs:focus {
@@ -15,18 +15,13 @@
   box-shadow: none;
 }
 
-.page1texta {
+.aboutsvg {
   margin: 0rem;
   padding: 0rem;
 }
 
-.aboutsvg {
-  padding-left: 0.8rem;
-  padding-right: 0.8rem;
-}
-
 .svg1 {
-  height: 110px;
+  height: 100px;
 }
 
 .booknavbackward {
@@ -56,32 +51,74 @@
     left: 0.5rem;
   }
 
+  .aboutsvg {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
   .abouttext {
     font-size: 2rem;
+    padding: 0.5rem;
+    padding-right: 1rem;
   }
 
   .page1texta {
     font-size: 5rem;
   }
 
+  .page5texta {
+    font-size: 1.9rem;
+  }
+
   .page7texta {
     font-size: 1.9rem;
+  }
+
+  .page11texta {
+    font-size: 2.5rem;
+  }
+
+  .page13texta {
+    font-size: 2.4rem;
+    padding-bottom: 1rem;
+  }
+
+  .page15texta {
+    font-size: 2.4rem;
+  }
+
+  .page17texta {
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 1.5rem;
   }
 }
 
 // IPHONE 5-SE - CHROME DEVTOOLS
 @media (min-width: 320px) and (min-height: 568px) and (orientation: portrait) {
   .aboutbookcontainer {
-    width: 640px;
-    height: 856px;
-    right: 0rem;
     bottom: -70rem;
   }
 
   .booknavs {
-    width: 90px;
-    height: 31px;
-    bottom: -59.1rem;
+    bottom: -59.5rem;
+  }
+}
+
+// Galaxy S5- CHROME DEVTOOLS
+@media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
+  .aboutbookcontainer {
+    width: 720px;
+    height: 963px;
+    right: 0rem;
+    bottom: -72rem;
+  }
+
+  .booknavs {
+    width: 120px;
+    height: 41px;
+    bottom: -60.2rem;
   }
 
   .booknavforward {
@@ -93,56 +130,36 @@
   }
 
   .abouttext {
-    font-size: 1.8rem;
+    font-size: 2.1rem;
   }
 
   .page1texta {
-    font-size: 5rem;
-  }
-}
-
-// Galaxy S5- CHROME DEVTOOLS
-@media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
-  .aboutbookcontainer {
-    width: 725px;
-    height: 969px;
-    left: -22.7rem;
-    bottom: -72rem;
+    font-size: 5.8rem;
   }
 
-  .booknavs {
-    width: 120px;
-    height: 41px;
-    bottom: -60.2rem;
+  .page11texta {
+    font-size: 3rem;
   }
 
-  .booknavforward {
-    left: 14.5rem;
+  .page13texta {
+    font-size: 2.5rem;
   }
 
-  .booknavbackward {
-    left: 1rem;
+  .page15texta {
+    font-size: 3rem;
   }
 
-  .abouttext {
-    font-size: 2.4rem;
-  }
-
-  .page1texta {
-    font-size: 6.3rem;
-  }
-
-  .page9texta {
-    font-size: 2rem;
+  .page17texta {
+    font-size: 1.69rem;
   }
 }
 
 // IPHONE 6/7/8 - CHROME DEVTOOLS
 @media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
   .aboutbookcontainer {
-    width: 750px;
-    height: 1003px;
-    left: -23.4rem;
+    width: 745px;
+    height: 996px;
+    right: 0rem;
     bottom: -71.5rem;
   }
 
@@ -152,37 +169,27 @@
     bottom: -59.2rem;
   }
 
-  .booknavforward {
-    left: 15rem;
-  }
-
-  .booknavbackward {
-    left: 2.5rem;
-  }
-
   .abouttext {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
   }
 
   .page1texta {
     font-size: 5rem;
   }
 
-  .page5texta {
-    font-size: 2.3rem;
-  }
-
-  .page7texta {
-    font-size: 2.2rem;
-  }
-  .page9texta {
-    font-size: 2.3rem;
-  }
   .page11texta {
     font-size: 3rem;
   }
+
   .page13texta {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
+  }
+
+  .page15texta {
+    font-size: 3rem;
+  }
+  .page17texta {
+    font-size: 1.81rem;
   }
 }
 
@@ -191,7 +198,7 @@
   .aboutbookcontainer {
     width: 825px;
     height: 1103px;
-    left: -25.65rem;
+    right: 0rem;
     bottom: -73rem;
   }
 
@@ -205,27 +212,31 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  .booknavforward {
-    left: 16.5rem;
-  }
-
-  .booknavbackward {
-    left: 3rem;
-  }
-
   .abouttext {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .page1texta {
     font-size: 6.5rem;
   }
 
-  .page5texta {
-    font-size: 2.5rem;
+  .page11texta {
+    font-size: 3.3rem;
   }
-  .page9texta {
-    font-size: 2.6rem;
+  .page13texta {
+    font-size: 3rem;
+  }
+
+  .page15texta {
+    font-size: 3rem;
+  }
+
+  .page17texta {
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -234,42 +245,21 @@
   .aboutbookcontainer {
     width: 750px;
     height: 1003px;
-    left: -23.35rem;
+    right: -0.05rem;
     bottom: -68rem;
   }
 
   .booknavs {
-    width: 120px;
-    height: 41px;
     bottom: -56.5rem;
   }
 
-  .booknavforward {
-    left: 14rem;
-  }
-
-  .booknavbackward {
-    left: 2rem;
-  }
-
-  .abouttext {
-    font-size: 2.4rem;
+  .aboutsvg {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .page1texta {
     font-size: 6.3rem;
-  }
-
-  .page5texta {
-    font-size: 2.3rem;
-  }
-
-  .page7texta {
-    font-size: 2.3rem;
-  }
-
-  .page9texta {
-    font-size: 2rem;
   }
 }
 
@@ -278,40 +268,17 @@
   .aboutbookcontainer {
     width: 825px;
     height: 1103px;
-    left: -25.75rem;
+    right: -0.05rem;
     bottom: -73rem;
   }
 
-  .booknavs {
-    width: 120px;
-    height: 41px;
-    bottom: -59rem;
+  .aboutsvg {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .booknavforward {
-    left: 15.5rem;
-  }
-
-  .booknavbackward {
-    left: 3rem;
-  }
-
-  .mobileabouttext {
-    font-size: 2.6rem;
-  }
-
-  .page1texta {
-    font-size: 6.3rem;
-  }
-
-  .page5texta {
-    font-size: 2.5rem;
-  }
-  .page7texta {
-    font-size: 2.5rem;
-  }
-  .page9texta {
-    font-size: 2.2rem;
+  .page17texta {
+    font-size: 2rem;
   }
 }
 
@@ -320,37 +287,28 @@
   .aboutbookcontainer {
     width: 825px;
     height: 1103px;
-    left: -25.7rem;
+    right: 0rem;
     bottom: -72rem;
   }
 
   .booknavs {
-    width: 110px;
-    height: 38px;
     bottom: -58.5rem;
   }
 
-  .booknavforward {
-    left: 17rem;
-  }
-
-  .booknavbackward {
-    left: 3rem;
-  }
-
   .abouttext {
-    font-size: 2.7rem;
+    font-size: 2.5rem;
   }
 
   .page1texta {
-    font-size: 6.5rem;
+    font-size: 6rem;
   }
 
-  .page5texta {
-    font-size: 2.5rem;
+  .page15texta {
+    font-size: 3rem;
   }
-  .page9texta {
-    font-size: 2.4rem;
+
+  .page17texta {
+    font-size: 2rem;
   }
 }
 
@@ -359,7 +317,7 @@
   .aboutbookcontainer {
     width: 825px;
     height: 1103px;
-    left: -25.75rem;
+    right: -0.05rem;
     bottom: -70rem;
   }
 
@@ -369,31 +327,19 @@
     bottom: -57rem;
   }
 
-  .booknavforward {
-    left: 16rem;
-  }
-
-  .booknavbackward {
-    left: 2rem;
-  }
-
   .abouttext {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
   }
 
   .page1texta {
     font-size: 6.3rem;
   }
 
-  .page5texta {
-    font-size: 2.5rem;
+  .page15texta {
+    font-size: 3.5rem;
   }
-  .page7texta {
-    font-size: 2.5rem;
-  }
-
-  .page9texta {
-    font-size: 2.4rem;
+  .page17texta {
+    font-size: 2rem;
   }
 }
 
@@ -407,17 +353,11 @@
   }
 
   .booknavs {
-    width: 100px;
-    height: 35px;
     bottom: -55rem;
   }
 
-  .booknavforward {
-    left: 24rem;
-  }
-
-  .booknavbackward {
-    left: 4rem;
+  .aboutsvg {
+    padding: 0.5rem;
   }
 
   .abouttext {
@@ -430,44 +370,36 @@
     font-size: 4rem;
     padding-bottom: 1.5rem;
   }
+
+  .page16texta {
+    font-size: 1.8rem;
+  }
+  .page17texta {
+    font-size: 1.6rem;
+  }
 }
 
 // SURFACE DUO - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 720px) and (min-height: 540px) and (orientation: landscape) {
   .aboutbookcontainer {
-    width: 700px;
-    height: 936px;
-    left: 0.7rem;
-    bottom: -72.8rem;
+    width: 720px;
+    height: 963px;
+    right: 0rem;
+    bottom: -74rem;
   }
 
   .booknavs {
     width: 120px;
     height: 41px;
-    bottom: -61.9rem;
+    bottom: -62rem;
   }
 
   .booknavforward {
-    left: 35rem;
+    right: 2rem;
   }
 
   .booknavbackward {
     left: 2rem;
-  }
-
-  .abouttext {
-    font-size: 2.7rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .page0texta {
-    font-size: 5rem;
-    padding-bottom: 2rem;
-  }
-
-  .svg1 {
-    height: 150px;
   }
 
   .aboutsvg {
@@ -475,40 +407,82 @@
     padding-right: 1rem;
   }
 
-  // .page11texta {
-  //   font-size: 3rem;
-  // }
+  .svg1 {
+    height: 150px;
+  }
 
-  // .page13texta {
-  //   font-size: 2.5rem;
-  //   padding: 1rem;
-  // }
+  .abouttext {
+    font-size: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
-  // .page15texta {
-  //   font-size: 3rem;
-  // }
+  .page0texta {
+    font-size: 5rem;
+  }
+
+  .page16texta,
+  .page17texta {
+    font-size: 2.15rem;
+  }
 }
 
 // IPAD MINI - TESTED WITH NGROK - PORTRAIT
 @media (min-width: 768px) and (min-height: 921px) and(orientation: portrait) {
-  .aboutpage {
-    padding: 1rem;
-  }
   .aboutbookcontainer {
-    width: 750px;
-    height: 1003px;
+    width: 770px;
+    height: 1030px;
     left: 0rem;
-    bottom: -62rem;
+    bottom: -63rem;
   }
 
   .booknavs {
-    width: 110px;
-    height: 38px;
-    bottom: -51rem;
+    bottom: -52rem;
+  }
+
+  .aboutsvg {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .svg1 {
+    height: 200px;
+  }
+
+  .abouttext {
+    font-size: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .page0texta {
+    font-size: 6rem;
+  }
+
+  .page16texta {
+    font-size: 2.5rem;
+  }
+
+  .page17texta {
+    font-size: 2.3rem;
+  }
+}
+
+// IPAD MINI - TESTED WITH NGROK - LANDSCAPE
+@media (min-width: 921px) and (min-height: 665.98px) and (orientation: landscape) {
+  .aboutbookcontainer {
+    width: 900px;
+    height: 1204px;
+    right: 4rem;
+    bottom: -78rem;
+  }
+
+  .booknavs {
+    bottom: -62rem;
   }
 
   .booknavforward {
-    left: 36rem;
+    right: 5rem;
   }
 
   .booknavbackward {
@@ -516,7 +490,8 @@
   }
 
   .aboutsvg {
-    padding: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .svg1 {
@@ -530,48 +505,12 @@
   .page0texta {
     font-size: 6rem;
   }
-}
 
-// IPAD MINI - TESTED WITH NGROK - LANDSCAPE
-@media (min-width: 921px) and (min-height: 665.98px) and (orientation: landscape) {
-  .aboutpage {
-    padding: 1rem;
-  }
-  .aboutbookcontainer {
-    width: 750px;
-    height: 1003px;
-    left: 9rem;
-    bottom: -70rem;
-  }
-
-  .booknavs {
-    width: 110px;
-    height: 38px;
-    bottom: -58rem;
-  }
-
-  .booknavforward {
-    left: 45rem;
-  }
-
-  .booknavbackward {
-    left: 14rem;
-  }
-
-  .aboutsvg {
-    padding: 0;
-  }
-
-  .svg1 {
-    height: 200px;
-  }
-
-  .abouttext {
+  .page16texta {
     font-size: 3rem;
   }
-
-  .page0texta {
-    font-size: 6rem;
+  .page17texta {
+    font-size: 2.7rem;
   }
 }
 

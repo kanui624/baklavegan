@@ -171,3 +171,60 @@
     width: 8rem;
   }
 }
+
+// SURFACE DUO - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 540px) and (min-height: 720px) and (orientation: portrait) {
+  .menupageimage {
+    bottom: -21.7rem;
+  }
+
+  .menupagetext {
+    font-size: 3.8rem;
+    bottom: -13rem;
+  }
+
+  .invisiblemenubtn {
+    height: 4rem;
+    width: 8rem;
+  }
+}
+
+// SURFACE DUO - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 720px) and (min-height: 540px) and (orientation: landscape) {
+  .menupageimage {
+    bottom: -23rem;
+  }
+
+  .menupagetext {
+    font-size: 3rem;
+    bottom: -13rem;
+  }
+
+  .invisiblemenubtn {
+    height: 3rem;
+    width: 8rem;
+  }
+}
+
+// IPAD MINI - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 768px) and (min-height: 921px) and(orientation: portrait) {
+  .menupageimage {
+    bottom: -21rem;
+  }
+
+  .menupagetext {
+    font-size: 4rem;
+  }
+
+  .invisiblemenubtn {
+    height: 4rem;
+  }
+}
+
+// IPAD MINI - TESTED WITH NGROK - LANDSCAPE
+@media (min-width: 921px) and (min-height: 665.98px) and (orientation: landscape) {
+  .menupagetext {
+    font-size: 3.5rem;
+    bottom: -13.5rem;
+  }
+}

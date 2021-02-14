@@ -68,24 +68,19 @@ const About: FC = () => {
     }
   };
 
-  const handleForward = (e: any) => {
-    (aboutBook.current as any).pageFlip.flipNext();
-    setPageCount(pageCount + 1);
+  const handleNav = (e: any, nav: boolean) => {
+    if (nav) {
+      (aboutBook.current as any).pageFlip.flipNext();
+      setPageCount(pageCount + 1);
+    } else {
+      (aboutBook.current as any).pageFlip.flipPrev();
+      setPageCount(pageCount - 1);
+    }
     clickedNav(e.target.alt);
     setDisabled(true);
     setTimeout(() => {
       setDisabled(false);
-    }, 1500);
-  };
-
-  const handleBackward = (e: any) => {
-    (aboutBook.current as any).pageFlip.flipPrev();
-    setPageCount(pageCount - 1);
-    clickedNav(e.target.alt);
-    setDisabled(true);
-    setTimeout(() => {
-      setDisabled(false);
-    }, 1500);
+    }, 1300);
   };
 
   useEffect(() => {
@@ -117,14 +112,14 @@ const About: FC = () => {
       <button
         disabled={disabled}
         className="booknavs booknavforward fixed opacity-0"
-        onClick={(e) => handleForward(e)}
+        onClick={(e) => handleNav(e, true)}
       >
         <img src="/3-svgs/about/book-nav.svg" alt="book-nav-forward" />
       </button>
       <button
         disabled={disabled}
         className="booknavs booknavbackward fixed opacity-0"
-        onClick={(e) => handleBackward(e)}
+        onClick={(e) => handleNav(e, false)}
       >
         <img src="/3-svgs/about/book-nav.svg" alt="book-nav-backward" />
       </button>

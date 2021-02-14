@@ -10,7 +10,7 @@ export const aboutBookLargeDeviceData: any = [
   {
     id: 2,
     texta:
-      'one day this really cool Turkish girl decided she wanted to go visit America',
+      'One day this really cool Turkish girl decided she wanted to go visit America',
   },
   {
     id: 3,
@@ -19,7 +19,7 @@ export const aboutBookLargeDeviceData: any = [
   {
     id: 4,
     texta:
-      'so she packed her bags and bought a plane ticket from Istanbul to Austin, Texas',
+      'So she packed her bags and bought a plane ticket from Istanbul to Austin, Texas',
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const aboutBookLargeDeviceData: any = [
   {
     id: 8,
     texta:
-      'they soon found that they had a lot in common like their love for animals...',
+      'They soon found they had a lot in common, like their love for animals...',
   },
   {
     id: 9,
@@ -53,7 +53,7 @@ export const aboutBookLargeDeviceData: any = [
   },
   {
     id: 12,
-    texta: 'and one day they had this really cool idea!',
+    texta: 'Then one day they had this really cool idea!',
   },
   {
     id: 13,
@@ -61,7 +61,7 @@ export const aboutBookLargeDeviceData: any = [
   },
   {
     id: 14,
-    texta: 'and the rest is History!',
+    texta: 'And the rest is History!',
   },
   {
     id: 15,
@@ -69,10 +69,15 @@ export const aboutBookLargeDeviceData: any = [
   },
   {
     id: 16,
-    texta: 'about extra info',
+    texta:
+      'Put simply, we just wanna make desserts, spread good vibes, and speak up for our animal friends we share this world with!',
   },
   {
     id: 17,
-    texta: 'about extra info',
+    texta:
+      "If you'd like learn more about how we allocate sales profits, check out our",
+    link: 'finance',
+    textb:
+      'page!, We strive to be what we want to see more of in the world so transparency and compassion are above all else :)',
   },
 ];

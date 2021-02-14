@@ -9,14 +9,14 @@ export const aboutBookMobileData: any = [
   {
     id: 3,
     texta:
-      'one day this really cool Turkish girl decided she wanted to go visit America',
+      'One day this really cool Turkish girl decided she wanted to go visit America',
     svg: 'visit-america',
   },
   { id: 4 },
   {
     id: 5,
     texta:
-      'so she packed her bags and bought a plane ticket from Istanbul to Austin, Texas',
+      'So she packed her bags and bought a plane ticket from Istanbul to Austin, Texas',
     svg: 'leave-turkey',
   },
   { id: 6 },
@@ -30,7 +30,7 @@ export const aboutBookMobileData: any = [
   {
     id: 9,
     texta:
-      'they soon found that they had a lot in common, like their love for animals...',
+      'They soon found they had a lot in common, like their love for animals...',
     svg: 'love-animals',
   },
   { id: 10 },
@@ -42,18 +42,23 @@ export const aboutBookMobileData: any = [
   { id: 12 },
   {
     id: 13,
-    texta: 'and one day they had this really cool idea!',
+    texta: 'Then one day they had this really cool idea!',
     svg: 'the-idea',
   },
   { id: 14 },
   {
     id: 15,
-    texta: 'and the rest is History!',
+    texta: 'And the rest is History!',
     svg: 'now-open',
   },
   { id: 16 },
   {
     id: 17,
-    texta: 'extra info',
+    texta:
+      "simply put, we just wanna make desserts, spread good vibes, and speak up for our animal friends we share this world with. If you'd like learn more about how we allocate sales profits, check out our",
+
+    link: 'finance',
+    textb:
+      'page. We strive to be what we want to see more of in the world so transparency and compassion are above all else :)',
   },
 ];
