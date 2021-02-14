@@ -76,7 +76,7 @@ const About: FC = () => {
     setDisabled(true);
     setTimeout(() => {
       setDisabled(false);
-    }, 1300);
+    }, 1500);
   };
 
   useEffect(() => {
