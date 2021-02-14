@@ -21,11 +21,14 @@ import { AboutBookDataProps } from '../0-types/AboutProps';
 interface AboutBookProps {
   ref: any;
   width: number;
+  height: number;
 }
 
-const AboutBook: FC<AboutBookProps> = forwardRef(({ width }, ref) => {
+const AboutBook: FC<AboutBookProps> = forwardRef(({ width, height }, ref) => {
   const dataToMap =
-    width >= 540 ? aboutBookLargeDeviceData : aboutBookMobileData;
+    width >= 540 && height >= 720
+      ? aboutBookLargeDeviceData
+      : aboutBookMobileData;
   return (
     <HTMLFlipBook
       ref={ref}

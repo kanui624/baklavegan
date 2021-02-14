@@ -36,6 +36,15 @@
   }
 }
 
+// IPHONE 4 - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 480px) and (min-height: 320px) and (orientation: landscape) {
+  .menupageimage,
+  .menupagetext,
+  .invisiblemenubtn {
+    display: none;
+  }
+}
+
 // IPHONE 5-SE - CHROME DEVTOOLS
 @media (min-width: 320px) and (min-height: 568px) and (orientation: portrait) {
   .menupageimage {

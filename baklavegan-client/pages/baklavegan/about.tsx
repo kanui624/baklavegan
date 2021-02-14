@@ -25,7 +25,7 @@ import { AppState } from '../../redux/store';
 
 const About: FC = () => {
   const {
-    WindowSize: { width },
+    WindowSize: { width, height },
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
 
@@ -103,7 +103,10 @@ const About: FC = () => {
   return (
     <Fragment>
       <div className="aboutbookcontainer absolute">
-        <AboutBook ref={aboutBook} width={width} />
+        <AboutBook ref={aboutBook} width={width} height={height} />
+      </div>
+      <div className="fixed viewportrait">
+        <img src="/3-svgs/about/view-portrait.svg" alt="view-portrait" />
       </div>
       <button
         disabled={disabled}
