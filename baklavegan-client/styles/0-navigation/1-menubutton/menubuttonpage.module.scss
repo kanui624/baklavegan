@@ -245,6 +245,11 @@
 
 // IPAD PRO - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
+  .menupageimage,
+  .menupagetext,
+  .invisiblemenubtn {
+    display: block;
+  }
   .menupageimage {
     bottom: -21rem;
   }
@@ -261,6 +266,11 @@
 
 // MACBOOK PRO 15" TESTED W/ NGROK
 @media (min-width: 1440px) and (orientation: landscape) {
+  .menupageimage,
+  .menupagetext,
+  .invisiblemenubtn {
+    display: block;
+  }
   .menupageimage {
     bottom: -21rem;
   }
