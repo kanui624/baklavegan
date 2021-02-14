@@ -228,3 +228,55 @@
     bottom: -13.5rem;
   }
 }
+
+// IPAD PRO - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
+
+// IPAD PRO - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
+  .menupageimage {
+    bottom: -21rem;
+  }
+
+  .menupagetext {
+    font-size: 4rem;
+    bottom: -13rem;
+  }
+
+  .invisiblemenubtn {
+    height: 4rem;
+  }
+}
+
+// MACBOOK PRO 15" TESTED W/ NGROK
+@media (min-width: 1440px) and (orientation: landscape) {
+  .menupageimage {
+    bottom: -21rem;
+  }
+
+  .menupagetext {
+    font-size: 4rem;
+    bottom: -13rem;
+  }
+
+  .invisiblemenubtn {
+    height: 4rem;
+  }
+}
+
+// 32 INCH MONITOR - TESTED W/ LOCAL MACHINE
+@media (min-width: 1920px) and (min-height: 1001px) and (orientation: landscape) {
+  // NOTHING NEEDED
+}
+
+// ULTRA-WIDESCREEN - TESTED ON LOCAL MACHINE
+@media (min-width: 2560px) and (min-height: 1001px) and (orientation: landscape) {
+  // NOTHING NEEDED
+}
+
+// IMAC 2015 - TESTED ON LOCAL MACHINE
+@media (min-width: 2560px) and (min-height: 1361px) and(orientation: landscape) {
+  // NOTHING NEEDED
+}
