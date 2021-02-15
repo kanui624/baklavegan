@@ -1,5 +1,5 @@
 // React
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 // Next
 import Image from 'next/image';
@@ -8,8 +8,11 @@ import Image from 'next/image';
 import { useDispatch } from 'react-redux';
 import { enterMenu } from '../../../redux/slices/MenuTransitionSlice';
 
-// GSAP
-import { gsap } from 'gsap';
+// GSAP Animations
+import {
+  animateIn,
+  animateOut,
+} from '../../../animations/0-navigation/RootAnimations';
 
 // Styles
 import styles from '../../../styles/0-navigation/1-menubutton/menubuttonroot.module.scss';
@@ -25,39 +28,9 @@ interface MenuButtonRootProps {
 
 const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
   const dispatch = useDispatch();
-  const [enterPlaced, setEnterPlaced] = useState(true);
-
-  const inTl = gsap.timeline();
-
-  const animateIn = () => {
-    gsap.to(['.rootmenuimage', '.rootmenutext'], {
-      y: -350,
-      delay: 2,
-      duration: 2.3,
-      ease: 'back.out(1.2)',
-    });
-    inTl.to('.rootmenuimage', {
-      opacity: 1,
-      delay: 2,
-      duration: 2.3,
-    });
-    inTl.to('.rootmenutext', {
-      opacity: 0.8,
-      duration: 2,
-    });
-  };
-
-  const animateOut = () => {
-    gsap.to('.rootmenubutton', {
-      y: 0,
-      stagger: 0.15,
-      duration: 1,
-      ease: 'back.in(1.5)',
-    });
-  };
 
   const handleEnterClick = () => {
-    animateOut();
+    animateOut('.rootmenubutton');
     dispatch(enterMenu({ transition: true }));
     setTimeout(() => {
       toggleClick();
@@ -65,7 +38,7 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
   };
 
   useEffect(() => {
-    animateIn();
+    animateIn('.rootmenuimage', '.rootmenutext');
   }, []);
 
   return (

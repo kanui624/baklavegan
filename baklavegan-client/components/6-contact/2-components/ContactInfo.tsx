@@ -9,7 +9,7 @@ import Image from 'next/image';
 import { FC } from 'react';
 
 // Component Level Types
-import { ContactInfoCardProps } from './0-types/ContactProps';
+import { ContactInfoCardProps } from '../0-types/ContactProps';
 
 const ContactInfo: FC<ContactInfoCardProps> = ({
   name,

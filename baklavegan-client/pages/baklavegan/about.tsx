@@ -4,18 +4,17 @@ import { useState, useEffect, useRef, Fragment } from 'react';
 // Redux
 import { useSelector } from 'react-redux';
 
-// GSAP
-import gsap from 'gsap';
-
 // GSAP Animations
 import {
+  animateIn,
+  animateOut,
   addNav,
   removeNav,
   bounceNav,
-} from '../../components/4-about/2-animations/AboutNavAnimations';
+} from '../../animations/4-about/AboutAnimations';
 
 // Components
-import AboutBook from '../../components/4-about/3-components/AboutBook';
+import AboutBook from '../../components/4-about/2-components/AboutBook';
 
 // React Types
 import { FC } from 'react';
@@ -32,29 +31,6 @@ const About: FC = () => {
   const aboutBook = useRef();
   const [pageCount, setPageCount] = useState(0);
   const [disabled, setDisabled] = useState(false);
-
-  const animateIn = () => {
-    gsap.to(['.aboutbookcontainer', '.booknavs'], {
-      y: -1000,
-      delay: 1,
-      duration: 2.3,
-      ease: 'back.out(1.07)',
-      stagger: 0.15,
-    });
-  };
-
-  const animateOut = () => {
-    gsap.to(['.aboutbookcontainer', '.booknavs'], {
-      y: 100,
-      duration: 2,
-      ease: 'back.in(1.1)',
-      stagger: 0.15,
-    });
-    setTimeout(() => {
-      setPageCount(0);
-      (aboutBook.current as any).pageFlip.turnToPage(0);
-    }, 3000);
-  };
 
   const determineNavBounce = (targetNav: string) => {
     if (targetNav === 'book-nav-forward') {
@@ -81,9 +57,13 @@ const About: FC = () => {
 
   useEffect(() => {
     if (transition) {
-      animateOut();
+      animateOut('.aboutbookcontainer', '.booknavs');
+      setTimeout(() => {
+        setPageCount(0);
+        (aboutBook.current as any).pageFlip.turnToPage(0);
+      }, 3000);
     } else {
-      animateIn();
+      animateIn('.aboutbookcontainer', '.booknavs');
     }
   }, [transition]);
 

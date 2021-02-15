@@ -8,8 +8,11 @@ import { useRouter } from 'next/router';
 import { useDispatch } from 'react-redux';
 import { exitMenu } from '../../redux/slices/MenuTransitionSlice';
 
-// GSAP
-import { gsap } from 'gsap';
+// GSAP Animations
+import {
+  animateMenuIn,
+  animateMenuOut,
+} from '../../animations/1-layout/LayoutAnimations';
 
 // Components
 import ClientPass from './ClientPass';
@@ -34,22 +37,6 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   const [disabled, setDisabled] = useState(true);
   const root = useRouter().pathname === '/' ? true : false;
   const dispatch = useDispatch();
-
-  const bgTl = gsap.timeline();
-  const canvasTl = gsap.timeline();
-
-  const animateMenuIn = () => {
-    canvasTl.to('#canvas', { display: 'block' });
-    canvasTl.to('#canvas', { opacity: '1', duration: 0.7 });
-    bgTl.to('#canvasbg', { display: 'block' });
-    bgTl.to('#canvasbg', { opacity: 1, duration: 1 });
-  };
-
-  const animateMenuOut = () => {
-    bgTl.to('#canvasbg', { opacity: 0, duration: 0.8, delay: 0.5 });
-    bgTl.to('#canvasbg', { display: 'none' });
-    gsap.to('#canvas', { display: 'none', delay: 1.5 });
-  };
 
   const toggleClick = () => {
     if (!disabled) {
@@ -77,9 +64,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 
   useEffect(() => {
     if (ready && clicked) {
-      animateMenuIn();
+      animateMenuIn('#canvas', '#canvasbg');
     } else {
-      animateMenuOut();
+      animateMenuOut('#canvas', '#canvasbg');
     }
   }, [clicked, ready]);
 

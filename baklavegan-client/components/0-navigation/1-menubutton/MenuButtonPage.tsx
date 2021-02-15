@@ -8,8 +8,13 @@ import Image from 'next/image';
 import { useDispatch } from 'react-redux';
 import { enterMenu } from '../../../redux/slices/MenuTransitionSlice';
 
-// GSAP
-import gsap from 'gsap';
+// GSAP Animations
+import {
+  animateIn,
+  animateOut,
+  onHoverIn,
+  onHoverOut,
+} from '../../../animations/0-navigation/PageAnimations';
 
 // Styles
 import styles from '../../../styles/0-navigation/1-menubutton/menubuttonpage.module.scss';
@@ -32,43 +37,6 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
   const dispatch = useDispatch();
   const [pageTrigger, setPageTrigger] = useState(true);
 
-  const animateIn = () => {
-    gsap.to('.pagemenubutton', {
-      y: -200,
-      stagger: 0.15,
-      delay: 2.2,
-      duration: 0.8,
-      ease: 'back.out(2.5)',
-    });
-  };
-
-  const animateOut = () => {
-    gsap.to('.pagemenubutton', {
-      y: -100,
-      stagger: 0.15,
-      duration: 0.8,
-      ease: 'back.in(2.5)',
-    });
-  };
-
-  const onHoverIn = () => {
-    gsap.to('.pagemenubutton', {
-      y: -210,
-      stagger: 0.15,
-      duration: 0.8,
-      ease: 'back.out(2.5)',
-    });
-  };
-
-  const onHoverOut = () => {
-    gsap.to('.pagemenubutton', {
-      y: -200,
-      stagger: 0.15,
-      duration: 0.8,
-      ease: 'back.out(2.5)',
-    });
-  };
-
   const handleMenuClick = () => {
     setPageTrigger(!pageTrigger);
     dispatch(enterMenu({ transition: true }));
@@ -87,9 +55,9 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
 
   useEffect(() => {
     if (pageTrigger) {
-      animateOut();
+      animateOut('.pagemenubutton');
     } else {
-      animateIn();
+      animateIn('.pagemenubutton');
     }
   }, [pageTrigger]);
 
@@ -109,8 +77,12 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
       <button
         disabled={disabled}
         className={`${styles.menubtn} flex justify-center items-center`}
-        onPointerOver={() => (pageTrigger ? null : onHoverIn())}
-        onPointerOut={() => (pageTrigger ? null : onHoverOut())}
+        onPointerOver={() =>
+          pageTrigger ? null : onHoverIn('.pagemenubutton')
+        }
+        onPointerOut={() =>
+          pageTrigger ? null : onHoverOut('.pagemenubutton')
+        }
         onClick={() => {
           handleMenuClick();
         }}

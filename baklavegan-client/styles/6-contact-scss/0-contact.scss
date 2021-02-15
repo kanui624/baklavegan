@@ -1,90 +1,113 @@
-// Question Card
-.questionsto {
-  left: -76rem;
-}
+// // Question Card
+// .questionsto {
+//   left: -76rem;
+// }
 
-.questionsbgpos {
-  bottom: 36rem;
-}
+// .questionsbgpos {
+//   bottom: 36rem;
+// }
 
-.questionstextpos {
-  bottom: 37rem;
-  left: -60rem;
-}
+// .questionstextpos {
+//   bottom: 37rem;
+//   left: -60rem;
+// }
 
-.questionstextstyle {
-  font-size: 2.3rem;
-  text-shadow: 3.5px 2.5px 3px #39311d;
-  letter-spacing: 0.05rem;
-}
+// .questionstextstyle {
+//   font-size: 2.3rem;
+//   text-shadow: 3.5px 2.5px 3px #39311d;
+//   letter-spacing: 0.05rem;
+// }
 
-// Info Card
+// // Info Card
 
-.infoto {
-  right: -76rem;
-}
+// .infoto {
+//   right: -76rem;
+// }
 
-.infobgpos {
-  bottom: 27rem;
-}
+// .infobgpos {
+//   bottom: 27rem;
+// }
 
-.infotextpos {
-  bottom: 28.2rem;
-  right: -61.8rem;
-}
+// .infotextpos {
+//   bottom: 28.2rem;
+//   right: -61.8rem;
+// }
 
-.infotextstyle {
-  font-size: 2.25rem;
-  text-shadow: 3.5px 2.5px 3px #39311d;
-  letter-spacing: 0.05rem;
-}
+// .infotextstyle {
+//   font-size: 2.25rem;
+//   text-shadow: 3.5px 2.5px 3px #39311d;
+//   letter-spacing: 0.05rem;
+// }
 
-// Business Card
+// // Business Card
 
-.businessto {
-  left: -76rem;
-}
+// .businessto {
+//   left: -76rem;
+// }
 
-.businessbgpos {
-  bottom: 18rem;
-}
+// .businessbgpos {
+//   bottom: 18rem;
+// }
 
-.businesstextpos {
-  bottom: 19rem;
-  left: -62.2rem;
-}
+// .businesstextpos {
+//   bottom: 19rem;
+//   left: -62.2rem;
+// }
 
-.businesstextstyle {
-  font-size: 2.3rem;
-  text-shadow: 3.5px 2.5px 3px #39311d;
-  letter-spacing: 0.05rem;
-}
+// .businesstextstyle {
+//   font-size: 2.3rem;
+//   text-shadow: 3.5px 2.5px 3px #39311d;
+//   letter-spacing: 0.05rem;
+// }
 
-// Social Card
+// // Social Card
 
-.socialto {
-  right: -76rem;
-}
+// .socialto {
+//   right: -76rem;
+// }
 
-.socialbgpos {
-  bottom: 9rem;
-}
+// .socialbgpos {
+//   bottom: 9rem;
+// }
 
-.socialtextpos {
-  bottom: 10rem;
-  right: -62.3rem;
-}
+// .socialtextpos {
+//   bottom: 10rem;
+//   right: -62.3rem;
+// }
 
-.socialtextstyle {
-  font-size: 2.25rem;
-  text-shadow: 3.5px 2.5px 3px #39311d;
-  letter-spacing: 0.05rem;
-}
+// .socialtextstyle {
+//   font-size: 2.25rem;
+//   text-shadow: 3.5px 2.5px 3px #39311d;
+//   letter-spacing: 0.05rem;
+// }
 
-// Social Links
-.sociallinks {
-  bottom: -8rem;
-}
+// // Social Links
+// .sociallinks {
+//   bottom: -8rem;
+// }
 
-// Media Queries
-@import './1-contact-responsive.scss';
+// // Media Queries
+// // @import './1-contact-responsive.scss';
+
+// // IPHONE 4 - CHROME DEVTOOLS - PORTRAIT
+// @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+//   .sociallinks {
+//     bottom: -5rem;
+//     height: 0rem;
+//   }
+//   .socialbgpos {
+//     bottom: 6rem;
+//   }
+//   .socialto {
+//     left: 63rem;
+//   }
+
+//   .socialtextstyle {
+//     font-size: 1.6rem;
+//   }
+
+//   .socialtextpos {
+//     bottom: 7.5em;
+//     left: 63.5rem;
+//   }
+// }

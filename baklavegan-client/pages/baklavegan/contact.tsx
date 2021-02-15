@@ -8,11 +8,14 @@ import Image from 'next/image';
 // Redux
 import { useSelector } from 'react-redux';
 
-// GSAP
-import gsap from 'gsap';
+// GSAP Animations
+import {
+  animateIn,
+  animateOut,
+} from '../../animations/6-contact/ContactAnimations';
 
 // Components
-import ContactInfo from '../../components/6-contact/ContactInfo';
+import ContactInfo from '../../components/6-contact/2-components/ContactInfo';
 
 // Data
 import { socialData } from '../../components/6-contact/1-data/SocialData';
@@ -35,62 +38,24 @@ const Contact: FC = () => {
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
 
-  const animateIn = () => {
-    gsap.to('.sociallinkanimate', {
-      y: -200,
-      delay: 1.6,
-      stagger: 0.15,
-      ease: 'back.out(1.02)',
-    });
-    gsap.to(['.questionsto', '.businessto'], {
-      x: 1000,
-      opacity: 1,
-      delay: 0.6,
-      stagger: 0.15,
-      duration: 1.5,
-      ease: 'back.out(.75)',
-    });
-    gsap.to(['.infoto', '.socialto'], {
-      x: -1000,
-      opacity: 1,
-      delay: 0.6,
-      stagger: 0.15,
-      duration: 1.5,
-      ease: 'back.out(.75)',
-    });
-  };
-
-  const animateOut = () => {
-    gsap.to('.sociallinkanimate', {
-      y: 200,
-      stagger: 0.1,
-      delay: 0.5,
-      ease: 'back.in(.75)',
-    });
-    gsap.to('.cardopacity', { opacity: 0, delay: 0.4, stagger: 0.1 });
-    gsap.to(['.questionsto', '.businessto'], {
-      x: -500,
-      opacity: 0,
-      stagger: 0.15,
-      duration: 1,
-      delay: 0.3,
-      ease: 'back.in(.75)',
-    });
-    gsap.to(['.infoto', '.socialto'], {
-      x: 500,
-      opacity: 0,
-      stagger: 0.15,
-      duration: 1,
-      delay: 0.3,
-      ease: 'back.in(.75)',
-    });
-  };
-
   useEffect(() => {
     if (transition) {
-      animateOut();
+      animateOut(
+        '.sociallinkanimate',
+        '.cardopacity',
+        '.questionsto',
+        '.businessto',
+        '.infoto',
+        '.socialto'
+      );
     } else {
-      animateIn();
+      animateIn(
+        '.sociallinkanimate',
+        '.questionsto',
+        '.businessto',
+        '.infoto',
+        '.socialto'
+      );
     }
   }, [transition]);
 
