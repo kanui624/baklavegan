@@ -38,30 +38,31 @@ const Contact: FC = () => {
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
 
-  useEffect(() => {
-    if (transition) {
-      animateOut(
-        '.sociallinkanimate',
-        '.cardopacity',
-        '.questionsto',
-        '.businessto',
-        '.infoto',
-        '.socialto'
-      );
-    } else {
-      animateIn(
-        '.sociallinkanimate',
-        '.questionsto',
-        '.businessto',
-        '.infoto',
-        '.socialto'
-      );
-    }
-  }, [transition]);
+  // useEffect(() => {
+  //   if (transition) {
+  //     animateOut(
+  //       '.sociallinkanimate',
+  //       '.cardopacity',
+  //       '.questionsto',
+  //       '.businessto',
+  //       '.infoto',
+  //       '.socialto'
+  //     );
+  //   } else {
+  //     animateIn(
+  //       '.sociallinkanimate',
+  //       '.questionsto',
+  //       '.businessto',
+  //       '.infoto',
+  //       '.socialto'
+  //     );
+  //   }
+  // }, [transition]);
 
   return (
     <Fragment>
       <div className="fixed">
+        <div className="flex flex-col"></div>
         {contactData.map(
           ({
             id,
