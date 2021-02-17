@@ -1,5 +1,5 @@
 // GSAP
-import gsap from 'gsap';
+import gsap from "gsap";
 
 export const animateIn = (
   linksIn: string,
@@ -12,24 +12,32 @@ export const animateIn = (
     y: -200,
     delay: 1.6,
     stagger: 0.15,
-    ease: 'back.out(1.02)',
+    ease: "back.out(1.02)",
   });
-  gsap.to([questionsIn, businessIn], {
-    x: 1000,
-    opacity: 1,
-    delay: 0.6,
-    stagger: 0.15,
-    duration: 1.5,
-    ease: 'back.out(.75)',
-  });
-  gsap.to([infoIn, socialIn], {
-    x: -1000,
-    opacity: 1,
-    delay: 0.6,
-    stagger: 0.15,
-    duration: 1.5,
-    ease: 'back.out(.75)',
-  });
+  gsap.fromTo(
+    [questionsIn, businessIn],
+    { x: 1000 },
+    {
+      x: 0,
+      opacity: 1,
+      delay: 0.6,
+      stagger: 0.15,
+      duration: 1.5,
+      ease: "back.out(.75)",
+    }
+  );
+  gsap.fromTo(
+    [infoIn, socialIn],
+    { x: -1000 },
+    {
+      x: 0,
+      opacity: 1,
+      delay: 0.6,
+      stagger: 0.15,
+      duration: 1.5,
+      ease: "back.out(.75)",
+    }
+  );
 };
 
 export const animateOut = (
@@ -44,7 +52,7 @@ export const animateOut = (
     y: 200,
     stagger: 0.1,
     delay: 0.5,
-    ease: 'back.in(.75)',
+    ease: "back.in(.75)",
   });
   gsap.to(cardOpacityOut, { opacity: 0, delay: 0.4, stagger: 0.1 });
   gsap.to([questionsOut, businessOut], {
@@ -53,7 +61,7 @@ export const animateOut = (
     stagger: 0.15,
     duration: 1,
     delay: 0.3,
-    ease: 'back.in(.75)',
+    ease: "back.in(.75)",
   });
   gsap.to([infoOut, socialOut], {
     x: 500,
@@ -61,6 +69,6 @@ export const animateOut = (
     stagger: 0.15,
     duration: 1,
     delay: 0.3,
-    ease: 'back.in(.75)',
+    ease: "back.in(.75)",
   });
 };
