@@ -16,6 +16,7 @@ import {
 
 // Components
 import ContactInfo from "../../components/6-contact/2-components/ContactInfo";
+import ViewInPortrait from "../../components/1-layout/ViewInPortrait";
 
 // Data
 import { socialData } from "../../components/6-contact/1-data/SocialData";
@@ -61,26 +62,29 @@ const Contact: FC = () => {
 
   return (
     <Fragment>
-      {contactData.map(
-        ({
-          id,
-          name,
-          link,
-          textOne,
-          textTwo,
-          textThree,
-        }: ContactInfoDataProps) => (
-          <ContactInfo
-            key={id}
-            name={name}
-            image={`/2-images/0-global/1-infocards/${id}-info-card.jpg`}
-            link={link}
-            textOne={textOne}
-            textTwo={textTwo}
-            textThree={textThree}
-          />
-        )
-      )}
+      <ViewInPortrait />
+      <div className="contactcards">
+        {contactData.map(
+          ({
+            id,
+            name,
+            link,
+            textOne,
+            textTwo,
+            textThree,
+          }: ContactInfoDataProps) => (
+            <ContactInfo
+              key={id}
+              name={name}
+              image={`/2-images/0-global/1-infocards/${id}-info-card.jpg`}
+              link={link}
+              textOne={textOne}
+              textTwo={textTwo}
+              textThree={textThree}
+            />
+          )
+        )}
+      </div>
       <div className={`sociallinks absolute -inset-x-0 container mx-auto`}>
         <div className="flex flex-row justify-evenly socialcontainer">
           {socialData.map(
