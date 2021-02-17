@@ -18,7 +18,7 @@ const ClientOnly: FC = ({ children }: any) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(
+    dispatch( 
       setDimensions({
         width: window.innerWidth,
         height: window.innerHeight,
