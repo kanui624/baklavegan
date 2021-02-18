@@ -1,11 +1,3 @@
-// .questionscard {
-//   bottom: 35rem;
-// }
-
-// .questionstextpos {
-//   bottom: 8rem;
-// }
-
 .textstyle {
   font-size: 1.4rem;
   text-shadow: 3.5px 2.5px 3px #39311d;
@@ -44,114 +36,124 @@
     bottom: 4.5rem;
   }
 }
-// 32 INCH MONITOR - TESTED W/ LOCAL MACHINE
-@media (min-width: 1920px) and (min-height: 1001px) and (orientation: landscape) {
+
+// IPHONE 5-SE - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 320px) and (min-height: 568px) and (orientation: portrait) {
+  .questionscard {
+    bottom: 23rem;
+    left: 1rem;
+  }
+
+  .infocard {
+    bottom: 17rem;
+    right: 1rem;
+  }
+
+  .businesscard {
+    bottom: 11rem;
+    left: 1rem;
+  }
+
+  .socialcard {
+    bottom: 5rem;
+    right: 1rem;
+  }
+
+  .textpos {
+    bottom: 4.6rem;
+  }
+
+  .socialtextpos {
+    bottom: 4.5rem;
+  }
+
+  .sociallinks {
+    bottom: -8rem;
+  }
 }
 
-// // Question Card
-// .questionsto {
-//  right: -76rem;
-// }
+// Galaxy S5- CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
+  .questionscard {
+    bottom: 25rem;
+    left: 1rem;
+  }
 
-// .questionsbgpos {
-//   bottom: 36rem;
-// }
+  .infocard {
+    bottom: 18rem;
+    right: 1rem;
+  }
 
-// .questionstextpos {
-//   bottom: 37rem;
-//  right: -60rem;
-// }
+  .businesscard {
+    bottom: 11rem;
+    left: 1rem;
+  }
 
-// // Info Card
+  .socialcard {
+    bottom: 4rem;
+    right: 1rem;
+  }
 
-// .infoto {
-//   right: -76rem;
-// }
+  .textstyle {
+    font-size: 1.6rem;
+  }
 
-// .infobgpos {
-//   bottom: 27rem;
-// }
+  .textpos {
+    bottom: 5.2rem;
+  }
 
-// .infotextpos {
-//   bottom: 28.2rem;
-//   right: -61.8rem;
-// }
+  .questionstextpos {
+    bottom: 5.3rem;
+  }
 
-// .infotextstyle {
-//   font-size: 2.25rem;
-//   text-shadow: 3.5px 2.5px 3px #39311d;
-//   letter-spacing: 0.05rem;
-// }
+  .socialtextpos {
+    bottom: 5rem;
+  }
 
-// // Business Card
+  .sociallinks {
+    bottom: -9rem;
+  }
+}
 
-// .businessto {
-//  right: -76rem;
-// }
+// IPHONE 6/7/8 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
+  .questionscard {
+    bottom: 27rem;
+    left: 1rem;
+  }
 
-// .businessbgpos {
-//   bottom: 18rem;
-// }
+  .infocard {
+    bottom: 20rem;
+    right: 1rem;
+  }
 
-// .businesstextpos {
-//   bottom: 19rem;
-//  right: -62.2rem;
-// }
+  .businesscard {
+    bottom: 13rem;
+    left: 1rem;
+  }
 
-// .businesstextstyle {
-//   font-size: 2.3rem;
-//   text-shadow: 3.5px 2.5px 3px #39311d;
-//   letter-spacing: 0.05rem;
-// }
+  .socialcard {
+    bottom: 6rem;
+    right: 1rem;
+  }
 
-// // Social Card
+  .textstyle {
+    font-size: 1.6rem;
+  }
 
-// .socialto {
-//   right: -76rem;
-// }
+  .textpos {
+    bottom: 5.3rem;
+  }
 
-// .socialbgpos {
-//   bottom: 9rem;
-// }
+  .questionstextpos {
+    bottom: 5.4rem;
+  }
 
-// .socialtextpos {
-//   bottom: 10rem;
-//   right: -62.3rem;
-// }
+  .socialtextpos {
+    bottom: 5.2rem;
+  }
 
-// .socialtextstyle {
-//   font-size: 2.25rem;
-//   text-shadow: 3.5px 2.5px 3px #39311d;
-//   letter-spacing: 0.05rem;
-// }
-
-// // Social Links
-// .sociallinks {
-//   bottom: -8rem;
-// }
-
-// // Media Queries
-// // @import './1-contact-responsive.scss';
-
-// // IPHONE 4 - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
-//   .sociallinks {
-//     bottom: -5rem;
-//     height: 0rem;
-//   }
-//   .socialbgpos {
-//     bottom: 6rem;
-//   }
-//   .socialto {
-//    right: 63rem;
-//   }
-
-//   .socialtextstyle {
-//     font-size: 1.6rem;
-//   }
-
-//   .socialtextpos {
-//     bottom: 7.5em;
-//    right: 63.5rem;
-//   }
-// }
+  .sociallinks {
+    bottom: -7.5rem;
+  }
+}

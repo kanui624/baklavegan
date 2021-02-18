@@ -14,38 +14,3 @@ body {
   font-family: "Annie Use Your Telescope", cursive !important;
   color: white;
 }
-
-// IPHONE 4 - CHROME DEVTOOLS - LANDSCAPE
-@media (min-width: 480px) and (min-height: 320px) and (orientation: landscape) {
-  .aboutbookcontainer,
-  .booknavs,
-  .contactcards,
-  .sociallinks {
-    display: none;
-  }
-  .viewportrait {
-    width: 400px;
-    display: block;
-  }
-}
-
-// IPAD MINI - TESTED WITH NGROK - LANDSCAPE
-@media (min-width: 921px) and (min-height: 665.98px) and (orientation: landscape) {
-  .viewportrait {
-    width: 500px;
-  }
-}
-
-// IPAD PRO - CHROME DEVTOOLS - LANDSCAPE
-@media (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
-  .viewportrait {
-    width: 700px;
-  }
-}
-
-// MACBOOK PRO 15" TESTED W/ NGROK
-@media (min-width: 1440px) and (orientation: landscape) {
-  .viewportrait {
-    display: none;
-  }
-}
