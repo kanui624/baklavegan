@@ -6,6 +6,16 @@
   padding: 0rem;
 }
 
+.questionscard,
+.businesscard {
+  left: 1rem;
+}
+
+.infocard,
+.socialcard {
+  right: 1rem;
+}
+
 .sociallinks {
   bottom: -9.5rem;
 }
@@ -14,22 +24,18 @@
 @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
   .questionscard {
     bottom: 19.5rem;
-    left: 1rem;
   }
 
   .infocard {
     bottom: 14rem;
-    right: 1rem;
   }
 
   .businesscard {
     bottom: 8.5rem;
-    left: 1rem;
   }
 
   .socialcard {
     bottom: 3rem;
-    right: 1rem;
   }
 
   .textpos {
@@ -41,22 +47,18 @@
 @media (min-width: 320px) and (min-height: 568px) and (orientation: portrait) {
   .questionscard {
     bottom: 23rem;
-    left: 1rem;
   }
 
   .infocard {
     bottom: 17rem;
-    right: 1rem;
   }
 
   .businesscard {
     bottom: 11rem;
-    left: 1rem;
   }
 
   .socialcard {
     bottom: 5rem;
-    right: 1rem;
   }
 
   .textpos {
@@ -76,22 +78,18 @@
 @media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
   .questionscard {
     bottom: 25rem;
-    left: 1rem;
   }
 
   .infocard {
     bottom: 18rem;
-    right: 1rem;
   }
 
   .businesscard {
     bottom: 11rem;
-    left: 1rem;
   }
 
   .socialcard {
     bottom: 4rem;
-    right: 1rem;
   }
 
   .textstyle {
@@ -119,22 +117,18 @@
 @media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
   .questionscard {
     bottom: 27rem;
-    left: 1rem;
   }
 
   .infocard {
     bottom: 20rem;
-    right: 1rem;
   }
 
   .businesscard {
     bottom: 13rem;
-    left: 1rem;
   }
 
   .socialcard {
     bottom: 6rem;
-    right: 1rem;
   }
 
   .textstyle {
@@ -156,4 +150,125 @@
   .sociallinks {
     bottom: -7.5rem;
   }
+}
+
+// IPHONE XR - TESTED W/ NGROK - PORTRAIT
+@media (min-width: 414.98px) and (min-height: 715.98px) and (orientation: portrait) {
+  .questionscard {
+    bottom: 30rem;
+  }
+
+  .infocard {
+    bottom: 22rem;
+  }
+
+  .businesscard {
+    bottom: 14rem;
+  }
+
+  .socialcard {
+    bottom: 6rem;
+  }
+
+  .textstyle {
+    font-size: 1.8rem;
+  }
+
+  .textpos {
+    bottom: 5.8rem;
+  }
+
+  .questionstextpos {
+    bottom: 6rem;
+  }
+
+  .socialtextpos {
+    bottom: 5.6rem;
+  }
+
+  .sociallinks {
+    bottom: -7rem;
+  }
+}
+
+// IPHONE X - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 375px) and (min-height: 812px) and (orientation: portrait) {
+  .questionscard {
+    bottom: 33rem;
+  }
+
+  .infocard {
+    bottom: 25rem;
+  }
+
+  .businesscard {
+    bottom: 17rem;
+  }
+
+  .socialcard {
+    bottom: 9rem;
+  }
+
+  .textstyle {
+    font-size: 1.6rem;
+  }
+
+  .textpos {
+    bottom: 5.4rem;
+  }
+
+  .questionstextpos {
+    bottom: 5.4rem;
+  }
+
+  .socialtextpos {
+    bottom: 5.2rem;
+  }
+
+  .sociallinks {
+    bottom: -5.5rem;
+  }
+}
+
+// PIXEL 2 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 411px) and (min-height: 731px) and (orientation: portrait) {
+  .questionscard {
+    bottom: 30rem;
+  }
+
+  .infocard {
+    bottom: 22rem;
+  }
+
+  .businesscard {
+    bottom: 14rem;
+  }
+
+  .socialcard {
+    bottom: 6rem;
+  }
+
+  .textstyle {
+    font-size: 1.8rem;
+  }
+
+  .textpos {
+    bottom: 5.8rem;
+  }
+
+  .questionstextpos {
+    bottom: 6rem;
+  }
+
+  .socialtextpos {
+    bottom: 5.6rem;
+  }
+
+  .sociallinks {
+    bottom: -7rem;
+  }
+}
+
+// IPHONE 6/7/8 PLUS - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 414px) and (min-height: 736px) and (orientation: portrait) {
 }
