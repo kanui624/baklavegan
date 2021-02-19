@@ -20,6 +20,10 @@
   bottom: -9.5rem;
 }
 
+.contactviewinportrait {
+  display: none;
+}
+
 // IPHONE 4 - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
   .questionscard {
@@ -40,6 +44,17 @@
 
   .textpos {
     bottom: 4.5rem;
+  }
+}
+
+// IPHONE 4 - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 480px) and (min-height: 320px) and (orientation: landscape) {
+  .contactviewinportrait {
+    display: block;
+  }
+  .contactcards,
+  .sociallinks {
+    display: none;
   }
 }
 
@@ -340,7 +355,200 @@
 
 // SURFACE DUO - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 720px) and (min-height: 540px) and (orientation: landscape) {
-  .viewportrait {
+}
+
+// IPAD MINI - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 768px) and (min-height: 921px) and(orientation: portrait) {
+  .questionscard {
+    bottom: 37rem;
+  }
+
+  .infocard {
+    bottom: 27rem;
+  }
+
+  .businesscard {
+    bottom: 17rem;
+  }
+
+  .socialcard {
+    bottom: 7rem;
+  }
+
+  .textstyle {
+    font-size: 2.8rem;
+  }
+
+  .textpos {
+    bottom: 8.8rem;
+  }
+
+  .questionstextpos {
+    bottom: 9rem;
+  }
+
+  .socialtextpos {
+    bottom: 8.6rem;
+  }
+
+  .sociallinks {
+    bottom: -4.5rem;
+  }
+}
+
+// IPAD - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+}
+// IPAD PRO - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+  .questionscard {
+    bottom: 45rem;
+    left: 5rem;
+  }
+
+  .infocard {
+    bottom: 35rem;
+    right: 5rem;
+  }
+
+  .businesscard {
+    bottom: 25rem;
+    left: 5rem;
+  }
+
+  .socialcard {
+    bottom: 15rem;
+    right: 5rem;
+  }
+
+  .textstyle {
+    font-size: 2.9rem;
+  }
+
+  .textpos {
+    bottom: 8.9rem;
+  }
+
+  .questionstextpos {
+    bottom: 9.1rem;
+  }
+
+  .socialtextpos {
+    bottom: 8.7rem;
+  }
+
+  .sociallinks {
+    bottom: -1rem;
+  }
+}
+
+// LOW-RES 32INCH MONITOR - TESTED W/ LOCAL MACHINE
+@media (min-width: 1360px) and (max-height: 689px) and (orientation: landscape) {
+  .contactviewinportrait {
     display: none;
+  }
+  .contactcards,
+  .sociallinks {
+    display: block;
+  }
+  .questionscard {
+    bottom: 25rem;
+    left: 20rem;
+  }
+
+  .infocard {
+    bottom: 16rem;
+    right: 20rem;
+  }
+
+  .businesscard {
+    bottom: 7rem;
+    left: 20rem;
+  }
+
+  .socialcard {
+    bottom: -2rem;
+    right: 20rem;
+  }
+
+  .textstyle {
+    font-size: 2.9rem;
+  }
+
+  .textpos {
+    bottom: 9rem;
+  }
+
+  .questionstextpos {
+    bottom: 9.2rem;
+  }
+
+  .socialtextpos {
+    bottom: 8.8rem;
+  }
+
+  .sociallinks {
+    bottom: -11rem;
+  }
+}
+
+// IPAD PRO - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
+  .contactviewinportrait {
+    display: block;
+  }
+  .contactcards,
+  .sociallinks {
+    display: none;
+  }
+}
+
+// MACBOOK PRO 15" TESTED W/ NGROK
+@media (min-width: 1440px) and (min-height: 821px) and (orientation: landscape) {
+  .contactviewinportrait {
+    display: none;
+  }
+  .contactcards,
+  .sociallinks {
+    display: block;
+  }
+  .questionscard {
+    bottom: 30rem;
+    left: 20rem;
+  }
+
+  .infocard {
+    bottom: 21rem;
+    right: 20rem;
+  }
+
+  .businesscard {
+    bottom: 12rem;
+    left: 20rem;
+  }
+
+  .socialcard {
+    bottom: 3rem;
+    right: 20rem;
+  }
+
+  .textstyle {
+    font-size: 2.9rem;
+  }
+
+  .textpos {
+    bottom: 9rem;
+  }
+
+  .questionstextpos {
+    bottom: 9.2rem;
+  }
+
+  .socialtextpos {
+    bottom: 8.8rem;
+  }
+
+  .sociallinks {
+    bottom: -6rem;
   }
 }

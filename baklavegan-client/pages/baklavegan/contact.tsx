@@ -62,7 +62,10 @@ const Contact: FC = () => {
 
   return (
     <Fragment>
-      <ViewInPortrait />
+      <ViewInPortrait
+        classN={"contactviewinportrait"}
+        descrip={" contact info "}
+      />
       <div className="contactcards">
         {contactData.map(
           ({

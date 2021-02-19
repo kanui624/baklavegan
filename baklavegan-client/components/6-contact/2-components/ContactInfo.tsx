@@ -24,7 +24,7 @@ const ContactInfo: FC<ContactInfoCardProps> = ({
       <div className={`${name}bgpos ${name}to`}>
         <Image src={image} alt={name} width={624} height={125} />
       </div>
-      <div className={`${name}textpos ${name}to relative cardopacity textpos`}>
+      <div className={`${name}textpos ${name}to relative textpos opacity-0`}>
         <div
           className={`${name}textstyle textstyle flex flex-col justify-center items-center`}
         >

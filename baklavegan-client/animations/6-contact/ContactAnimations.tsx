@@ -16,7 +16,7 @@ export const animateIn = (
   });
   gsap.fromTo(
     [questionsIn, businessIn],
-    { x: 1000 },
+    { x: 1500 },
     {
       x: 0,
       opacity: 1,
@@ -28,7 +28,7 @@ export const animateIn = (
   );
   gsap.fromTo(
     [infoIn, socialIn],
-    { x: -1000 },
+    { x: -1500 },
     {
       x: 0,
       opacity: 1,

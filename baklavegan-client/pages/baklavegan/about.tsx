@@ -79,7 +79,6 @@ const About: FC = () => {
     } else {
       addNav(".booknavbackward");
     }
-    console.log(width, height);
   }, [pageCount]);
 
   return (
