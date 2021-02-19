@@ -271,4 +271,76 @@
 
 // IPHONE 6/7/8 PLUS - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 414px) and (min-height: 736px) and (orientation: portrait) {
+  .sociallinks {
+    bottom: -6.5rem;
+  }
+}
+
+// PIXEL 2XL- CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 411px) and (min-height: 823px) and (orientation: portrait) {
+  .questionscard {
+    bottom: 33rem;
+  }
+
+  .infocard {
+    bottom: 25rem;
+  }
+
+  .businesscard {
+    bottom: 17rem;
+  }
+
+  .socialcard {
+    bottom: 9rem;
+  }
+
+  .sociallinks {
+    bottom: -5rem;
+  }
+}
+
+// SURFACE DUO - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 540px) and (min-height: 720px) and (orientation: portrait) {
+  .questionscard {
+    bottom: 27rem;
+  }
+
+  .infocard {
+    bottom: 19rem;
+  }
+
+  .businesscard {
+    bottom: 11rem;
+  }
+
+  .socialcard {
+    bottom: 3rem;
+  }
+
+  .textstyle {
+    font-size: 2.4rem;
+  }
+
+  .textpos {
+    bottom: 7.5rem;
+  }
+
+  .questionstextpos {
+    bottom: 7.8rem;
+  }
+
+  .socialtextpos {
+    bottom: 7.4rem;
+  }
+
+  .sociallinks {
+    bottom: -7rem;
+  }
+}
+
+// SURFACE DUO - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 720px) and (min-height: 540px) and (orientation: landscape) {
+  .viewportrait {
+    display: none;
+  }
 }

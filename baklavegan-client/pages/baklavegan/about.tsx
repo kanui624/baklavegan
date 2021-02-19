@@ -79,11 +79,15 @@ const About: FC = () => {
     } else {
       addNav(".booknavbackward");
     }
+    console.log(width, height);
   }, [pageCount]);
 
   return (
     <Fragment>
-      <ViewInPortrait />
+      <ViewInPortrait
+        classN={"aboutviewinportrait"}
+        descrip={" about story "}
+      />
       <div className="aboutbookcontainer absolute">
         <AboutBook ref={aboutBook} width={width} height={height} />
       </div>

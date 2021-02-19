@@ -1,11 +1,17 @@
 // React Types
 import { FC } from "react";
 
-const ViewInPortrait: FC = () => {
+// Component Level Types
+interface ViewInPortraitProps {
+  classN: string;
+  descrip: string;
+}
+
+const ViewInPortrait: FC<ViewInPortraitProps> = ({ classN, descrip }) => {
   return (
-    <div className="fixed viewportrait">
-      <h1>viewed in portrait mode :)</h1>
-    </div>
+    <h1 className={`${classN} fixed viewinportraitstyle`}>
+      view our {descrip} in portrait mode
+    </h1>
   );
 };
 

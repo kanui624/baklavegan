@@ -242,14 +242,28 @@
 @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
   // NOTHING NEEDED
 }
-
-// IPAD PRO - CHROME DEVTOOLS - LANDSCAPE
-@media (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
+// EXTRA 32INCH MONITOR - TESTED W/ LOCAL MACHINE
+@media (min-width: 1360px) and (max-height: 689px) and (orientation: landscape) {
   .menupageimage,
   .menupagetext,
   .invisiblemenubtn {
     display: block;
   }
+  .menupageimage {
+    bottom: -21rem;
+  }
+
+  .menupagetext {
+    font-size: 4rem;
+    bottom: -13rem;
+  }
+
+  .invisiblemenubtn {
+    height: 4rem;
+  }
+}
+// IPAD PRO - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
   .menupageimage {
     bottom: -21rem;
   }
