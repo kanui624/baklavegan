@@ -556,3 +556,11 @@
 // HIGH-RES 32 INCH MONITOR - TESTED W/ LOCAL MACHINE
 @media (min-width: 1920px) and (min-height: 1001px) and (orientation: landscape) {
 }
+
+// ULTRA-WIDESCREEN - TESTED ON LOCAL MACHINE
+@media (min-width: 2560px) and (min-height: 1001px) and (orientation: landscape) {
+}
+
+// IMAC 2015 - TESTED ON LOCAL MACHINE
+@media (min-width: 2560px) and (min-height: 1361px) and(orientation: landscape) {
+}
