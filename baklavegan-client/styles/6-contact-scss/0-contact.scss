@@ -552,3 +552,7 @@
     bottom: -6rem;
   }
 }
+
+// HIGH-RES 32 INCH MONITOR - TESTED W/ LOCAL MACHINE
+@media (min-width: 1920px) and (min-height: 1001px) and (orientation: landscape) {
+}
