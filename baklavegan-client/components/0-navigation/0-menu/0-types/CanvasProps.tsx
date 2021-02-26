@@ -3,5 +3,4 @@ export interface CanvasProps {
   toggleClick: () => void;
   handleTransition: (devLink?: string) => void;
   onCompile: () => void;
-  setDevPageClicked: any;
 }

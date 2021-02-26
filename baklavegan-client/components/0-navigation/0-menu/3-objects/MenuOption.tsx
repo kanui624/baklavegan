@@ -34,7 +34,6 @@ const MenuOption: FC<MenuOptionProps> = ({
   toggleClick,
   handleTransition,
   clicked,
-  setDevPageClicked,
 }) => {
   useEffect(() => {
     Router.prefetch(`/baklavegan/${link}`);

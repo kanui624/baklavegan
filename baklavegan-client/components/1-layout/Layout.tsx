@@ -51,6 +51,10 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     }
   };
 
+  // const handleTransition = (devLink?: string) => {
+  //     dispatch(exitMenu({ transition: false }));
+  // };
+
   const handleTransition = (devLink?: string) => {
     if (devLink) {
       showDevNote('.devnotetext');
@@ -104,7 +108,6 @@ const Layout: FC<LayoutProps> = ({ children }) => {
           clicked={clicked}
           toggleClick={toggleClick}
           handleTransition={handleTransition}
-          setDevPageClicked={setDevPageClicked}
           onCompile={() => setReady(true)}
         />
       </div>

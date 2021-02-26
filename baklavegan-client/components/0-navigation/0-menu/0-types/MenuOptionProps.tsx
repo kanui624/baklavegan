@@ -17,5 +17,4 @@ export interface MenuOptionProps {
   toggleClick: () => void;
   handleTransition: (devLink?: string) => void;
   clicked: boolean;
-  setDevPageClicked: any;
 }
