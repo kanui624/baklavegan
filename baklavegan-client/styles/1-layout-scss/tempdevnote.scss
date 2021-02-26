@@ -5,6 +5,145 @@
   font-size: 2.7rem;
 }
 
+// IPHONE 4 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
+  .devnotetext {
+    bottom: -12rem;
+    left: 1.5rem;
+    font-size: 2rem;
+  }
+}
+
+// IPHONE 5-SE - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 320px) and (min-height: 568px) and (orientation: portrait) {
+}
+
+// Galaxy S5- CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
+  .devnotetext {
+    left: 1.3rem;
+    font-size: 2.4rem;
+  }
+}
+
+// IPHONE 6/7/8 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
+  .devnotetext {
+    font-size: 2.5rem;
+  }
+}
+
+// IPHONE XR - TESTED W/ NGROK - PORTRAIT
+@media (min-width: 414.98px) and (min-height: 715.98px) and (orientation: portrait) {
+  .devnotetext {
+    left: 2.3rem;
+    font-size: 2.58em;
+  }
+}
+
+// IPHONE X - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 375px) and (min-height: 812px) and (orientation: portrait) {
+  .devnotetext {
+    left: 2.2rem;
+    font-size: 2.3em;
+  }
+}
+
+// PIXEL 2 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 411px) and (min-height: 731px) and (orientation: portrait) {
+  .devnotetext {
+    left: 2.2rem;
+    font-size: 2.5em;
+  }
+}
+
+// IPHONE 6/7/8 PLUS - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 414px) and (min-height: 736px) and (orientation: portrait) {
+  .devnotetext {
+    left: 2.5rem;
+    font-size: 2.5em;
+  }
+}
+
+// PIXEL 2XL- CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 411px) and (min-height: 823px) and (orientation: portrait) {
+}
+
+// SURFACE DUO - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 540px) and (min-height: 720px) and (orientation: portrait) {
+  .devnotetext {
+    left: 5.5rem;
+    font-size: 2.8em;
+  }
+}
+
+// SURFACE DUO - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 720px) and (min-height: 540px) and (orientation: landscape) {
+  .devnotetext {
+    bottom: -12rem;
+    left: 12rem;
+    font-size: 2.8em;
+  }
+}
+
+// IPAD MINI - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 768px) and (min-height: 921px) and(orientation: portrait) {
+  .devnotetext {
+    left: 13rem;
+  }
+}
+
+// IPAD MINI - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 921px) and (min-height: 665.98px) and (orientation: landscape) {
+  .devnotetext {
+    left: 21rem;
+    font-size: 2.8em;
+  }
+}
+
+// IPAD - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+  .devnotetext {
+    left: 12.5rem;
+    font-size: 3em;
+  }
+}
+
+// IPAD - CHROME DEV TOOLS - LANDSCAPE
+@media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape) {
+}
+
+// IPAD PRO - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+  .devnotetext {
+    left: 20rem;
+    font-size: 3rem;
+  }
+}
+
+// IPAD PRO - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
+  .devnotetext {
+    left: 31rem;
+    font-size: 3rem;
+  }
+}
+
+// MACBOOK PRO 15" TESTED W/ NGROK
+@media (min-width: 1440px) and (min-height: 821px) and (orientation: landscape) {
+  .devnotetext {
+    left: 33rem;
+    font-size: 3rem;
+  }
+}
+
+// HIGH-RES 32 INCH MONITOR - TESTED W/ LOCAL MACHINE
+@media (min-width: 1920px) and (min-height: 1001px) and (orientation: landscape) {
+  .devnotetext {
+    left: 48rem;
+  }
+}
+
 // ULTRA-WIDESCREEN - TESTED ON LOCAL MACHINE
 @media (min-width: 2560px) and (min-height: 1001px) and (orientation: landscape) {
   .devnotetext {

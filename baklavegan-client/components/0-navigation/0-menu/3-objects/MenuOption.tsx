@@ -54,10 +54,10 @@ const MenuOption: FC<MenuOptionProps> = ({
     push: pushed ? [1, 1, 1] : [1.08, 1.08, 1.08],
   });
 
-  // const handlePointerDown = (e: any) => {
-  //   e.stopPropagation();
-  //   setPushed(true);
-  // };
+  const handlePointerDown = (e: any) => {
+    e.stopPropagation();
+    setPushed(true);
+  };
 
   // const handlePointerUp = (e: any) => {
   //   if (link === 'about' || link === 'contact') {
@@ -72,16 +72,9 @@ const MenuOption: FC<MenuOptionProps> = ({
   //   }
   // };
 
-  const devHandlePointerDown = (e: any) => {
-    e.stopPropagation();
-    if (link in prodReadyLinks) {
-      setPushed(true);
-    }
-  };
-
   const devHandlePointerUp = (e: any) => {
+    setPushed(false);
     if (link in prodReadyLinks) {
-      setPushed(false);
       handleTransition();
       if (clicked) {
         Router.push(`/baklavegan/${link}`);
@@ -136,7 +129,7 @@ const MenuOption: FC<MenuOptionProps> = ({
         <mesh
           position={labelPosition}
           rotation={frontRotation}
-          onPointerDown={(e) => devHandlePointerDown(e)}
+          onPointerDown={(e) => handlePointerDown(e)}
           onPointerUp={(e) => devHandlePointerUp(e)}
           onPointerOver={(e) => handleHover(e, true)}
           onPointerOut={(e) => handleHover(e, false)}
