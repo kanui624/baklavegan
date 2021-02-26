@@ -555,12 +555,104 @@
 
 // HIGH-RES 32 INCH MONITOR - TESTED W/ LOCAL MACHINE
 @media (min-width: 1920px) and (min-height: 1001px) and (orientation: landscape) {
+  .contactviewinportrait {
+    display: none;
+  }
+  .contactcards,
+  .sociallinks {
+    display: block;
+  }
+  .questionscard {
+    bottom: 39rem;
+    left: 35rem;
+  }
+
+  .infocard {
+    bottom: 29rem;
+    right: 35rem;
+  }
+
+  .businesscard {
+    bottom: 19rem;
+    left: 35rem;
+  }
+
+  .socialcard {
+    bottom: 9rem;
+    right: 35rem;
+  }
+
+  .textstyle {
+    font-size: 2.9rem;
+  }
+
+  .textpos {
+    bottom: 9rem;
+  }
+
+  .questionstextpos {
+    bottom: 9.2rem;
+  }
+
+  .socialtextpos {
+    bottom: 8.8rem;
+  }
+
+  .sociallinks {
+    bottom: -4rem;
+  }
 }
 
 // ULTRA-WIDESCREEN - TESTED ON LOCAL MACHINE
 @media (min-width: 2560px) and (min-height: 1001px) and (orientation: landscape) {
+  .questionscard {
+    bottom: 37rem;
+    left: 55rem;
+  }
+
+  .infocard {
+    bottom: 27rem;
+    right: 55rem;
+  }
+
+  .businesscard {
+    bottom: 17rem;
+    left: 55rem;
+  }
+
+  .socialcard {
+    bottom: 7rem;
+    right: 55rem;
+  }
+
+  .sociallinks {
+    bottom: -4rem;
+  }
 }
 
 // IMAC 2015 - TESTED ON LOCAL MACHINE
 @media (min-width: 2560px) and (min-height: 1361px) and(orientation: landscape) {
+  .questionscard {
+    bottom: 52rem;
+    left: 57rem;
+  }
+
+  .infocard {
+    bottom: 40rem;
+    right: 57rem;
+  }
+
+  .businesscard {
+    bottom: 28rem;
+    left: 57rem;
+  }
+
+  .socialcard {
+    bottom: 16rem;
+    right: 57rem;
+  }
+
+  .sociallinks {
+    bottom: 0rem;
+  }
 }

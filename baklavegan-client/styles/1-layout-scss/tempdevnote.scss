@@ -4,3 +4,10 @@
   text-shadow: 3.5px 2.5px 3px #39311d;
   font-size: 2.7rem;
 }
+
+// ULTRA-WIDESCREEN - TESTED ON LOCAL MACHINE
+@media (min-width: 2560px) and (min-height: 1001px) and (orientation: landscape) {
+  .devnotetext {
+    left: 70rem;
+  }
+}
