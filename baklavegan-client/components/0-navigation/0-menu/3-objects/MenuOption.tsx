@@ -16,6 +16,8 @@ import { FC } from 'react';
 // Component Level Types
 import { MenuOptionProps } from '../0-types/MenuOptionProps';
 
+const prodReadyLinks = { about: 'about', contact: 'contact' };
+
 const MenuOption: FC<MenuOptionProps> = ({
   link,
   name,
@@ -32,6 +34,7 @@ const MenuOption: FC<MenuOptionProps> = ({
   toggleClick,
   handleTransition,
   clicked,
+  setDevPageClicked,
 }) => {
   useEffect(() => {
     Router.prefetch(`/baklavegan/${link}`);
@@ -45,28 +48,52 @@ const MenuOption: FC<MenuOptionProps> = ({
   const [scaleState, setScaleState] = useState(false);
   const [pushed, setPushed] = useState(false);
 
-  const handlePointerDown = (e: any) => {
-    e.stopPropagation();
-    setPushed(true);
-  };
-
-  const handlePointerUp = (e: any) => {
-    setPushed(false);
-    handleTransition();
-    if (clicked) {
-      Router.push(`/baklavegan/${link}`);
-      setTimeout(() => {
-        toggleClick();
-      }, 100);
-    }
-  };
-
   const { push }: any = useSpring({
     config: {
       friction: 15,
     },
     push: pushed ? [1, 1, 1] : [1.08, 1.08, 1.08],
   });
+
+  // const handlePointerDown = (e: any) => {
+  //   e.stopPropagation();
+  //   setPushed(true);
+  // };
+
+  // const handlePointerUp = (e: any) => {
+  //   if (link === 'about' || link === 'contact') {
+  //     setPushed(false);
+  //     handleTransition();
+  //     if (clicked) {
+  //       Router.push(`/baklavegan/${link}`);
+  //       setTimeout(() => {
+  //         toggleClick();
+  //       }, 100);
+  //     }
+  //   }
+  // };
+
+  const devHandlePointerDown = (e: any) => {
+    e.stopPropagation();
+    if (link in prodReadyLinks) {
+      setPushed(true);
+    }
+  };
+
+  const devHandlePointerUp = (e: any) => {
+    if (link in prodReadyLinks) {
+      setPushed(false);
+      handleTransition();
+      if (clicked) {
+        Router.push(`/baklavegan/${link}`);
+        setTimeout(() => {
+          toggleClick();
+        }, 100);
+      }
+    } else {
+      handleTransition(link);
+    }
+  };
 
   const handleHover = (e: any, cursor: boolean) => {
     e.stopPropagation();
@@ -110,8 +137,8 @@ const MenuOption: FC<MenuOptionProps> = ({
         <mesh
           position={labelPosition}
           rotation={frontRotation}
-          onPointerDown={(e) => handlePointerDown(e)}
-          onPointerUp={(e) => handlePointerUp(e)}
+          onPointerDown={(e) => devHandlePointerDown(e)}
+          onPointerUp={(e) => devHandlePointerUp(e)}
           onPointerOver={(e) => handleHover(e, true)}
           onPointerOut={(e) => handleHover(e, false)}
           renderOrder={3}

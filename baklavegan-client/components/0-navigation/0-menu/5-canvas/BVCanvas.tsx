@@ -34,6 +34,7 @@ const BVCanvas: FC<CanvasProps> = ({
   clicked,
   toggleClick,
   handleTransition,
+  setDevPageClicked,
   onCompile = () => {},
 }) => {
   return (
@@ -48,6 +49,7 @@ const BVCanvas: FC<CanvasProps> = ({
           clicked={clicked}
           toggleClick={toggleClick}
           handleTransition={handleTransition}
+          setDevPageClicked={setDevPageClicked}
         />
       </Suspense>
     </Canvas>

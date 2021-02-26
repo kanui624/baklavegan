@@ -13,12 +13,14 @@ import {
   animateMenuIn,
   animateMenuOut,
 } from '../../animations/1-layout/LayoutAnimations';
+import { showDevNote } from '../../animations/1-layout/DevNoteAnimations';
 
 // Components
 import ClientPass from './ClientPass';
 import MemoBVCanvas from '../0-navigation/0-menu/5-canvas/BVCanvas';
 import MenuButtonRoot from '../0-navigation/1-menubutton/MenuButtonRoot';
 import MenuButtonPage from '../0-navigation/1-menubutton/MenuButtonPage';
+import DevNote from './DevNote';
 
 // Styles
 import styles from '../../styles/1-layout-scss/layout.module.scss';
@@ -35,6 +37,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   const [ready, setReady] = useState(false);
   const [clicked, setClicked] = useState(false);
   const [disabled, setDisabled] = useState(true);
+  const [devPageClicked, setDevPageClicked] = useState('');
   const root = useRouter().pathname === '/' ? true : false;
   const dispatch = useDispatch();
 
@@ -48,8 +51,13 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     }
   };
 
-  const handleTransition = () => {
-    dispatch(exitMenu({ transition: false }));
+  const handleTransition = (devLink?: string) => {
+    if (devLink) {
+      showDevNote('.devnotetext');
+      setDevPageClicked(devLink);
+    } else {
+      dispatch(exitMenu({ transition: false }));
+    }
   };
 
   const initialDisableStatus = () => {
@@ -96,9 +104,11 @@ const Layout: FC<LayoutProps> = ({ children }) => {
           clicked={clicked}
           toggleClick={toggleClick}
           handleTransition={handleTransition}
+          setDevPageClicked={setDevPageClicked}
           onCompile={() => setReady(true)}
         />
       </div>
+      <DevNote devPageClicked={devPageClicked} />
     </Fragment>
   );
 };

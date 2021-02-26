@@ -15,6 +15,7 @@ export interface MenuOptionProps {
   backRotation: Euler;
   setOrbitSpeed: (orbitSpeed: number) => void;
   toggleClick: () => void;
-  handleTransition: () => void;
+  handleTransition: (devLink?: string) => void;
   clicked: boolean;
+  setDevPageClicked: any;
 }
