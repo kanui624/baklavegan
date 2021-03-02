@@ -20,6 +20,6 @@ The skills that were necessary to complete this were:
 - Extensive researching and googling skills (most of my time was spent doing this)
 - General Ability to stay focused, see a clear vision for what I want, and persevere through the adversity of not seeing the product of my work immediately.
 
-If you are reading this, it means this site is still in construction and has not been deployed to production yet. However, if you are a recruiter or employer you can view my currently written code to get a feel for what I can do or you can contact me and I can provision you a link to view this site in it's developing state. Thank you.
+This site is still in development. However, if you are a recruiter or employer you can view my currently written code or view what has been deployed at ( ) to experience the UI. Thank you.
 
 If you are interested in my work or would like to hire me you can reach me at marley.kanui@gmail.com. Thank you.
