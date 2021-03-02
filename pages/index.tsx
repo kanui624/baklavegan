@@ -1,5 +1,5 @@
 // React
-import { useEffect } from 'react';
+import { useEffect, Fragment } from 'react';
 
 // Next
 import Image from 'next/image';
@@ -7,11 +7,14 @@ import Image from 'next/image';
 // Redux
 import { useSelector } from 'react-redux';
 
-// GSAP
-import { gsap } from 'gsap';
+// GSAP Animations
+import {
+  animateLogoIn,
+  animateLogoOut,
+} from '../animations/2-index/IndexAnimations';
 
-// Styles
-import styles from '../styles/2-index-scss/index.module.scss';
+// Components
+import ViewInPortrait from '../components/1-layout/ViewInPortrait';
 
 // React Types
 import { FC } from 'react';
@@ -24,32 +27,30 @@ const BaklaHome: FC = () => {
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
 
-  const animateLogoIn = () => {
-    gsap.to('.animatelogo', { opacity: 1, duration: 4, delay: 1 });
-  };
-
-  const animateLogoOut = () => {
-    gsap.to('.animatelogo', { opacity: 0, duration: 1 });
-  };
-
   useEffect(() => {
     if (transition) {
-      animateLogoOut();
+      animateLogoOut('.animatelogo');
     } else {
-      animateLogoIn();
+      animateLogoIn('.animatelogo');
     }
   }, [transition]);
 
   return (
-    <div className="fixed">
-      <Image
-        className="opacity-0 animatelogo"
-        src="/2-images/1-index/0-bv-logo.png"
-        alt="Baklavegan"
-        width={1400}
-        height={343}
+    <Fragment>
+      <ViewInPortrait
+        classN={'indexviewinportrait'}
+        descrip={' baklavegan site '}
       />
-    </div>
+      <div className="fixed bvlogo">
+        <Image
+          className="opacity-0 animatelogo"
+          src="/2-images/1-index/0-bv-logo.png"
+          alt="Baklavegan"
+          width={1400}
+          height={343}
+        />
+      </div>
+    </Fragment>
   );
 };
 
