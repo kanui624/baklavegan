@@ -7,9 +7,10 @@
 
 // module.exports = withTM();
 const withTM = require('next-transpile-modules')([
-  '@react-three/drei',
   'three',
   'react-spring',
+  '@react-three/drei',
+  'postprocessing',
   'react-three-fiber',
 ]);
 
