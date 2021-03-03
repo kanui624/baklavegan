@@ -128,6 +128,45 @@
   }
 }
 
+// IPHONE 6 - TESTED W/ NGROK
+@media (min-width: 375px) and (min-height: 553px) and (orientation: portrait) {
+  .questionscard {
+    bottom: 23rem;
+  }
+
+  .infocard {
+    bottom: 17rem;
+  }
+
+  .businesscard {
+    bottom: 11rem;
+  }
+
+  .socialcard {
+    bottom: 5rem;
+  }
+
+  .textstyle {
+    font-size: 1.6rem;
+  }
+
+  .textpos {
+    bottom: 5.2rem;
+  }
+
+  .questionstextpos {
+    bottom: 5.3rem;
+  }
+
+  .socialtextpos {
+    bottom: 5rem;
+  }
+
+  .sociallinks {
+    bottom: -8rem;
+  }
+}
+
 // IPHONE 6/7/8 - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
   .questionscard {
