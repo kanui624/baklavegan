@@ -1,74 +1,70 @@
 // React
-import { Fragment, useEffect } from 'react';
+import { Fragment, useEffect } from "react";
 
 // Next
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
 // Redux
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 
 // GSAP Animations
 import {
   animateIn,
   animateOut,
-} from '../../animations/6-contact/ContactAnimations';
+} from "../../animations/6-contact/ContactAnimations";
 
 // Components
-import ContactInfo from '../../components/6-contact/2-components/ContactInfo';
-import ViewInPortrait from '../../components/1-layout/ViewInPortrait';
+import ContactInfo from "../../components/6-contact/2-components/ContactInfo";
+import ViewInPortrait from "../../components/1-layout/ViewInPortrait";
 
 // Data
-import { socialData } from '../../components/6-contact/1-data/SocialData';
-import { contactData } from '../../components/6-contact/1-data/ContactData';
+import { socialData } from "../../components/6-contact/1-data/SocialData";
+import { contactData } from "../../components/6-contact/1-data/ContactData";
 
 // React Types
-import { FC } from 'react';
+import { FC } from "react";
 
 // Redux Types
-import { AppState } from '../../redux/store';
+import { AppState } from "../../redux/store";
 
 // Component level Types
 import {
   SocialDataProps,
   ContactInfoDataProps,
-} from '../../components/6-contact/0-types/ContactProps';
+} from "../../components/6-contact/0-types/ContactProps";
 
 const Contact: FC = () => {
   const {
-    WindowSize: { width, height },
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
 
   useEffect(() => {
     if (transition) {
       animateOut(
-        '.sociallinkanimate',
-        '.cardopacity',
-        '.questionsto',
-        '.businessto',
-        '.infoto',
-        '.socialto'
+        ".sociallinkanimate",
+        ".cardopacity",
+        ".questionsto",
+        ".businessto",
+        ".infoto",
+        ".socialto"
       );
     } else {
       animateIn(
-        '.sociallinkanimate',
-        '.questionsto',
-        '.businessto',
-        '.infoto',
-        '.socialto'
+        ".sociallinkanimate",
+        ".questionsto",
+        ".businessto",
+        ".infoto",
+        ".socialto"
       );
     }
   }, [transition]);
 
-  useEffect(() => {
-    console.log(width, height);
-  }, []);
   return (
     <Fragment>
       <ViewInPortrait
-        classN={'contactviewinportrait'}
-        descrip={' contact info '}
+        classN={"contactviewinportrait"}
+        descrip={" contact info "}
       />
       <div className="contactcards">
         {contactData.map(
