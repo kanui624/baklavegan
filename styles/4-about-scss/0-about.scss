@@ -444,6 +444,57 @@
 @media (min-width: 921px) and (min-height: 665.98px) and (orientation: landscape) {
 }
 
+// IPAD 2019 - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 810px) and (min-height: 977px) and (orientation: portrait) {
+  .aboutbookcontainer {
+    width: 810px;
+    height: 1084px;
+    left: 0rem;
+    bottom: -63rem;
+  }
+
+  .booknavs {
+    width: 150px;
+    height: 51px;
+    bottom: -54rem;
+  }
+
+  .booknavforward {
+    right: 5rem;
+  }
+
+  .booknavbackward {
+    left: 5rem;
+  }
+
+  .aboutsvg {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .svg1 {
+    height: 200px;
+  }
+
+  .abouttext {
+    font-size: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .page0texta {
+    font-size: 6rem;
+  }
+
+  .page16texta {
+    font-size: 2.5rem;
+  }
+
+  .page17texta {
+    font-size: 2.3rem;
+  }
+}
+
 // IPAD - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
   .aboutpage {

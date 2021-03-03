@@ -24,7 +24,6 @@ import { AppState } from "../redux/store";
 
 const BaklaHome: FC = () => {
   const {
-    WindowSize: { width, height },
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
 
@@ -35,10 +34,6 @@ const BaklaHome: FC = () => {
       animateLogoIn(".animatelogo");
     }
   }, [transition]);
-
-  useEffect(() => {
-    console.log(width, height);
-  }, []);
 
   return (
     <Fragment>
