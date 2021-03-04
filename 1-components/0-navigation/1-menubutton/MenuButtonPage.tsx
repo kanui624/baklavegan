@@ -1,12 +1,12 @@
 // React
-import { useState, useEffect, Fragment } from 'react';
+import { useState, useEffect, Fragment } from "react";
 
 // Next
-import Image from 'next/image';
+import Image from "next/image";
 
 // Redux
-import { useDispatch } from 'react-redux';
-import { enterMenu } from '../../../redux/slices/MenuTransitionSlice';
+import { useDispatch } from "react-redux";
+import { enterMenu } from "../../../0-redux/slices/MenuTransitionSlice";
 
 // GSAP Animations
 import {
@@ -14,13 +14,13 @@ import {
   animateOut,
   onHoverIn,
   onHoverOut,
-} from '../../../animations/0-navigation/PageAnimations';
+} from "../../../3-animations/0-navigation/PageAnimations";
 
 // Styles
-import styles from '../../../styles/0-navigation/1-menubutton/menubuttonpage.module.scss';
+import styles from "../../../4-styles/0-navigation/1-menubutton/menubuttonpage.module.scss";
 
 // React Types
-import { FC } from 'react';
+import { FC } from "react";
 
 // Component Level Types
 interface MenuButtonPageProps {
@@ -55,9 +55,9 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
 
   useEffect(() => {
     if (pageTrigger) {
-      animateOut('.pagemenubutton');
+      animateOut(".pagemenubutton");
     } else {
-      animateIn('.pagemenubutton');
+      animateIn(".pagemenubutton");
     }
   }, [pageTrigger]);
 
@@ -78,10 +78,10 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
         disabled={disabled}
         className={`${styles.menubtn} flex justify-center items-center`}
         onPointerOver={() =>
-          pageTrigger ? null : onHoverIn('.pagemenubutton')
+          pageTrigger ? null : onHoverIn(".pagemenubutton")
         }
         onPointerOut={() =>
-          pageTrigger ? null : onHoverOut('.pagemenubutton')
+          pageTrigger ? null : onHoverOut(".pagemenubutton")
         }
         onClick={() => {
           handleMenuClick();

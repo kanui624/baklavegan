@@ -1,32 +1,32 @@
 // React
-import { useState, Fragment, useEffect } from 'react';
+import { useState, Fragment, useEffect } from "react";
 
 // Next
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
 // Redux
-import { useDispatch } from 'react-redux';
-import { exitMenu } from '../../redux/slices/MenuTransitionSlice';
+import { useDispatch } from "react-redux";
+import { exitMenu } from "../../0-redux/slices/MenuTransitionSlice";
 
 // GSAP Animations
 import {
   animateMenuIn,
   animateMenuOut,
-} from '../../animations/1-layout/LayoutAnimations';
-import { showDevNote } from '../../animations/1-layout/DevNoteAnimations';
+} from "../../3-animations/1-layout/LayoutAnimations";
+import { showDevNote } from "../../3-animations/1-layout/DevNoteAnimations";
 
 // Components
-import ClientPass from './ClientPass';
-import MemoBVCanvas from '../0-navigation/0-menu/5-canvas/BVCanvas';
-import MenuButtonRoot from '../0-navigation/1-menubutton/MenuButtonRoot';
-import MenuButtonPage from '../0-navigation/1-menubutton/MenuButtonPage';
-import DevNote from './DevNote';
+import ClientPass from "./ClientPass";
+import MemoBVCanvas from "../0-navigation/0-menu/5-canvas/BVCanvas";
+import MenuButtonRoot from "../0-navigation/1-menubutton/MenuButtonRoot";
+import MenuButtonPage from "../0-navigation/1-menubutton/MenuButtonPage";
+import DevNote from "./DevNote";
 
 // Styles
-import styles from '../../styles/1-layout-scss/layout.module.scss';
+import styles from "../../4-styles/1-layout-scss/layout.module.scss";
 
 // React Types
-import { ReactNode, FC } from 'react';
+import { ReactNode, FC } from "react";
 
 // Component Level Types
 interface LayoutProps {
@@ -37,8 +37,8 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   const [ready, setReady] = useState(false);
   const [clicked, setClicked] = useState(false);
   const [disabled, setDisabled] = useState(true);
-  const [devPageClicked, setDevPageClicked] = useState('');
-  const root = useRouter().pathname === '/' ? true : false;
+  const [devPageClicked, setDevPageClicked] = useState("");
+  const root = useRouter().pathname === "/" ? true : false;
   const dispatch = useDispatch();
 
   const toggleClick = () => {
@@ -57,7 +57,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 
   const handleTransition = (devLink?: string) => {
     if (devLink) {
-      showDevNote('.devnotetext');
+      showDevNote(".devnotetext");
       setDevPageClicked(devLink);
     } else {
       dispatch(exitMenu({ transition: false }));
@@ -76,9 +76,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 
   useEffect(() => {
     if (ready && clicked) {
-      animateMenuIn('#canvas', '#canvasbg');
+      animateMenuIn("#canvas", "#canvasbg");
     } else {
-      animateMenuOut('#canvas', '#canvasbg');
+      animateMenuOut("#canvas", "#canvasbg");
     }
   }, [clicked, ready]);
 

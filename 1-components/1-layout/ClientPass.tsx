@@ -1,15 +1,15 @@
 // React
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 // Redux
-import { useDispatch, useSelector } from 'react-redux';
-import { setDimensions } from '../../redux/slices/WindowSizeSlice';
+import { useDispatch, useSelector } from "react-redux";
+import { setDimensions } from "../../0-redux/slices/WindowSizeSlice";
 
 // React Types
-import { FC } from 'react';
+import { FC } from "react";
 
 // Redux Types
-import { AppState } from '../../redux/store';
+import { AppState } from "../../0-redux/store";
 
 const ClientOnly: FC = ({ children }: any) => {
   const {

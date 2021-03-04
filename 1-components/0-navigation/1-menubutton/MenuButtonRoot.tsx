@@ -1,24 +1,24 @@
 // React
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 // Next
-import Image from 'next/image';
+import Image from "next/image";
 
 // Redux
-import { useDispatch } from 'react-redux';
-import { enterMenu } from '../../../redux/slices/MenuTransitionSlice';
+import { useDispatch } from "react-redux";
+import { enterMenu } from "../../../0-redux/slices/MenuTransitionSlice";
 
 // GSAP Animations
 import {
   animateIn,
   animateOut,
-} from '../../../animations/0-navigation/RootAnimations';
+} from "../../../3-animations/0-navigation/RootAnimations";
 
 // Styles
-import styles from '../../../styles/0-navigation/1-menubutton/menubuttonroot.module.scss';
+import styles from "../../../4-styles/0-navigation/1-menubutton/menubuttonroot.module.scss";
 
 // React Types
-import { FC } from 'react';
+import { FC } from "react";
 
 // Component Level Types
 interface MenuButtonRootProps {
@@ -30,7 +30,7 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
   const dispatch = useDispatch();
 
   const handleEnterClick = () => {
-    animateOut('.rootmenubutton');
+    animateOut(".rootmenubutton");
     dispatch(enterMenu({ transition: true }));
     setTimeout(() => {
       toggleClick();
@@ -38,7 +38,7 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
   };
 
   useEffect(() => {
-    animateIn('.rootmenuimage', '.rootmenutext');
+    animateIn(".rootmenuimage", ".rootmenutext");
   }, []);
 
   return (

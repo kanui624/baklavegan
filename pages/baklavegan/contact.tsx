@@ -12,27 +12,27 @@ import { useSelector } from "react-redux";
 import {
   animateIn,
   animateOut,
-} from "../../animations/6-contact/ContactAnimations";
+} from "../../3-animations/6-contact/ContactAnimations";
 
 // Components
-import ContactInfo from "../../components/6-contact/2-components/ContactInfo";
-import ViewInPortrait from "../../components/1-layout/ViewInPortrait";
+import ContactInfo from "../../1-components/6-contact/2-components/ContactInfo";
+import ViewInPortrait from "../../1-components/1-layout/ViewInPortrait";
 
 // Data
-import { socialData } from "../../components/6-contact/1-data/SocialData";
-import { contactData } from "../../components/6-contact/1-data/ContactData";
+import { socialData } from "../../1-components/6-contact/1-data/SocialData";
+import { contactData } from "../../1-components/6-contact/1-data/ContactData";
 
 // React Types
 import { FC } from "react";
 
 // Redux Types
-import { AppState } from "../../redux/store";
+import { AppState } from "../../0-redux/store";
 
 // Component level Types
 import {
   SocialDataProps,
   ContactInfoDataProps,
-} from "../../components/6-contact/0-types/ContactProps";
+} from "../../1-components/6-contact/0-types/ContactProps";
 
 const Contact: FC = () => {
   const {

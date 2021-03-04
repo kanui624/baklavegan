@@ -11,17 +11,17 @@ import {
   addNav,
   removeNav,
   bounceNav,
-} from "../../animations/4-about/AboutAnimations";
+} from "../../3-animations/4-about/AboutAnimations";
 
 // Components
-import AboutBook from "../../components/4-about/2-components/AboutBook";
-import ViewInPortrait from "../../components/1-layout/ViewInPortrait";
+import AboutBook from "../../1-components/4-about/2-components/AboutBook";
+import ViewInPortrait from "../../1-components/1-layout/ViewInPortrait";
 
 // React Types
 import { FC } from "react";
 
 // Redux Types
-import { AppState } from "../../redux/store";
+import { AppState } from "../../0-redux/store";
 
 const About: FC = () => {
   const {

@@ -1,23 +1,23 @@
 // React
-import { useEffect, Fragment } from 'react';
+import { useEffect, Fragment } from "react";
 
 // Next
-import Image from 'next/image';
+import Image from "next/image";
 
 // Redux
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 
 // GSAP
-import gsap from 'gsap';
+import gsap from "gsap";
 
 // Components
-import BabyWalnut from '../../components/3-baklava/BabyWalnut';
+import BabyWalnut from "../../1-components/3-baklava/BabyWalnut";
 
 // React Types
-import { FC } from 'react';
+import { FC } from "react";
 
 // Redux Types
-import { AppState } from '../../redux/store';
+import { AppState } from "../../0-redux/store";
 
 const Baklava: FC = () => {
   const {
@@ -25,44 +25,44 @@ const Baklava: FC = () => {
   } = useSelector<AppState, AppState>((state) => state);
   const treeWalnutTl = gsap.timeline();
   const animateIn = () => {
-    treeWalnutTl.to(['.treeattribs', '.babywalnuts'], {
+    treeWalnutTl.to([".treeattribs", ".babywalnuts"], {
       y: -1000,
       delay: 1,
       duration: 2.3,
-      ease: 'back.out(1.07)',
+      ease: "back.out(1.07)",
     });
     gsap.fromTo(
-      '.babywalnuts',
+      ".babywalnuts",
       { scale: 0 },
       {
         scale: 1,
         duration: 1,
         stagger: 0.2,
         delay: 3,
-        ease: 'bounce.out',
+        ease: "bounce.out",
       }
     );
   };
   const animateOut = () => {
-    gsap.to(['.treeattribs', '.babywalnuts'], {
+    gsap.to([".treeattribs", ".babywalnuts"], {
       y: 100,
       duration: 2,
-      ease: 'back.in(1.1)',
+      ease: "back.in(1.1)",
     });
   };
 
   useEffect(() => {
-    gsap.to('.attribanimation', {
+    gsap.to(".attribanimation", {
       rotationZ: -360,
       duration: 20,
-      ease: 'none',
+      ease: "none",
       repeat: -1,
     });
 
     return () => {
-      gsap.to('.attribanimation', {
+      gsap.to(".attribanimation", {
         rotationZ: 0,
-        ease: 'none',
+        ease: "none",
       });
     };
   }, []);
