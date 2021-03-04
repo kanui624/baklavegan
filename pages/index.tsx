@@ -14,13 +14,13 @@ import {
 } from "../animations/2-index/IndexAnimations";
 
 // Components
-import ViewInPortrait from "../1-components/1-layout/ViewInPortrait";
+import ViewInPortrait from "../components/1-layout/ViewInPortrait";
 
 // React Types
 import { FC } from "react";
 
 // Redux Types
-import { AppState } from "../0-redux/store";
+import { AppState } from "../redux/store";
 
 const BaklaHome: FC = () => {
   const {

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 // Redux
 import { useDispatch } from "react-redux";
-import { enterMenu } from "../../../0-redux/slices/MenuTransitionSlice";
+import { enterMenu } from "../../../redux/slices/MenuTransitionSlice";
 
 // GSAP Animations
 import {
@@ -17,7 +17,7 @@ import {
 } from "../../../animations/0-navigation/PageAnimations";
 
 // Styles
-import styles from "../../../4-styles/0-navigation/1-menubutton/menubuttonpage.module.scss";
+import styles from "../../../styles/0-navigation/1-menubutton/menubuttonpage.module.scss";
 
 // React Types
 import { FC } from "react";

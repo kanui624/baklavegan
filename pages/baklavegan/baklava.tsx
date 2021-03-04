@@ -11,13 +11,13 @@ import { useSelector } from "react-redux";
 import gsap from "gsap";
 
 // Components
-import BabyWalnut from "../../1-components/3-baklava/BabyWalnut";
+import BabyWalnut from "../../components/3-baklava/BabyWalnut";
 
 // React Types
 import { FC } from "react";
 
 // Redux Types
-import { AppState } from "../../0-redux/store";
+import { AppState } from "../../redux/store";
 
 const Baklava: FC = () => {
   const {

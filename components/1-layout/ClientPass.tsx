@@ -3,13 +3,13 @@ import { useEffect } from "react";
 
 // Redux
 import { useDispatch, useSelector } from "react-redux";
-import { setDimensions } from "../../0-redux/slices/WindowSizeSlice";
+import { setDimensions } from "../../redux/slices/WindowSizeSlice";
 
 // React Types
 import { FC } from "react";
 
 // Redux Types
-import { AppState } from "../../0-redux/store";
+import { AppState } from "../../redux/store";
 
 const ClientOnly: FC = ({ children }: any) => {
   const {

@@ -15,24 +15,24 @@ import {
 } from "../../animations/6-contact/ContactAnimations";
 
 // Components
-import ContactInfo from "../../1-components/6-contact/2-components/ContactInfo";
-import ViewInPortrait from "../../1-components/1-layout/ViewInPortrait";
+import ContactInfo from "../../components/6-contact/2-components/ContactInfo";
+import ViewInPortrait from "../../components/1-layout/ViewInPortrait";
 
 // Data
-import { socialData } from "../../1-components/6-contact/1-data/SocialData";
-import { contactData } from "../../1-components/6-contact/1-data/ContactData";
+import { socialData } from "../../components/6-contact/1-data/SocialData";
+import { contactData } from "../../components/6-contact/1-data/ContactData";
 
 // React Types
 import { FC } from "react";
 
 // Redux Types
-import { AppState } from "../../0-redux/store";
+import { AppState } from "../../redux/store";
 
 // Component level Types
 import {
   SocialDataProps,
   ContactInfoDataProps,
-} from "../../1-components/6-contact/0-types/ContactProps";
+} from "../../components/6-contact/0-types/ContactProps";
 
 const Contact: FC = () => {
   const {
