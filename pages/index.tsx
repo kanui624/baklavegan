@@ -11,16 +11,16 @@ import { useSelector } from "react-redux";
 import {
   animateLogoIn,
   animateLogoOut,
-} from "../animations/2-index/IndexAnimations";
+} from "@/animations/2-index/IndexAnimations";
 
 // Components
-import ViewInPortrait from "../components/1-layout/ViewInPortrait";
+import ViewInPortrait from "@/components/1-layout/ViewInPortrait";
 
 // React Types
 import { FC } from "react";
 
 // Redux Types
-import { AppState } from "../redux/store";
+import { AppState } from "@/redux/store";
 
 const BaklaHome: FC = () => {
   const {

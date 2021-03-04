@@ -12,21 +12,21 @@ import { useSelector } from "react-redux";
 import {
   animateIn,
   animateOut,
-} from "../../animations/6-contact/ContactAnimations";
+} from "@/animations/6-contact/ContactAnimations";
 
 // Components
-import ContactInfo from "../../components/6-contact/2-components/ContactInfo";
-import ViewInPortrait from "../../components/1-layout/ViewInPortrait";
+import ContactInfo from "@/components/6-contact/2-components/ContactInfo";
+import ViewInPortrait from "@/components/1-layout/ViewInPortrait";
 
 // Data
-import { socialData } from "../../components/6-contact/1-data/SocialData";
-import { contactData } from "../../components/6-contact/1-data/ContactData";
+import { socialData } from "@/components/6-contact/1-data/SocialData";
+import { contactData } from "@/components/6-contact/1-data/ContactData";
 
 // React Types
 import { FC } from "react";
 
 // Redux Types
-import { AppState } from "../../redux/store";
+import { AppState } from "@/redux/store";
 
 // Component level Types
 import {

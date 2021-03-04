@@ -6,14 +6,14 @@ import { useRouter } from "next/router";
 
 // Redux
 import { useDispatch } from "react-redux";
-import { exitMenu } from "../../redux/slices/MenuTransitionSlice";
+import { exitMenu } from "@/redux/slices/MenuTransitionSlice";
 
 // GSAP Animations
 import {
   animateMenuIn,
   animateMenuOut,
-} from "../../animations/1-layout/LayoutAnimations";
-import { showDevNote } from "../../animations/1-layout/DevNoteAnimations";
+} from "@/animations/1-layout/LayoutAnimations";
+import { showDevNote } from "@/animations/1-layout/DevNoteAnimations";
 
 // Components
 import ClientPass from "./ClientPass";
@@ -23,7 +23,7 @@ import MenuButtonPage from "../0-navigation/1-menubutton/MenuButtonPage";
 import DevNote from "./DevNote";
 
 // Styles
-import styles from "../../styles/1-layout-scss/layout.module.scss";
+import styles from "@/styles/1-layout-scss/layout.module.scss";
 
 // React Types
 import { ReactNode, FC } from "react";
