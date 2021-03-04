@@ -1,11 +1,11 @@
 // Redux Toolkit
-import { createSlice, PayloadAction, createAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction, createAction } from "@reduxjs/toolkit";
 
 // Next Redux Wrapper
-import { HYDRATE } from 'next-redux-wrapper';
+import { HYDRATE } from "next-redux-wrapper";
 
 // Redux Types
-import { AppState } from '../store';
+import { AppState } from "../store";
 
 // Types
 interface MenuTransitionProps {
@@ -15,7 +15,7 @@ interface MenuTransitionProps {
 const hydrate = createAction<AppState>(HYDRATE);
 
 const MenuTransition = createSlice({
-  name: 'MenuTransition',
+  name: "MenuTransition",
   initialState: { transition: false } as MenuTransitionProps,
   reducers: {
     enterMenu: (state, action: PayloadAction<MenuTransitionProps>) => {
@@ -29,7 +29,7 @@ const MenuTransition = createSlice({
   },
   extraReducers(builder) {
     builder.addCase(hydrate, (state, action) => {
-      console.log('HYDRATE', state, action.payload);
+      console.log("HYDRATE", state, action.payload);
       return {
         ...state,
         ...action.payload[MenuTransition.name],

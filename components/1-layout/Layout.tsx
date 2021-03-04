@@ -12,8 +12,8 @@ import { exitMenu } from "../../0-redux/slices/MenuTransitionSlice";
 import {
   animateMenuIn,
   animateMenuOut,
-} from "../../3-animations/1-layout/LayoutAnimations";
-import { showDevNote } from "../../3-animations/1-layout/DevNoteAnimations";
+} from "../../animations/1-layout/LayoutAnimations";
+import { showDevNote } from "../../animations/1-layout/DevNoteAnimations";
 
 // Components
 import ClientPass from "./ClientPass";

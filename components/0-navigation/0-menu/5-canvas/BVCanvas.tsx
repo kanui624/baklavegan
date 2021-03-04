@@ -1,21 +1,21 @@
 // React
-import { Suspense, useLayoutEffect, memo, lazy } from 'react';
+import { Suspense, useLayoutEffect, memo, lazy } from "react";
 
 // React-Three-Fiber
-import { Canvas, useThree } from 'react-three-fiber';
+import { Canvas, useThree } from "react-three-fiber";
 
 // Resize Observer
-import { ResizeObserver } from '@juggle/resize-observer';
+import { ResizeObserver } from "@juggle/resize-observer";
 
 // Components
-const Menu = lazy(() => import('../4-group/Menu'));
+const Menu = lazy(() => import("../4-group/Menu"));
 
 // React Types
-import { FC } from 'react';
+import { FC } from "react";
 
 // Component Level Types
-import { CanvasProps } from '../0-types/CanvasProps';
-import { ResizeOptions } from 'react-three-fiber/canvas';
+import { CanvasProps } from "../0-types/CanvasProps";
+import { ResizeOptions } from "react-three-fiber/canvas";
 
 const Precompile = ({ onCompile = () => {} }) => {
   const { gl, scene, camera } = useThree();

@@ -11,7 +11,7 @@ import {
   addNav,
   removeNav,
   bounceNav,
-} from "../../3-animations/4-about/AboutAnimations";
+} from "../../animations/4-about/AboutAnimations";
 
 // Components
 import AboutBook from "../../1-components/4-about/2-components/AboutBook";

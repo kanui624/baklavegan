@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 import {
   animateIn,
   animateOut,
-} from "../../3-animations/6-contact/ContactAnimations";
+} from "../../animations/6-contact/ContactAnimations";
 
 // Components
 import ContactInfo from "../../1-components/6-contact/2-components/ContactInfo";

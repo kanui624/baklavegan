@@ -14,7 +14,7 @@ import {
   animateOut,
   onHoverIn,
   onHoverOut,
-} from "../../../3-animations/0-navigation/PageAnimations";
+} from "../../../animations/0-navigation/PageAnimations";
 
 // Styles
 import styles from "../../../4-styles/0-navigation/1-menubutton/menubuttonpage.module.scss";

@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 import {
   animateLogoIn,
   animateLogoOut,
-} from "../3-animations/2-index/IndexAnimations";
+} from "../animations/2-index/IndexAnimations";
 
 // Components
 import ViewInPortrait from "../1-components/1-layout/ViewInPortrait";

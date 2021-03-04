@@ -12,7 +12,7 @@ import { enterMenu } from "../../../0-redux/slices/MenuTransitionSlice";
 import {
   animateIn,
   animateOut,
-} from "../../../3-animations/0-navigation/RootAnimations";
+} from "../../../animations/0-navigation/RootAnimations";
 
 // Styles
 import styles from "../../../4-styles/0-navigation/1-menubutton/menubuttonroot.module.scss";
