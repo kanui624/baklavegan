@@ -141,6 +141,14 @@
   }
 }
 
+// 13" DELL - TESTED W/ NGROK
+@media (min-width: 1280px) and (min-height: 610px) and (orientation: landscape) {
+  .devnotetext {
+    left: 29rem;
+    font-size: 3rem;
+  }
+}
+
 // LOW-RES 32INCH MONITOR - TESTED W/ LOCAL MACHINE
 @media (min-width: 1360px) and (max-height: 689px) and (orientation: landscape) {
   .devnotetext {
@@ -157,8 +165,12 @@
   }
 }
 
+// HIGH RES 27" - TESTED W/ NGROK
+@media (min-width: 1920px) and (min-height: 969px) and (orientation: landscape) {
+}
+
 // HIGH-RES 32 INCH MONITOR - TESTED W/ LOCAL MACHINE
-@media (min-width: 1920px) and (min-height: 1001px) and (orientation: landscape) {
+@media (min-width: 1920px) and (min-height: 969px) and (orientation: landscape) {
   .devnotetext {
     left: 48rem;
   }
