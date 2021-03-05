@@ -20,6 +20,6 @@ The skills that were necessary to complete this were:
 - Extensive researching and googling skills (most of my time was spent doing this)
 - General Ability to stay focused, see a clear vision for what I want, and persevere through the adversity of not seeing the product of my work immediately.
 
-This site is still in development. However, if you are a recruiter or employer you can view my currently written code or view what has been deployed at https://baklavegan-git-main-kanui.vercel.app/ to experience the UI in it's current state.
+This site is still in development. However, if you are a recruiter or employer you can view my currently written code or view what has been deployed at https://baklavegan.vercel.app/ to experience the UI in it's current state.
 
 If you are interested in my work or would like to hire me you can reach me at marley.kanui@gmail.com. Thank you.
