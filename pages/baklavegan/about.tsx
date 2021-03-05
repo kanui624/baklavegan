@@ -104,9 +104,9 @@ const About: FC = () => {
       >
         <img src="/3-svgs/about/book-nav.svg" alt="book-nav-backward" />
       </button>
-      <h1 className="fixed text-8xl text-red-900 bottom-20">
+      {/* <h1 className="fixed text-8xl text-red-900 bottom-20">
         width: {width} height: {height}
-      </h1>
+      </h1> */}
     </Fragment>
   );
 };
