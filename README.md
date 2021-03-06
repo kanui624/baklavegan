@@ -2,7 +2,9 @@ Baklavegan all rights reserved 2021.
 
 All creative decisions made, content created, and code written was done by me, Marley Kanui. I created this project specifically to one, start a business venture, and two, demonstrate my creative abilities and technical competency to potential clients or employers.
 
-The skills that were necessary to complete this were:
+Baklavegan is a dessert company providing the iconic Turkish dessert, Baklava, with a vegan twist.
+
+The skills that were necessary to complete this site were:
 
 - Knowledge of various frontend and backend technologies (see package.json) and ability to get them all to work nicley with each other.
 - Experience with responsive design.
