@@ -32,7 +32,12 @@ const ContactInfo: FC<ContactInfoCardProps> = ({
           <p>
             {textTwo && textTwo}{" "}
             {link && (
-              <Link href="/baklavegan/faq">
+              // <Link href="/baklavegan/faq">
+              //   <a>
+              //     <u>{link}</u>
+              //   </a>
+              // </Link>
+              <Link href="#">
                 <a>
                   <u>{link}</u>
                 </a>

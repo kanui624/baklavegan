@@ -57,7 +57,13 @@ const AboutBook: FC<AboutBookProps> = forwardRef(({ width, height }, ref) => {
                 <div className={`page${id}texta abouttext px-8 py-8`}>
                   {texta}{" "}
                   {link && (
-                    <Link href={`/baklavegan/${link}`}>
+                    // <Link href={`/baklavegan/${link}`}>
+                    //   <a className="aboutbooklink">
+                    //     <u>{link}</u>
+                    //   </a>
+                    // </Link>
+
+                    <Link href="#">
                       <a className="aboutbooklink">
                         <u>{link}</u>
                       </a>
