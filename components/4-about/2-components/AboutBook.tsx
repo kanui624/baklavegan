@@ -62,7 +62,6 @@ const AboutBook: FC<AboutBookProps> = forwardRef(({ width, height }, ref) => {
                     //     <u>{link}</u>
                     //   </a>
                     // </Link>
-
                     <Link href="#">
                       <a className="aboutbooklink">
                         <u>{link}</u>
