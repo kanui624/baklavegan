@@ -26,7 +26,7 @@ interface AboutBookProps {
 
 const AboutBook: FC<AboutBookProps> = forwardRef(({ width, height }, ref) => {
   const dataToMap =
-    width >= 540 && height >= 610
+    width >= 540 && height >= 578
       ? aboutBookLargeDeviceData
       : aboutBookMobileData;
   return (

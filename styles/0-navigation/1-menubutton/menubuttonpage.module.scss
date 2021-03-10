@@ -244,6 +244,27 @@
 }
 
 // 13" DELL - TESTED W/ NGROK
+@media (min-width: 1280px) and (min-height: 578px) and (orientation: landscape) {
+  .menupageimage,
+  .menupagetext,
+  .invisiblemenubtn {
+    display: block;
+  }
+  .menupageimage {
+    bottom: -23rem;
+  }
+
+  .menupagetext {
+    font-size: 3rem;
+    bottom: -13rem;
+  }
+
+  .invisiblemenubtn {
+    height: 4rem;
+  }
+}
+
+// 13" DELL - TESTED W/ NGROK
 @media (min-width: 1280px) and (min-height: 610px) and (orientation: landscape) {
   .menupageimage,
   .menupagetext,

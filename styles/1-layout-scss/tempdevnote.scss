@@ -133,6 +133,14 @@
   }
 }
 
+// 13" DELL - TESTED W/ NGROK
+@media (min-width: 1280px) and (min-height: 578px) and (orientation: landscape) {
+  .devnotetext {
+    left: 29rem;
+    font-size: 3rem;
+  }
+}
+
 // IPAD PRO - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
   .devnotetext {

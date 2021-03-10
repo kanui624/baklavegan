@@ -482,7 +482,7 @@
 }
 
 // 13" DELL - TESTED W/ NGROK
-@media (min-width: 1280px) and (min-height: 610px) and (orientation: landscape) {
+@media (min-width: 1280px) and (min-height: 578px) and (orientation: landscape) {
   .contactviewinportrait {
     display: none;
   }
@@ -491,22 +491,23 @@
     display: block;
   }
   .questionscard {
-    bottom: 20.8rem;
+    bottom: 18.8rem;
     left: 15rem;
   }
 
   .infocard {
-    bottom: 12.8rem;
+    bottom: 10.8rem;
     right: 15rem;
+    border-radius: 4rem;
   }
 
   .businesscard {
-    bottom: 4.8rem;
+    bottom: 2.8rem;
     left: 15rem;
   }
 
   .socialcard {
-    bottom: -3.2rem;
+    bottom: -5.2rem;
     right: 15rem;
   }
 
@@ -527,7 +528,7 @@
   }
 
   .sociallinks {
-    bottom: -11rem;
+    bottom: -12.5rem;
   }
 }
 

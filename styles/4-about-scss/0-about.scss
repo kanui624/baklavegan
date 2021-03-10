@@ -630,6 +630,70 @@
 }
 
 // 13" DELL - TESTED W/ NGROK
+@media (min-width: 1280px) and (min-height: 578px) and (orientation: landscape) {
+  .aboutviewinportrait {
+    display: none;
+  }
+  .aboutbookcontainer,
+  .booknavs {
+    display: block;
+  }
+
+  .aboutbookcontainer {
+    width: 770px;
+    height: 1030px;
+    right: 16.5rem;
+    bottom: -75rem;
+  }
+
+  .booknavs {
+    width: 120px;
+    height: 41px;
+    bottom: -62rem;
+  }
+
+  .booknavforward {
+    right: 20rem;
+  }
+
+  .booknavbackward {
+    left: 20rem;
+  }
+
+  .svg1 {
+    height: 180px;
+  }
+
+  .aboutsvg {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .abouttext {
+    font-size: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .page0texta {
+    font-size: 6rem;
+  }
+
+  .page14texta {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .page16texta {
+    font-size: 2.5rem;
+  }
+
+  .page17texta {
+    font-size: 2.2rem;
+  }
+}
+
+// 13" DELL - TESTED W/ NGROK
 @media (min-width: 1280px) and (min-height: 610px) and (orientation: landscape) {
   .aboutviewinportrait {
     display: none;
