@@ -1,22 +1,23 @@
+// Alt
 // React
-import { forwardRef } from "react";
+import { forwardRef } from 'react';
 
 // Next
-import Link from "next/link";
+import Link from 'next/link';
 
 // Page Flip
 // @ts-ignore
-import HTMLFlipBook from "react-pageflip";
+import HTMLFlipBook from 'react-pageflip';
 
 // Data
-import { aboutBookMobileData } from "../1-data/AboutBookMobileData";
-import { aboutBookLargeDeviceData } from "../1-data/AboutBookLargeDeviceData";
+import { aboutBookMobileData } from '../1-data/AboutBookMobileData';
+import { aboutBookLargeDeviceData } from '../1-data/AboutBookLargeDeviceData';
 
 // React Types
-import { FC } from "react";
+import { FC } from 'react';
 
 // Component Level Types
-import { AboutBookDataProps } from "../0-types/AboutProps";
+import { AboutBookDataProps } from '../0-types/AboutProps';
 
 interface AboutBookProps {
   ref: any;
@@ -38,7 +39,7 @@ const AboutBook: FC<AboutBookProps> = forwardRef(({ width, height }, ref) => {
       usePortrait={false}
       maxShadowOpacity={1}
       autoSize={false}
-      size={"stretch"}
+      size={'stretch'}
       width={400}
       height={535}
       minWidth={80}
@@ -55,7 +56,7 @@ const AboutBook: FC<AboutBookProps> = forwardRef(({ width, height }, ref) => {
             <div className="flex justify-center items-center h-full flex-col">
               {texta && (
                 <div className={`page${id}texta abouttext px-8 py-8`}>
-                  {texta}{" "}
+                  {texta}{' '}
                   {link && (
                     // <Link href={`/baklavegan/${link}`}>
                     //   <a className="aboutbooklink">
@@ -67,7 +68,7 @@ const AboutBook: FC<AboutBookProps> = forwardRef(({ width, height }, ref) => {
                         <u>{link}</u>
                       </a>
                     </Link>
-                  )}{" "}
+                  )}{' '}
                   {textb && textb}
                 </div>
               )}
