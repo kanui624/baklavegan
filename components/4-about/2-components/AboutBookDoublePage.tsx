@@ -64,17 +64,17 @@ const AboutBookDoublePage: FC = () => {
     }, 1500);
   };
 
-  useEffect(() => {
-    if (transition) {
-      animateOut('.aboutbookcontainer', '.booknavsdp');
-      setTimeout(() => {
-        setPageCount(0);
-        (aboutBookDP.current as any).pageFlip.turnToPage(0);
-      }, 3000);
-    } else {
-      animateIn('.aboutbookcontainer', '.booknavsdp');
-    }
-  }, [transition]);
+  // useEffect(() => {
+  //   if (transition) {
+  //     animateOut('.aboutbookcontainerdp', '.booknavsdp');
+  //     setTimeout(() => {
+  //       setPageCount(0);
+  //       (aboutBookDP.current as any).pageFlip.turnToPage(0);
+  //     }, 3000);
+  //   } else {
+  //     animateIn('.aboutbookcontainerdp', '.booknavsdp');
+  //   }
+  // }, [transition]);
 
   useEffect(() => {
     if (pageCount === 8) {
@@ -91,7 +91,7 @@ const AboutBookDoublePage: FC = () => {
 
   return (
     <Fragment>
-      <div className="aboutbookcontainer doublepage absolute">
+      <div className="aboutbookcontainerdp doublepage absolute">
         <HTMLFlipBook
           ref={aboutBookDP}
           className="aboutbook inset-0 h-full max-w-full"

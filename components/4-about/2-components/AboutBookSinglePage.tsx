@@ -1,5 +1,5 @@
 // React
-import { useState, useEffect, useRef, forwardRef, Fragment } from 'react';
+import { useState, useEffect, useRef, Fragment } from 'react';
 
 // Next
 import Link from 'next/link';
@@ -64,17 +64,17 @@ const AboutBookSinglePage: FC = () => {
     }, 1500);
   };
 
-  useEffect(() => {
-    if (transition) {
-      animateOut('.aboutbookcontainer', '.booknavssp');
-      setTimeout(() => {
-        setPageCount(0);
-        (aboutBookSP.current as any).pageFlip.turnToPage(0);
-      }, 3000);
-    } else {
-      animateIn('.aboutbookcontainer', '.booknavssp');
-    }
-  }, [transition]);
+  // useEffect(() => {
+  //   if (transition) {
+  //     animateOut('.aboutbookcontainersp', '.booknavssp');
+  //     setTimeout(() => {
+  //       setPageCount(0);
+  //       (aboutBookSP.current as any).pageFlip.turnToPage(0);
+  //     }, 3000);
+  //   } else {
+  //     animateIn('.aboutbookcontainersp', '.booknavssp');
+  //   }
+  // }, [transition]);
 
   useEffect(() => {
     if (pageCount === 8) {
@@ -91,7 +91,7 @@ const AboutBookSinglePage: FC = () => {
 
   return (
     <Fragment>
-      <div className="aboutbookcontainer singlepage absolute">
+      <div className="aboutbookcontainersp singlepage absolute">
         <HTMLFlipBook
           ref={aboutBookSP}
           className="aboutbook inset-0 h-full max-w-full"

@@ -21,11 +21,6 @@ const About: FC = () => {
       ) : (
         <AboutBookSinglePage />
       )}
-
-      {/* <div className="aboutbookcontainer doublepage absolute">
-          <AboutBookDoublePage />
-        </div> */}
-
       {/* <span className="fixed text-4xl text-red-900 bottom-20">
         Window size: {width} x {height}
       </span> */}
