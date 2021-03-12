@@ -1,8 +1,8 @@
 // React
-import { useState, useEffect, useRef, Fragment } from "react";
+import { useState, useEffect, useRef, Fragment } from 'react';
 
 // Redux
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux';
 
 // GSAP Animations
 import {
@@ -11,17 +11,17 @@ import {
   addNav,
   removeNav,
   bounceNav,
-} from "@/animations/4-about/AboutAnimations";
+} from '@/animations/4-about/AboutAnimations';
 
 // Components
-import AboutBook from "@/components/4-about/2-components/AboutBook";
-import ViewInPortrait from "@/components/1-layout/ViewInPortrait";
+import AboutBook from '@/components/4-about/2-components/AboutBook';
+import ViewInPortrait from '@/components/1-layout/ViewInPortrait';
 
 // React Types
-import { FC } from "react";
+import { FC } from 'react';
 
 // Redux Types
-import { AppState } from "@/redux/store";
+import { AppState } from '@/redux/store';
 
 const About: FC = () => {
   const {
@@ -34,10 +34,10 @@ const About: FC = () => {
   const [disabled, setDisabled] = useState(false);
 
   const determineNavBounce = (targetNav: string) => {
-    if (targetNav === "book-nav-forward") {
-      bounceNav(".booknavforward");
+    if (targetNav === 'book-nav-forward') {
+      bounceNav('.booknavforward');
     } else {
-      bounceNav(".booknavbackward");
+      bounceNav('.booknavbackward');
     }
   };
 
@@ -58,34 +58,34 @@ const About: FC = () => {
 
   useEffect(() => {
     if (transition) {
-      animateOut(".aboutbookcontainer", ".booknavs");
+      animateOut('.aboutbookcontainer', '.booknavs');
       setTimeout(() => {
         setPageCount(0);
         (aboutBook.current as any).pageFlip.turnToPage(0);
       }, 3000);
     } else {
-      animateIn(".aboutbookcontainer", ".booknavs");
+      animateIn('.aboutbookcontainer', '.booknavs');
     }
   }, [transition]);
 
   useEffect(() => {
     if (pageCount === 8) {
-      removeNav(".booknavforward");
+      removeNav('.booknavforward');
     } else {
-      addNav(".booknavforward");
+      addNav('.booknavforward');
     }
     if (pageCount === 0) {
-      removeNav(".booknavbackward");
+      removeNav('.booknavbackward');
     } else {
-      addNav(".booknavbackward");
+      addNav('.booknavbackward');
     }
   }, [pageCount]);
 
   return (
     <Fragment>
       <ViewInPortrait
-        classN={"aboutviewinportrait"}
-        descrip={" about story "}
+        classN={'aboutviewinportrait'}
+        descrip={' about story '}
       />
       <div className="aboutbookcontainer absolute">
         <AboutBook ref={aboutBook} width={width} height={height} />
