@@ -1,13 +1,17 @@
 import gsap from 'gsap';
 
 export const animateIn = (inClassOne: string, inClassTwo: string) => {
-  gsap.to([inClassOne, inClassTwo], {
-    y: -1000,
-    delay: 1,
-    duration: 2.3,
-    ease: 'back.out(1.07)',
-    stagger: 0.15,
-  });
+  gsap.fromTo(
+    [inClassOne, inClassTwo],
+    { y: 0 },
+    {
+      y: -1000,
+      delay: 1,
+      duration: 2.3,
+      ease: 'back.out(1.07)',
+      stagger: 0.15,
+    }
+  );
 };
 
 export const animateOut = (outClassOne: string, outClassTwo: string) => {

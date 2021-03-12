@@ -1,14 +1,18 @@
 // Next
 import Link from 'next/link';
 
+// Custom Hooks
+import { useWindowResize } from '../../customhooks/useWindowResize';
+
 // React Types
 import { FC } from 'react';
 
 const merch: FC = () => {
+  const [width, height] = useWindowResize();
   return (
-    <Link href="/">
-      <a>You're on merch link page click to go back</a>
-    </Link>
+    <span>
+      Window size: {width} x {height}
+    </span>
   );
 };
 

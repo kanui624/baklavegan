@@ -1,6 +1,6 @@
 // UNIVERSAL STYLES
 .aboutpage {
-  background: url("/2-images/3-about/0-aboutpage.png") no-repeat center center;
+  background: url('/2-images/3-about/0-aboutpage.png') no-repeat center center;
   background-size: cover;
 }
 
@@ -10,7 +10,7 @@
   text-shadow: 3.5px 2.5px 3px #39311d;
 }
 
-.booknavs:focus {
+.booknavssp:focus {
   outline: none;
   box-shadow: none;
 }
@@ -24,34 +24,35 @@
   height: 100px;
 }
 
-.booknavbackward {
+.booknavbackwardsp {
   transform: rotateY(180deg);
 }
 
-.aboutviewinportrait {
-  display: none;
+.doublepage {
+  opacity: 0;
 }
 
 // IPHONE 4 - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
-  .aboutbookcontainer {
+  .singlepage {
     width: 640px;
     height: 856px;
-    right: 0rem;
+    left: 50%;
+    transform: translate(-75%, 0%);
     bottom: -73rem;
   }
 
-  .booknavs {
+  .booknavssp {
     width: 80px;
     height: 27px;
     bottom: -61.7rem;
   }
 
-  .booknavforward {
+  .booknavforwardsp {
     right: 0.5rem;
   }
 
-  .booknavbackward {
+  .booknavbackwardsp {
     left: 0.5rem;
   }
 
@@ -101,13 +102,73 @@
 
 // IPHONE 4 - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 480px) and (min-height: 320px) and (orientation: landscape) {
-  .aboutbookcontainer,
-  .booknavs {
-    display: none;
+  .singlepage {
+    opacity: 0;
+  }
+  .doublepage {
+    opacity: 1;
+    width: 400px;
+    height: 535px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    bottom: -69rem;
   }
 
-  .aboutviewinportrait {
-    display: block;
+  .booknavsdp {
+    width: 80px;
+    height: 27px;
+    bottom: -61.7rem;
+  }
+
+  .booknavforwarddp {
+    right: 0.5rem;
+  }
+
+  .booknavbackwarddp {
+    left: 0.5rem;
+  }
+
+  .aboutsvg {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+  }
+
+  .abouttext {
+    font-size: 2rem;
+    padding: 0.5rem;
+    padding-right: 1rem;
+  }
+
+  .page1texta {
+    font-size: 5rem;
+  }
+
+  .page5texta {
+    font-size: 1.9rem;
+  }
+
+  .page7texta {
+    font-size: 1.9rem;
+  }
+
+  .page11texta {
+    font-size: 2.5rem;
+  }
+
+  .page13texta {
+    font-size: 2.4rem;
+    padding-bottom: 1rem;
+  }
+
+  .page15texta {
+    font-size: 2.4rem;
+  }
+
+  .page17texta {
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 1.5rem;
   }
 }
 

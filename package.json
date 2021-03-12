@@ -29,7 +29,8 @@
     "resize-observer-polyfill": "^1.5.1",
     "sass": "^1.30.0",
     "tailwindcss": "^2.0.2",
-    "three": "^0.123.0"
+    "three": "^0.123.0",
+    "use-orientation-change": "^1.0.4"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.9",

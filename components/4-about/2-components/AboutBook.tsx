@@ -1,6 +1,5 @@
-// Alt
 // React
-import { forwardRef } from 'react';
+import { useState, useEffect, forwardRef } from 'react';
 
 // Next
 import Link from 'next/link';
@@ -8,10 +7,6 @@ import Link from 'next/link';
 // Page Flip
 // @ts-ignore
 import HTMLFlipBook from 'react-pageflip';
-
-// Data
-import { aboutBookMobileData } from '../1-data/AboutBookMobileData';
-import { aboutBookLargeDeviceData } from '../1-data/AboutBookLargeDeviceData';
 
 // React Types
 import { FC } from 'react';
@@ -21,15 +16,10 @@ import { AboutBookDataProps } from '../0-types/AboutProps';
 
 interface AboutBookProps {
   ref: any;
-  width: number;
-  height: number;
+  data: any;
 }
 
-const AboutBook: FC<AboutBookProps> = forwardRef(({ width, height }, ref) => {
-  const dataToMap =
-    width >= 540 && height >= 578
-      ? aboutBookLargeDeviceData
-      : aboutBookMobileData;
+const AboutBook: FC<AboutBookProps> = forwardRef(({ data }, ref) => {
   return (
     <HTMLFlipBook
       ref={ref}
@@ -47,7 +37,7 @@ const AboutBook: FC<AboutBookProps> = forwardRef(({ width, height }, ref) => {
       maxWidth={1000}
       maxHeight={1337}
     >
-      {dataToMap.map(({ id, texta, textb, svg, link }: AboutBookDataProps) => {
+      {data.map(({ id, texta, textb, svg, link }: AboutBookDataProps) => {
         return (
           <div
             key={id}
@@ -58,12 +48,7 @@ const AboutBook: FC<AboutBookProps> = forwardRef(({ width, height }, ref) => {
                 <div className={`page${id}texta abouttext px-8 py-8`}>
                   {texta}{' '}
                   {link && (
-                    // <Link href={`/baklavegan/${link}`}>
-                    //   <a className="aboutbooklink">
-                    //     <u>{link}</u>
-                    //   </a>
-                    // </Link>
-                    <Link href="#">
+                    <Link href={`/baklavegan/${link}`}>
                       <a className="aboutbooklink">
                         <u>{link}</u>
                       </a>

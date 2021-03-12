@@ -5,7 +5,8 @@
       "@/components/*": ["components/*"],
       "@/animations/*": ["animations/*"],
       "@/styles/*": ["styles/*"],
-      "@/redux/*": ["redux/*"]
+      "@/redux/*": ["redux/*"],
+      "@/customhooks/*": ["customhooks/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
