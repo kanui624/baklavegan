@@ -1,11 +1,11 @@
 // React
-import { useState, useEffect, useRef, Fragment } from 'react';
+import { useState, useEffect, useRef, Fragment } from "react";
 
 // Next
-import Link from 'next/link';
+import Link from "next/link";
 
 // Redux
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 
 // GSAP Animations
 import {
@@ -14,55 +14,35 @@ import {
   addNav,
   removeNav,
   bounceNav,
-} from '@/animations/4-about/AboutAnimations';
+} from "@/animations/4-about/AboutAnimations";
 
 // Page Flip
 // @ts-ignore
-import HTMLFlipBook from 'react-pageflip';
+import HTMLFlipBook from "react-pageflip";
 
 // Data
-import { AboutBookSinglePageData } from '@/components/4-about/1-data/AboutBookSinglePage';
+import { AboutBookSinglePageData } from "@/components/4-about/1-data/AboutBookSinglePage";
 
 // React Types
-import { FC } from 'react';
+import { FC } from "react";
 
 // Redux Types
-import { AppState } from '@/redux/store';
+import { AppState } from "@/redux/store";
 
 // Component Level Types
-import { AboutBookDataProps } from '../0-types/AboutProps';
+import { AboutBookDataProps } from "../0-types/AboutProps";
 
-const AboutBookSinglePage: FC = () => {
+interface AboutBookSinglePageProps {
+  next: boolean;
+}
+
+const AboutBookSinglePage: FC<AboutBookSinglePageProps> = ({ next }) => {
   const {
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
 
   const aboutBookSP = useRef();
   const [pageCount, setPageCount] = useState(0);
-  const [disabled, setDisabled] = useState(false);
-
-  const determineNavBounceSP = (targetNav: string) => {
-    if (targetNav === 'book-nav-forward-sp') {
-      bounceNav('.booknavforwardsp');
-    } else {
-      bounceNav('.booknavbackwardsp');
-    }
-  };
-
-  const handleNavSP = (e: any, next: boolean) => {
-    if (next) {
-      (aboutBookSP.current as any).pageFlip.flipNext();
-      setPageCount(pageCount + 1);
-    } else {
-      (aboutBookSP.current as any).pageFlip.flipPrev();
-      setPageCount(pageCount - 1);
-    }
-    determineNavBounceSP(e.target.alt);
-    setDisabled(true);
-    setTimeout(() => {
-      setDisabled(false);
-    }, 1500);
-  };
 
   // useEffect(() => {
   //   if (transition) {
@@ -77,15 +57,23 @@ const AboutBookSinglePage: FC = () => {
   // }, [transition]);
 
   useEffect(() => {
-    if (pageCount === 8) {
-      removeNav('.booknavforwardsp');
+    if (next) {
+      (aboutBookSP.current as any).pageFlip.flipNext();
     } else {
-      addNav('.booknavforwardsp');
+      (aboutBookSP.current as any).pageFlip.flipPrev();
+    }
+  }, [next]);
+
+  useEffect(() => {
+    if (pageCount === 8) {
+      removeNav(".booknavforwardsp");
+    } else {
+      addNav(".booknavforwardsp");
     }
     if (pageCount === 0) {
-      removeNav('.booknavbackwardsp');
+      removeNav(".booknavbackwardsp");
     } else {
-      addNav('.booknavbackwardsp');
+      addNav(".booknavbackwardsp");
     }
   }, [pageCount]);
 
@@ -100,7 +88,7 @@ const AboutBookSinglePage: FC = () => {
           usePortrait={false}
           maxShadowOpacity={1}
           autoSize={false}
-          size={'stretch'}
+          size={"stretch"}
           width={400}
           height={535}
           minWidth={80}
@@ -118,14 +106,14 @@ const AboutBookSinglePage: FC = () => {
                   <div className="flex justify-center items-center h-full flex-col">
                     {texta && (
                       <div className={`page${id}texta abouttext px-8 py-8`}>
-                        {texta}{' '}
+                        {texta}{" "}
                         {link && (
                           <Link href={`/baklavegan/${link}`}>
                             <a className="aboutbooklink">
                               <u>{link}</u>
                             </a>
                           </Link>
-                        )}{' '}
+                        )}{" "}
                         {textb && textb}
                       </div>
                     )}
@@ -143,7 +131,7 @@ const AboutBookSinglePage: FC = () => {
           )}
         </HTMLFlipBook>
       </div>
-      <button
+      {/* <button
         disabled={disabled}
         className="booknavssp booknavforwardsp fixed opacity-0"
         onClick={(e) => handleNavSP(e, true)}
@@ -156,7 +144,7 @@ const AboutBookSinglePage: FC = () => {
         onClick={(e) => handleNavSP(e, false)}
       >
         <img src="/3-svgs/about/book-nav.svg" alt="book-nav-backward-sp" />
-      </button>
+      </button> */}
     </Fragment>
   );
 };

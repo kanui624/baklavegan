@@ -1,6 +1,6 @@
 // UNIVERSAL STYLES
 .aboutpage {
-  background: url('/2-images/3-about/0-aboutpage.png') no-repeat center center;
+  background: url("/2-images/3-about/0-aboutpage.png") no-repeat center center;
   background-size: cover;
 }
 
@@ -327,7 +327,8 @@
   .aboutbookcontainer {
     width: 825px;
     height: 1103px;
-    right: 0rem;
+    left: 50%;
+    transform: translate(-75%, 0%);
     bottom: -73rem;
   }
 
