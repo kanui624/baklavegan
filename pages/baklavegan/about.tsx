@@ -2,12 +2,19 @@
 import { useState, useEffect, Fragment } from "react";
 
 // Components
-import AboutBookSinglePage from "@/components/4-about/2-components/AboutBookSinglePage";
-import AboutBookDoublePage from "@/components/4-about/2-components/AboutBookDoublePage";
+import AboutBook from "@/components/4-about/2-components/AboutBook";
 
 // Redux
 import { useDispatch, useSelector } from "react-redux";
-import { nextPage, prevPage } from "@/redux/slices/AboutPageCountSlice";
+import {
+  nextPage,
+  prevPage,
+  initializePage,
+} from "@/redux/slices/AboutPageCountSlice";
+
+// Data
+import { AboutBookSinglePageData } from "@/components/4-about/1-data/AboutBookSinglePage";
+import { AboutBookDoublePageData } from "@/components/4-about/1-data/AboutBookDoublePage";
 
 // GSAP Animations
 import {
@@ -31,17 +38,18 @@ const About: FC = () => {
   const dispatch = useDispatch();
   const {
     AboutPageCount: { pageCount },
+    MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
 
   const [width, height] = useWindowResize();
-  const [next, setNext] = useState(false);
+  const [next, setNext] = useState();
   const [disabled, setDisabled] = useState(false);
 
   const dispatchPageCount = (flipPage: boolean) => {
     if (flipPage) {
       dispatch(nextPage({ pageCount: pageCount + 1 }));
     } else {
-      dispatch(nextPage({ pageCount: pageCount - 1 }));
+      dispatch(prevPage({ pageCount: pageCount - 1 }));
     }
   };
 
@@ -54,7 +62,7 @@ const About: FC = () => {
   };
 
   const handleNav = (e: any, flip: boolean) => {
-    setNext(flip);
+    setNext(next + 1);
     dispatchPageCount(flip);
     determineNavBounce(e.target.alt);
     setDisabled(true);
@@ -63,14 +71,49 @@ const About: FC = () => {
     }, 1500);
   };
 
+  useEffect(() => {
+    if (transition) {
+      animateOut(".aboutbookcontainer", ".booknavs");
+      setTimeout(() => {
+        dispatch(initializePage({ pageCount: 0 }));
+      }, 3000);
+    }
+    // } else {
+    //   animateIn(".aboutbookcontainer", ".booknavs");
+    // }
+  }, [transition]);
+
+  useEffect(() => {
+    if (pageCount === 8) {
+      removeNav(".booknavforward");
+    } else {
+      addNav(".booknavforward");
+    }
+    if (pageCount === 0) {
+      removeNav(".booknavbackward");
+    } else {
+      addNav(".booknavbackward");
+    }
+  }, [pageCount]);
+
   return (
     <Fragment>
-      {width >= 540 && height >= 720 ? (
-        <AboutBookDoublePage />
-      ) : width > height ? (
-        <AboutBookDoublePage />
+      {(width >= 540 && height >= 720) || width > height ? (
+        <AboutBook
+          transition={transition}
+          pageCount={pageCount}
+          data={AboutBookDoublePageData}
+          next={next}
+          tag={"dp"}
+        />
       ) : (
-        <AboutBookSinglePage next={next} />
+        <AboutBook
+          transition={transition}
+          pageCount={pageCount}
+          data={AboutBookSinglePageData}
+          next={next}
+          tag={"sp"}
+        />
       )}
       <button
         disabled={disabled}

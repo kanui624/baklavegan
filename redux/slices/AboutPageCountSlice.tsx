@@ -26,6 +26,10 @@ const AboutPageCount = createSlice({
       const { pageCount } = action.payload;
       state.pageCount = pageCount;
     },
+    initializePage: (state, action: PayloadAction<AboutPageCountProps>) => {
+      const { pageCount } = action.payload;
+      state.pageCount = pageCount;
+    },
   },
   extraReducers(builder) {
     builder.addCase(hydrate, (state, action) => {
@@ -38,6 +42,6 @@ const AboutPageCount = createSlice({
   },
 });
 
-export const { nextPage, prevPage } = AboutPageCount.actions;
+export const { nextPage, prevPage, initializePage } = AboutPageCount.actions;
 
 export default AboutPageCount;

@@ -10,7 +10,7 @@
   text-shadow: 3.5px 2.5px 3px #39311d;
 }
 
-.booknavssp:focus {
+.booknavs:focus {
   outline: none;
   box-shadow: none;
 }
@@ -24,17 +24,17 @@
   height: 100px;
 }
 
-.booknavbackwardsp {
+.booknavbackward {
   transform: rotateY(180deg);
 }
 
-.doublepage {
+.dp {
   opacity: 0;
 }
 
 // IPHONE 4 - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
-  .singlepage {
+  .sp {
     width: 640px;
     height: 856px;
     left: 50%;
@@ -42,17 +42,17 @@
     top: -13rem;
   }
 
-  .booknavssp {
+  .booknavs {
     width: 80px;
     height: 27px;
     bottom: 1rem;
   }
 
-  .booknavforwardsp {
+  .booknavforward {
     right: 0.5rem;
   }
 
-  .booknavbackwardsp {
+  .booknavbackward {
     left: 0.5rem;
   }
 
@@ -102,10 +102,10 @@
 
 // IPHONE 4 - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 480px) and (min-height: 320px) and (orientation: landscape) {
-  .singlepage {
+  .sp {
     opacity: 0;
   }
-  .doublepage {
+  .dp {
     opacity: 1;
     width: 400px;
     height: 535px;
