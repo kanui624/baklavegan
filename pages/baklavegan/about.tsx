@@ -42,7 +42,7 @@ const About: FC = () => {
   } = useSelector<AppState, AppState>((state) => state);
 
   const [width, height] = useWindowResize();
-  const [next, setNext] = useState();
+  const [next, setNext] = useState(false);
   const [disabled, setDisabled] = useState(false);
 
   const dispatchPageCount = (flipPage: boolean) => {
@@ -62,8 +62,8 @@ const About: FC = () => {
   };
 
   const handleNav = (e: any, flip: boolean) => {
-    setNext(next + 1);
     dispatchPageCount(flip);
+    setNext(flip);
     determineNavBounce(e.target.alt);
     setDisabled(true);
     setTimeout(() => {
@@ -77,10 +77,9 @@ const About: FC = () => {
       setTimeout(() => {
         dispatch(initializePage({ pageCount: 0 }));
       }, 3000);
+    } else {
+      animateIn(".aboutbookcontainer", ".booknavs");
     }
-    // } else {
-    //   animateIn(".aboutbookcontainer", ".booknavs");
-    // }
   }, [transition]);
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 // React
-import { useState, useEffect, useRef, Fragment } from "react";
+import { useEffect, useRef } from "react";
 
 // Next
 import Link from "next/link";
@@ -18,7 +18,7 @@ interface AboutBookProps {
   transition: boolean;
   pageCount: number;
   data: any;
-  next: number;
+  next: boolean;
   tag: string;
 }
 
@@ -37,7 +37,7 @@ const AboutBook: FC<AboutBookProps> = ({
         pageNum: pageCount * 2,
       });
     }
-  }, [pageCount]);
+  }, []);
 
   useEffect(() => {
     if (next) {
@@ -45,7 +45,7 @@ const AboutBook: FC<AboutBookProps> = ({
     } else {
       (aboutBook.current as any).pageFlip.flipPrev();
     }
-  }, [next]);
+  }, [next, pageCount]);
 
   useEffect(() => {
     if (transition) {
@@ -56,59 +56,56 @@ const AboutBook: FC<AboutBookProps> = ({
   }, [transition]);
 
   return (
-    <Fragment>
-      <div className={`aboutbookcontainer ${tag} absolute`}>
-        <HTMLFlipBook
-          ref={aboutBook}
-          className="aboutbook inset-0 h-full max-w-full"
-          useMouseEvents={false}
-          flippingTime={1500}
-          usePortrait={false}
-          maxShadowOpacity={1}
-          autoSize={false}
-          size={"stretch"}
-          width={400}
-          height={535}
-          minWidth={80}
-          minHeight={107}
-          maxWidth={1000}
-          maxHeight={1337}
-        >
-          {data.map(({ id, texta, textb, svg, link }: AboutBookDataProps) => {
-            return (
-              <div
-                key={id}
-                className={`aboutpage inset-0 h-full max-w-full text-center `}
-              >
-                <div className="flex justify-center items-center h-full flex-col">
-                  {texta && (
-                    <div className={`page${id}texta abouttext px-8 py-8`}>
-                      {texta}{" "}
-                      {link && (
-                        <Link href={`/baklavegan/${link}`}>
-                          <a className="aboutbooklink">
-                            <u>{link}</u>
-                          </a>
-                        </Link>
-                      )}{" "}
-                      {textb && textb}
-                    </div>
-                  )}
-                  {svg && (
-                    <img
-                      className={`svg${id} aboutsvg opacity-90`}
-                      src={`/3-svgs/about/${svg}.svg`}
-                      alt={svg}
-                    />
-                  )}
-                </div>
+    <div className={`aboutbookcontainer ${tag} absolute`}>
+      <HTMLFlipBook
+        ref={aboutBook}
+        className={`aboutbook${tag} inset-0 h-full max-w-full`}
+        useMouseEvents={false}
+        flippingTime={1500}
+        usePortrait={false}
+        maxShadowOpacity={1}
+        autoSize={false}
+        size={"stretch"}
+        width={400}
+        height={535}
+        minWidth={80}
+        minHeight={107}
+        maxWidth={1000}
+        maxHeight={1337}
+      >
+        {data.map(({ id, texta, textb, svg, link }: AboutBookDataProps) => {
+          return (
+            <div
+              key={id}
+              className={`aboutpage inset-0 h-full max-w-full text-center `}
+            >
+              <div className="flex justify-center items-center h-full flex-col">
+                {texta && (
+                  <div className={`page${id}texta abouttext px-8 py-8`}>
+                    {texta}{" "}
+                    {link && (
+                      <Link href={`/baklavegan/${link}`}>
+                        <a className="aboutbooklink">
+                          <u>{link}</u>
+                        </a>
+                      </Link>
+                    )}{" "}
+                    {textb && textb}
+                  </div>
+                )}
+                {svg && (
+                  <img
+                    className={`svg${id} aboutsvg opacity-90`}
+                    src={`/3-svgs/about/${svg}.svg`}
+                    alt={svg}
+                  />
+                )}
               </div>
-            );
-          })}
-        </HTMLFlipBook>
-      </div>
-    </Fragment>
+            </div>
+          );
+        })}
+      </HTMLFlipBook>
+    </div>
   );
 };
-
 export default AboutBook;
