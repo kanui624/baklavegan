@@ -2,7 +2,8 @@
 import { useState, useEffect, Fragment } from "react";
 
 // Components
-import AboutBook from "@/components/4-about/2-components/AboutBook";
+import AboutBookSP from "@/components/4-about/2-components/AboutBookSP";
+import AboutBookDP from "@/components/4-about/2-components/AboutBookDP";
 
 // Redux
 import { useDispatch, useSelector } from "react-redux";
@@ -11,10 +12,6 @@ import {
   prevPage,
   initializePage,
 } from "@/redux/slices/AboutPageCountSlice";
-
-// Data
-import { AboutBookSinglePageData } from "@/components/4-about/1-data/AboutBookSinglePage";
-import { AboutBookDoublePageData } from "@/components/4-about/1-data/AboutBookDoublePage";
 
 // GSAP Animations
 import {
@@ -98,20 +95,16 @@ const About: FC = () => {
   return (
     <Fragment>
       {(width >= 540 && height >= 720) || width > height ? (
-        <AboutBook
+        <AboutBookDP
           transition={transition}
           pageCount={pageCount}
-          data={AboutBookDoublePageData}
           next={next}
-          tag={"dp"}
         />
       ) : (
-        <AboutBook
+        <AboutBookSP
           transition={transition}
           pageCount={pageCount}
-          data={AboutBookSinglePageData}
           next={next}
-          tag={"sp"}
         />
       )}
       <button

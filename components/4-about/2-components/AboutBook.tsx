@@ -8,6 +8,10 @@ import Link from "next/link";
 // @ts-ignore
 import HTMLFlipBook from "react-pageflip";
 
+// Data
+import { AboutBookSinglePageData } from "@/components/4-about/1-data/AboutBookSinglePage";
+import { AboutBookDoublePageData } from "@/components/4-about/1-data/AboutBookDoublePage";
+
 // React Types
 import { FC } from "react";
 

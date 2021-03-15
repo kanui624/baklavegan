@@ -29,7 +29,7 @@
 }
 
 .dp {
-  display: none;
+  opacity: 0;
 }
 
 // IPHONE 4 - CHROME DEVTOOLS - PORTRAIT
@@ -103,10 +103,10 @@
 // IPHONE 4 - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 480px) and (min-height: 320px) and (orientation: landscape) {
   .sp {
-    display: none;
+    opacity: 0;
   }
   .dp {
-    display: flex;
+    opacity: 1;
     width: 400px;
     height: 535px;
     align-items: center;
