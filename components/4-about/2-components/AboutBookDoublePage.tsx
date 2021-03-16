@@ -1,11 +1,11 @@
 // React
-import { useState, useEffect, useRef, forwardRef, Fragment } from 'react';
+import { useState, useEffect, useRef, forwardRef, Fragment } from "react";
 
 // Next
-import Link from 'next/link';
+import Link from "next/link";
 
 // Redux
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 
 // GSAP Animations
 import {
@@ -14,23 +14,23 @@ import {
   addNav,
   removeNav,
   bounceNav,
-} from '@/animations/4-about/AboutAnimations';
+} from "@/animations/4-about/AboutAnimations";
 
 // Page Flip
 // @ts-ignore
-import HTMLFlipBook from 'react-pageflip';
+import HTMLFlipBook from "react-pageflip";
 
 // Data
-import { AboutBookDoublePageData } from '@/components/4-about/1-data/AboutBookDoublePage';
+import { AboutBookDoublePageData } from "@/components/4-about/1-data/AboutBookDoublePage";
 
 // React Types
-import { FC } from 'react';
+import { FC } from "react";
 
 // Redux Types
-import { AppState } from '@/redux/store';
+import { AppState } from "@/redux/store";
 
 // Component Level Types
-import { AboutBookDataProps } from '../0-types/AboutProps';
+import { AboutBookDataProps } from "../0-types/AboutProps";
 
 const AboutBookDoublePage: FC = () => {
   const {
@@ -42,10 +42,10 @@ const AboutBookDoublePage: FC = () => {
   const [disabled, setDisabled] = useState(false);
 
   const determineNavBounceDP = (targetNav: string) => {
-    if (targetNav === 'book-nav-forward-dp') {
-      bounceNav('.booknavforwarddp');
+    if (targetNav === "book-nav-forward-dp") {
+      bounceNav(".booknavforwarddp");
     } else {
-      bounceNav('.booknavbackwarddp');
+      bounceNav(".booknavbackwarddp");
     }
   };
 
@@ -64,28 +64,28 @@ const AboutBookDoublePage: FC = () => {
     }, 1500);
   };
 
-  // useEffect(() => {
-  //   if (transition) {
-  //     animateOut('.aboutbookcontainerdp', '.booknavsdp');
-  //     setTimeout(() => {
-  //       setPageCount(0);
-  //       (aboutBookDP.current as any).pageFlip.turnToPage(0);
-  //     }, 3000);
-  //   } else {
-  //     animateIn('.aboutbookcontainerdp', '.booknavsdp');
-  //   }
-  // }, [transition]);
+  useEffect(() => {
+    if (transition) {
+      animateOut(".aboutbookcontainerdp", ".booknavsdp");
+      setTimeout(() => {
+        setPageCount(0);
+        (aboutBookDP.current as any).pageFlip.turnToPage(0);
+      }, 3000);
+    } else {
+      animateIn(".aboutbookcontainerdp", ".booknavsdp");
+    }
+  }, [transition]);
 
   useEffect(() => {
     if (pageCount === 8) {
-      removeNav('.booknavforwarddp');
+      removeNav(".booknavforwarddp");
     } else {
-      addNav('.booknavforwarddp');
+      addNav(".booknavforwarddp");
     }
     if (pageCount === 0) {
-      removeNav('.booknavbackwarddp');
+      removeNav(".booknavbackwarddp");
     } else {
-      addNav('.booknavbackwarddp');
+      addNav(".booknavbackwarddp");
     }
   }, [pageCount]);
 
@@ -100,7 +100,7 @@ const AboutBookDoublePage: FC = () => {
           usePortrait={false}
           maxShadowOpacity={1}
           autoSize={false}
-          size={'stretch'}
+          size={"stretch"}
           width={400}
           height={535}
           minWidth={80}
@@ -118,14 +118,14 @@ const AboutBookDoublePage: FC = () => {
                   <div className="flex justify-center items-center h-full flex-col">
                     {texta && (
                       <div className={`page${id}texta abouttext px-8 py-8`}>
-                        {texta}{' '}
+                        {texta}{" "}
                         {link && (
                           <Link href={`/baklavegan/${link}`}>
                             <a className="aboutbooklink">
                               <u>{link}</u>
                             </a>
                           </Link>
-                        )}{' '}
+                        )}{" "}
                         {textb && textb}
                       </div>
                     )}

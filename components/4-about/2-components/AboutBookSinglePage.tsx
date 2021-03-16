@@ -1,91 +1,147 @@
 // React
-import { useState, useEffect, useRef, Fragment } from 'react';
+import { useState, useEffect, useRef, Fragment } from "react";
 
 // Next
-import Link from 'next/link';
+import Link from "next/link";
 
 // Redux
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from "react-redux";
+import {
+  nextPage,
+  prevPage,
+  initializePage,
+} from "@/redux/slices/AboutPageCountSlice";
 
 // GSAP Animations
 import {
-  animateIn,
+  animateInInitialLoad,
+  animateInIsLoaded,
   animateOut,
   addNav,
   removeNav,
   bounceNav,
-} from '@/animations/4-about/AboutAnimations';
+} from "@/animations/4-about/AboutAnimations";
 
 // Page Flip
 // @ts-ignore
-import HTMLFlipBook from 'react-pageflip';
+import HTMLFlipBook from "react-pageflip";
 
 // Data
-import { AboutBookSinglePageData } from '@/components/4-about/1-data/AboutBookSinglePage';
+import { AboutBookSinglePageData } from "@/components/4-about/1-data/AboutBookSinglePage";
 
 // React Types
-import { FC } from 'react';
+import { FC } from "react";
 
 // Redux Types
-import { AppState } from '@/redux/store';
+import { AppState } from "@/redux/store";
 
 // Component Level Types
-import { AboutBookDataProps } from '../0-types/AboutProps';
+import { AboutBookDataProps } from "../0-types/AboutProps";
 
-const AboutBookSinglePage: FC = () => {
+interface AboutBookSPProps {
+  isLoaded: boolean;
+  setIsLoaded: (isLoaded: boolean) => void;
+}
+
+const AboutBookSinglePage: FC<AboutBookSPProps> = ({
+  isLoaded,
+  setIsLoaded,
+}) => {
+  const dispatch = useDispatch();
   const {
+    AboutPageCount: { pageCount },
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
 
   const aboutBookSP = useRef();
-  const [pageCount, setPageCount] = useState(0);
+
   const [disabled, setDisabled] = useState(false);
 
-  const determineNavBounceSP = (targetNav: string) => {
-    if (targetNav === 'book-nav-forward-sp') {
-      bounceNav('.booknavforwardsp');
+  const handleDispatchPageCount = (dispatchCount: boolean) => {
+    if (dispatchCount) {
+      dispatch(nextPage({ pageCount: pageCount + 1 }));
     } else {
-      bounceNav('.booknavbackwardsp');
+      dispatch(prevPage({ pageCount: pageCount - 1 }));
     }
   };
 
-  const handleNavSP = (e: any, next: boolean) => {
-    if (next) {
+  const handlePageFlip = (pageFlip: boolean) => {
+    if (pageFlip) {
       (aboutBookSP.current as any).pageFlip.flipNext();
-      setPageCount(pageCount + 1);
     } else {
       (aboutBookSP.current as any).pageFlip.flipPrev();
-      setPageCount(pageCount - 1);
     }
-    determineNavBounceSP(e.target.alt);
+  };
+
+  const handleNavBounceSP = (targetNav: string) => {
+    if (targetNav === "book-nav-forward-sp") {
+      bounceNav(".booknavforwardsp");
+    } else {
+      bounceNav(".booknavbackwardsp");
+    }
+  };
+
+  const handleDisable = () => {
     setDisabled(true);
     setTimeout(() => {
       setDisabled(false);
     }, 1500);
   };
 
-  // useEffect(() => {
-  //   if (transition) {
-  //     animateOut('.aboutbookcontainersp', '.booknavssp');
-  //     setTimeout(() => {
-  //       setPageCount(0);
-  //       (aboutBookSP.current as any).pageFlip.turnToPage(0);
-  //     }, 3000);
-  //   } else {
-  //     animateIn('.aboutbookcontainersp', '.booknavssp');
-  //   }
-  // }, [transition]);
+  const handleNavSP = (e: any, next: boolean) => {
+    handleDispatchPageCount(next);
+    handlePageFlip(next);
+    handleNavBounceSP(e.target.alt);
+    handleDisable();
+  };
+
+  const handleInitializePageCount = () => {
+    setIsLoaded(false);
+    setTimeout(() => {
+      dispatch(initializePage({ pageCount: 0 }));
+      (aboutBookSP.current as any).pageFlip.turnToPage(0);
+    }, 3000);
+  };
+
+  const handleInitialLoad = async () => {
+    await animateInInitialLoad(".aboutbookcontainersp", ".booknavssp");
+    setIsLoaded(true);
+  };
+
+  useEffect(() => {
+    if (pageCount !== 0) {
+      (aboutBookSP.current as any).pageFlip.turnToPage(pageCount * 2);
+    }
+  }, []);
+
+  useEffect(() => {
+    let mounted = true;
+    if (transition && mounted) {
+      animateOut(".aboutbookcontainersp", ".booknavssp");
+      handleInitializePageCount();
+    }
+
+    if (!transition && !isLoaded) {
+      handleInitialLoad();
+    } else {
+      animateInIsLoaded(".aboutbookcontainersp", ".booknavssp");
+    }
+
+    return () => {
+      mounted = false;
+    };
+  }, [transition]);
 
   useEffect(() => {
     if (pageCount === 8) {
-      removeNav('.booknavforwardsp');
+      removeNav(".booknavforwardsp");
     } else {
-      addNav('.booknavforwardsp');
+      addNav(".booknavforwardsp");
     }
     if (pageCount === 0) {
-      removeNav('.booknavbackwardsp');
+      removeNav(".booknavbackwardsp");
     } else {
-      addNav('.booknavbackwardsp');
+      addNav(".booknavbackwardsp");
     }
   }, [pageCount]);
 
@@ -100,7 +156,7 @@ const AboutBookSinglePage: FC = () => {
           usePortrait={false}
           maxShadowOpacity={1}
           autoSize={false}
-          size={'stretch'}
+          size={"stretch"}
           width={400}
           height={535}
           minWidth={80}
@@ -118,14 +174,14 @@ const AboutBookSinglePage: FC = () => {
                   <div className="flex justify-center items-center h-full flex-col">
                     {texta && (
                       <div className={`page${id}texta abouttext px-8 py-8`}>
-                        {texta}{' '}
+                        {texta}{" "}
                         {link && (
                           <Link href={`/baklavegan/${link}`}>
                             <a className="aboutbooklink">
                               <u>{link}</u>
                             </a>
                           </Link>
-                        )}{' '}
+                        )}{" "}
                         {textb && textb}
                       </div>
                     )}
