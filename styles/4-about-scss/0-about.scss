@@ -39,13 +39,15 @@
     height: 856px;
     left: 50%;
     transform: translate(-75%, 0%);
-    bottom: -73rem;
+    // bottom: -73rem;
+    top: -13rem;
   }
 
   .booknavs {
     width: 80px;
     height: 27px;
     bottom: -62rem;
+    top: 1rem;
   }
 
   .booknavforward {
@@ -110,13 +112,15 @@
     width: 400px;
     height: 535px;
     align-items: center;
-    bottom: -69rem;
+    // bottom: -68rem;
+    top: -8rem;
   }
 
   .booknavsdp {
     width: 80px;
     height: 27px;
-    bottom: 1rem;
+    // bottom: 1rem;
+    top: -8rem;
   }
 
   .booknavforwarddp {

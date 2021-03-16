@@ -1,9 +1,9 @@
 // React
-import { useState, useEffect, Fragment } from "react";
+import { useState, useEffect, useRef, Fragment } from "react";
 
 // Components
-import AboutBookSP from "@/components/4-about/2-components/AboutBookSP";
-import AboutBookDP from "@/components/4-about/2-components/AboutBookDP";
+import AboutBookSP from "@/components/4-about/2-components/AboutBookSP-og";
+import AboutBookDP from "@/components/4-about/2-components/AboutBookDP-og";
 
 // Redux
 import { useDispatch, useSelector } from "react-redux";
@@ -15,7 +15,7 @@ import {
 
 // GSAP Animations
 import {
-  animateIn,
+  animateInInitialLoad,
   animateOut,
   addNav,
   removeNav,
@@ -32,15 +32,17 @@ import { FC } from "react";
 import { AppState } from "@/redux/store";
 
 const About: FC = () => {
-  const dispatch = useDispatch();
-  const {
-    AboutPageCount: { pageCount },
-    MenuTransition: { transition },
-  } = useSelector<AppState, AppState>((state) => state);
+  // const dispatch = useDispatch();
+  // const {
+  //   AboutPageCount: { pageCount },
+  //   MenuTransition: { transition },
+  // } = useSelector<AppState, AppState>((state) => state);
 
   const [width, height] = useWindowResize();
+
+  // const [isLoaded, setIsLoaded] = useState(false);
+  const aboutBookSP = useRef();
   const [next, setNext] = useState(false);
-  const [disabled, setDisabled] = useState(false);
 
   const dispatchPageCount = (flipPage: boolean) => {
     if (flipPage) {
@@ -50,23 +52,29 @@ const About: FC = () => {
     }
   };
 
-  const determineNavBounce = (targetNav: string) => {
-    if (targetNav === "book-nav-forward") {
-      bounceNav(".booknavforward");
-    } else {
-      bounceNav(".booknavbackward");
-    }
-  };
+  // const determineNavBounce = (targetNav: string) => {
+  //   if (targetNav === "book-nav-forward") {
+  //     bounceNav(".booknavforward");
+  //   } else {
+  //     bounceNav(".booknavbackward");
+  //   }
+  // };
 
-  const handleNav = (e: any, flip: boolean) => {
-    dispatchPageCount(flip);
-    setNext(flip);
-    determineNavBounce(e.target.alt);
-    setDisabled(true);
-    setTimeout(() => {
-      setDisabled(false);
-    }, 1500);
-  };
+  // const handleNav = (e: any, flip: boolean) => {
+  //   dispatchPageCount(flip);
+  //   setNext(flip);
+  //   determineNavBounce(e.target.alt);
+  //   setDisabled(true);
+  //   setTimeout(() => {
+  //     setDisabled(false);
+  //   }, 1500);
+  // };
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsLoaded(true);
+  //   }, 3000);
+  // }, []);
 
   useEffect(() => {
     if (transition) {
@@ -74,9 +82,11 @@ const About: FC = () => {
       setTimeout(() => {
         dispatch(initializePage({ pageCount: 0 }));
       }, 3000);
-    } else {
-      animateIn(".aboutbookcontainer", ".booknavs");
     }
+
+    // else {
+    //   animateInInitialLoad(".aboutbookcontainer", ".booknavs");
+    // }
   }, [transition]);
 
   useEffect(() => {
@@ -99,28 +109,18 @@ const About: FC = () => {
           transition={transition}
           pageCount={pageCount}
           next={next}
+          // isLoaded={isLoaded}
         />
       ) : (
         <AboutBookSP
           transition={transition}
           pageCount={pageCount}
           next={next}
+          ref={aboutBookSP}
+          // isLoaded={isLoaded}
         />
       )}
-      <button
-        disabled={disabled}
-        className="booknavs booknavforward fixed opacity-0"
-        onClick={(e) => handleNav(e, true)}
-      >
-        <img src="/3-svgs/about/book-nav.svg" alt="book-nav-forward" />
-      </button>
-      <button
-        disabled={disabled}
-        className="booknavs booknavbackward fixed opacity-0"
-        onClick={(e) => handleNav(e, false)}
-      >
-        <img src="/3-svgs/about/book-nav.svg" alt="book-nav-backward" />
-      </button>
+
       {/* <span className="fixed text-4xl text-red-900 bottom-20">
         Window size: {width} x {height}
       </span> */}

@@ -9,8 +9,8 @@ import Link from "next/link";
 import HTMLFlipBook from "react-pageflip";
 
 // Data
-import { AboutBookSinglePageData } from "@/components/4-about/1-data/AboutBookSinglePage";
-import { AboutBookDoublePageData } from "@/components/4-about/1-data/AboutBookDoublePage";
+import { AboutBookSinglePageData } from "@/components/4-about/1-data/AboutBookSinglePageData";
+import { AboutBookDoublePageData } from "@/components/4-about/1-data/AboutBookDoublePageData";
 
 // React Types
 import { FC } from "react";

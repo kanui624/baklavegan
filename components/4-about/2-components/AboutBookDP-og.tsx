@@ -8,8 +8,11 @@ import Link from "next/link";
 // @ts-ignore
 import HTMLFlipBook from "react-pageflip";
 
+// GSAP Animations
+import { animateInIsLoaded } from "@/animations/4-about/AboutAnimations";
+
 // Data
-import { AboutBookDoublePageData } from "@/components/4-about/1-data/AboutBookDoublePage";
+import { AboutBookDoublePageData } from "@/components/4-about/1-data/AboutBookDoublePageData";
 
 // React Types
 import { FC } from "react";
@@ -21,26 +24,32 @@ interface AboutBookDPProps {
   transition: boolean;
   pageCount: number;
   next: boolean;
+  // isLoaded: boolean;
 }
 
-const AboutBookDP: FC<AboutBookDPProps> = ({ transition, pageCount, next }) => {
+const AboutBookDP: FC<AboutBookDPProps> = ({
+  transition,
+  pageCount,
+  next,
+  // isLoaded,
+}) => {
   const aboutBookDP = useRef();
 
-  useEffect(() => {
-    if (pageCount !== 0) {
-      (aboutBookDP.current as any).pageFlip.turnToPage({
-        pageNum: pageCount * 2,
-      });
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (pageCount !== 0) {
+  //     (aboutBookDP.current as any).pageFlip.turnToPage({
+  //       pageNum: pageCount * 2,
+  //     });
+  //   }
+  // }, []);
 
-  useEffect(() => {
-    if (next) {
-      (aboutBookDP.current as any).pageFlip.flipNext();
-    } else {
-      (aboutBookDP.current as any).pageFlip.flipPrev();
-    }
-  }, [next, pageCount]);
+  // useEffect(() => {
+  //   if (next) {
+  //     (aboutBookDP.current as any).pageFlip.flipNext();
+  //   } else {
+  //     (aboutBookDP.current as any).pageFlip.flipPrev();
+  //   }
+  // }, [next, pageCount]);
 
   useEffect(() => {
     if (transition) {
@@ -67,6 +76,7 @@ const AboutBookDP: FC<AboutBookDPProps> = ({ transition, pageCount, next }) => {
         minHeight={107}
         maxWidth={1000}
         maxHeight={1337}
+        startZIndex={pageCount * 2}
       >
         {AboutBookDoublePageData.map(
           ({ id, texta, textb, svg, link }: AboutBookDataProps) => {

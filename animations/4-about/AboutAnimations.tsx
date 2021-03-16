@@ -1,31 +1,44 @@
-import gsap from 'gsap';
+import gsap from "gsap";
 
-export const animateIn = (inClassOne: string, inClassTwo: string) => {
+export const animateInInitialLoad = (
+  inInitClassOne: string,
+  inInitClassTwo: string
+) => {
   gsap.fromTo(
-    [inClassOne, inClassTwo],
+    [inInitClassOne, inInitClassTwo],
     { y: 0 },
     {
       y: -1000,
       delay: 1,
       duration: 2.3,
-      ease: 'back.out(1.07)',
+      ease: "back.out(1.07)",
       stagger: 0.15,
     }
   );
+};
+
+export const animateInIsLoaded = (inLoadedClass: string) => {
+  const isLoadedTL = gsap.timeline();
+  isLoadedTL.fromTo(
+    inLoadedClass,
+    { y: 0, opacity: 0 },
+    { y: -1000, duration: 0 }
+  );
+  isLoadedTL.to(inLoadedClass, { opacity: 1 });
 };
 
 export const animateOut = (outClassOne: string, outClassTwo: string) => {
   gsap.to([outClassOne, outClassTwo], {
     y: 100,
     duration: 2,
-    ease: 'back.in(1.1)',
+    ease: "back.in(1.1)",
     stagger: 0.15,
   });
 };
 
 export const addNav = (addNavClass: string) => {
   gsap.to(addNavClass, {
-    display: 'block',
+    display: "block",
   });
   gsap.to(addNavClass, {
     opacity: 1,
@@ -41,7 +54,7 @@ export const removeNav = (removeNavClass: string) => {
     delay: 1,
   });
   gsap.to(removeNavClass, {
-    display: 'none',
+    display: "none",
     delay: 1,
   });
 };
@@ -52,11 +65,11 @@ export const bounceNav = (bounceClass: string) => {
     scale: 0.8,
     duration: 0.1,
     delay: 0.1,
-    ease: 'elastic.out(1, 0.1)',
+    ease: "elastic.out(1, 0.1)",
   });
   bounceTl.to(bounceClass, {
     scale: 1,
     duration: 1.5,
-    ease: 'elastic.out(1, 0.1)',
+    ease: "elastic.out(1, 0.1)",
   });
 };
