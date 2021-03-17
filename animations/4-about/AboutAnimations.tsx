@@ -1,5 +1,9 @@
 import gsap from "gsap";
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 export const animateInInitialLoad = (
   inInitClassOne: string,
   inInitClassTwo: string

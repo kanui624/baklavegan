@@ -6,6 +6,7 @@ import Link from "next/link";
 
 // Redux
 import { useDispatch, useSelector } from "react-redux";
+import { loadPage, unloadPage } from "@/redux/slices/AboutPageLoadedSlice";
 import {
   nextPage,
   prevPage,
@@ -27,7 +28,7 @@ import {
 import HTMLFlipBook from "react-pageflip";
 
 // Data
-import { AboutBookSinglePageData } from "@/components/4-about/1-data/AboutBookSinglePage";
+import { AboutBookSPData } from "@/components/4-about/1-data/AboutBookSPData";
 
 // React Types
 import { FC } from "react";
@@ -38,17 +39,10 @@ import { AppState } from "@/redux/store";
 // Component Level Types
 import { AboutBookDataProps } from "../0-types/AboutProps";
 
-interface AboutBookSPProps {
-  isLoaded: boolean;
-  setIsLoaded: (isLoaded: boolean) => void;
-}
-
-const AboutBookSinglePage: FC<AboutBookSPProps> = ({
-  isLoaded,
-  setIsLoaded,
-}) => {
+const AboutBookSP: FC = () => {
   const dispatch = useDispatch();
   const {
+    AboutPageLoaded: { pageLoaded },
     AboutPageCount: { pageCount },
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
@@ -95,33 +89,39 @@ const AboutBookSinglePage: FC<AboutBookSPProps> = ({
     handleDisable();
   };
 
-  const handleInitializePageCount = () => {
-    setIsLoaded(false);
+  const handleInitializeBook = () => {
+    animateOut(".aboutbookcontainersp", ".booknavssp");
     setTimeout(() => {
+      dispatch(unloadPage({ pageLoaded: false }));
       dispatch(initializePage({ pageCount: 0 }));
       (aboutBookSP.current as any).pageFlip.turnToPage(0);
     }, 3000);
   };
 
-  const handleInitialLoad = async () => {
-    await animateInInitialLoad(".aboutbookcontainersp", ".booknavssp");
-    setIsLoaded(true);
+  const handleInitialLoad = () => {
+    animateInInitialLoad(".aboutbookcontainersp", ".booknavssp");
+    setTimeout(() => {
+      dispatch(loadPage({ pageLoaded: true }));
+    }, 2000);
   };
 
   useEffect(() => {
-    if (pageCount !== 0) {
+    let mounted = true;
+    if (pageCount !== 0 && mounted) {
       (aboutBookSP.current as any).pageFlip.turnToPage(pageCount * 2);
     }
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   useEffect(() => {
     let mounted = true;
     if (transition && mounted) {
-      animateOut(".aboutbookcontainersp", ".booknavssp");
-      handleInitializePageCount();
+      handleInitializeBook();
     }
 
-    if (!transition && !isLoaded) {
+    if (!transition && !pageLoaded && mounted) {
       handleInitialLoad();
     } else {
       animateInIsLoaded(".aboutbookcontainersp", ".booknavssp");
@@ -133,16 +133,22 @@ const AboutBookSinglePage: FC<AboutBookSPProps> = ({
   }, [transition]);
 
   useEffect(() => {
-    if (pageCount === 8) {
+    let mounted = true;
+    if (pageCount === 8 && mounted) {
       removeNav(".booknavforwardsp");
     } else {
       addNav(".booknavforwardsp");
     }
-    if (pageCount === 0) {
+    if (pageCount === 0 && mounted) {
       removeNav(".booknavbackwardsp");
     } else {
       addNav(".booknavbackwardsp");
     }
+
+    return () => {
+      mounted = false;
+      setDisabled(false);
+    };
   }, [pageCount]);
 
   return (
@@ -164,7 +170,7 @@ const AboutBookSinglePage: FC<AboutBookSPProps> = ({
           maxWidth={1000}
           maxHeight={1337}
         >
-          {AboutBookSinglePageData.map(
+          {AboutBookSPData.map(
             ({ id, texta, textb, svg, link }: AboutBookDataProps) => {
               return (
                 <div
@@ -217,4 +223,4 @@ const AboutBookSinglePage: FC<AboutBookSPProps> = ({
   );
 };
 
-export default AboutBookSinglePage;
+export default AboutBookSP;

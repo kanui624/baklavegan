@@ -1,15 +1,22 @@
 // React
-import { useState, useEffect, useRef, forwardRef, Fragment } from "react";
+import { useState, useEffect, useRef, Fragment } from "react";
 
 // Next
 import Link from "next/link";
 
 // Redux
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { loadPage, unloadPage } from "@/redux/slices/AboutPageLoadedSlice";
+import {
+  nextPage,
+  prevPage,
+  initializePage,
+} from "@/redux/slices/AboutPageCountSlice";
 
 // GSAP Animations
 import {
-  animateIn,
+  animateInInitialLoad,
+  animateInIsLoaded,
   animateOut,
   addNav,
   removeNav,
@@ -21,7 +28,7 @@ import {
 import HTMLFlipBook from "react-pageflip";
 
 // Data
-import { AboutBookDoublePageData } from "@/components/4-about/1-data/AboutBookDoublePage";
+import { AboutBookDPData } from "@/components/4-about/1-data/AboutBookDPData";
 
 // React Types
 import { FC } from "react";
@@ -32,16 +39,35 @@ import { AppState } from "@/redux/store";
 // Component Level Types
 import { AboutBookDataProps } from "../0-types/AboutProps";
 
-const AboutBookDoublePage: FC = () => {
+const AboutBookDP: FC = () => {
+  const dispatch = useDispatch();
   const {
+    AboutPageLoaded: { pageLoaded },
+    AboutPageCount: { pageCount },
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
 
   const aboutBookDP = useRef();
-  const [pageCount, setPageCount] = useState(0);
+
   const [disabled, setDisabled] = useState(false);
 
-  const determineNavBounceDP = (targetNav: string) => {
+  const handleDispatchPageCount = (dispatchCount: boolean) => {
+    if (dispatchCount) {
+      dispatch(nextPage({ pageCount: pageCount + 1 }));
+    } else {
+      dispatch(prevPage({ pageCount: pageCount - 1 }));
+    }
+  };
+
+  const handlePageFlip = (pageFlip: boolean) => {
+    if (pageFlip) {
+      (aboutBookDP.current as any).pageFlip.flipNext();
+    } else {
+      (aboutBookDP.current as any).pageFlip.flipPrev();
+    }
+  };
+
+  const handleNavBounceDP = (targetNav: string) => {
     if (targetNav === "book-nav-forward-dp") {
       bounceNav(".booknavforwarddp");
     } else {
@@ -49,44 +75,70 @@ const AboutBookDoublePage: FC = () => {
     }
   };
 
-  const handleNavDP = (e: any, next: boolean) => {
-    if (next) {
-      (aboutBookDP.current as any).pageFlip.flipNext();
-      setPageCount(pageCount + 1);
-    } else {
-      (aboutBookDP.current as any).pageFlip.flipPrev();
-      setPageCount(pageCount - 1);
-    }
-    determineNavBounceDP(e.target.alt);
+  const handleDisable = () => {
     setDisabled(true);
     setTimeout(() => {
       setDisabled(false);
     }, 1500);
   };
 
+  const handleNavDP = (e: any, next: boolean) => {
+    handleDispatchPageCount(next);
+    handlePageFlip(next);
+    handleNavBounceDP(e.target.alt);
+    handleDisable();
+  };
+
+  const handleInitializeBook = async () => {
+    await animateOut(".aboutbookcontainerdp", ".booknavsdp");
+    dispatch(unloadPage({ pageLoaded: false }));
+    dispatch(initializePage({ pageCount: 0 }));
+    (aboutBookDP.current as any).pageFlip.turnToPage(0);
+  };
+
+  const handleInitialLoad = async () => {
+    await animateInInitialLoad(".aboutbookcontainerdp", ".booknavsdp");
+    dispatch(loadPage({ pageLoaded: true }));
+  };
+
   useEffect(() => {
-    if (transition) {
-      animateOut(".aboutbookcontainerdp", ".booknavsdp");
-      setTimeout(() => {
-        setPageCount(0);
-        (aboutBookDP.current as any).pageFlip.turnToPage(0);
-      }, 3000);
-    } else {
-      animateIn(".aboutbookcontainerdp", ".booknavsdp");
+    if (pageCount !== 0) {
+      (aboutBookDP.current as any).pageFlip.turnToPage(pageCount * 2);
     }
+  }, []);
+
+  useEffect(() => {
+    let mounted = true;
+    if (transition && mounted) {
+      handleInitializeBook();
+    }
+
+    if (!transition && !pageLoaded && mounted) {
+      handleInitialLoad();
+    } else {
+      animateInIsLoaded(".aboutbookcontainerdp", ".booknavsdp");
+    }
+
+    return () => {
+      mounted = false;
+      setDisabled(false);
+    };
   }, [transition]);
 
   useEffect(() => {
     if (pageCount === 8) {
       removeNav(".booknavforwarddp");
     } else {
-      addNav(".booknavforwarddp");
+      addNav(".booknavforwardsp");
     }
     if (pageCount === 0) {
       removeNav(".booknavbackwarddp");
     } else {
       addNav(".booknavbackwarddp");
     }
+    return () => {
+      setDisabled(false);
+    };
   }, [pageCount]);
 
   return (
@@ -108,7 +160,7 @@ const AboutBookDoublePage: FC = () => {
           maxWidth={1000}
           maxHeight={1337}
         >
-          {AboutBookDoublePageData.map(
+          {AboutBookDPData.map(
             ({ id, texta, textb, svg, link }: AboutBookDataProps) => {
               return (
                 <div
@@ -161,4 +213,4 @@ const AboutBookDoublePage: FC = () => {
   );
 };
 
-export default AboutBookDoublePage;
+export default AboutBookDP;
