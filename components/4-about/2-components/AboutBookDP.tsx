@@ -126,6 +126,8 @@ const AboutBookDP: FC = () => {
   }, [transition]);
 
   useEffect(() => {
+    setDisabled(true);
+    setDisabled(false);
     if (pageCount === 8) {
       removeNav(".booknavforwarddp");
     } else {
