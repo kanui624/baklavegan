@@ -128,25 +128,6 @@ const AboutBookSP: FC = () => {
     };
   }, [transition]);
 
-  // useEffect(() => {
-  //   setDisabled(true);
-  //   setDisabled(false);
-  //   let mounted = true;
-  //   if (pageCount === 8) {
-  //     removeNav(".booknavforwardsp");
-  //   } else {
-  //     addNav(".booknavforwardsp");
-  //   }
-  //   if (pageCount === 0) {
-  //     removeNav(".booknavbackwardsp");
-  //   } else {
-  //     addNav(".booknavbackwardsp");
-  //   }
-
-  //   return () => {
-  //     setDisabled(false);
-  //   };
-  // }, [pageCount]);
   useEffect(() => {
     setDisabled(true);
     setDisabled(false);

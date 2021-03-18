@@ -1,5 +1,5 @@
 // React
-import { useState, Fragment, useEffect, useRef } from "react";
+import { Fragment } from "react";
 
 // Components
 import AboutBookSP from "@/components/4-about/2-components/AboutBookSP";
@@ -12,7 +12,6 @@ import { FC } from "react";
 
 const About: FC = () => {
   const [width, height] = useWindowResize();
-  // const [isLoaded, setIsLoaded] = useState(false);
 
   return (
     <Fragment>
