@@ -24,7 +24,14 @@
   height: 100px;
 }
 
-.booknavbackwardsp {
+.booknavssp,
+.booknavsdp {
+  opacity: 0;
+  display: none;
+}
+
+.booknavbackwardsp,
+.booknavbackwarddp {
   transform: rotateY(180deg);
 }
 

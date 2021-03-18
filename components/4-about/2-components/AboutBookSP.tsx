@@ -128,23 +128,42 @@ const AboutBookSP: FC = () => {
     };
   }, [transition]);
 
+  // useEffect(() => {
+  //   setDisabled(true);
+  //   setDisabled(false);
+  //   let mounted = true;
+  //   if (pageCount === 8) {
+  //     removeNav(".booknavforwardsp");
+  //   } else {
+  //     addNav(".booknavforwardsp");
+  //   }
+  //   if (pageCount === 0) {
+  //     removeNav(".booknavbackwardsp");
+  //   } else {
+  //     addNav(".booknavbackwardsp");
+  //   }
+
+  //   return () => {
+  //     setDisabled(false);
+  //   };
+  // }, [pageCount]);
   useEffect(() => {
     setDisabled(true);
     setDisabled(false);
     let mounted = true;
-    if (pageCount === 8) {
+    if (mounted && pageCount === 8) {
       removeNav(".booknavforwardsp");
     } else {
       addNav(".booknavforwardsp");
     }
-    if (pageCount === 0) {
+    if (mounted && pageCount === 0) {
       removeNav(".booknavbackwardsp");
     } else {
       addNav(".booknavbackwardsp");
     }
-
     return () => {
       setDisabled(false);
+      mounted = false;
     };
   }, [pageCount]);
 
@@ -204,14 +223,14 @@ const AboutBookSP: FC = () => {
       </div>
       <button
         disabled={disabled}
-        className="booknavssp booknavforwardsp fixed opacity-0"
+        className="booknavssp booknavforwardsp fixed"
         onClick={(e) => handleNavSP(e, true)}
       >
         <img src="/3-svgs/about/book-nav.svg" alt="book-nav-forward-sp" />
       </button>
       <button
         disabled={disabled}
-        className="booknavssp booknavbackwardsp fixed opacity-0"
+        className="booknavssp booknavbackwardsp fixed"
         onClick={(e) => handleNavSP(e, false)}
       >
         <img src="/3-svgs/about/book-nav.svg" alt="book-nav-backward-sp" />

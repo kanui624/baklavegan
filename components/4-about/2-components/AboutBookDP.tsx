@@ -89,15 +89,15 @@ const AboutBookDP: FC = () => {
     handleDisable();
   };
 
-  const handleInitializeBook = async () => {
-    await animateOut(".aboutbookcontainerdp", ".booknavsdp");
+  const handleInitializeBook = () => {
+    animateOut(".aboutbookcontainerdp", ".booknavsdp");
     dispatch(unloadPage({ pageLoaded: false }));
     dispatch(initializePage({ pageCount: 0 }));
     (aboutBookDP.current as any).pageFlip.turnToPage(0);
   };
 
-  const handleInitialLoad = async () => {
-    await animateInInitialLoad(".aboutbookcontainerdp", ".booknavsdp");
+  const handleInitialLoad = () => {
+    animateInInitialLoad(".aboutbookcontainerdp", ".booknavsdp");
     dispatch(loadPage({ pageLoaded: true }));
   };
 
@@ -128,18 +128,20 @@ const AboutBookDP: FC = () => {
   useEffect(() => {
     setDisabled(true);
     setDisabled(false);
-    if (pageCount === 8) {
+    let mounted = true;
+    if (mounted && pageCount === 8) {
       removeNav(".booknavforwarddp");
     } else {
-      addNav(".booknavforwardsp");
+      addNav(".booknavforwarddp");
     }
-    if (pageCount === 0) {
+    if (mounted && pageCount === 0) {
       removeNav(".booknavbackwarddp");
     } else {
       addNav(".booknavbackwarddp");
     }
     return () => {
       setDisabled(false);
+      mounted = false;
     };
   }, [pageCount]);
 
@@ -199,14 +201,14 @@ const AboutBookDP: FC = () => {
       </div>
       <button
         disabled={disabled}
-        className="booknavsdp booknavforwarddp fixed opacity-0"
+        className="booknavsdp booknavforwarddp fixed"
         onClick={(e) => handleNavDP(e, true)}
       >
         <img src="/3-svgs/about/book-nav.svg" alt="book-nav-forward-dp" />
       </button>
       <button
         disabled={disabled}
-        className="booknavsdp booknavbackwarddp fixed opacity-0"
+        className="booknavsdp booknavbackwarddp fixed"
         onClick={(e) => handleNavDP(e, false)}
       >
         <img src="/3-svgs/about/book-nav.svg" alt="book-nav-backward-dp" />
