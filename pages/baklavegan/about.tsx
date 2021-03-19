@@ -2,8 +2,8 @@
 import { Fragment } from "react";
 
 // Components
-import AboutBookSP from "@/components/4-about/2-components/AboutBookSP";
-import AboutBookDP from "@/components/4-about/2-components/AboutBookDP";
+import AboutBookSP from "@/components/4-about/3-components/AboutBookSP";
+import AboutBookDP from "@/components/4-about/3-components/AboutBookDP";
 
 // Custom Hooks
 import { useWindowResize } from "../../customhooks/useWindowResize";

@@ -1,4 +1,4 @@
-export interface AboutBookDataProps {
+export interface AboutPageDataProps {
   id: number;
   texta: string;
   textb?: string;

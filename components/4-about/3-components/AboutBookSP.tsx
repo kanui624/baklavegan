@@ -1,9 +1,6 @@
 // React
 import { useState, useEffect, useRef, Fragment } from "react";
 
-// Next
-import Link from "next/link";
-
 // Redux
 import { useDispatch, useSelector } from "react-redux";
 import { loadPage, unloadPage } from "@/redux/slices/AboutPageLoadedSlice";
@@ -13,6 +10,12 @@ import {
   initializePage,
 } from "@/redux/slices/AboutPageCountSlice";
 
+// Components
+import AboutPage from "./AboutPage";
+
+// Helpers
+import { handleNavBounce } from "../2-helpers/AboutBookHelpers";
+
 // GSAP Animations
 import {
   animateInInitialLoad,
@@ -20,7 +23,6 @@ import {
   animateOut,
   addNav,
   removeNav,
-  bounceNav,
 } from "@/animations/4-about/AboutAnimations";
 
 // Page Flip
@@ -37,7 +39,7 @@ import { FC } from "react";
 import { AppState } from "@/redux/store";
 
 // Component Level Types
-import { AboutBookDataProps } from "../0-types/AboutProps";
+import { AboutPageDataProps } from "../0-types/AboutPageDataProps";
 
 const AboutBookSP: FC = () => {
   const dispatch = useDispatch();
@@ -67,14 +69,6 @@ const AboutBookSP: FC = () => {
     }
   };
 
-  const handleNavBounceSP = (targetNav: string) => {
-    if (targetNav === "book-nav-forward-sp") {
-      bounceNav(".booknavforwardsp");
-    } else {
-      bounceNav(".booknavbackwardsp");
-    }
-  };
-
   const handleDisable = () => {
     setDisabled(true);
     setTimeout(() => {
@@ -85,7 +79,7 @@ const AboutBookSP: FC = () => {
   const handleNavSP = (e: any, next: boolean) => {
     handleDispatchPageCount(next);
     handlePageFlip(next);
-    handleNavBounceSP(e.target.alt);
+    handleNavBounce(e.target.alt, "sp");
     handleDisable();
   };
 
@@ -157,7 +151,7 @@ const AboutBookSP: FC = () => {
           useMouseEvents={false}
           flippingTime={1500}
           usePortrait={false}
-          maxShadowOpacity={1}
+          maxShadowOpacity={0}
           autoSize={false}
           size={"stretch"}
           width={400}
@@ -168,35 +162,16 @@ const AboutBookSP: FC = () => {
           maxHeight={1337}
         >
           {AboutBookSPData.map(
-            ({ id, texta, textb, svg, link }: AboutBookDataProps) => {
+            ({ id, texta, textb, svg, link }: AboutPageDataProps) => {
               return (
-                <div
+                <AboutPage
                   key={id}
-                  className={`aboutpage inset-0 h-full max-w-full text-center `}
-                >
-                  <div className="flex justify-center items-center h-full flex-col">
-                    {texta && (
-                      <div className={`page${id}texta abouttext px-8 py-8`}>
-                        {texta}{" "}
-                        {link && (
-                          <Link href={`/baklavegan/${link}`}>
-                            <a className="aboutbooklink">
-                              <u>{link}</u>
-                            </a>
-                          </Link>
-                        )}{" "}
-                        {textb && textb}
-                      </div>
-                    )}
-                    {svg && (
-                      <img
-                        className={`svg${id} aboutsvg opacity-90`}
-                        src={`/3-svgs/about/${svg}.svg`}
-                        alt={svg}
-                      />
-                    )}
-                  </div>
-                </div>
+                  id={id}
+                  texta={texta}
+                  textb={textb}
+                  svg={svg}
+                  link={link}
+                />
               );
             }
           )}

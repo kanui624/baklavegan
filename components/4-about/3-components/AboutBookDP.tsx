@@ -13,6 +13,12 @@ import {
   initializePage,
 } from "@/redux/slices/AboutPageCountSlice";
 
+// Components
+import AboutPage from "./AboutPage";
+
+// Helpers
+import { handleNavBounce } from "../2-helpers/AboutBookHelpers";
+
 // GSAP Animations
 import {
   animateInInitialLoad,
@@ -20,7 +26,6 @@ import {
   animateOut,
   addNav,
   removeNav,
-  bounceNav,
 } from "@/animations/4-about/AboutAnimations";
 
 // Page Flip
@@ -37,7 +42,7 @@ import { FC } from "react";
 import { AppState } from "@/redux/store";
 
 // Component Level Types
-import { AboutBookDataProps } from "../0-types/AboutProps";
+import { AboutPageDataProps } from "../0-types/AboutPageDataProps";
 
 const AboutBookDP: FC = () => {
   const dispatch = useDispatch();
@@ -67,14 +72,6 @@ const AboutBookDP: FC = () => {
     }
   };
 
-  const handleNavBounceDP = (targetNav: string) => {
-    if (targetNav === "book-nav-forward-dp") {
-      bounceNav(".booknavforwarddp");
-    } else {
-      bounceNav(".booknavbackwarddp");
-    }
-  };
-
   const handleDisable = () => {
     setDisabled(true);
     setTimeout(() => {
@@ -85,7 +82,7 @@ const AboutBookDP: FC = () => {
   const handleNavDP = (e: any, next: boolean) => {
     handleDispatchPageCount(next);
     handlePageFlip(next);
-    handleNavBounceDP(e.target.alt);
+    handleNavBounce(e.target.alt, "dp");
     handleDisable();
   };
 
@@ -121,7 +118,6 @@ const AboutBookDP: FC = () => {
 
     return () => {
       mounted = false;
-      setDisabled(false);
     };
   }, [transition]);
 
@@ -165,35 +161,16 @@ const AboutBookDP: FC = () => {
           maxHeight={1337}
         >
           {AboutBookDPData.map(
-            ({ id, texta, textb, svg, link }: AboutBookDataProps) => {
+            ({ id, texta, textb, svg, link }: AboutPageDataProps) => {
               return (
-                <div
+                <AboutPage
                   key={id}
-                  className={`aboutpage inset-0 h-full max-w-full text-center `}
-                >
-                  <div className="flex justify-center items-center h-full flex-col">
-                    {texta && (
-                      <div className={`page${id}texta abouttext px-8 py-8`}>
-                        {texta}{" "}
-                        {link && (
-                          <Link href={`/baklavegan/${link}`}>
-                            <a className="aboutbooklink">
-                              <u>{link}</u>
-                            </a>
-                          </Link>
-                        )}{" "}
-                        {textb && textb}
-                      </div>
-                    )}
-                    {svg && (
-                      <img
-                        className={`svg${id} aboutsvg opacity-90`}
-                        src={`/3-svgs/about/${svg}.svg`}
-                        alt={svg}
-                      />
-                    )}
-                  </div>
-                </div>
+                  id={id}
+                  texta={texta}
+                  textb={textb}
+                  svg={svg}
+                  link={link}
+                />
               );
             }
           )}
