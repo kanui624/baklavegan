@@ -102,6 +102,9 @@ const AboutBookDP: FC = () => {
     if (pageCount !== 0) {
       (aboutBookDP.current as any).pageFlip.turnToPage(pageCount * 2);
     }
+    return () => {
+      setDisabled(false);
+    };
   }, []);
 
   useEffect(() => {
@@ -122,8 +125,6 @@ const AboutBookDP: FC = () => {
   }, [transition]);
 
   useEffect(() => {
-    setDisabled(true);
-    setDisabled(false);
     let mounted = true;
     if (mounted && pageCount === 8) {
       removeNav(".booknavforwarddp");
@@ -136,7 +137,6 @@ const AboutBookDP: FC = () => {
       addNav(".booknavbackwarddp");
     }
     return () => {
-      setDisabled(false);
       mounted = false;
     };
   }, [pageCount]);
@@ -170,6 +170,7 @@ const AboutBookDP: FC = () => {
                   textb={textb}
                   svg={svg}
                   link={link}
+                  tag={"dp"}
                 />
               );
             }
@@ -177,14 +178,14 @@ const AboutBookDP: FC = () => {
         </HTMLFlipBook>
       </div>
       <button
-        disabled={disabled}
+        disabled={pageCount === 8 ? true : disabled}
         className="booknavsdp booknavforwarddp fixed"
         onClick={(e) => handleNavDP(e, true)}
       >
         <img src="/3-svgs/about/book-nav.svg" alt="book-nav-forward-dp" />
       </button>
       <button
-        disabled={disabled}
+        disabled={pageCount === 0 ? true : disabled}
         className="booknavsdp booknavbackwarddp fixed"
         onClick={(e) => handleNavDP(e, false)}
       >

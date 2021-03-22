@@ -55,7 +55,7 @@ export const AboutBookSPData: any = [
   {
     id: 17,
     texta:
-      "simply put, we just wanna make desserts, spread good vibes, and speak up for our animal friends we share this world with. If you'd like learn more about how we allocate sales profits, check out our",
+      "Put simply, we just wanna make desserts, spread good vibes, and speak up for our animal friends we share this world with. If you'd like learn more about how we allocate sales profits, check out our",
 
     link: "finance",
     textb:

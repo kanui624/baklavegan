@@ -9,21 +9,27 @@ import { FC } from "react";
 // Component Level Types
 import { AboutPageDataProps } from "@/components/4-about/0-types/AboutPageDataProps";
 
-const AboutPage: FC<AboutPageDataProps> = forwardRef(
-  ({ id, texta, textb, svg, link }, ref) => {
+interface AboutPageProps extends AboutPageDataProps {
+  tag: string;
+}
+
+const AboutPage: FC<AboutPageProps> = forwardRef(
+  ({ id, texta, textb, svg, link, tag }, ref) => {
     return (
       <div
         // @ts-ignore
         ref={ref}
-        className={`aboutpage inset-0 h-full max-w-full text-center `}
+        className="aboutpage inset-0 h-full max-w-full text-center"
       >
         <div className="flex justify-center items-center h-full flex-col">
           {texta && (
-            <div className={`page${id}texta abouttext px-8 py-8`}>
+            <div
+              className={`abouttext abouttext${tag} page${id}text${tag} px-8 py-8`}
+            >
               {texta}{" "}
               {link && (
                 <Link href={`/baklavegan/${link}`}>
-                  <a className="aboutbooklink">
+                  <a className={`aboutbooklink${tag}`}>
                     <u>{link}</u>
                   </a>
                 </Link>
@@ -33,7 +39,7 @@ const AboutPage: FC<AboutPageDataProps> = forwardRef(
           )}
           {svg && (
             <img
-              className={`svg${id} aboutsvg opacity-90`}
+              className={`svg${id} svg${id}${tag} aboutsvg${tag} opacity-90`}
               src={`/3-svgs/about/${svg}.svg`}
               alt={svg}
             />

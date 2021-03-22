@@ -10,7 +10,8 @@
   text-shadow: 3.5px 2.5px 3px #39311d;
 }
 
-.booknavssp:focus {
+.booknavssp:focus,
+.booknavsdp:focus {
   outline: none;
   box-shadow: none;
 }
@@ -47,7 +48,6 @@
     left: 50%;
     transform: translate(-75%, 0%);
     bottom: -73rem;
-    // top: -13rem;
   }
 
   .booknavssp {
@@ -65,43 +65,43 @@
     left: 0.5rem;
   }
 
-  .aboutsvg {
+  .aboutsvgsp {
     padding-left: 0.7rem;
     padding-right: 0.7rem;
   }
 
-  .abouttext {
+  .abouttextsp {
     font-size: 2rem;
     padding: 0.5rem;
     padding-right: 1rem;
   }
 
-  .page1texta {
+  .page1textsp {
     font-size: 5rem;
   }
 
-  .page5texta {
+  .page5textsp {
     font-size: 1.9rem;
   }
 
-  .page7texta {
+  .page7textsp {
     font-size: 1.9rem;
   }
 
-  .page11texta {
+  .page11textsp {
     font-size: 2.5rem;
   }
 
-  .page13texta {
+  .page13textsp {
     font-size: 2.4rem;
     padding-bottom: 1rem;
   }
 
-  .page15texta {
+  .page15textsp {
     font-size: 2.4rem;
   }
 
-  .page17texta {
+  .page17textsp {
     padding: 0.5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -121,64 +121,42 @@
     left: 50%;
     transform: translate(-50%, 0%);
     bottom: -68rem;
-    // top: 1rem;
   }
 
   .booknavsdp {
     width: 80px;
     height: 27px;
-    bottom: -60rem;
+    bottom: -62rem;
   }
 
   .booknavforwarddp {
-    right: 0.5rem;
+    right: 1.5rem;
   }
 
   .booknavbackwarddp {
-    left: 0.5rem;
+    left: 1.5rem;
   }
 
-  .aboutsvg {
-    padding-left: 0.7rem;
-    padding-right: 0.7rem;
+  .aboutsvgdp {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
   }
 
-  .abouttext {
-    font-size: 2rem;
+  .abouttextdp {
+    font-size: 1.6rem;
     padding: 0.5rem;
-    padding-right: 1rem;
   }
 
-  .page1texta {
-    font-size: 5rem;
+  .page0textdp {
+    font-size: 3rem;
   }
 
-  .page5texta {
-    font-size: 1.9rem;
+  .page16textdp {
+    font-size: 1.3rem;
   }
 
-  .page7texta {
-    font-size: 1.9rem;
-  }
-
-  .page11texta {
-    font-size: 2.5rem;
-  }
-
-  .page13texta {
-    font-size: 2.4rem;
-    padding-bottom: 1rem;
-  }
-
-  .page15texta {
-    font-size: 2.4rem;
-  }
-
-  .page17texta {
-    padding: 0.5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    font-size: 1.5rem;
+  .page17textdp {
+    font-size: 1.2rem;
   }
 }
 
@@ -193,843 +171,843 @@
   }
 }
 
-// Galaxy S5- CHROME DEVTOOLS
-@media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
-  .aboutbookcontainer {
-    width: 720px;
-    height: 963px;
-    right: 0rem;
-    bottom: -72rem;
-  }
-
-  .booknavs {
-    width: 120px;
-    height: 41px;
-    bottom: -60.2rem;
-  }
-
-  .booknavforward {
-    right: 1rem;
-  }
-
-  .booknavbackward {
-    left: 1rem;
-  }
-
-  .abouttext {
-    font-size: 2.1rem;
-  }
-
-  .page1texta {
-    font-size: 5.8rem;
-  }
-
-  .page11texta {
-    font-size: 3rem;
-  }
-
-  .page13texta {
-    font-size: 2.5rem;
-  }
-
-  .page15texta {
-    font-size: 3rem;
-  }
-
-  .page17texta {
-    font-size: 1.69rem;
-  }
-}
-
-// IPHONE 6 - TESTED W/ NGROK
-@media (min-width: 375px) and (min-height: 553px) and (orientation: portrait) {
-  .aboutbookcontainer {
-    width: 750px;
-    height: 1003px;
-    right: 0rem;
-    bottom: -75.5rem;
-  }
-
-  .booknavs {
-    width: 100px;
-    height: 34px;
-    bottom: -62.2rem;
-  }
-
-  .aboutsvg {
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-  }
-
-  .booknavforward {
-    right: 1rem;
-  }
-
-  .booknavbackward {
-    left: 1rem;
-  }
-
-  .abouttext {
-    font-size: 2.3rem;
-  }
-
-  .page1texta {
-    font-size: 5rem;
-  }
-
-  .page11texta {
-    font-size: 2.9rem;
-  }
-
-  .page13texta {
-    font-size: 2.9rem;
-  }
-
-  .page15texta {
-    font-size: 2.8rem;
-  }
-
-  .page17texta {
-    font-size: 1.8rem;
-  }
-}
-// IPHONE 6/7/8 - CHROME DEVTOOLS
-@media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
-  .aboutbookcontainer {
-    width: 745px;
-    height: 996px;
-    right: 0rem;
-    bottom: -71.5rem;
-  }
-
-  .booknavs {
-    width: 110px;
-    height: 38px;
-    bottom: -59.2rem;
-  }
-
-  .abouttext {
-    font-size: 2.1rem;
-  }
-
-  .page1texta {
-    font-size: 5rem;
-  }
-
-  .page11texta {
-    font-size: 3rem;
-  }
-
-  .page13texta {
-    font-size: 2.5rem;
-  }
-
-  .page15texta {
-    font-size: 3rem;
-  }
-  .page17texta {
-    font-size: 1.81rem;
-  }
-}
-
-// IPHONE XR - TESTED W/ NGROK
-@media (min-width: 414.98px) and (min-height: 715.98px) and (orientation: portrait) {
-  .aboutbookcontainer {
-    width: 825px;
-    height: 1103px;
-    right: 0rem;
-    bottom: -73rem;
-  }
-
-  .booknavs {
-    width: 120px;
-    height: 41px;
-    bottom: -59.5rem;
-  }
-
-  .aboutsvg {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .abouttext {
-    font-size: 2.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  .page1texta {
-    font-size: 6.5rem;
-  }
-
-  .page11texta {
-    font-size: 3.3rem;
-  }
-  .page13texta {
-    font-size: 3rem;
-  }
-
-  .page15texta {
-    font-size: 3rem;
-  }
-
-  .page17texta {
-    font-size: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-// IPHONE X - CHROME DEVTOOLS
-@media (min-width: 375px) and (min-height: 812px) and (orientation: portrait) {
-  .aboutbookcontainer {
-    width: 750px;
-    height: 1003px;
-    right: -0.05rem;
-    bottom: -68rem;
-  }
-
-  .booknavs {
-    bottom: -56.5rem;
-  }
-
-  .aboutsvg {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .page1texta {
-    font-size: 6.3rem;
-  }
-}
-
-// PIXEL 2 - CHROME DEVTOOLS
-@media (min-width: 411px) and (min-height: 731px) and (orientation: portrait) {
-  .aboutbookcontainer {
-    width: 825px;
-    height: 1103px;
-    right: -0.05rem;
-    bottom: -73rem;
-  }
-
-  .aboutsvg {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .page17texta {
-    font-size: 2rem;
-  }
-}
-
-// IPHONE 6/7/8 PLUS - CHROME DEVTOOLS
-@media (min-width: 414px) and (min-height: 736px) and (orientation: portrait) {
-  .aboutbookcontainer {
-    width: 825px;
-    height: 1103px;
-    right: 0rem;
-    bottom: -72rem;
-  }
-
-  .booknavs {
-    bottom: -58.5rem;
-  }
-
-  .abouttext {
-    font-size: 2.5rem;
-  }
-
-  .page1texta {
-    font-size: 6rem;
-  }
-
-  .page15texta {
-    font-size: 3rem;
-  }
-
-  .page17texta {
-    font-size: 2rem;
-  }
-}
-
-// PIXEL 2XL- CHROME DEVTOOLS
-@media (min-width: 411px) and (min-height: 823px) and (orientation: portrait) {
-  .aboutbookcontainer {
-    width: 825px;
-    height: 1103px;
-    right: -0.05rem;
-    bottom: -70rem;
-  }
-
-  .booknavs {
-    width: 120px;
-    height: 41px;
-    bottom: -57rem;
-  }
-
-  .abouttext {
-    font-size: 2.5rem;
-  }
-
-  .page1texta {
-    font-size: 6.3rem;
-  }
-
-  .page15texta {
-    font-size: 3.5rem;
-  }
-  .page17texta {
-    font-size: 2rem;
-  }
-}
-
-// SURFACE DUO - CHROME DEVTOOLS - PORTRAIT
-@media (min-width: 540px) and (min-height: 720px) and (orientation: portrait) {
-  .aboutbookcontainer {
-    width: 540px;
-    height: 722px;
-    left: 0rem;
-    bottom: -62rem;
-  }
-
-  .booknavs {
-    bottom: -55rem;
-  }
-
-  .aboutsvg {
-    padding: 0.5rem;
-  }
-
-  .abouttext {
-    font-size: 2rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  .page0texta {
-    font-size: 4rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .page16texta {
-    font-size: 1.8rem;
-  }
-  .page17texta {
-    font-size: 1.6rem;
-  }
-}
-
-// SURFACE DUO - CHROME DEVTOOLS - LANDSCAPE
-@media (min-width: 720px) and (min-height: 540px) and (orientation: landscape) {
-}
-
-// IPAD MINI - TESTED WITH NGROK - PORTRAIT
-@media (min-width: 768px) and (min-height: 921px) and(orientation: portrait) {
-  .aboutbookcontainer {
-    width: 770px;
-    height: 1030px;
-    left: 0rem;
-    bottom: -63rem;
-  }
-
-  .booknavs {
-    bottom: -52rem;
-  }
-
-  .aboutsvg {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .svg1 {
-    height: 200px;
-  }
-
-  .abouttext {
-    font-size: 3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .page0texta {
-    font-size: 6rem;
-  }
-
-  .page16texta {
-    font-size: 2.5rem;
-  }
-
-  .page17texta {
-    font-size: 2.3rem;
-  }
-}
-
-// IPAD MINI - TESTED WITH NGROK - LANDSCAPE
-@media (min-width: 921px) and (min-height: 665.98px) and (orientation: landscape) {
-}
-
-// IPAD 2019 - TESTED WITH NGROK - PORTRAIT
-@media (min-width: 810px) and (min-height: 977px) and (orientation: portrait) {
-  .aboutbookcontainer {
-    width: 810px;
-    height: 1084px;
-    left: 0rem;
-    bottom: -63rem;
-  }
-
-  .booknavs {
-    width: 150px;
-    height: 51px;
-    bottom: -54rem;
-  }
-
-  .booknavforward {
-    right: 5rem;
-  }
-
-  .booknavbackward {
-    left: 5rem;
-  }
-
-  .aboutsvg {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .svg1 {
-    height: 200px;
-  }
-
-  .abouttext {
-    font-size: 3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .page0texta {
-    font-size: 6rem;
-  }
-
-  .page16texta {
-    font-size: 2.5rem;
-  }
-
-  .page17texta {
-    font-size: 2.3rem;
-  }
-}
-
-// IPAD - CHROME DEVTOOLS - PORTRAIT
-@media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
-  .aboutpage {
-    padding: 1rem;
-  }
-  .aboutbookcontainer {
-    width: 770px;
-    height: 1030px;
-    left: 0rem;
-    bottom: -64rem;
-  }
-
-  .booknavs {
-    width: 150px;
-    height: 53px;
-    bottom: -53rem;
-  }
-
-  .booknavforward {
-    right: 2rem;
-  }
-
-  .booknavbackward {
-    left: 2rem;
-  }
-
-  .aboutsvg {
-    padding: 0;
-  }
-
-  .page17texta {
-    font-size: 2.2rem;
-  }
-}
-
-// IPAD - CHROME DEV TOOLS - LANDSCAPE
-@media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape) {
-}
-
-// IPAD PRO - CHROME DEVTOOLS - PORTRAIT
-@media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
-  .aboutbookcontainer {
-    width: 1025px;
-    height: 1371px;
-    right: 0rem;
-    bottom: -64rem;
-  }
-
-  .booknavs {
-    width: 200px;
-    height: 71px;
-    bottom: -50rem;
-  }
-
-  .svg1 {
-    height: 220px;
-  }
-
-  .booknavforward {
-    right: 3rem;
-  }
-
-  .booknavbackward {
-    left: 3rem;
-  }
-
-  .abouttext {
-    font-size: 4rem;
-  }
-
-  .page0texta {
-    font-size: 8.5rem;
-  }
-
-  .page16texta {
-    font-size: 3.5rem;
-  }
-  .page17texta {
-    font-size: 3rem;
-  }
-}
-
-// 13" DELL - TESTED W/ NGROK
-@media (min-width: 1280px) and (min-height: 578px) and (orientation: landscape) {
-  .aboutviewinportrait {
-    display: none;
-  }
-  .aboutbookcontainer,
-  .booknavs {
-    display: block;
-  }
-
-  .aboutbookcontainer {
-    width: 770px;
-    height: 1030px;
-    right: 16.5rem;
-    bottom: -75rem;
-  }
-
-  .booknavs {
-    width: 120px;
-    height: 41px;
-    bottom: -62rem;
-  }
-
-  .booknavforward {
-    right: 20rem;
-  }
-
-  .booknavbackward {
-    left: 20rem;
-  }
-
-  .svg1 {
-    height: 180px;
-  }
-
-  .aboutsvg {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .abouttext {
-    font-size: 2.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .page0texta {
-    font-size: 6rem;
-  }
-
-  .page14texta {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .page16texta {
-    font-size: 2.5rem;
-  }
-
-  .page17texta {
-    font-size: 2.2rem;
-  }
-}
-
-// 13" DELL - TESTED W/ NGROK
-@media (min-width: 1280px) and (min-height: 610px) and (orientation: landscape) {
-  .aboutviewinportrait {
-    display: none;
-  }
-  .aboutbookcontainer,
-  .booknavs {
-    display: block;
-  }
-
-  .aboutbookcontainer {
-    width: 770px;
-    height: 1030px;
-    right: 16.5rem;
-    bottom: -73rem;
-  }
-
-  .booknavs {
-    width: 120px;
-    height: 41px;
-    bottom: -61rem;
-  }
-
-  .booknavforward {
-    right: 20rem;
-  }
-
-  .booknavbackward {
-    left: 20rem;
-  }
-
-  .svg1 {
-    height: 180px;
-  }
-
-  .aboutsvg {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .abouttext {
-    font-size: 2.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .page0texta {
-    font-size: 6rem;
-  }
-
-  .page14texta {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .page16texta {
-    font-size: 2.5rem;
-  }
-
-  .page17texta {
-    font-size: 2.2rem;
-  }
-}
-
-// LOW-RES 32INCH MONITOR - TESTED W/ LOCAL MACHINE
-@media (min-width: 1360px) and (max-height: 689px) and (orientation: landscape) {
-  .aboutviewinportrait {
-    display: none;
-  }
-  .aboutbookcontainer,
-  .booknavs {
-    display: block;
-  }
-  .aboutbookcontainer {
-    width: 770px;
-    height: 1030px;
-    right: 18.5rem;
-    bottom: -70.5rem;
-  }
-
-  .booknavs {
-    width: 120px;
-    height: 41px;
-    bottom: -59rem;
-  }
-
-  .booknavforward {
-    right: 20rem;
-  }
-
-  .booknavbackward {
-    left: 20rem;
-  }
-
-  .svg1 {
-    height: 180px;
-  }
-
-  .aboutsvg {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .abouttext {
-    font-size: 2.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .page0texta {
-    font-size: 6rem;
-  }
-
-  .page14texta {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .page16texta {
-    font-size: 2.5rem;
-  }
-
-  .page17texta {
-    font-size: 2.2rem;
-  }
-}
-
-// IPAD PRO - CHROME DEVTOOLS - LANDSCAPE
-@media (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
-  .aboutviewinportrait {
-    display: block;
-  }
-}
-
-// MACBOOK PRO 15" TESTED W/ NGROK
-@media (min-width: 1440px) and (min-height: 769px) and (orientation: landscape) {
-  .aboutviewinportrait {
-    display: none;
-  }
-  .aboutbookcontainer {
-    display: block;
-    width: 1000px;
-    height: 1338px;
-    right: 14rem;
-    bottom: -77rem;
-  }
-
-  .booknavs {
-    width: 150px;
-    height: 53px;
-    bottom: -60.5rem;
-  }
-
-  .booknavforward {
-    right: 15rem;
-  }
-
-  .booknavbackward {
-    left: 15rem;
-  }
-
-  .svg1 {
-    height: 200px;
-  }
-
-  .aboutsvg {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .abouttext {
-    font-size: 3rem;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-  }
-
-  .page0texta {
-    font-size: 8rem;
-  }
-
-  .page10texta,
-  .page12texta,
-  .page14texta {
-    font-size: 3.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .page16texta,
-  .page17texta {
-    font-size: 2.7rem;
-  }
-}
-
-// HIGH RES 27" - TESTED W/ NGROK
-@media (min-width: 1920px) and (min-height: 969px) and (orientation: landscape) {
-}
-
-// HIGH-RES 32 INCH MONITOR - TESTED W/ LOCAL MACHINE
-@media (min-width: 1920px) and (min-height: 969px) and (orientation: landscape) {
-  .aboutviewinportrait {
-    display: none;
-  }
-  .aboutbookcontainer {
-    right: 29rem;
-    bottom: -72.5rem;
-  }
-
-  .booknavs {
-    bottom: -57rem;
-  }
-
-  .booknavforward {
-    right: 30rem;
-  }
-
-  .booknavbackward {
-    left: 30rem;
-  }
-
-  .abouttext {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .page8texta {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-// ULTRA-WIDESCREEN - TESTED ON LOCAL MACHINE
-@media (min-width: 2560px) and (min-height: 953px) and (orientation: landscape) {
-  .aboutbookcontainer {
-    right: 48.5rem;
-    bottom: -72.5rem;
-  }
-
-  .booknavs {
-    bottom: -57rem;
-  }
-
-  .booknavforward {
-    right: 50rem;
-  }
-
-  .booknavbackward {
-    left: 50rem;
-  }
-}
-
-// IMAC 2015 - TESTED ON LOCAL MACHINE
-@media (min-width: 2560px) and (min-height: 1361px) and(orientation: landscape) {
-  .aboutbookcontainer {
-    right: 48.5rem;
-    bottom: -62.5rem;
-  }
-
-  .booknavs {
-    bottom: -47rem;
-  }
-
-  .booknavforward {
-    right: 50rem;
-  }
-
-  .booknavbackward {
-    left: 50rem;
-  }
-}
+// // Galaxy S5- CHROME DEVTOOLS
+// @media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
+//   .aboutbookcontainer {
+//     width: 720px;
+//     height: 963px;
+//     right: 0rem;
+//     bottom: -72rem;
+//   }
+
+//   .booknavs {
+//     width: 120px;
+//     height: 41px;
+//     bottom: -60.2rem;
+//   }
+
+//   .booknavforward {
+//     right: 1rem;
+//   }
+
+//   .booknavbackward {
+//     left: 1rem;
+//   }
+
+//   .abouttext {
+//     font-size: 2.1rem;
+//   }
+
+//   .page1texta {
+//     font-size: 5.8rem;
+//   }
+
+//   .page11texta {
+//     font-size: 3rem;
+//   }
+
+//   .page13texta {
+//     font-size: 2.5rem;
+//   }
+
+//   .page15texta {
+//     font-size: 3rem;
+//   }
+
+//   .page17texta {
+//     font-size: 1.69rem;
+//   }
+// }
+
+// // IPHONE 6 - TESTED W/ NGROK
+// @media (min-width: 375px) and (min-height: 553px) and (orientation: portrait) {
+//   .aboutbookcontainer {
+//     width: 750px;
+//     height: 1003px;
+//     right: 0rem;
+//     bottom: -75.5rem;
+//   }
+
+//   .booknavs {
+//     width: 100px;
+//     height: 34px;
+//     bottom: -62.2rem;
+//   }
+
+//   .aboutsvg {
+//     padding-left: 0.8rem;
+//     padding-right: 0.8rem;
+//   }
+
+//   .booknavforward {
+//     right: 1rem;
+//   }
+
+//   .booknavbackward {
+//     left: 1rem;
+//   }
+
+//   .abouttext {
+//     font-size: 2.3rem;
+//   }
+
+//   .page1texta {
+//     font-size: 5rem;
+//   }
+
+//   .page11texta {
+//     font-size: 2.9rem;
+//   }
+
+//   .page13texta {
+//     font-size: 2.9rem;
+//   }
+
+//   .page15texta {
+//     font-size: 2.8rem;
+//   }
+
+//   .page17texta {
+//     font-size: 1.8rem;
+//   }
+// }
+// // IPHONE 6/7/8 - CHROME DEVTOOLS
+// @media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
+//   .aboutbookcontainer {
+//     width: 745px;
+//     height: 996px;
+//     right: 0rem;
+//     bottom: -71.5rem;
+//   }
+
+//   .booknavs {
+//     width: 110px;
+//     height: 38px;
+//     bottom: -59.2rem;
+//   }
+
+//   .abouttext {
+//     font-size: 2.1rem;
+//   }
+
+//   .page1texta {
+//     font-size: 5rem;
+//   }
+
+//   .page11texta {
+//     font-size: 3rem;
+//   }
+
+//   .page13texta {
+//     font-size: 2.5rem;
+//   }
+
+//   .page15texta {
+//     font-size: 3rem;
+//   }
+//   .page17texta {
+//     font-size: 1.81rem;
+//   }
+// }
+
+// // IPHONE XR - TESTED W/ NGROK
+// @media (min-width: 414.98px) and (min-height: 715.98px) and (orientation: portrait) {
+//   .aboutbookcontainer {
+//     width: 825px;
+//     height: 1103px;
+//     right: 0rem;
+//     bottom: -73rem;
+//   }
+
+//   .booknavs {
+//     width: 120px;
+//     height: 41px;
+//     bottom: -59.5rem;
+//   }
+
+//   .aboutsvg {
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+//   .abouttext {
+//     font-size: 2.5rem;
+//     padding-left: 0.5rem;
+//     padding-right: 0.5rem;
+//   }
+
+//   .page1texta {
+//     font-size: 6.5rem;
+//   }
+
+//   .page11texta {
+//     font-size: 3.3rem;
+//   }
+//   .page13texta {
+//     font-size: 3rem;
+//   }
+
+//   .page15texta {
+//     font-size: 3rem;
+//   }
+
+//   .page17texta {
+//     font-size: 2rem;
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+// }
+
+// // IPHONE X - CHROME DEVTOOLS
+// @media (min-width: 375px) and (min-height: 812px) and (orientation: portrait) {
+//   .aboutbookcontainer {
+//     width: 750px;
+//     height: 1003px;
+//     right: -0.05rem;
+//     bottom: -68rem;
+//   }
+
+//   .booknavs {
+//     bottom: -56.5rem;
+//   }
+
+//   .aboutsvg {
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+
+//   .page1texta {
+//     font-size: 6.3rem;
+//   }
+// }
+
+// // PIXEL 2 - CHROME DEVTOOLS
+// @media (min-width: 411px) and (min-height: 731px) and (orientation: portrait) {
+//   .aboutbookcontainer {
+//     width: 825px;
+//     height: 1103px;
+//     right: -0.05rem;
+//     bottom: -73rem;
+//   }
+
+//   .aboutsvg {
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+
+//   .page17texta {
+//     font-size: 2rem;
+//   }
+// }
+
+// // IPHONE 6/7/8 PLUS - CHROME DEVTOOLS
+// @media (min-width: 414px) and (min-height: 736px) and (orientation: portrait) {
+//   .aboutbookcontainer {
+//     width: 825px;
+//     height: 1103px;
+//     right: 0rem;
+//     bottom: -72rem;
+//   }
+
+//   .booknavs {
+//     bottom: -58.5rem;
+//   }
+
+//   .abouttext {
+//     font-size: 2.5rem;
+//   }
+
+//   .page1texta {
+//     font-size: 6rem;
+//   }
+
+//   .page15texta {
+//     font-size: 3rem;
+//   }
+
+//   .page17texta {
+//     font-size: 2rem;
+//   }
+// }
+
+// // PIXEL 2XL- CHROME DEVTOOLS
+// @media (min-width: 411px) and (min-height: 823px) and (orientation: portrait) {
+//   .aboutbookcontainer {
+//     width: 825px;
+//     height: 1103px;
+//     right: -0.05rem;
+//     bottom: -70rem;
+//   }
+
+//   .booknavs {
+//     width: 120px;
+//     height: 41px;
+//     bottom: -57rem;
+//   }
+
+//   .abouttext {
+//     font-size: 2.5rem;
+//   }
+
+//   .page1texta {
+//     font-size: 6.3rem;
+//   }
+
+//   .page15texta {
+//     font-size: 3.5rem;
+//   }
+//   .page17texta {
+//     font-size: 2rem;
+//   }
+// }
+
+// // SURFACE DUO - CHROME DEVTOOLS - PORTRAIT
+// @media (min-width: 540px) and (min-height: 720px) and (orientation: portrait) {
+//   .aboutbookcontainer {
+//     width: 540px;
+//     height: 722px;
+//     left: 0rem;
+//     bottom: -62rem;
+//   }
+
+//   .booknavs {
+//     bottom: -55rem;
+//   }
+
+//   .aboutsvg {
+//     padding: 0.5rem;
+//   }
+
+//   .abouttext {
+//     font-size: 2rem;
+//     padding-left: 0.5rem;
+//     padding-right: 0.5rem;
+//   }
+
+//   .page0texta {
+//     font-size: 4rem;
+//     padding-bottom: 1.5rem;
+//   }
+
+//   .page16texta {
+//     font-size: 1.8rem;
+//   }
+//   .page17texta {
+//     font-size: 1.6rem;
+//   }
+// }
+
+// // SURFACE DUO - CHROME DEVTOOLS - LANDSCAPE
+// @media (min-width: 720px) and (min-height: 540px) and (orientation: landscape) {
+// }
+
+// // IPAD MINI - TESTED WITH NGROK - PORTRAIT
+// @media (min-width: 768px) and (min-height: 921px) and(orientation: portrait) {
+//   .aboutbookcontainer {
+//     width: 770px;
+//     height: 1030px;
+//     left: 0rem;
+//     bottom: -63rem;
+//   }
+
+//   .booknavs {
+//     bottom: -52rem;
+//   }
+
+//   .aboutsvg {
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+
+//   .svg1 {
+//     height: 200px;
+//   }
+
+//   .abouttext {
+//     font-size: 3rem;
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+
+//   .page0texta {
+//     font-size: 6rem;
+//   }
+
+//   .page16texta {
+//     font-size: 2.5rem;
+//   }
+
+//   .page17texta {
+//     font-size: 2.3rem;
+//   }
+// }
+
+// // IPAD MINI - TESTED WITH NGROK - LANDSCAPE
+// @media (min-width: 921px) and (min-height: 665.98px) and (orientation: landscape) {
+// }
+
+// // IPAD 2019 - TESTED WITH NGROK - PORTRAIT
+// @media (min-width: 810px) and (min-height: 977px) and (orientation: portrait) {
+//   .aboutbookcontainer {
+//     width: 810px;
+//     height: 1084px;
+//     left: 0rem;
+//     bottom: -63rem;
+//   }
+
+//   .booknavs {
+//     width: 150px;
+//     height: 51px;
+//     bottom: -54rem;
+//   }
+
+//   .booknavforward {
+//     right: 5rem;
+//   }
+
+//   .booknavbackward {
+//     left: 5rem;
+//   }
+
+//   .aboutsvg {
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+
+//   .svg1 {
+//     height: 200px;
+//   }
+
+//   .abouttext {
+//     font-size: 3rem;
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+
+//   .page0texta {
+//     font-size: 6rem;
+//   }
+
+//   .page16texta {
+//     font-size: 2.5rem;
+//   }
+
+//   .page17texta {
+//     font-size: 2.3rem;
+//   }
+// }
+
+// // IPAD - CHROME DEVTOOLS - PORTRAIT
+// @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+//   .aboutpage {
+//     padding: 1rem;
+//   }
+//   .aboutbookcontainer {
+//     width: 770px;
+//     height: 1030px;
+//     left: 0rem;
+//     bottom: -64rem;
+//   }
+
+//   .booknavs {
+//     width: 150px;
+//     height: 53px;
+//     bottom: -53rem;
+//   }
+
+//   .booknavforward {
+//     right: 2rem;
+//   }
+
+//   .booknavbackward {
+//     left: 2rem;
+//   }
+
+//   .aboutsvg {
+//     padding: 0;
+//   }
+
+//   .page17texta {
+//     font-size: 2.2rem;
+//   }
+// }
+
+// // IPAD - CHROME DEV TOOLS - LANDSCAPE
+// @media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape) {
+// }
+
+// // IPAD PRO - CHROME DEVTOOLS - PORTRAIT
+// @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+//   .aboutbookcontainer {
+//     width: 1025px;
+//     height: 1371px;
+//     right: 0rem;
+//     bottom: -64rem;
+//   }
+
+//   .booknavs {
+//     width: 200px;
+//     height: 71px;
+//     bottom: -50rem;
+//   }
+
+//   .svg1 {
+//     height: 220px;
+//   }
+
+//   .booknavforward {
+//     right: 3rem;
+//   }
+
+//   .booknavbackward {
+//     left: 3rem;
+//   }
+
+//   .abouttext {
+//     font-size: 4rem;
+//   }
+
+//   .page0texta {
+//     font-size: 8.5rem;
+//   }
+
+//   .page16texta {
+//     font-size: 3.5rem;
+//   }
+//   .page17texta {
+//     font-size: 3rem;
+//   }
+// }
+
+// // 13" DELL - TESTED W/ NGROK
+// @media (min-width: 1280px) and (min-height: 578px) and (orientation: landscape) {
+//   .aboutviewinportrait {
+//     display: none;
+//   }
+//   .aboutbookcontainer,
+//   .booknavs {
+//     display: block;
+//   }
+
+//   .aboutbookcontainer {
+//     width: 770px;
+//     height: 1030px;
+//     right: 16.5rem;
+//     bottom: -75rem;
+//   }
+
+//   .booknavs {
+//     width: 120px;
+//     height: 41px;
+//     bottom: -62rem;
+//   }
+
+//   .booknavforward {
+//     right: 20rem;
+//   }
+
+//   .booknavbackward {
+//     left: 20rem;
+//   }
+
+//   .svg1 {
+//     height: 180px;
+//   }
+
+//   .aboutsvg {
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+
+//   .abouttext {
+//     font-size: 2.5rem;
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+
+//   .page0texta {
+//     font-size: 6rem;
+//   }
+
+//   .page14texta {
+//     padding-left: 2rem;
+//     padding-right: 2rem;
+//   }
+
+//   .page16texta {
+//     font-size: 2.5rem;
+//   }
+
+//   .page17texta {
+//     font-size: 2.2rem;
+//   }
+// }
+
+// // 13" DELL - TESTED W/ NGROK
+// @media (min-width: 1280px) and (min-height: 610px) and (orientation: landscape) {
+//   .aboutviewinportrait {
+//     display: none;
+//   }
+//   .aboutbookcontainer,
+//   .booknavs {
+//     display: block;
+//   }
+
+//   .aboutbookcontainer {
+//     width: 770px;
+//     height: 1030px;
+//     right: 16.5rem;
+//     bottom: -73rem;
+//   }
+
+//   .booknavs {
+//     width: 120px;
+//     height: 41px;
+//     bottom: -61rem;
+//   }
+
+//   .booknavforward {
+//     right: 20rem;
+//   }
+
+//   .booknavbackward {
+//     left: 20rem;
+//   }
+
+//   .svg1 {
+//     height: 180px;
+//   }
+
+//   .aboutsvg {
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+
+//   .abouttext {
+//     font-size: 2.5rem;
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+
+//   .page0texta {
+//     font-size: 6rem;
+//   }
+
+//   .page14texta {
+//     padding-left: 2rem;
+//     padding-right: 2rem;
+//   }
+
+//   .page16texta {
+//     font-size: 2.5rem;
+//   }
+
+//   .page17texta {
+//     font-size: 2.2rem;
+//   }
+// }
+
+// // LOW-RES 32INCH MONITOR - TESTED W/ LOCAL MACHINE
+// @media (min-width: 1360px) and (max-height: 689px) and (orientation: landscape) {
+//   .aboutviewinportrait {
+//     display: none;
+//   }
+//   .aboutbookcontainer,
+//   .booknavs {
+//     display: block;
+//   }
+//   .aboutbookcontainer {
+//     width: 770px;
+//     height: 1030px;
+//     right: 18.5rem;
+//     bottom: -70.5rem;
+//   }
+
+//   .booknavs {
+//     width: 120px;
+//     height: 41px;
+//     bottom: -59rem;
+//   }
+
+//   .booknavforward {
+//     right: 20rem;
+//   }
+
+//   .booknavbackward {
+//     left: 20rem;
+//   }
+
+//   .svg1 {
+//     height: 180px;
+//   }
+
+//   .aboutsvg {
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+
+//   .abouttext {
+//     font-size: 2.5rem;
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+
+//   .page0texta {
+//     font-size: 6rem;
+//   }
+
+//   .page14texta {
+//     padding-left: 2rem;
+//     padding-right: 2rem;
+//   }
+
+//   .page16texta {
+//     font-size: 2.5rem;
+//   }
+
+//   .page17texta {
+//     font-size: 2.2rem;
+//   }
+// }
+
+// // IPAD PRO - CHROME DEVTOOLS - LANDSCAPE
+// @media (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
+//   .aboutviewinportrait {
+//     display: block;
+//   }
+// }
+
+// // MACBOOK PRO 15" TESTED W/ NGROK
+// @media (min-width: 1440px) and (min-height: 769px) and (orientation: landscape) {
+//   .aboutviewinportrait {
+//     display: none;
+//   }
+//   .aboutbookcontainer {
+//     display: block;
+//     width: 1000px;
+//     height: 1338px;
+//     right: 14rem;
+//     bottom: -77rem;
+//   }
+
+//   .booknavs {
+//     width: 150px;
+//     height: 53px;
+//     bottom: -60.5rem;
+//   }
+
+//   .booknavforward {
+//     right: 15rem;
+//   }
+
+//   .booknavbackward {
+//     left: 15rem;
+//   }
+
+//   .svg1 {
+//     height: 200px;
+//   }
+
+//   .aboutsvg {
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+
+//   .abouttext {
+//     font-size: 3rem;
+//     padding-right: 1.5rem;
+//     padding-left: 1.5rem;
+//   }
+
+//   .page0texta {
+//     font-size: 8rem;
+//   }
+
+//   .page10texta,
+//   .page12texta,
+//   .page14texta {
+//     font-size: 3.5rem;
+//     padding-left: 2rem;
+//     padding-right: 2rem;
+//   }
+
+//   .page16texta,
+//   .page17texta {
+//     font-size: 2.7rem;
+//   }
+// }
+
+// // HIGH RES 27" - TESTED W/ NGROK
+// @media (min-width: 1920px) and (min-height: 969px) and (orientation: landscape) {
+// }
+
+// // HIGH-RES 32 INCH MONITOR - TESTED W/ LOCAL MACHINE
+// @media (min-width: 1920px) and (min-height: 969px) and (orientation: landscape) {
+//   .aboutviewinportrait {
+//     display: none;
+//   }
+//   .aboutbookcontainer {
+//     right: 29rem;
+//     bottom: -72.5rem;
+//   }
+
+//   .booknavs {
+//     bottom: -57rem;
+//   }
+
+//   .booknavforward {
+//     right: 30rem;
+//   }
+
+//   .booknavbackward {
+//     left: 30rem;
+//   }
+
+//   .abouttext {
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+//   }
+//   .page8texta {
+//     padding-left: 1.5rem;
+//     padding-right: 1.5rem;
+//   }
+// }
+
+// // ULTRA-WIDESCREEN - TESTED ON LOCAL MACHINE
+// @media (min-width: 2560px) and (min-height: 953px) and (orientation: landscape) {
+//   .aboutbookcontainer {
+//     right: 48.5rem;
+//     bottom: -72.5rem;
+//   }
+
+//   .booknavs {
+//     bottom: -57rem;
+//   }
+
+//   .booknavforward {
+//     right: 50rem;
+//   }
+
+//   .booknavbackward {
+//     left: 50rem;
+//   }
+// }
+
+// // IMAC 2015 - TESTED ON LOCAL MACHINE
+// @media (min-width: 2560px) and (min-height: 1361px) and(orientation: landscape) {
+//   .aboutbookcontainer {
+//     right: 48.5rem;
+//     bottom: -62.5rem;
+//   }
+
+//   .booknavs {
+//     bottom: -47rem;
+//   }
+
+//   .booknavforward {
+//     right: 50rem;
+//   }
+
+//   .booknavbackward {
+//     left: 50rem;
+//   }
+// }

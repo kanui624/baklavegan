@@ -77,10 +77,10 @@ const AboutBookSP: FC = () => {
   };
 
   const handleNavSP = (e: any, next: boolean) => {
+    handleDisable();
     handleDispatchPageCount(next);
     handlePageFlip(next);
     handleNavBounce(e.target.alt, "sp");
-    handleDisable();
   };
 
   const handleInitializeBook = () => {
@@ -103,6 +103,9 @@ const AboutBookSP: FC = () => {
     if (pageCount !== 0) {
       (aboutBookSP.current as any).pageFlip.turnToPage(pageCount * 2);
     }
+    return () => {
+      setDisabled(false);
+    };
   }, []);
 
   useEffect(() => {
@@ -123,8 +126,6 @@ const AboutBookSP: FC = () => {
   }, [transition]);
 
   useEffect(() => {
-    setDisabled(true);
-    setDisabled(false);
     let mounted = true;
     if (mounted && pageCount === 8) {
       removeNav(".booknavforwardsp");
@@ -137,7 +138,6 @@ const AboutBookSP: FC = () => {
       addNav(".booknavbackwardsp");
     }
     return () => {
-      setDisabled(false);
       mounted = false;
     };
   }, [pageCount]);
@@ -171,6 +171,7 @@ const AboutBookSP: FC = () => {
                   textb={textb}
                   svg={svg}
                   link={link}
+                  tag={"sp"}
                 />
               );
             }
@@ -178,14 +179,14 @@ const AboutBookSP: FC = () => {
         </HTMLFlipBook>
       </div>
       <button
-        disabled={disabled}
+        disabled={pageCount === 8 ? true : disabled}
         className="booknavssp booknavforwardsp fixed"
         onClick={(e) => handleNavSP(e, true)}
       >
         <img src="/3-svgs/about/book-nav.svg" alt="book-nav-forward-sp" />
       </button>
       <button
-        disabled={disabled}
+        disabled={pageCount === 0 ? true : disabled}
         className="booknavssp booknavbackwardsp fixed"
         onClick={(e) => handleNavSP(e, false)}
       >
