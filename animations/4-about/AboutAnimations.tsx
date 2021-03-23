@@ -23,7 +23,7 @@ export const animateInInitialLoad = (
 
 export const animateInIsLoaded = (
   inLoadedClassOne: string,
-  inLoadedClassTwo: string
+  inLoadedClassTwo?: string
 ) => {
   const isLoadedTL = gsap.timeline();
   isLoadedTL.fromTo(
@@ -48,12 +48,12 @@ export const animateOut = (outClassOne: string, outClassTwo: string) => {
 
 export const addNav = (addNavClass: string) => {
   gsap.to(addNavClass, {
-    display: "block",
+    visibility: "visible",
   });
   gsap.to(addNavClass, {
     opacity: 1,
     duration: 1,
-    delay: 0.8,
+    delay: 0.7,
   });
 };
 
@@ -61,10 +61,10 @@ export const removeNav = (removeNavClass: string) => {
   gsap.to(removeNavClass, {
     opacity: 0,
     duration: 0.5,
-    delay: 1,
+    delay: 0.7,
   });
   gsap.to(removeNavClass, {
-    display: "none",
+    visibility: "hidden",
     delay: 1,
   });
 };

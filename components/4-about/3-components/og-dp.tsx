@@ -1,6 +1,9 @@
 // React
 import { useState, useEffect, useRef, Fragment } from "react";
 
+// Next
+import Link from "next/link";
+
 // Redux
 import { useDispatch, useSelector } from "react-redux";
 import { loadPage, unloadPage } from "@/redux/slices/AboutPageLoadedSlice";
@@ -30,7 +33,7 @@ import {
 import HTMLFlipBook from "react-pageflip";
 
 // Data
-import { AboutBookSPData } from "@/components/4-about/1-data/AboutBookSPData";
+import { AboutBookDPData } from "@/components/4-about/1-data/AboutBookDPData";
 
 // React Types
 import { FC } from "react";
@@ -41,7 +44,7 @@ import { AppState } from "@/redux/store";
 // Component Level Types
 import { AboutPageDataProps } from "../0-types/AboutPageDataProps";
 
-const AboutBookSP: FC = () => {
+const AboutBookDP: FC = () => {
   const dispatch = useDispatch();
   const {
     AboutPageLoaded: { pageLoaded },
@@ -49,7 +52,7 @@ const AboutBookSP: FC = () => {
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
 
-  const aboutBookSP = useRef();
+  const aboutBookDP = useRef();
 
   const [disabled, setDisabled] = useState(false);
 
@@ -63,9 +66,9 @@ const AboutBookSP: FC = () => {
 
   const handlePageFlip = (pageFlip: boolean) => {
     if (pageFlip) {
-      (aboutBookSP.current as any).pageFlip.flipNext();
+      (aboutBookDP.current as any).pageFlip.flipNext();
     } else {
-      (aboutBookSP.current as any).pageFlip.flipPrev();
+      (aboutBookDP.current as any).pageFlip.flipPrev();
     }
   };
 
@@ -76,32 +79,28 @@ const AboutBookSP: FC = () => {
     }, 1500);
   };
 
-  const handleNavSP = (e: any, next: boolean) => {
-    handleDisable();
+  const handleNavDP = (e: any, next: boolean) => {
     handleDispatchPageCount(next);
     handlePageFlip(next);
-    handleNavBounce(e.target.alt, "sp");
+    handleNavBounce(e.target.alt, "dp");
+    handleDisable();
   };
 
   const handleInitializeBook = () => {
-    animateOut(".aboutbookcontainersp", ".booknavssp");
-    setTimeout(() => {
-      dispatch(unloadPage({ pageLoaded: false }));
-      dispatch(initializePage({ pageCount: 0 }));
-      (aboutBookSP.current as any).pageFlip.turnToPage(0);
-    }, 3000);
+    animateOut(".aboutbookcontainerdp", ".booknavcontainerdp");
+    dispatch(unloadPage({ pageLoaded: false }));
+    dispatch(initializePage({ pageCount: 0 }));
+    (aboutBookDP.current as any).pageFlip.turnToPage(0);
   };
 
   const handleInitialLoad = () => {
-    animateInInitialLoad(".aboutbookcontainersp", ".booknavssp");
-    setTimeout(() => {
-      dispatch(loadPage({ pageLoaded: true }));
-    }, 2000);
+    animateInInitialLoad(".aboutbookcontainerdp", ".booknavcontainerdp");
+    dispatch(loadPage({ pageLoaded: true }));
   };
 
   useEffect(() => {
     if (pageCount !== 0) {
-      (aboutBookSP.current as any).pageFlip.turnToPage(pageCount * 2);
+      (aboutBookDP.current as any).pageFlip.turnToPage(pageCount * 2);
     }
     return () => {
       setDisabled(false);
@@ -117,7 +116,7 @@ const AboutBookSP: FC = () => {
     if (!transition && !pageLoaded && mounted) {
       handleInitialLoad();
     } else {
-      animateInIsLoaded(".aboutbookcontainersp", ".booknavssp");
+      animateInIsLoaded(".aboutbookcontainerdp", ".booknavcontainerdp");
     }
 
     return () => {
@@ -128,14 +127,14 @@ const AboutBookSP: FC = () => {
   useEffect(() => {
     let mounted = true;
     if (mounted && pageCount === 8) {
-      removeNav(".booknavforwardsp");
+      removeNav(".booknavforwarddp");
     } else {
-      addNav(".booknavforwardsp");
+      addNav(".booknavforwarddp");
     }
     if (mounted && pageCount === 0) {
-      removeNav(".booknavbackwardsp");
+      removeNav(".booknavbackwarddp");
     } else {
-      addNav(".booknavbackwardsp");
+      addNav(".booknavbackwarddp");
     }
     return () => {
       mounted = false;
@@ -144,14 +143,14 @@ const AboutBookSP: FC = () => {
 
   return (
     <Fragment>
-      <div className="aboutbookcontainersp singlepage absolute">
+      <div className="aboutbookcontainerdp doublepage absolute">
         <HTMLFlipBook
-          ref={aboutBookSP}
+          ref={aboutBookDP}
           className="aboutbook inset-0 h-full max-w-full"
           useMouseEvents={false}
           flippingTime={1500}
           usePortrait={false}
-          maxShadowOpacity={0}
+          maxShadowOpacity={1}
           autoSize={false}
           size={"stretch"}
           width={400}
@@ -161,7 +160,7 @@ const AboutBookSP: FC = () => {
           maxWidth={1000}
           maxHeight={1337}
         >
-          {AboutBookSPData.map(
+          {AboutBookDPData.map(
             ({ id, texta, textb, svg, link }: AboutPageDataProps) => {
               return (
                 <AboutPage
@@ -171,31 +170,31 @@ const AboutBookSP: FC = () => {
                   textb={textb}
                   svg={svg}
                   link={link}
-                  tag={"sp"}
+                  tag={"dp"}
                 />
               );
             }
           )}
         </HTMLFlipBook>
       </div>
-      <div className="booknavcontainersp fixed flex justify-between">
+      <div className="booknavcontainerdp fixed flex justify-between">
         <button
           disabled={pageCount === 0 ? true : disabled}
-          className="booknavssp booknavbackwardsp ml-4"
-          onClick={(e) => handleNavSP(e, false)}
+          className="booknavsdp booknavbackwarddp ml-4"
+          onClick={(e) => handleNavDP(e, false)}
         >
-          <img src="/3-svgs/about/book-nav.svg" alt="book-nav-backward-sp" />
+          <img src="/3-svgs/about/book-nav.svg" alt="book-nav-backward-dp" />
         </button>
         <button
           disabled={pageCount === 8 ? true : disabled}
-          className="booknavssp booknavforwardsp mr-4"
-          onClick={(e) => handleNavSP(e, true)}
+          className="booknavsdp booknavforwarddp mr-4"
+          onClick={(e) => handleNavDP(e, true)}
         >
-          <img src="/3-svgs/about/book-nav.svg" alt="book-nav-forward-sp" />
+          <img src="/3-svgs/about/book-nav.svg" alt="book-nav-forward-dp" />
         </button>
       </div>
     </Fragment>
   );
 };
 
-export default AboutBookSP;
+export default AboutBookDP;

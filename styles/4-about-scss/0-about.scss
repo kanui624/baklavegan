@@ -25,10 +25,12 @@
   height: 100px;
 }
 
-.booknavssp,
-.booknavsdp {
+.booknavforwarddp,
+.booknavbackwarddp,
+.booknavforwardsp,
+.booknavbackwardsp {
   opacity: 0;
-  display: none;
+  visibility: hidden;
 }
 
 .booknavbackwardsp,
@@ -50,19 +52,14 @@
     bottom: -73rem;
   }
 
+  .booknavcontainersp {
+    width: 320px;
+    bottom: -61.5rem;
+  }
+
   .booknavssp {
     width: 80px;
     height: 27px;
-    bottom: -61.5rem;
-    // top: 1rem;
-  }
-
-  .booknavforwardsp {
-    right: 0.5rem;
-  }
-
-  .booknavbackwardsp {
-    left: 0.5rem;
   }
 
   .aboutsvgsp {
@@ -123,18 +120,14 @@
     bottom: -68rem;
   }
 
-  .booknavsdp {
-    width: 80px;
-    height: 27px;
+  .booknavcontainerdp {
+    width: 400px;
     bottom: -62rem;
   }
 
-  .booknavforwarddp {
-    right: 1.5rem;
-  }
-
-  .booknavbackwarddp {
-    left: 1.5rem;
+  .booknavsdp {
+    width: 80px;
+    height: 27px;
   }
 
   .aboutsvgdp {
@@ -143,7 +136,7 @@
   }
 
   .abouttextdp {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     padding: 0.5rem;
   }
 
@@ -151,8 +144,17 @@
     font-size: 3rem;
   }
 
+  .page10textdp,
+  .page12textdp {
+    font-size: 2rem;
+  }
+
+  .page14textdp {
+    font-size: 2.4rem;
+  }
+
   .page16textdp {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   .page17textdp {
@@ -160,155 +162,205 @@
   }
 }
 
-// IPHONE 5-SE - CHROME DEVTOOLS
+// IPHONE 5-SE - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 320px) and (min-height: 568px) and (orientation: portrait) {
-  .aboutbookcontainer {
+  .singlepage {
     bottom: -70rem;
   }
 
-  .booknavs {
-    bottom: -59.5rem;
+  .booknavcontainersp {
+    bottom: -59rem;
   }
 }
 
-// // Galaxy S5- CHROME DEVTOOLS
-// @media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
-//   .aboutbookcontainer {
-//     width: 720px;
-//     height: 963px;
-//     right: 0rem;
-//     bottom: -72rem;
-//   }
+// IPHONE 5-SE - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 568px) and (min-height: 320px) and (orientation: landscape) {
+  .page10textdp,
+  .page12textdp,
+  .page14textdp {
+    font-size: 2rem;
+  }
+}
 
-//   .booknavs {
-//     width: 120px;
-//     height: 41px;
-//     bottom: -60.2rem;
-//   }
+// Galaxy S5- CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
+  .singlepage {
+    width: 720px;
+    height: 963px;
+    bottom: -72rem;
+  }
 
-//   .booknavforward {
-//     right: 1rem;
-//   }
+  .booknavcontainersp {
+    width: 360px;
+    bottom: -59.5rem;
+  }
 
-//   .booknavbackward {
-//     left: 1rem;
-//   }
+  .booknavssp {
+    width: 100px;
+    height: 34px;
+  }
 
-//   .abouttext {
-//     font-size: 2.1rem;
-//   }
+  .abouttextsp {
+    font-size: 2.1rem;
+  }
 
-//   .page1texta {
-//     font-size: 5.8rem;
-//   }
+  .page1textsp {
+    font-size: 5.8rem;
+  }
 
-//   .page11texta {
-//     font-size: 3rem;
-//   }
+  .page11textsp,
+  .page15textsp {
+    font-size: 3rem;
+  }
 
-//   .page13texta {
-//     font-size: 2.5rem;
-//   }
+  .page13textsp {
+    font-size: 2.5rem;
+  }
 
-//   .page15texta {
-//     font-size: 3rem;
-//   }
+  .page17textsp {
+    font-size: 1.69rem;
+  }
+}
 
-//   .page17texta {
-//     font-size: 1.69rem;
-//   }
-// }
+// Galaxy S5- CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 640px) and (min-height: 360px) and (orientation: landscape) {
+  .doublepage {
+    width: 450px;
+    height: 602px;
+    bottom: -69rem;
+  }
 
-// // IPHONE 6 - TESTED W/ NGROK
-// @media (min-width: 375px) and (min-height: 553px) and (orientation: portrait) {
-//   .aboutbookcontainer {
-//     width: 750px;
-//     height: 1003px;
-//     right: 0rem;
-//     bottom: -75.5rem;
-//   }
+  .booknavcontainerdp {
+    width: 450px;
+    bottom: -61.8rem;
+  }
 
-//   .booknavs {
-//     width: 100px;
-//     height: 34px;
-//     bottom: -62.2rem;
-//   }
+  .aboutsvgdp {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+  }
 
-//   .aboutsvg {
-//     padding-left: 0.8rem;
-//     padding-right: 0.8rem;
-//   }
+  .page16textdp {
+    font-size: 1.6rem;
+  }
 
-//   .booknavforward {
-//     right: 1rem;
-//   }
+  .page17textdp {
+    font-size: 1.3rem;
+  }
+}
 
-//   .booknavbackward {
-//     left: 1rem;
-//   }
+// IPHONE 6 - TESTED W/ NGROK - PORTRAIT
+@media (min-width: 375px) and (min-height: 553px) and (orientation: portrait) {
+  .singlepage {
+    width: 750px;
+    height: 1003px;
+    bottom: -75.5rem;
+  }
 
-//   .abouttext {
-//     font-size: 2.3rem;
-//   }
+  .booknavcontainersp {
+    width: 375px;
+    bottom: -62.2rem;
+  }
 
-//   .page1texta {
-//     font-size: 5rem;
-//   }
+  .booknavssp {
+    width: 100px;
+    height: 34px;
+  }
 
-//   .page11texta {
-//     font-size: 2.9rem;
-//   }
+  .aboutsvgsp {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
 
-//   .page13texta {
-//     font-size: 2.9rem;
-//   }
+  .abouttextsp {
+    font-size: 2.1rem;
+  }
 
-//   .page15texta {
-//     font-size: 2.8rem;
-//   }
+  .page1textsp {
+    font-size: 5rem;
+  }
 
-//   .page17texta {
-//     font-size: 1.8rem;
-//   }
-// }
-// // IPHONE 6/7/8 - CHROME DEVTOOLS
-// @media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
-//   .aboutbookcontainer {
-//     width: 745px;
-//     height: 996px;
-//     right: 0rem;
-//     bottom: -71.5rem;
-//   }
+  .page11textsp,
+  .page13textsp,
+  .page15textsp {
+    font-size: 2.9rem;
+  }
 
-//   .booknavs {
-//     width: 110px;
-//     height: 38px;
-//     bottom: -59.2rem;
-//   }
+  .page17textsp {
+    font-size: 1.8rem;
+  }
+}
 
-//   .abouttext {
-//     font-size: 2.1rem;
-//   }
+// IPHONE 6 - TESTED W/ NGROK - LANDSCAPE
+@media (min-width: 553px) and (min-height: 375px) and (orientation: landscape) {
+  .doublepage {
+    width: 475px;
+    height: 635px;
+    bottom: -69.5rem;
+  }
 
-//   .page1texta {
-//     font-size: 5rem;
-//   }
+  .booknavcontainerdp {
+    width: 475px;
+    bottom: -61.8rem;
+  }
 
-//   .page11texta {
-//     font-size: 3rem;
-//   }
+  .booknavsdp {
+    width: 90px;
+    height: 30px;
+  }
 
-//   .page13texta {
-//     font-size: 2.5rem;
-//   }
+  .aboutsvgdp {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 
-//   .page15texta {
-//     font-size: 3rem;
-//   }
-//   .page17texta {
-//     font-size: 1.81rem;
-//   }
-// }
+  .abouttextdp {
+    font-size: 1.8rem;
+    padding: 1rem;
+  }
+
+  .page0textdp {
+    font-size: 3.5rem;
+  }
+
+  .page10textdp,
+  .page12textdp,
+  .page14textdp {
+    font-size: 2.2rem;
+  }
+
+  .page16textdp {
+    font-size: 1.6rem;
+  }
+
+  .page17textdp {
+    font-size: 1.4rem;
+  }
+}
+
+// IPHONE 6/7/8 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
+  .singlepage {
+    width: 745px;
+    height: 996px;
+    bottom: -71.5rem;
+  }
+
+  .booknavcontainersp {
+    width: 372.5px;
+    bottom: -59rem;
+  }
+
+  .aboutsvgsp {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+}
+
+// IPHONE 6/7/8 - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 667px) and (min-height: 375px) and (orientation: landscape) {
+  // NOTHING NEEDED
+}
 
 // // IPHONE XR - TESTED W/ NGROK
 // @media (min-width: 414.98px) and (min-height: 715.98px) and (orientation: portrait) {
