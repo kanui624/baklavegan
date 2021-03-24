@@ -1,9 +1,6 @@
 // React
 import { useState, useEffect, useRef, Fragment } from "react";
 
-// Next
-import Link from "next/link";
-
 // Redux
 import { useDispatch, useSelector } from "react-redux";
 import { loadPage, unloadPage } from "@/redux/slices/AboutPageLoadedSlice";
@@ -88,9 +85,11 @@ const AboutBookDP: FC = () => {
 
   const handleInitializeBook = () => {
     animateOut(".aboutbookcontainerdp", ".booknavsdp");
-    dispatch(unloadPage({ pageLoaded: false }));
-    dispatch(initializePage({ pageCount: 0 }));
-    (aboutBookDP.current as any).pageFlip.turnToPage(0);
+    setTimeout(() => {
+      dispatch(unloadPage({ pageLoaded: false }));
+      dispatch(initializePage({ pageCount: 0 }));
+      (aboutBookDP.current as any).pageFlip.turnToPage(0);
+    }, 3000);
   };
 
   const handleInitialLoad = () => {
