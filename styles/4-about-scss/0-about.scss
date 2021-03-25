@@ -11,7 +11,8 @@
 }
 
 .booknavssp:focus,
-.booknavsdp:focus {
+.booknavsdp:focus,
+.booknavsdpp:focus {
   outline: none;
   box-shadow: none;
 }
@@ -28,19 +29,23 @@
 .booknavforwarddp,
 .booknavbackwarddp,
 .booknavforwardsp,
-.booknavbackwardsp {
+.booknavbackwardsp,
+.booknavforwarddpp,
+.booknavbackwarddpp {
   opacity: 0;
   visibility: hidden;
 }
 
 .booknavbackwardsp,
-.booknavbackwarddp {
+.booknavbackwarddp,
+.booknavbackwarddpp {
   transform: rotateY(180deg);
 }
 
 // IPHONE 4 - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
-  .doublepage {
+  .doublepage,
+  .doublepagep {
     opacity: 0;
   }
   .singlepage {
@@ -568,19 +573,25 @@
 
 // SURFACE DUO - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 540px) and (min-height: 720px) and (orientation: portrait) {
-  .singlepage {
+  .singlepage,
+  .doublepage {
     opacity: 0;
   }
-  .doublepage {
+  .doublepagep {
     opacity: 1;
     width: 540px;
     height: 722px;
     bottom: -62rem;
   }
 
-  .booknavcontainerdp {
-    width: 270px;
-    bottom: -65rem;
+  .booknavcontainerdpp {
+    width: 540px;
+    bottom: -54rem;
+  }
+
+  .booknavsdpp {
+    width: 100px;
+    height: 34px;
   }
 
   // .aboutsvg {

@@ -4,6 +4,7 @@ import { Fragment } from "react";
 // Components
 import AboutBookSP from "@/components/4-about/3-components/AboutBookSP";
 import AboutBookDP from "@/components/4-about/3-components/AboutBookDP";
+import AboutBookDPP from "@/components/4-about/3-components/AboutBookDPP";
 
 // Custom Hooks
 import { useWindowResize } from "../../customhooks/useWindowResize";
@@ -15,7 +16,9 @@ const About: FC = () => {
 
   return (
     <Fragment>
-      {(width >= 540 && height >= 720) || width > height ? (
+      {width >= 540 && height >= 720 ? (
+        <AboutBookDPP />
+      ) : width > height ? (
         <AboutBookDP />
       ) : (
         <AboutBookSP />
