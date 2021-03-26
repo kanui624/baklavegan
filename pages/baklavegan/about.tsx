@@ -16,7 +16,7 @@ const About: FC = () => {
 
   return (
     <Fragment>
-      {width >= 540 && height >= 720 ? (
+      {width >= 540 && height >= 720 && height > width ? (
         <AboutBookDPP />
       ) : width > height ? (
         <AboutBookDP />

@@ -219,67 +219,87 @@
   // NOTHING NEEDED
 }
 
-// // SURFACE DUO - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 540px) and (min-height: 720px) and (orientation: portrait) {
-//   .menupageimage {
-//     bottom: -21.7rem;
-//   }
+// SURFACE DUO - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 540px) and (min-height: 720px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
 
-//   .menupagetext {
-//     font-size: 3.8rem;
-//     bottom: -13rem;
-//   }
+// SURFACE DUO - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 720px) and (min-height: 540px) and (orientation: landscape) {
+  .menupageimage {
+    bottom: -22rem;
+  }
 
-//   .invisiblemenubtn {
-//     height: 4rem;
-//     width: 8rem;
-//   }
-// }
+  .menupagetext {
+    font-size: 4rem;
+    bottom: -13.5rem;
+  }
 
-// // SURFACE DUO - CHROME DEVTOOLS - LANDSCAPE
-// @media (min-width: 720px) and (min-height: 540px) and (orientation: landscape) {
-//   .menupageimage {
-//     bottom: -23rem;
-//   }
+  .invisiblemenubtn {
+    height: 4rem;
+    width: 8.5rem;
+  }
+}
 
-//   .menupagetext {
-//     font-size: 3rem;
-//     bottom: -13rem;
-//   }
+// IPAD MINI - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 768px) and (min-height: 921px) and(orientation: portrait) {
+  .menupageimage {
+    bottom: -20.5rem;
+  }
 
-//   .invisiblemenubtn {
-//     height: 3rem;
-//     width: 8rem;
-//   }
-// }
+  .menupagetext {
+    font-size: 4.5rem;
+    bottom: -13rem;
+  }
+}
 
-// // IPAD MINI - TESTED WITH NGROK - PORTRAIT
-// @media (min-width: 768px) and (min-height: 921px) and(orientation: portrait) {
-//   .menupageimage {
-//     bottom: -21rem;
-//   }
+// IPAD MINI - TESTED WITH NGROK - LANDSCAPE
+@media (min-width: 921px) and (min-height: 665.98px) and (orientation: landscape) {
+  .menupageimage {
+    bottom: -21rem;
+  }
+  .menupagetext {
+    font-size: 4rem;
+    bottom: -13rem;
+  }
+}
 
-//   .menupagetext {
-//     font-size: 4rem;
-//   }
+// IPAD 2019 - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 810px) and (min-height: 977px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
 
-//   .invisiblemenubtn {
-//     height: 4rem;
-//   }
-// }
+// IPAD 2019 - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 977px) and (min-height: 810px) and (orientation: landscape) {
+  .menupageimage {
+    bottom: -21rem;
+  }
+  .menupagetext {
+    font-size: 4rem;
+    bottom: -13rem;
+  }
+  .invisiblemenubtn {
+    height: 4.5rem;
+    width: 9.5rem;
+  }
+}
 
-// // IPAD MINI - TESTED WITH NGROK - LANDSCAPE
-// @media (min-width: 921px) and (min-height: 665.98px) and (orientation: landscape) {
-//   .menupagetext {
-//     font-size: 3.5rem;
-//     bottom: -13.5rem;
-//   }
-// }
+// IPAD - CHROME DEV TOOLS - LANDSCAPE
+@media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape) {
+  .invisiblemenubtn {
+    height: 5rem;
+    width: 9rem;
+  }
+}
+// IPAD PRO - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
 
-// // IPAD PRO - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
-//   // NOTHING NEEDED
-// }
+// IPAD PRO - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
+  // NOTHING NEEDED
+}
 
 // // 13" DELL - TESTED W/ NGROK
 // @media (min-width: 1280px) and (min-height: 578px) and (orientation: landscape) {
