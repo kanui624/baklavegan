@@ -98,6 +98,23 @@
 @media (min-width: 640px) and (min-height: 360px) and (orientation: landscape) {
   // NOTHING NEEDED
 }
+
+// IPHONE 6 - TESTED W/ NGROK - PORTRAIT
+@media (min-width: 375px) and (min-height: 553px) and (orientation: portrait) {
+  .invisiblemenubtn {
+    height: 2.5rem;
+    width: 7.5rem;
+  }
+}
+
+// IPHONE 6 - TESTED W/ NGROK - LANDSCAPE
+@media (min-width: 553px) and (min-height: 375px) and (orientation: landscape) {
+  .invisiblemenubtn {
+    height: 2.5rem;
+    width: 7.5rem;
+  }
+}
+
 // IPHONE 6/7/8 - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
   .menupageimage {

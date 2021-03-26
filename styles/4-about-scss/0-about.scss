@@ -666,6 +666,36 @@
 }
 
 // IPAD MINI - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 665px) and (min-height: 921px) and(orientation: portrait) {
+  .doublepagep {
+    width: 650px;
+    height: 869px;
+    bottom: -60rem;
+  }
+
+  .booknavcontainerdpp {
+    width: 600px;
+    bottom: -50rem;
+  }
+
+  .abouttextdpp {
+    font-size: 2.5rem;
+  }
+
+  .page0textdpp {
+    font-size: 4rem;
+  }
+
+  .page16textdpp {
+    font-size: 2.2rem;
+  }
+
+  .page17textdpp {
+    font-size: 1.8rem;
+  }
+}
+
+// IPAD MINI - TESTED WITH NGROK - PORTRAIT
 @media (min-width: 768px) and (min-height: 921px) and(orientation: portrait) {
   .doublepagep {
     width: 770px;
@@ -713,16 +743,16 @@
 }
 
 // IPAD MINI - TESTED WITH NGROK - LANDSCAPE
-@media (min-width: 921px) and (min-height: 665.98px) and (orientation: landscape) {
+@media (min-width: 921px) and (min-height: 665px) and (orientation: landscape) {
   .doublepage {
     width: 750px;
     height: 1003px;
-    bottom: -68.5rem;
+    bottom: -72rem;
   }
 
   .booknavcontainerdp {
     width: 700px;
-    bottom: -57rem;
+    bottom: -61rem;
   }
 
   .booknavsdp {
@@ -800,7 +830,7 @@
   }
 }
 
-// IPAD 2019 - TESTED WITH NGROK - PORTRAIT
+// IPAD 2019 - TESTED WITH NGROK - LANDSCAPE
 @media (min-width: 977px) and (min-height: 810px) and (orientation: landscape) {
   .doublepage {
     bottom: -67rem;
@@ -987,6 +1017,52 @@
 
 // MACBOOK PRO 15" TESTED W/ NGROK
 @media (min-width: 1440px) and (min-height: 769px) and (orientation: landscape) {
+  .doublepage {
+    width: 900px;
+    height: 1204px;
+    bottom: -74rem;
+  }
+
+  .booknavcontainerdp {
+    width: 850px;
+    bottom: -59rem;
+  }
+
+  .svg1dp {
+    height: 180px;
+  }
+
+  .aboutsvgdp {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .abouttextdp {
+    font-size: 2.8rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .page0textdp {
+    font-size: 6rem;
+  }
+
+  .page10textdp,
+  .page12textdp,
+  .page14textdp {
+    font-size: 3.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .page16textdp,
+  .page17textdp {
+    font-size: 2.5rem;
+  }
+}
+
+// MACBOOK PRO 15" TESTED W/ NGROK
+@media (min-width: 1440px) and (min-height: 821px) and (orientation: landscape) {
   .doublepage {
     width: 1000px;
     height: 1338px;
