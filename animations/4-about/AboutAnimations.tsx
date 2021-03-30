@@ -25,13 +25,18 @@ export const animateInInitialLoad = (
   inInitClassOne: string,
   inInitClassTwo: string
 ) => {
-  gsap.from([inInitClassOne, inInitClassTwo], {
-    y: 1000,
-    delay: 1,
-    duration: 2.3,
-    ease: "back.out(1.07)",
-    stagger: 0.15,
-  });
+  gsap.fromTo(
+    [inInitClassOne, inInitClassTwo],
+    { y: 1000, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      delay: 1,
+      duration: 2.3,
+      ease: "back.out(1.07)",
+      stagger: 0.15,
+    }
+  );
 };
 
 export const animateInIsLoaded = (
@@ -41,18 +46,33 @@ export const animateInIsLoaded = (
   const isLoadedTL = gsap.timeline();
   isLoadedTL.fromTo(
     [inLoadedClassOne, inLoadedClassTwo],
-    { y: 0, opacity: 0 },
-    { y: -1000, duration: 0 }
+    { opacity: 0 },
+    {
+      opacity: 1,
+      duration: 0,
+    }
   );
-  isLoadedTL.to([inLoadedClassOne, inLoadedClassTwo], {
-    opacity: 1,
-    duration: 0,
-  });
 };
+
+// export const animateInIsLoaded = (
+//   inLoadedClassOne: string,
+//   inLoadedClassTwo?: string
+// ) => {
+//   const isLoadedTL = gsap.timeline();
+//   isLoadedTL.fromTo(
+//     [inLoadedClassOne, inLoadedClassTwo],
+//     { y: 0, opacity: 0 },
+//     { y: -1000, duration: 0 }
+//   );
+//   isLoadedTL.to([inLoadedClassOne, inLoadedClassTwo], {
+//     opacity: 1,
+//     duration: 0,
+//   });
+// };
 
 export const animateOut = (outClassOne: string, outClassTwo: string) => {
   gsap.to([outClassOne, outClassTwo], {
-    y: 100,
+    y: 1000,
     duration: 2,
     ease: "back.in(1.1)",
     stagger: 0.15,
