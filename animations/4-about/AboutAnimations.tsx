@@ -4,21 +4,34 @@ gsap.config({
   nullTargetWarn: false,
 });
 
+// export const animateInInitialLoad = (
+//   inInitClassOne: string,
+//   inInitClassTwo: string
+// ) => {
+//   gsap.fromTo(
+//     [inInitClassOne, inInitClassTwo],
+//     { y: 0 },
+//     {
+//       y: -1000,
+//       delay: 1,
+//       duration: 2.3,
+//       ease: "back.out(1.07)",
+//       stagger: 0.15,
+//     }
+//   );
+// };
+
 export const animateInInitialLoad = (
   inInitClassOne: string,
   inInitClassTwo: string
 ) => {
-  gsap.fromTo(
-    [inInitClassOne, inInitClassTwo],
-    { y: 0 },
-    {
-      y: -1000,
-      delay: 1,
-      duration: 2.3,
-      ease: "back.out(1.07)",
-      stagger: 0.15,
-    }
-  );
+  gsap.from([inInitClassOne, inInitClassTwo], {
+    y: 1000,
+    delay: 1,
+    duration: 2.3,
+    ease: "back.out(1.07)",
+    stagger: 0.15,
+  });
 };
 
 export const animateInIsLoaded = (

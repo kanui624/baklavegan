@@ -51,14 +51,16 @@
   .singlepage {
     width: 640px;
     height: 856px;
+    top: 50%;
     left: 50%;
-    transform: translate(-75%, 0%);
-    bottom: -73rem;
+    transform: translate(-75%, -52.5%);
+    // bottom: -73rem;
   }
 
   .booknavcontainersp {
     width: 320px;
-    bottom: -61.5rem;
+    bottom: 3%;
+    // bottom: -61.5rem;
   }
 
   .booknavssp {
@@ -1015,63 +1017,67 @@
   }
 }
 
+// // MACBOOK PRO 15" TESTED W/ NGROK
+// @media (min-width: 1440px) and (min-height: 769px) and (orientation: landscape) {
+//   .doublepage {
+//     width: 1000px;
+//     height: 1338px;
+//     // bottom: -74rem;
+//     top: 50%;
+//     transform: translateY(-53%);
+//   }
+
+//   .booknavcontainerdp {
+//     width: 850px;
+//     // bottom: -59rem;
+//   }
+
+//   .svg1dp {
+//     height: 180px;
+//   }
+
+//   .aboutsvgdp {
+//     padding-left: 1.2rem;
+//     padding-right: 1.2rem;
+//   }
+
+//   .abouttextdp {
+//     font-size: 2.8rem;
+//     padding-right: 1.5rem;
+//     padding-left: 1.5rem;
+//   }
+
+//   .page0textdp {
+//     font-size: 6rem;
+//   }
+
+//   .page10textdp,
+//   .page12textdp,
+//   .page14textdp {
+//     font-size: 3.5rem;
+//     padding-left: 2rem;
+//     padding-right: 2rem;
+//   }
+
+//   .page16textdp,
+//   .page17textdp {
+//     font-size: 2.5rem;
+//   }
+// }
+
 // MACBOOK PRO 15" TESTED W/ NGROK
 @media (min-width: 1440px) and (min-height: 769px) and (orientation: landscape) {
   .doublepage {
-    width: 900px;
-    height: 1204px;
-    bottom: -74rem;
-  }
-
-  .booknavcontainerdp {
-    width: 850px;
-    bottom: -59rem;
-  }
-
-  .svg1dp {
-    height: 180px;
-  }
-
-  .aboutsvgdp {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-  }
-
-  .abouttextdp {
-    font-size: 2.8rem;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-  }
-
-  .page0textdp {
-    font-size: 6rem;
-  }
-
-  .page10textdp,
-  .page12textdp,
-  .page14textdp {
-    font-size: 3.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .page16textdp,
-  .page17textdp {
-    font-size: 2.5rem;
-  }
-}
-
-// MACBOOK PRO 15" TESTED W/ NGROK
-@media (min-width: 1440px) and (min-height: 821px) and (orientation: landscape) {
-  .doublepage {
     width: 1000px;
     height: 1338px;
-    bottom: -77rem;
+    // bottom: -77rem;
+    top: 50%;
+    transform: translateY(-53%);
   }
 
   .booknavcontainerdp {
     width: 900px;
-    bottom: -60.5rem;
+    // bottom: -60.5rem;
   }
 
   .booknavsdp {
