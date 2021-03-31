@@ -47,6 +47,7 @@ const AboutBookSP: FC = () => {
     AboutPageLoaded: { pageLoaded },
     AboutPageCount: { pageCount },
     MenuTransition: { transition },
+    WindowSize: { width, height },
   } = useSelector<AppState, AppState>((state) => state);
 
   const aboutBookSP = useRef();
@@ -144,15 +145,16 @@ const AboutBookSP: FC = () => {
 
   return (
     <Fragment>
-      <div className="aboutbookcontainersp singlepage absolute">
+      <div
+        className="aboutbookcontainersp singlepage absolute"
+        style={{ height: height * 2, width: width * 2 }}
+      >
         <HTMLFlipBook
           ref={aboutBookSP}
-          className="aboutbook inset-0 h-full max-w-full"
+          className="aboutbooksp inset-0 h-full max-w-full"
           useMouseEvents={false}
           flippingTime={1500}
-          usePortrait={false}
           maxShadowOpacity={0}
-          autoSize={false}
           size={"stretch"}
           width={400}
           height={535}
