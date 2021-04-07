@@ -60,6 +60,9 @@ const AboutBookDP: FC = () => {
       ? { w: 819.2, h: 614.4 }
       : { w: width * wh, h: height * wh };
 
+  console.log(width, height);
+  console.log(w, h);
+
   const handleDispatchPageCount = (dispatchCount: boolean) => {
     if (dispatchCount) {
       dispatch(nextPage({ pageCount: pageCount + 1 }));

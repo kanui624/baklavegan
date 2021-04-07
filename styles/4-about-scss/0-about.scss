@@ -1278,112 +1278,102 @@
 // MACBOOK PRO 15" TESTED W/ NGROK
 @media (min-width: 1440px) and (min-height: 769px) and (orientation: landscape) {
   .booknavcontainerdp {
+    width: 49rem;
+    top: 85%;
   }
-  // .doublepage {
-  //   top: 50%;
-  // }
 
-  // .abouttextdp {
-  //   font-size: 2.2rem;
-  //   padding: 2rem;
-  // }
+  .abouttextdp {
+    font-size: 2.5rem;
+    padding: 3.5rem;
+  }
 
-  // .page0textdp {
-  //   font-size: 5rem;
-  // }
+  .page0textdp {
+    font-size: 5rem;
+  }
 
-  // .page10textdp,
-  // .page12textdp,
-  // .page14textdp {
-  //   font-size: 2.8rem;
-  //   padding-left: 2rem;
-  //   padding-right: 2rem;
-  // }
+  .page10textdp,
+  .page12textdp,
+  .page14textdp {
+    font-size: 2.8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 
-  // .page16textdp,
-  // .page17textdp {
-  //   font-size: 2.1rem;
-  // }
+  .page16textdp,
+  .page17textdp {
+    font-size: 2.1rem;
+  }
+
+  .page17textdp {
+    padding: 2rem;
+  }
 }
 
-// // // HIGH-RES 32 INCH MONITOR - TESTED W/ LOCAL MACHINE
-// @media (min-width: 1920px) and (min-height: 969px) and (orientation: landscape) {
-//   .doublepage {
-//     width: 1000px;
-//     height: 1338px;
-//     top: 50%;
-//   }
+// HIGH-RES 32 INCH MONITOR - TESTED W/ LOCAL MACHINE
+@media (min-width: 1920px) and (min-height: 969px) and (orientation: landscape) {
+  .aboutbookdp {
+    top: 6rem;
+  }
+  .booknavcontainerdp {
+    width: 49rem;
+    top: 82%;
+    .booknavsdp {
+      width: 7.5rem;
+      height: 5rem;
+    }
+  }
 
-//   .booknavcontainerdp {
-//     top: 90%;
-//   }
+  .svg1dp {
+    height: 12rem;
+  }
 
-//   .booknavcontainerdp {
-//     width: 900px;
-//     top: 92%;
-//   }
+  .aboutsvgdp {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
-//   .booknavsdp {
-//     width: 150px;
-//     height: 53px;
-//   }
+  .abouttextdp {
+    font-size: 2.7rem;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
 
-//   .svg1dp {
-//     height: 200px;
-//   }
+  .page0textdp {
+    font-size: 6rem;
+  }
 
-//   .aboutsvgdp {
-//     padding-left: 1rem;
-//     padding-right: 1rem;
-//   }
+  .page10textdp,
+  .page12textdp,
+  .page14textdp {
+    font-size: 3.1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 
-//   .abouttextdp {
-//     font-size: 3rem;
-//     padding-right: 1.5rem;
-//     padding-left: 1.5rem;
-//   }
+  .page16textdp,
+  .page17textdp {
+    font-size: 2.3rem;
+  }
+}
 
-//   .page0textdp {
-//     font-size: 8rem;
-//   }
+// ULTRA-WIDESCREEN - TESTED ON LOCAL MACHINE
+@media (min-width: 2560px) and (min-height: 953px) and (orientation: landscape) {
+  .aboutbookdp {
+    top: 12%;
+  }
 
-//   .page10textdp,
-//   .page12textdp,
-//   .page14textdp {
-//     font-size: 3.5rem;
-//     padding-left: 2rem;
-//     padding-right: 2rem;
-//   }
+  .booknavcontainerdp {
+    top: 83%;
+  }
+}
 
-//   .page16textdp,
-//   .page17textdp {
-//     font-size: 2.7rem;
-//   }
-//   // .abouttext {
-//   //   padding-left: 1rem;
-//   //   padding-right: 1rem;
-//   // }
+// IMAC 2015 - TESTED ON LOCAL MACHINE
+@media (min-width: 2560px) and (min-height: 1361px) and(orientation: landscape) {
+  .aboutbookdp {
+    top: 50%;
+  }
 
-//   // .page8texta {
-//   //   padding-left: 1.5rem;
-//   //   padding-right: 1.5rem;
-//   // }
-// }
-
-// // ULTRA-WIDESCREEN - TESTED ON LOCAL MACHINE
-// @media (min-width: 2560px) and (min-height: 953px) and (orientation: landscape) {
-//   .doublepage {
-//     top: 50%;
-//   }
-
-//   .booknavcontainerdp {
-//     top: 90%;
-//   }
-// }
-
-// // IMAC 2015 - TESTED ON LOCAL MACHINE
-// @media (min-width: 2560px) and (min-height: 1361px) and(orientation: landscape) {
-//   .booknavcontainerdp {
-//     top: 80%;
-//   }
-// }
+  .booknavcontainerdp {
+    top: 79%;
+  }
+}
