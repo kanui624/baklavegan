@@ -54,6 +54,12 @@ const AboutBookDP: FC = () => {
 
   const [disabled, setDisabled] = useState(false);
 
+  const { wh } = width > 720 && height > 540 ? { wh: 0.8 } : { wh: 0.85 };
+  const { w, h } =
+    width > 1024 && height >= 720
+      ? { w: 819.2, h: 614.4 }
+      : { w: width * wh, h: height * wh };
+
   const handleDispatchPageCount = (dispatchCount: boolean) => {
     if (dispatchCount) {
       dispatch(nextPage({ pageCount: pageCount + 1 }));
@@ -145,7 +151,7 @@ const AboutBookDP: FC = () => {
     <Fragment>
       <div
         className="aboutbookcontainerdp doublepage absolute"
-        style={{ height: height * 0.85, width: width * 0.85 }}
+        style={{ height: h, width: w }}
       >
         <HTMLFlipBook
           ref={aboutBookDP}
