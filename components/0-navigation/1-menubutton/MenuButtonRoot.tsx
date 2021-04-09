@@ -1,21 +1,21 @@
 // React
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 // Next
 import Image from "next/image";
 
 // Redux
 import { useDispatch } from "react-redux";
-import { enterMenu } from "../../../redux/slices/MenuTransitionSlice";
+import { enterMenu } from "@/redux/slices/MenuTransitionSlice";
 
 // GSAP Animations
 import {
   animateIn,
   animateOut,
-} from "../../../animations/0-navigation/RootAnimations";
+} from "@/animations/0-navigation/RootAnimations";
 
 // Styles
-import styles from "../../../styles/0-navigation/1-menubutton/menubuttonroot.module.scss";
+import styles from "@/styles/0-navigation/1-menubutton/menubuttonroot.module.scss";
 
 // React Types
 import { FC } from "react";

@@ -1,5 +1,5 @@
 // GSAP
-import gsap from 'gsap';
+import gsap from "gsap";
 
 const inTl = gsap.timeline();
 
@@ -8,7 +8,7 @@ export const animateIn = (rootImageIn: string, rootTextIn: string) => {
     y: -350,
     delay: 2,
     duration: 2.3,
-    ease: 'back.out(1.2)',
+    ease: "back.out(1.2)",
   });
   inTl.to(rootImageIn, {
     opacity: 1,
@@ -26,6 +26,6 @@ export const animateOut = (rootBtnOut: string) => {
     y: 0,
     stagger: 0.15,
     duration: 1,
-    ease: 'back.in(1.5)',
+    ease: "back.in(1.5)",
   });
 };
