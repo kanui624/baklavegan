@@ -6,7 +6,7 @@ export interface SocialDataProps {
   height: number;
 }
 
-export interface ContactInfoDataProps {
+export interface ContactCardDataProps {
   id: number;
   name: string;
   textOne: string;

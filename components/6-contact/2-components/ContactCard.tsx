@@ -20,7 +20,7 @@ const ContactInfo: FC<ContactInfoCardProps> = ({
   textThree = null,
 }) => {
   return (
-    <div className={`${name}card fixed`}>
+    <div className={`${name}card`}>
       <div className={`${name}bgpos ${name}to`}>
         <Image src={image} alt={name} width={624} height={125} />
       </div>
