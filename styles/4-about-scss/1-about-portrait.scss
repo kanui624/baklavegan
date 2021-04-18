@@ -1,0 +1,646 @@
+// PORTRAIT BASE STYLES- SIZED TO IPHONE 4 - 320 X 480
+.spcontainer {
+  right: 0;
+  .aboutbookcontainersp {
+    .svg1sp {
+      width: 70%;
+    }
+    .aboutsvgsp {
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+    }
+    .abouttextsp {
+      font-size: 200%;
+      padding: 0.5rem;
+      padding-right: 1rem;
+    }
+
+    .page1textsp {
+      font-size: 500%;
+    }
+
+    .page5textsp,
+    .page7textsp {
+      font-size: 190%;
+    }
+
+    .page11textsp {
+      font-size: 230%;
+    }
+    .page13textsp {
+      font-size: 220%;
+    }
+    .page15textsp {
+      font-size: 250%;
+    }
+    .page17textsp {
+      font-size: 160%;
+    }
+  }
+  .booknavcontainersp {
+    float: right;
+    margin-top: 0.5%;
+    .booknavssp {
+      margin-top: 2.5%;
+      margin-bottom: 3%;
+      width: 26%;
+    }
+  }
+}
+
+// NOKIA LUMA 520 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 320px) and (min-height: 533px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
+
+// IPHONE 5-SE - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 320px) and (min-height: 568px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
+
+// NEXUS 5 - CHROME DEV TOOLS - PORTRAIT
+@media (min-width: 360px) and (min-height: 512px) and (orientation: portrait) {
+  .spcontainer {
+    .aboutbookcontainersp {
+      .svg1sp {
+        width: 60%;
+      }
+      .page15textsp {
+        font-size: 290%;
+      }
+      .page17textsp {
+        font-size: 180%;
+      }
+    }
+    .booknavcontainersp {
+      margin-top: 0;
+      .booknavssp {
+        margin-top: 2%;
+        margin-bottom: 4%;
+      }
+    }
+  }
+}
+
+// NEXUS 5 - CHROME DEV TOOLS - PORTRAIT
+@media (min-width: 360px) and (min-height: 567px) and (orientation: portrait) {
+  .spcontainer {
+    .aboutbookcontainersp {
+      .svg1sp {
+        width: 60%;
+      }
+    }
+    .booknavcontainersp {
+      margin-top: 0;
+      .booknavssp {
+        margin-top: 2%;
+        margin-bottom: 2%;
+      }
+    }
+  }
+}
+
+// IPHONE 6 - TESTED W/ NGROK - PORTRAIT
+@media (min-width: 375px) and (min-height: 553px) and (orientation: portrait) {
+  .spcontainer {
+    .aboutbookcontainersp {
+      .svg1sp {
+        width: 60%;
+      }
+    }
+    .booknavcontainersp {
+      margin-top: 0;
+      .booknavssp {
+        margin-top: 1.5%;
+        margin-bottom: 1.5%;
+      }
+    }
+  }
+}
+
+// Galaxy S5- CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
+
+// LG Optimus L70 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 384px) and (min-height: 640px) and (orientation: portrait) {
+  .spcontainer {
+    .aboutbookcontainersp {
+      .svg1sp {
+        width: 60%;
+      }
+      .abouttextsp {
+        font-size: 220%;
+      }
+      .aboutsvgsp {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .page1textsp {
+        font-size: 550%;
+      }
+      .page11textsp,
+      .page13textsp {
+        font-size: 250%;
+      }
+
+      .page15textsp {
+        font-size: 290%;
+      }
+      .page17textsp {
+        font-size: 190%;
+      }
+    }
+    .booknavcontainersp {
+      .booknavssp {
+        width: 24%;
+      }
+    }
+  }
+}
+
+// NEXUS 5X - CHORME DEVTOOLS - PORTRAIT
+@media (min-width: 412px) and (min-height: 604px) and (orientation: portrait) {
+  .spcontainer {
+    .aboutbookcontainersp {
+      .svg1sp {
+        width: 60%;
+      }
+      .abouttextsp {
+        font-size: 220%;
+      }
+      .aboutsvgsp {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .page1textsp {
+        font-size: 550%;
+      }
+      .page11textsp,
+      .page13textsp {
+        font-size: 250%;
+      }
+
+      .page15textsp {
+        font-size: 320%;
+      }
+      .page17textsp {
+        font-size: 200%;
+      }
+    }
+    .booknavcontainersp {
+      .booknavssp {
+        width: 24%;
+      }
+    }
+  }
+}
+
+// NEXUS 5X - CHORME DEVTOOLS - PORTRAIT
+@media (min-width: 412px) and (min-height: 660px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
+
+// IPHONE 6/7/8 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
+  .spcontainer {
+    .aboutbookcontainersp {
+      .abouttextsp {
+        font-size: 220%;
+      }
+      .aboutsvgsp {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .page1textsp {
+        font-size: 550%;
+      }
+      .page11textsp,
+      .page13textsp {
+        font-size: 250%;
+      }
+
+      .page15textsp {
+        font-size: 300%;
+      }
+      .page17textsp {
+        font-size: 185%;
+      }
+    }
+    .booknavcontainersp {
+      .booknavbackwardsp {
+        margin-left: 1.5rem;
+      }
+      .booknavforwardsp {
+        margin-right: 1.5rem;
+      }
+      .booknavssp {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+// IPHONE XR - TESTED W/ NGROK - PORTRAIT
+@media (min-width: 414px) and (min-height: 715px) and (orientation: portrait) {
+  .spcontainer {
+    .aboutbookcontainersp {
+      .abouttextsp {
+        font-size: 250%;
+      }
+      .page1textsp {
+        font-size: 600%;
+      }
+      .page11textsp,
+      .page13textsp {
+        font-size: 300%;
+      }
+
+      .page15textsp {
+        font-size: 350%;
+      }
+      .page17textsp {
+        font-size: 200%;
+      }
+    }
+    .booknavcontainersp {
+      .booknavssp {
+        width: 25%;
+      }
+    }
+  }
+}
+
+// IPHONE X - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 375px) and (min-height: 812px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
+
+// PIXEL 2 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 411px) and (min-height: 731px) and (orientation: portrait) {
+  .spcontainer {
+    .aboutbookcontainersp {
+      .abouttextsp {
+        font-size: 230%;
+        padding: 1rem;
+      }
+      .page1textsp {
+        font-size: 600%;
+      }
+
+      .page11textsp,
+      .page13textsp {
+        font-size: 300%;
+      }
+
+      .page15textsp {
+        font-size: 320%;
+      }
+      .page17textsp {
+        font-size: 200%;
+      }
+    }
+    .booknavcontainersp {
+      .booknavssp {
+        width: 25%;
+      }
+    }
+  }
+}
+
+// NEXUS 6 - CHORME DEVTOOLS - PORTRAIT
+@media (min-width: 412px) and (min-height: 732px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
+
+// IPHONE 6/7/8 PLUS - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 414px) and (min-height: 736px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
+
+// PIXEL 2XL- CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 411px) and (min-height: 823px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
+
+// NOKIA N9 - CHROME DEV TOOLS - PORTRAIT
+@media (min-width: 480px) and (min-height: 854px) and (orientation: portrait) {
+  .spcontainer {
+    .aboutbookcontainersp {
+      .abouttextsp {
+        font-size: 270%;
+        padding: 1rem;
+      }
+      .page1textsp {
+        font-size: 750%;
+      }
+
+      .page11textsp,
+      .page13textsp {
+        font-size: 350%;
+      }
+
+      .page15textsp {
+        font-size: 370%;
+      }
+      .page17textsp {
+        font-size: 240%;
+      }
+    }
+  }
+}
+
+// GALAXY FOLD - CHROME DEV TOOLS - PORTRAIT
+@media (min-width: 500px) and (min-height: 700px) and (orientation: portrait) {
+  .dppcontainer {
+    .aboutbookcontainerdpp {
+      .svg1dpp {
+        width: 70%;
+      }
+      .aboutsvgdpp {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      .abouttextdpp {
+        font-size: 180%;
+        padding: 1rem;
+      }
+      .page0textdpp {
+        font-size: 400%;
+      }
+
+      .page10textdpp,
+      .page12textdpp {
+        font-size: 200%;
+      }
+
+      .page14textdpp {
+        font-size: 250%;
+      }
+
+      .page16textdpp {
+        font-size: 160%;
+      }
+      .page17textdpp {
+        font-size: 150%;
+      }
+    }
+    .booknavcontainerdpp {
+      border-radius: 5rem;
+      //   background-color: pink;
+      .booknavsdpp {
+        margin-top: 1rem;
+        width: 18%;
+      }
+    }
+  }
+}
+
+// SURFACE DUO - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 540px) and (min-height: 720px) and (orientation: portrait) {
+  .dppcontainer {
+    .aboutbookcontainerdpp {
+      .svg1dpp {
+        width: 80%;
+      }
+      .aboutsvgdpp {
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+      }
+      .abouttextdpp {
+        padding: 1.5rem;
+      }
+
+      .page4textdpp {
+        padding: 1rem;
+      }
+
+      .page8textdpp {
+        padding: 2rem;
+      }
+
+      .page16textdpp {
+        font-size: 170%;
+      }
+      .page17textdpp {
+        font-size: 155%;
+        padding: 0.7rem;
+      }
+    }
+    .booknavcontainerdpp {
+      .booknavsdpp {
+        margin-top: 1.3rem;
+        width: 17%;
+      }
+    }
+  }
+}
+
+// NEXUS 7 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 600px) and (min-height: 960px) and (orientation: portrait) {
+  .dppcontainer {
+    .aboutbookcontainerdpp {
+      .svg1dpp {
+        width: 80%;
+      }
+      .aboutsvgdpp {
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+      }
+      .abouttextdpp {
+        padding: 2.5rem;
+      }
+
+      .page10textdpp {
+        font-size: 210%;
+      }
+
+      .page17textdpp {
+        font-size: 175%;
+        padding: 0.7rem;
+      }
+    }
+  }
+}
+
+// IPAD MINI - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 665px) and (min-height: 921px) and(orientation: portrait) {
+  .dppcontainer {
+    .aboutbookcontainerdpp {
+      .abouttextdpp {
+        font-size: 210%;
+        padding: 2.5rem;
+      }
+      .page0textdpp {
+        font-size: 500%;
+      }
+
+      .page10textdpp {
+        font-size: 270%;
+      }
+
+      .page12textdpp {
+        font-size: 250%;
+        padding: 2.5rem;
+      }
+
+      .page14textdpp {
+        font-size: 300%;
+      }
+
+      .page16textdpp {
+        font-size: 190%;
+      }
+
+      .page17textdpp {
+        font-size: 190%;
+        padding: 0.7rem;
+      }
+    }
+  }
+}
+
+// IPAD MINI - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 768px) and (min-height: 921px) and(orientation: portrait) {
+  .dppcontainer {
+    .aboutbookcontainerdpp {
+      .svg1dpp {
+        width: 70%;
+      }
+
+      .aboutsvgdpp {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      .abouttextdpp {
+        font-size: 250%;
+        padding: 3.5rem;
+      }
+      .page0textdpp {
+        font-size: 500%;
+      }
+
+      .page10textdpp {
+        font-size: 290%;
+      }
+
+      .page12textdpp {
+        font-size: 270%;
+      }
+
+      .page14textdpp {
+        font-size: 320%;
+      }
+
+      .page16textdpp {
+        font-size: 220%;
+      }
+
+      .page17textdpp {
+        font-size: 220%;
+        padding: 1rem;
+      }
+    }
+    .booknavcontainerdpp {
+      margin-top: 0.7rem;
+      .booknavsdpp {
+        width: 16%;
+      }
+    }
+  }
+}
+
+// IPAD 2019 - TESTED WITH NGROK - LANDSCAPE
+@media (min-width: 810px) and (min-height: 977px) and (orientation: portrait) {
+  .dppcontainer {
+    .aboutbookcontainerdpp {
+      .abouttextdpp {
+        font-size: 270%;
+        padding: 3.5rem;
+      }
+
+      .page0textdpp {
+        font-size: 600%;
+      }
+
+      .page10textdpp {
+        font-size: 300%;
+      }
+      .page12textdpp {
+        font-size: 300%;
+      }
+
+      .page14textdpp {
+        font-size: 320%;
+      }
+
+      .page16textdpp {
+        font-size: 230%;
+      }
+
+      .page17textdpp {
+        font-size: 230%;
+        padding: 1rem;
+      }
+    }
+    .booknavcontainerdpp {
+      .booknavforwarddpp {
+        margin-right: 2rem;
+      }
+      .booknavbackwarddpp {
+        margin-left: 2rem;
+      }
+    }
+  }
+}
+
+// BLACKBERRY PLAYBOOK - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 600px) and (min-height: 1024px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
+
+// IPAD - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
+
+// IPAD PRO - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+  .dppcontainer {
+    .aboutbookcontainerdpp {
+      .aboutsvgdpp {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+      }
+      .abouttextdpp {
+        font-size: 330%;
+        padding: 3.5rem;
+      }
+
+      .page0textdpp {
+        font-size: 700%;
+      }
+
+      .page10textdpp {
+        font-size: 350%;
+      }
+      .page12textdpp {
+        font-size: 320%;
+      }
+
+      .page14textdpp {
+        font-size: 370%;
+      }
+
+      .page16textdpp {
+        font-size: 290%;
+      }
+
+      .page17textdpp {
+        font-size: 290%;
+        padding: 1.5rem;
+      }
+    }
+  }
+}

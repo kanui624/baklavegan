@@ -1,0 +1,906 @@
+// LANDSCAPE BASE STYLES - SIZED TO IPHONE 4 - 480 X 320
+.dpcontainer {
+  .aboutbookcontainerdp {
+    .svg1dp {
+      height: 30%;
+    }
+
+    .aboutsvgdp {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    .abouttextdp {
+      font-size: 135%;
+      padding: 8%;
+    }
+
+    .page0textdp {
+      font-size: 300%;
+    }
+
+    .page4textdp {
+      padding: 5%;
+    }
+
+    .page8textdp {
+      padding: 15%;
+    }
+
+    .page10textdp,
+    .page12textdp {
+      font-size: 160%;
+    }
+
+    .page14textdp {
+      font-size: 200%;
+    }
+
+    .page16textdp {
+      font-size: 125%;
+    }
+
+    .page17textdp {
+      font-size: 1.15rem;
+    }
+  }
+  .booknavcontainerdp {
+    margin-top: 2%;
+    .booknavsdp {
+      width: 20%;
+    }
+  }
+}
+
+// NOKIA LUMA 520 - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 533px) and (min-height: 320px) and (orientation: landscape) {
+  // NOTHING NEEDED
+}
+
+// IPHONE 5-SE - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 568px) and (min-height: 320px) and (orientation: landscape) {
+  // NOTHING NEEDED
+}
+
+// NEXUS 5 - CHROME DEV TOOLS - LANDSCAPE
+@media (min-width: 598px) and (min-height: 280px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .abouttextdp {
+        font-size: 120%;
+      }
+
+      .page0textdp {
+        font-size: 250%;
+      }
+
+      .page10textdp,
+      .page14textdp {
+        font-size: 150%;
+      }
+
+      .page12textdp {
+        font-size: 130%;
+      }
+
+      .page16textdp {
+        font-size: 110%;
+      }
+      .page17textdp {
+        font-size: 100%;
+      }
+    }
+    .booknavcontainerdp {
+      margin-top: 2%;
+    }
+  }
+}
+
+// NEXUS 5 - CHROME DEV TOOLS - LANDSCAPE
+@media (min-width: 598px) and (min-height: 335px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .abouttextdp {
+        font-size: 150%;
+      }
+
+      .page0textdp {
+        font-size: 300%;
+      }
+
+      .page6textdp {
+        font-size: 140%;
+      }
+
+      .page10textdp,
+      .page14textdp,
+      .page12textdp {
+        font-size: 180%;
+      }
+
+      .page16textdp {
+        font-size: 130%;
+      }
+      .page17textdp {
+        font-size: 120%;
+      }
+    }
+    .booknavcontainerdp {
+      margin-top: 2.5%;
+    }
+  }
+}
+
+// IPHONE 6 - TESTED W/ NGROK - LANDSCAPE
+@media (min-width: 553px) and (min-height: 375px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .abouttextdp {
+        font-size: 160%;
+      }
+
+      .page0textdp {
+        font-size: 350%;
+      }
+
+      .page2textdp {
+        font-size: 170%;
+      }
+
+      .page10textdp,
+      .page12textdp {
+        font-size: 190%;
+      }
+
+      .page14textdp {
+        font-size: 210%;
+      }
+
+      .page16textdp {
+        font-size: 145%;
+      }
+
+      .page17textdp {
+        font-size: 135%;
+      }
+    }
+    .booknavcontainerdp {
+      margin-top: 2.3%;
+      .booknavsdp {
+        width: 18%;
+      }
+    }
+  }
+}
+
+// Galaxy S5- CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 640px) and (min-height: 360px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .abouttextdp {
+        font-size: 160%;
+      }
+
+      .page0textdp {
+        font-size: 300%;
+      }
+
+      .page6textdp {
+        padding: 0;
+      }
+
+      .page10textdp,
+      .page12textdp {
+        font-size: 190%;
+      }
+
+      .page14textdp {
+        font-size: 210%;
+      }
+
+      .page16textdp {
+        font-size: 140%;
+      }
+
+      .page17textdp {
+        font-size: 130%;
+        padding: 0.5rem;
+      }
+    }
+    .booknavcontainerdp {
+      margin-top: 2.5%;
+    }
+  }
+}
+
+// LG Optimus L70 - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 640px) and (min-height: 384px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .abouttextdp {
+        font-size: 170%;
+      }
+
+      .page0textdp {
+        font-size: 350%;
+      }
+
+      .page6textdp {
+        padding: 0.5rem;
+      }
+
+      .page10textdp,
+      .page12textdp {
+        font-size: 200%;
+      }
+
+      .page14textdp {
+        font-size: 230%;
+      }
+      .page16textdp {
+        font-size: 140%;
+        padding: 1rem;
+      }
+      .page17textdp {
+        font-size: 145%;
+      }
+    }
+    .booknavcontainerdp {
+      margin-top: 2.5%;
+    }
+  }
+}
+
+// NEXUS 5X - CHORME DEVTOOLS - LANDSCAPE
+@media (min-width: 684px) and (min-height: 332px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .abouttextdp {
+        font-size: 140%;
+      }
+
+      .page0textdp {
+        font-size: 300%;
+      }
+
+      .page10textdp,
+      .page12textdp,
+      .page14textdp {
+        font-size: 180%;
+      }
+
+      .page16textdp {
+        font-size: 130%;
+      }
+
+      .page17textdp {
+        font-size: 120%;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+// IPHONE 6/7/8 - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 667px) and (min-height: 375px) and (orientation: landscape) {
+  .dpcontainer {
+    margin-bottom: 0%;
+    .aboutbookcontainerdp {
+      width: 29.2rem;
+
+      .page6textdp {
+        padding: 0.5rem;
+      }
+
+      .page16textdp {
+        font-size: 140%;
+      }
+      .page17textdp {
+        font-size: 140%;
+      }
+    }
+    .booknavcontainerdp {
+      margin-top: 2.5%;
+    }
+  }
+}
+
+// NEXUS 5X - CHORME DEVTOOLS - LANDSCAPE
+@media (min-width: 684px) and (min-height: 388px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .abouttextdp {
+        font-size: 170%;
+      }
+
+      .page0textdp {
+        font-size: 350%;
+      }
+
+      .page6textdp {
+        padding: 0.5rem;
+      }
+
+      .page10textdp,
+      .page12textdp {
+        font-size: 200%;
+      }
+
+      .page14textdp {
+        font-size: 230%;
+      }
+      .page16textdp {
+        font-size: 140%;
+        padding: 1rem;
+      }
+      .page17textdp {
+        font-size: 145%;
+      }
+    }
+    .booknavcontainerdp {
+      margin-top: 2.5%;
+    }
+  }
+}
+
+// IPHONE XR - TESTED W/ NGROK - LANDSCAPE
+@media (min-width: 715px) and (min-height: 414px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .aboutsvgdp {
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+      }
+
+      .abouttextdp {
+        font-size: 180%;
+      }
+      .page0textdp {
+        font-size: 375%;
+      }
+
+      .page10textdp,
+      .page14textdp {
+        font-size: 220%;
+      }
+
+      .page12textdp {
+        font-size: 200%;
+      }
+
+      .page16textdp {
+        font-size: 160%;
+      }
+
+      .page17textdp {
+        font-size: 150%;
+      }
+    }
+  }
+}
+
+// NEXUS 6 - CHORME DEVTOOLS -LANDSCAPE
+@media (min-width: 732px) and (min-height: 412px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .aboutsvgdp {
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+      }
+
+      .abouttextdp {
+        font-size: 180%;
+      }
+      .page0textdp {
+        font-size: 375%;
+      }
+
+      .page10textdp,
+      .page14textdp {
+        font-size: 220%;
+      }
+
+      .page12textdp {
+        font-size: 200%;
+      }
+
+      .page16textdp {
+        font-size: 160%;
+      }
+
+      .page17textdp {
+        font-size: 150%;
+      }
+    }
+  }
+}
+
+// IPHONE XR - TESTED W/ NGROK - LANDSCAPE
+@media (min-width: 800px) and (min-height: 364px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .aboutsvgdp {
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+      }
+
+      .abouttextdp {
+        font-size: 180%;
+      }
+
+      .page0textdp {
+        font-size: 375%;
+      }
+
+      .page10textdp,
+      .page14textdp {
+        font-size: 220%;
+      }
+
+      .page12textdp {
+        font-size: 200%;
+      }
+
+      .page16textdp {
+        font-size: 160%;
+      }
+
+      .page17textdp {
+        font-size: 150%;
+      }
+    }
+    .booknavcontainerdp {
+      margin-top: 2.5%;
+    }
+  }
+}
+
+// IPHONE X - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 812px) and (min-height: 375px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .aboutsvgdp {
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+      }
+
+      .abouttextdp {
+        font-size: 180%;
+      }
+      .page0textdp {
+        font-size: 375%;
+      }
+
+      .page8textdp {
+        padding: 0.8rem;
+      }
+
+      .page10textdp,
+      .page14textdp {
+        font-size: 220%;
+      }
+
+      .page12textdp {
+        font-size: 200%;
+      }
+
+      .page16textdp {
+        font-size: 150%;
+      }
+
+      .page17textdp {
+        font-size: 135%;
+      }
+    }
+  }
+}
+
+// PIXEL 2 - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 731px) and (min-height: 411px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .page2textdp {
+        font-size: 180%;
+      }
+      .page10textdp {
+        font-size: 220%;
+      }
+
+      .page12textdp {
+        font-size: 190%;
+      }
+      .page14textdp {
+        font-size: 230%;
+      }
+
+      .page16textdp {
+        font-size: 160%;
+      }
+
+      .page17textdp {
+        font-size: 150%;
+      }
+    }
+  }
+}
+
+// NEXUS 6 - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 732px) and (min-height: 412px) and (orientation: landscape) {
+  // NOTHING NEEDED
+}
+
+// IPHONE 6/7/8 PLUS - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 736px) and (min-height: 414px) and (orientation: landscape) {
+  // NOTHING NEEDED
+}
+
+// PIXEL 2XL- CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 823px) and (min-height: 411px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .page8textdp {
+        padding: 1.5rem;
+      }
+    }
+  }
+}
+
+//NOKIA 9 - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 854px) and (min-height: 480px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .abouttextdp {
+        font-size: 200%;
+      }
+
+      .page0textdp {
+        font-size: 450%;
+      }
+
+      .page2textdp {
+        padding: 2rem;
+      }
+      .page8textdp {
+        font-size: 210%;
+        padding: 2rem;
+      }
+
+      .page10textdp {
+        font-size: 240%;
+      }
+
+      .page12textdp {
+        font-size: 230%;
+        padding: 2.5rem;
+      }
+
+      .page14textdp {
+        font-size: 250%;
+      }
+
+      .page16textdp {
+        font-size: 180%;
+      }
+
+      .page17textdp {
+        font-size: 175%;
+      }
+    }
+  }
+}
+
+// GALAXY FOLD - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 700px) and (min-height: 500px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .abouttextdp {
+        font-size: 210%;
+      }
+
+      .page0textdp {
+        font-size: 450%;
+      }
+
+      .page2textdp,
+      .page6textdp {
+        padding: 2rem;
+      }
+
+      .page8textdp {
+        font-size: 220%;
+        padding: 2rem;
+      }
+
+      .page10textdp {
+        font-size: 260%;
+      }
+
+      .page12textdp {
+        font-size: 250%;
+        padding: 2.5rem;
+      }
+
+      .page14textdp {
+        font-size: 270%;
+      }
+
+      .page16textdp {
+        font-size: 190%;
+      }
+
+      .page17textdp {
+        font-size: 185%;
+      }
+    }
+    .booknavcontainerdp {
+      .booknavsdp {
+        width: 16%;
+      }
+    }
+  }
+}
+
+// SURFACE DUO - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 720px) and (min-height: 540px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .abouttextdp {
+        font-size: 220%;
+      }
+
+      .page0textdp {
+        font-size: 450%;
+      }
+
+      .page8textdp {
+        padding: 2.5rem;
+      }
+
+      .page10textdp {
+        font-size: 260%;
+      }
+
+      .page12textdp {
+        font-size: 250%;
+        padding: 3rem;
+      }
+
+      .page14textdp {
+        font-size: 280%;
+      }
+
+      .page16textdp {
+        font-size: 190%;
+      }
+
+      .page17textdp {
+        font-size: 195%;
+      }
+    }
+  }
+}
+
+// NEXUS 7 - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 960px) and (min-height: 600px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .aboutsvgdp {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+      }
+      .abouttextdp {
+        font-size: 230%;
+      }
+
+      .page0textdp {
+        font-size: 450%;
+      }
+
+      .page2textdp {
+        padding: 3rem;
+      }
+
+      .page8textdp {
+        font-size: 240%;
+        padding: 3rem;
+      }
+
+      .page10textdp {
+        font-size: 280%;
+      }
+
+      .page12textdp {
+        font-size: 260%;
+        padding: 4rem;
+      }
+
+      .page14textdp {
+        font-size: 300%;
+      }
+
+      .page16textdp {
+        font-size: 220%;
+        padding: 2rem;
+      }
+
+      .page17textdp {
+        font-size: 200%;
+        padding: 2rem;
+      }
+    }
+  }
+}
+
+// IPAD MINI - TESTED WITH NGROK - LANDSCAPE
+@media (min-width: 921px) and (min-height: 665px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .abouttextdp {
+        font-size: 230%;
+      }
+
+      .svg1dp {
+        height: 25%;
+      }
+
+      .aboutsvgdp {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .page0textdp {
+        font-size: 600%;
+      }
+
+      .page2textdp {
+        padding: 1.5rem;
+      }
+
+      .page8textdp {
+        font-size: 240%;
+        padding: 3rem;
+      }
+
+      .page10textdp {
+        font-size: 290%;
+      }
+
+      .page12textdp {
+        font-size: 260%;
+        padding: 2rem;
+      }
+
+      .page14textdp {
+        font-size: 320%;
+      }
+
+      .page16textdp,
+      .page17textdp {
+        font-size: 220%;
+        padding: 2rem;
+      }
+    }
+    .booknavcontainerdp {
+      .booknavsdp {
+        width: 14%;
+      }
+    }
+  }
+}
+
+// IPAD MINI - TESTED WITH NGROK - LANDSCAPE
+@media (min-width: 921px) and (min-height: 768px) and(orientation: landscape) {
+  //  NOTHING NEEDED
+}
+
+// IPAD 2019 - TESTED WITH NGROK - LANDSCAPE
+@media (min-width: 977px) and (min-height: 810px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .page2textdp {
+        padding: 1 rem;
+      }
+
+      .page12textdp {
+        font-size: 270%;
+      }
+    }
+  }
+}
+
+// BLACKBERRY PLAYBOOK - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 1024px) and (min-height: 600px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .page12textdp {
+        font-size: 270%;
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+// IPAD - CHROME DEV TOOLS - LANDSCAPE
+@media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape) {
+  // NOTHING NEEDED
+}
+
+// 13" DELL - TESTED W/ NGROK - LANDSCAPE
+@media (min-width: 1280px) and (min-height: 578px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .aboutsvgdp {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+      }
+      .page2textdp {
+        padding: 0.5rem;
+      }
+
+      .page8textdp {
+        padding: 1rem;
+      }
+
+      .page12textdp {
+        padding: 0;
+        font-size: 250%;
+      }
+      .page16textdp {
+        font-size: 220%;
+      }
+      .page17textdp {
+        padding: 1.5rem;
+        font-size: 200%;
+      }
+    }
+  }
+}
+
+// LOW-RES 32INCH MONITOR - TESTED W/ LOCAL MACHINE
+@media (min-width: 1360px) and (min-height: 689px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .page16textdp,
+      .page17textdp {
+        font-size: 240%;
+      }
+    }
+  }
+}
+
+// IPAD PRO - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .page12textdp {
+        font-size: 300%;
+      }
+    }
+  }
+}
+
+// MACBOOK PRO 15" TESTED W/ NGROK
+@media (min-width: 1440px) and (min-height: 769px) and (orientation: landscape) {
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .page12textdp {
+        font-size: 310%;
+      }
+    }
+  }
+}
+
+// HIGH-RES 32 INCH MONITOR - TESTED W/ LOCAL MACHINE
+@media (min-width: 1920px) and (min-height: 969px) and (orientation: landscape) {
+  // NOTHING NEEDED
+}
+
+// ULTRA-WIDESCREEN - TESTED ON LOCAL MACHINE
+@media (min-width: 2560px) and (min-height: 953px) and (orientation: landscape) {
+  // NOTHING NEEDED
+}
+
+// IMAC 2015 - TESTED ON LOCAL MACHINE
+@media (min-width: 2560px) and (min-height: 1361px) and(orientation: landscape) {
+  // NOTHING NEEDED
+}

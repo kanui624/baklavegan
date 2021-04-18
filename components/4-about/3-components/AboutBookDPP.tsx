@@ -142,11 +142,8 @@ const AboutBookDPP: FC = () => {
   }, [pageCount]);
 
   return (
-    <Fragment>
-      <div
-        className="aboutbookcontainerdpp doublepagep absolute"
-        style={{ width: width, height: height }}
-      >
+    <div className="dppcontainer fixed">
+      <div className="aboutbookcontainerdpp" style={{ width: width }}>
         <HTMLFlipBook
           ref={aboutBookDPP}
           className="aboutbook inset-0 h-full max-w-full"
@@ -178,7 +175,10 @@ const AboutBookDPP: FC = () => {
           )}
         </HTMLFlipBook>
       </div>
-      <div className="booknavcontainerdpp fixed flex justify-between">
+      <div
+        className="booknavcontainerdpp flex justify-between"
+        style={{ width: width }}
+      >
         <button
           disabled={pageCount === 0 ? true : disabled}
           className="booknavsdpp booknavbackwarddpp ml-4"
@@ -194,7 +194,7 @@ const AboutBookDPP: FC = () => {
           <img src="/3-svgs/about/book-nav.svg" alt="book-nav-forward-dpp" />
         </button>
       </div>
-    </Fragment>
+    </div>
   );
 };
 

@@ -52,16 +52,10 @@ const AboutBookDP: FC = () => {
 
   const aboutBookDP = useRef();
 
+  const calcSize = (height * 1.25) / 16;
+  const conditionalSize = calcSize >= 52 ? 52 : Math.round(calcSize * 2) / 2;
+
   const [disabled, setDisabled] = useState(false);
-
-  const { wh } = width > 720 && height > 540 ? { wh: 0.8 } : { wh: 0.85 };
-  const { w, h } =
-    width > 1024 && height >= 720
-      ? { w: 819.2, h: 614.4 }
-      : { w: width * wh, h: height * wh };
-
-  console.log(width, height);
-  console.log(w, h);
 
   const handleDispatchPageCount = (dispatchCount: boolean) => {
     if (dispatchCount) {
@@ -151,17 +145,18 @@ const AboutBookDP: FC = () => {
   }, [pageCount]);
 
   return (
-    <Fragment>
+    <div className="dpcontainer">
       <div
-        className="aboutbookcontainerdp doublepage absolute"
-        style={{ height: h, width: w }}
+        className="aboutbookcontainerdp"
+        style={{ width: `${conditionalSize}rem` }}
       >
         <HTMLFlipBook
           ref={aboutBookDP}
-          className="aboutbookdp inset-0 h-full max-w-full"
+          className="aboutbookdp"
           useMouseEvents={false}
+          usePortrait={false}
           flippingTime={1500}
-          maxShadowOpacity={1}
+          maxShadowOpacity={0}
           size={"stretch"}
           width={400}
           height={535}
@@ -187,7 +182,7 @@ const AboutBookDP: FC = () => {
           )}
         </HTMLFlipBook>
       </div>
-      <div className="booknavcontainerdp fixed flex justify-between">
+      <div className="booknavcontainerdp flex justify-between">
         <button
           disabled={pageCount === 0 ? true : disabled}
           className="booknavsdp booknavbackwarddp ml-4"
@@ -203,7 +198,7 @@ const AboutBookDP: FC = () => {
           <img src="/3-svgs/about/book-nav.svg" alt="book-nav-forward-dp" />
         </button>
       </div>
-    </Fragment>
+    </div>
   );
 };
 

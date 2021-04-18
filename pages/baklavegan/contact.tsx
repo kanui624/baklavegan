@@ -62,7 +62,7 @@ const Contact: FC = () => {
 
   return (
     <Fragment>
-      <div className="contactcards">
+      <div className="contactcards flex flex-row">
         {contactData.map(
           ({
             id,

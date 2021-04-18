@@ -13,7 +13,6 @@ import { FC } from "react";
 
 const About: FC = () => {
   const [width, height] = useWindowResize();
-
   return (
     <Fragment>
       {width >= 500 && height >= 700 && height > width ? (
@@ -23,10 +22,10 @@ const About: FC = () => {
       ) : (
         <AboutBookSP />
       )}
-      {/* <AboutBookSP /> */}
-      {/* <span className="fixed text-4xl text-red-900 bottom-20">
-        Window size: {width} x {height}
-      </span> */}
+      {/* <AboutBookDP /> */}
+      <span className="fixed text-4xl bottom-20">
+        {width} x {height}
+      </span>
     </Fragment>
   );
 };

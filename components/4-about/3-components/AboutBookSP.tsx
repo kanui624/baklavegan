@@ -51,6 +51,9 @@ const AboutBookSP: FC = () => {
   } = useSelector<AppState, AppState>((state) => state);
 
   const aboutBookSP = useRef();
+  const calcSize = (width * 2) / 16;
+  const remWidth = Math.round(calcSize * 2) / 2;
+  console.log(calcSize, remWidth);
 
   const [disabled, setDisabled] = useState(false);
 
@@ -144,14 +147,11 @@ const AboutBookSP: FC = () => {
   }, [pageCount]);
 
   return (
-    <Fragment>
-      <div
-        className="aboutbookcontainersp singlepage absolute"
-        style={{ height: height * 2, width: width * 2 }}
-      >
+    <div className="spcontainer fixed">
+      <div className="aboutbookcontainersp" style={{ width: `${remWidth}rem` }}>
         <HTMLFlipBook
           ref={aboutBookSP}
-          className="aboutbooksp inset-0 h-full max-w-full"
+          className="aboutbooksp h-full max-w-full"
           useMouseEvents={false}
           flippingTime={1500}
           maxShadowOpacity={0}
@@ -180,23 +180,26 @@ const AboutBookSP: FC = () => {
           )}
         </HTMLFlipBook>
       </div>
-      <div className="booknavcontainersp fixed flex justify-between">
+      <div
+        className="booknavcontainersp flex justify-between"
+        style={{ width: width }}
+      >
         <button
           disabled={pageCount === 0 ? true : disabled}
-          className="booknavssp booknavbackwardsp ml-4"
+          className="booknavssp booknavbackwardsp ml-2"
           onClick={(e) => handleNavSP(e, false)}
         >
           <img src="/3-svgs/about/book-nav.svg" alt="book-nav-backward-sp" />
         </button>
         <button
           disabled={pageCount === 8 ? true : disabled}
-          className="booknavssp booknavforwardsp mr-4"
+          className="booknavssp booknavforwardsp mr-2"
           onClick={(e) => handleNavSP(e, true)}
         >
           <img src="/3-svgs/about/book-nav.svg" alt="book-nav-forward-sp" />
         </button>
       </div>
-    </Fragment>
+    </div>
   );
 };
 

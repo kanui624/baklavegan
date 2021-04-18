@@ -16,9 +16,6 @@ import {
   onHoverOut,
 } from "../../../animations/0-navigation/PageAnimations";
 
-// Styles
-import styles from "../../../styles/0-navigation/1-menubutton/menubuttonpage.module.scss";
-
 // React Types
 import { FC } from "react";
 
@@ -63,7 +60,7 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
 
   return (
     <Fragment>
-      <div className={`${styles.menupageimage} absolute pagemenubutton`}>
+      <div className="menupageimage absolute pagemenubutton">
         <Image
           src="/2-images/1-index/1-enter-btn.png"
           alt="enter"
@@ -71,12 +68,12 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
           height={219}
         />
       </div>
-      <div className={`${styles.menupagetext} absolute pagemenubutton`}>
+      <div className="menupagetext absolute pagemenubutton">
         <h3>menu</h3>
       </div>
       <button
         disabled={disabled}
-        className={`${styles.menubtn} flex justify-center items-center`}
+        className="menubtn absolute"
         onPointerOver={() =>
           pageTrigger ? null : onHoverIn(".pagemenubutton")
         }
@@ -87,7 +84,7 @@ const MenuButtonPage: FC<MenuButtonPageProps> = ({
           handleMenuClick();
         }}
       >
-        <div className={`${styles.invisiblemenubtn} pagemenubutton absolute`} />
+        <div className="invisiblemenubtn pagemenubutton" />
       </button>
     </Fragment>
   );
