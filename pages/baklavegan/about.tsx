@@ -22,10 +22,9 @@ const About: FC = () => {
       ) : (
         <AboutBookSP />
       )}
-      {/* <AboutBookDP /> */}
-      <span className="fixed text-4xl bottom-20">
+      {/* <span className="fixed text-4xl bottom-20">
         {width} x {height}
-      </span>
+      </span> */}
     </Fragment>
   );
 };

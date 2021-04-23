@@ -53,7 +53,6 @@ const AboutBookSP: FC = () => {
   const aboutBookSP = useRef();
   const calcSize = (width * 2) / 16;
   const remWidth = Math.round(calcSize * 2) / 2;
-  console.log(calcSize, remWidth);
 
   const [disabled, setDisabled] = useState(false);
 
