@@ -15,6 +15,7 @@ import "@/styles/globals.scss";
 import "@/styles/1-layout-scss/veiwinportrait.scss";
 import "@/styles/1-layout-scss/tempdevnote.scss";
 import "@/styles/0-navigation/1-menubutton/1-menubuttonpage/0-menubuttonpage.scss";
+import "@/styles/0-navigation/1-menubutton/0-menubuttonroot/0-menubuttonroot.scss";
 
 //Third Party Styles
 import "../styles/tailwind.css";

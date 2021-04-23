@@ -1,0 +1,13 @@
+.roottext {
+  text-shadow: 0.25rem 0.19rem 0.05rem #4a3f35;
+  opacity: 80%;
+}
+
+.invisiblerootbtn {
+  //   background-color: rgba(0, 255, 0, 0.144);
+  border: none !important;
+  outline: none !important;
+}
+
+@import "./1-menubuttonroot-portrait.scss";
+@import "./2-menubuttonroot-landscape.scss";
