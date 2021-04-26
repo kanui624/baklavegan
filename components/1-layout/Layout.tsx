@@ -22,6 +22,9 @@ import MenuButtonRoot from "../0-navigation/1-menubutton/MenuButtonRoot";
 import MenuButtonPage from "../0-navigation/1-menubutton/MenuButtonPage";
 import DevNote from "./DevNote";
 
+// Custom Hooks
+import { useWindowResize } from "../../customhooks/useWindowResize";
+
 // Styles
 import styles from "@/styles/1-layout-scss/layout.module.scss";
 
@@ -38,6 +41,8 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   const [clicked, setClicked] = useState(false);
   const [disabled, setDisabled] = useState(true);
   const [devPageClicked, setDevPageClicked] = useState("");
+  const [width, height] = useWindowResize();
+
   const root = useRouter().pathname === "/" ? true : false;
   const dispatch = useDispatch();
 
@@ -112,6 +117,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         />
       </div>
       <DevNote devPageClicked={devPageClicked} />
+      {/* <span className="fixed text-4xl bottom-20">
+        {width} x {height}
+      </span> */}
     </Fragment>
   );
 };
