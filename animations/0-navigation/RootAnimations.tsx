@@ -33,6 +33,7 @@ export const animateIn = (
 export const animateOut = (rootBtnOut: string) => {
   gsap.to(rootBtnOut, {
     y: 50,
+    opacity: 0,
     stagger: 0.15,
     duration: 1,
     ease: "back.in(1.5)",

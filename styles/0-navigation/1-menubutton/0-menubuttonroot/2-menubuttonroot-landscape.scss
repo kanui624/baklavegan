@@ -193,61 +193,88 @@
 // GALAXY FOLD - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 700px) and (min-height: 500px) and (orientation: landscape) {
   .rootmenubutton {
-    bottom: -19.5rem;
+    bottom: -18rem;
   }
 }
 
 // SURFACE DUO - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 720px) and (min-height: 540px) and (orientation: landscape) {
   .rootmenubutton {
-    bottom: -20rem;
+    bottom: -18rem;
   }
 
   .rootmenuimage,
   .invisiblerootbtn {
-    height: 10.5rem;
-    width: 7.7rem;
+    height: 7.5rem;
+    width: 6rem;
   }
 
   .roottext {
-    padding-bottom: 3rem;
-    font-size: 350%;
+    padding-bottom: 2.3rem;
+    font-size: 240%;
   }
 }
 
 // NEXUS 7 - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 960px) and (min-height: 600px) and (orientation: landscape) {
+  .rootmenubutton {
+    bottom: -17rem;
+  }
 }
 
 // IPAD MINI - TESTED WITH NGROK - LANDSCAPE
 @media (min-width: 921px) and (min-height: 665px) and (orientation: landscape) {
+  .rootmenubutton {
+    bottom: -16rem;
+  }
+  .rootmenuimage,
+  .invisiblerootbtn {
+    height: 9rem;
+    width: 7rem;
+  }
+
+  .roottext {
+    padding-bottom: 2.8rem;
+    font-size: 290%;
+  }
 }
 
 // IPAD MINI - TESTED WITH NGROK - LANDSCAPE
 @media (min-width: 921px) and (min-height: 768px) and(orientation: landscape) {
   .rootmenubutton {
-    bottom: -18rem;
+    bottom: -13rem;
   }
 }
 
 // IPAD 2019 - TESTED WITH NGROK - LANDSCAPE
 @media (min-width: 977px) and (min-height: 810px) and (orientation: landscape) {
   .rootmenubutton {
-    bottom: -17rem;
+    bottom: -13rem;
   }
 }
 
 // BLACKBERRY PLAYBOOK - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 1024px) and (min-height: 600px) and (orientation: landscape) {
   .rootmenubutton {
-    bottom: -19.5rem;
+    bottom: -18rem;
+  }
+
+  .rootmenuimage,
+  .invisiblerootbtn {
+    height: 9rem;
+    width: 7rem;
+  }
+
+  .roottext {
+    padding-bottom: 2.8rem;
+    font-size: 290%;
   }
 }
 
 // IPAD - CHROME DEV TOOLS - LANDSCAPE
 @media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape) {
   .rootmenubutton {
-    bottom: -18rem;
+    bottom: -15rem;
   }
 }
 
@@ -258,38 +285,48 @@
 // LOW-RES 32INCH MONITOR - TESTED W/ LOCAL MACHINE
 @media (min-width: 1360px) and (min-height: 689px) and (orientation: landscape) {
   .rootmenubutton {
-    bottom: -18.5rem;
+    bottom: -17.5rem;
   }
   .rootmenuimage,
   .invisiblerootbtn {
-    height: 11rem;
-    width: 8.2rem;
+    height: 10rem;
+    width: 8rem;
   }
 
   .roottext {
-    padding-bottom: 3.2rem;
-    font-size: 380%;
+    padding-bottom: 3rem;
+    font-size: 340%;
   }
 }
 
 // IPAD PRO - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
   .rootmenubutton {
-    bottom: -11rem;
+    bottom: -10rem;
+  }
+  .rootmenuimage,
+  .invisiblerootbtn {
+    height: 11.5rem;
+    width: 9rem;
+  }
+
+  .roottext {
+    padding-bottom: 3.3rem;
+    font-size: 400%;
   }
 }
 
 // MACBOOK PRO 15" TESTED W/ NGROK
 @media (min-width: 1440px) and (min-height: 769px) and (orientation: landscape) {
   .rootmenubutton {
-    bottom: -16rem;
+    bottom: -12rem;
   }
 }
 
 // HIGH-RES 32 INCH MONITOR - TESTED W/ LOCAL MACHINE
 @media (min-width: 1920px) and (min-height: 969px) and (orientation: landscape) {
   .rootmenubutton {
-    bottom: -13rem;
+    bottom: -12rem;
   }
 }
 
