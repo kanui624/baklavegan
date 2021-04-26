@@ -22,9 +22,6 @@ const About: FC = () => {
       ) : (
         <AboutBookSP />
       )}
-      {/* <span className="fixed text-4xl bottom-20">
-        {width} x {height}
-      </span> */}
     </Fragment>
   );
 };

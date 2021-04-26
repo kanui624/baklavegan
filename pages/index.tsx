@@ -13,6 +13,9 @@ import {
   animateLogoOut,
 } from "@/animations/2-index/IndexAnimations";
 
+// Custom Hooks
+import { useWindowResize } from "../customhooks/useWindowResize";
+
 // React Types
 import { FC } from "react";
 
@@ -20,6 +23,8 @@ import { FC } from "react";
 import { AppState } from "@/redux/store";
 
 const BaklaHome: FC = () => {
+  const [width, height] = useWindowResize();
+
   const {
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
@@ -38,9 +43,12 @@ const BaklaHome: FC = () => {
         className="opacity-0 animatelogo"
         src="/2-images/1-index/0-bv-logo.png"
         alt="Baklavegan"
-        width={1400}
-        height={343}
+        layout="fill"
+        objectFit="cover"
       />
+      <span className="fixed text-4xl bottom-20">
+        {width} x {height}
+      </span>
     </div>
   );
 };
