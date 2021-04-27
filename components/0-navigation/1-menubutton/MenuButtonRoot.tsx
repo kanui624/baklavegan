@@ -31,47 +31,42 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
 
   const handleEnterClick = () => {
     setRootTrigger(!rootTrigger);
-    animateOut(".rootmenubutton");
+    animateOut(".rootmenuitem");
     dispatch(enterMenu({ transition: true }));
     setTimeout(() => {
       toggleClick();
     }, 1000);
   };
 
-  useEffect(() => {
-    animateIn(".rootmenuimage", ".rootmenutext", ".invisiblerootbtn");
-  }, []);
+  // useEffect(() => {
+  //   animateIn(".rootmenuimage", ".rootmenutext", ".invisiblerootbtn");
+  // }, []);
 
   return (
-    <Fragment>
-      <div className="fixed rootmenubutton rootmenuimage opacity-0">
+    <div className="rootmenubutton">
+      <div className="absolute rootmenuitem rootmenuimage">
         <Image
-          className="rootimage"
           src="/2-images/1-index/1-enter-btn.png"
           layout="fill"
-          objectFit="cover"
+          objectFit="contain"
           alt="enter"
         />
       </div>
-      <div className="fixed roottext rootmenubutton rootmenutext opacity-0">
+      <div className="absolute roottext rootmenuitem rootmenutext">
         <h3>enter</h3>
       </div>
       <button
         disabled={disabled}
-        className="fixed invisiblerootbtn rootmenubutton"
-        onPointerOver={() =>
-          rootTrigger ? null : onHoverIn(".rootmenubutton")
-        }
-        onPointerOut={() =>
-          rootTrigger ? null : onHoverOut(".rootmenubutton")
-        }
+        className="absolute invisiblerootbtn rootmenuitem"
+        onPointerOver={() => (rootTrigger ? null : onHoverIn(".rootmenuitem"))}
+        onPointerOut={() => (rootTrigger ? null : onHoverOut(".rootmenuitem"))}
         onClick={() => {
           handleEnterClick();
         }}
       >
-        <div className="rootmenubutton rootmenuinvisi" />
+        <div className="rootmenuitem" />
       </button>
-    </Fragment>
+    </div>
   );
 };
 

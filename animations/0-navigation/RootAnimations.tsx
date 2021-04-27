@@ -8,13 +8,17 @@ export const animateIn = (
   rootTextIn: string,
   rootInvisiIn: string
 ) => {
-  gsap.to([rootImageIn, rootTextIn, rootInvisiIn], {
-    y: -350,
-    delay: 2,
-    duration: 2.3,
-    ease: "back.out(1.2)",
-    stagger: 0.1,
-  });
+  gsap.fromTo(
+    [rootImageIn, rootTextIn, rootInvisiIn],
+    { y: 200 },
+    {
+      y: -350,
+      delay: 2,
+      duration: 2.3,
+      ease: "back.out(1.2)",
+      stagger: 0.1,
+    }
+  );
   inTl.to(rootImageIn, {
     opacity: 1,
     delay: 2,
