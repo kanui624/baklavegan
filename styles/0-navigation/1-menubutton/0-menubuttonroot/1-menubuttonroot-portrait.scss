@@ -1,7 +1,7 @@
 //  IPHONE 4 - CHROME DEVTOOLS - PORTRIAT - BASE STYLES
 @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
   .rootmenubutton {
-    padding-top: 5rem;
+    margin-top: 6rem;
   }
 
   .rootmenuimage,
@@ -13,246 +13,285 @@
   .roottext {
     padding-left: 0.2rem;
     padding-top: 1.5rem;
-    font-size: 160%;
+    font-size: 165%;
   }
 }
 
-// // NOKIA LUMA 520 - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 320px) and (min-height: 533px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -15rem;
-//   }
-// }
+// NOKIA LUMA 520 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 320px) and (min-height: 533px) and (orientation: portrait) {
+  //NOTHING NEEDED
+}
 
-// // IPHONE 5-SE - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 320px) and (min-height: 568px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -14rem;
-//   }
-// }
+// IPHONE 5-SE - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 320px) and (min-height: 568px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
 
-// // NEXUS 5 - CHROME DEV TOOLS - PORTRAIT
-// @media (min-width: 360px) and (min-height: 512px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -16rem;
-//   }
-// }
+// NEXUS 5 - CHROME DEV TOOLS - PORTRAIT
+@media (min-width: 360px) and (min-height: 512px) and (orientation: portrait) {
+  //NOTHING NEEDED
+}
 
-// // NEXUS 5 - CHROME DEV TOOLS - PORTRAIT
-// @media (min-width: 360px) and (min-height: 567px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -15rem;
-//   }
-// }
+// NEXUS 5 - CHROME DEV TOOLS - PORTRAIT
+@media (min-width: 360px) and (min-height: 567px) and (orientation: portrait) {
+  //NOTHING NEEDED
+}
 
-// // IPHONE 6 - TESTED W/ NGROK - PORTRAIT
-// @media (min-width: 375px) and (min-height: 553px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -16rem;
-//   }
-// }
+// IPHONE 6 - TESTED W/ NGROK - PORTRAIT
+@media (min-width: 375px) and (min-height: 553px) and (orientation: portrait) {
+  .rootmenubutton {
+    margin-top: 8rem;
+  }
 
-// // Galaxy S5- CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -12rem;
-//   }
-// }
+  .rootmenuimage,
+  .invisiblerootbtn {
+    height: 6.5rem;
+    width: 5rem;
+  }
 
-// // LG Optimus L70 - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 384px) and (min-height: 640px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -13rem;
-//   }
+  .roottext {
+    padding-left: 0.3rem;
+    padding-top: 1.5rem;
+    font-size: 185%;
+  }
+}
 
-//   .rootmenuimage,
-//   .invisiblerootbtn {
-//     height: 7rem;
-//     width: 5.5rem;
-//   }
+// Galaxy S5- CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
+  .rootmenubutton {
+    margin-top: 8rem;
+  }
 
-//   .roottext {
-//     padding-left: 0.3rem;
-//     padding-bottom: 2.3rem;
-//     font-size: 210%;
-//   }
-// }
+  .rootmenuimage,
+  .invisiblerootbtn {
+    height: 6.5rem;
+    width: 5rem;
+  }
 
-// // NEXUS 5X - CHORME DEVTOOLS - PORTRAIT
-// @media (min-width: 412px) and (min-height: 604px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -15rem;
-//   }
+  .roottext {
+    padding-left: 0.3rem;
+    padding-top: 1.5rem;
+    font-size: 185%;
+  }
+}
 
-//   .rootmenuimage,
-//   .invisiblerootbtn {
-//     height: 7.5rem;
-//     width: 5.7rem;
-//   }
+// LG Optimus L70 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 384px) and (min-height: 640px) and (orientation: portrait) {
+  .rootmenuimage,
+  .invisiblerootbtn {
+    height: 7rem;
+    width: 5.5rem;
+  }
 
-//   .roottext {
-//     padding-bottom: 2.5rem;
-//     font-size: 230%;
-//   }
-// }
+  .roottext {
+    font-size: 210%;
+  }
+}
 
-// // NEXUS 5X - CHORME DEVTOOLS - PORTRAIT
-// @media (min-width: 412px) and (min-height: 660px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -13.5rem;
-//   }
-// }
+// NEXUS 5X - CHORME DEVTOOLS - PORTRAIT
+@media (min-width: 412px) and (min-height: 604px) and (orientation: portrait) {
+  .rootmenuimage,
+  .invisiblerootbtn {
+    height: 7.5rem;
+    width: 5.7rem;
+  }
 
-// // IPHONE 6/7/8 - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -11rem;
-//   }
-// }
+  .roottext {
+    padding-top: 1.7rem;
+    font-size: 230%;
+  }
+}
 
-// // IPHONE XR - TESTED W/ NGROK - PORTRAIT
-// @media (min-width: 414px) and (min-height: 715px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -12rem;
-//   }
-// }
+// NEXUS 5X - CHORME DEVTOOLS - PORTRAIT
+@media (min-width: 412px) and (min-height: 660px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
 
-// // IPHONE X - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 375px) and (min-height: 812px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -6.5rem;
-//   }
-// }
+// IPHONE 6/7/8 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
 
-// // PIXEL 2 - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 411px) and (min-height: 731px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -12rem;
-//   }
-//   .rootmenuimage,
-//   .invisiblerootbtn {
-//     height: 8rem;
-//     width: 6rem;
-//   }
-//   .roottext {
-//     font-size: 250%;
-//   }
-// }
+// IPHONE XR - TESTED W/ NGROK - PORTRAIT
+@media (min-width: 414px) and (min-height: 715px) and (orientation: portrait) {
+  .rootmenubutton {
+    margin-top: 9rem;
+  }
+}
 
-// // NEXUS 6 - CHORME DEVTOOLS - PORTRAIT
-// @media (min-width: 412px) and (min-height: 732px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -11.5rem;
-//   }
-//   .rootmenuimage,
-//   .invisiblerootbtn {
-//     height: 8rem;
-//     width: 6rem;
-//   }
+// IPHONE X - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 375px) and (min-height: 812px) and (orientation: portrait) {
+  .roottext {
+    padding-left: 0.3rem;
+    padding-top: 1.6rem;
+  }
+}
 
-//   .roottext {
-//     font-size: 250%;
-//   }
-// }
+// PIXEL 2 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 411px) and (min-height: 731px) and (orientation: portrait) {
+  .rootmenuimage,
+  .invisiblerootbtn {
+    height: 8rem;
+    width: 6rem;
+  }
+  .roottext {
+    padding-top: 1.7rem;
+    font-size: 250%;
+  }
+}
 
-// // IPHONE 6/7/8 PLUS - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 414px) and (min-height: 736px) and (orientation: portrait) {
-//   // NOTHING NEEDED
-// }
+// NEXUS 6 - CHORME DEVTOOLS - PORTRAIT
+@media (min-width: 412px) and (min-height: 732px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
 
-// // PIXEL 2XL- CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 411px) and (min-height: 823px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -9rem;
-//   }
-// }
+// IPHONE 6/7/8 PLUS - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 414px) and (min-height: 736px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
 
-// // NOKIA N9 - CHROME DEV TOOLS - PORTRAIT
-// @media (min-width: 480px) and (min-height: 854px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -10rem;
-//   }
+// PIXEL 2XL- CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 411px) and (min-height: 823px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
 
-//   .rootmenuimage,
-//   .invisiblerootbtn {
-//     height: 9.5rem;
-//     width: 7.5rem;
-//   }
+// NOKIA N9 - CHROME DEV TOOLS - PORTRAIT
+@media (min-width: 480px) and (min-height: 854px) and (orientation: portrait) {
+  .rootmenubutton {
+    margin-top: 10rem;
+  }
 
-//   .roottext {
-//     padding-bottom: 2.9rem;
-//     font-size: 310%;
-//   }
-// }
+  .rootmenuimage,
+  .invisiblerootbtn {
+    height: 8.5rem;
+    width: 6.5rem;
+  }
 
-// // GALAXY FOLD - CHROME DEV TOOLS - PORTRAIT
-// @media (min-width: 500px) and (min-height: 700px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -13rem;
-//   }
-// }
+  .roottext {
+    padding-top: 1.9rem;
+    font-size: 270%;
+  }
+}
 
-// // SURFACE DUO - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 540px) and (min-height: 720px) and (orientation: portrait) {
-//   // NOTHING NEEDED
-// }
+// GALAXY FOLD - CHROME DEV TOOLS - PORTRAIT
+@media (min-width: 500px) and (min-height: 700px) and (orientation: portrait) {
+  .rootmenubutton {
+    margin-top: 10rem;
+  }
 
-// // NEXUS 7 - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 600px) and (min-height: 960px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -9rem;
-//   }
-// }
+  .rootmenuimage,
+  .invisiblerootbtn {
+    height: 8.5rem;
+    width: 6.5rem;
+  }
 
-// // IPAD MINI - TESTED WITH NGROK - PORTRAIT
-// @media (min-width: 665px) and (min-height: 921px) and(orientation: portrait) {
-//   // .rootmenuitem {
-//   //   bottom: -10rem;
-//   // }
-// }
+  .roottext {
+    padding-top: 1.9rem;
+    font-size: 270%;
+  }
+}
 
-// // IPAD MINI - TESTED WITH NGROK - PORTRAIT
-// @media (min-width: 768px) and (min-height: 921px) and(orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -10rem;
-//   }
-// }
+// SURFACE DUO - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 540px) and (min-height: 720px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
 
-// // IPAD 2019 - TESTED WITH NGROK - LANDSCAPE
-// @media (min-width: 810px) and (min-height: 977px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -9rem;
-//   }
-// }
+// NEXUS 7 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 600px) and (min-height: 960px) and (orientation: portrait) {
+  .rootmenubutton {
+    margin-top: 12rem;
+  }
+}
 
-// // BLACKBERRY PLAYBOOK - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 600px) and (min-height: 1024px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -6rem;
-//   }
-// }
+// IPAD MINI - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 665px) and (min-height: 921px) and(orientation: portrait) {
+  .rootmenubutton {
+    margin-top: 14rem;
+  }
 
-// // IPAD - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -7rem;
-//   }
-// }
+  .rootmenuimage,
+  .invisiblerootbtn {
+    height: 9.5rem;
+    width: 7.5rem;
+  }
 
-// // IPAD PRO - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
-//   .rootmenuitem {
-//     bottom: -1rem;
-//   }
+  .roottext {
+    padding-top: 2rem;
+    font-size: 310%;
+  }
+}
 
-//   .rootmenuimage,
-//   .invisiblerootbtn {
-//     height: 13rem;
-//     width: 9.5rem;
-//   }
+// IPAD MINI - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 768px) and (min-height: 921px) and(orientation: portrait) {
+  .rootmenubutton {
+    margin-top: 15rem;
+  }
 
-//   .roottext {
-//     padding-bottom: 4rem;
-//     font-size: 450%;
-//   }
-// }
+  .roottext {
+    padding-top: 2.2rem;
+  }
+}
+
+// IPAD 2019 - TESTED WITH NGROK - LANDSCAPE
+@media (min-width: 810px) and (min-height: 977px) and (orientation: portrait) {
+  .rootmenubutton {
+    margin-top: 16rem;
+  }
+
+  .rootmenuimage,
+  .invisiblerootbtn {
+    height: 10.5rem;
+    width: 8.5rem;
+  }
+
+  .roottext {
+    padding-top: 2rem;
+    font-size: 350%;
+  }
+}
+
+// BLACKBERRY PLAYBOOK - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 600px) and (min-height: 1024px) and (orientation: portrait) {
+  .rootmenuimage,
+  .invisiblerootbtn {
+    height: 10.5rem;
+    width: 8.5rem;
+  }
+
+  .roottext {
+    padding-top: 2.2rem;
+    font-size: 360%;
+  }
+}
+
+// IPAD - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+  .rootmenuimage,
+  .invisiblerootbtn {
+    height: 11.5rem;
+    width: 9.5rem;
+  }
+
+  .roottext {
+    padding-top: 2.3rem;
+    font-size: 400%;
+  }
+}
+
+// IPAD PRO - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+  .rootmenubutton {
+    margin-top: 22rem;
+  }
+
+  .rootmenuimage,
+  .invisiblerootbtn {
+    height: 12.5rem;
+    width: 10.5rem;
+  }
+
+  .roottext {
+    padding-top: 2.5rem;
+    font-size: 450%;
+  }
+}

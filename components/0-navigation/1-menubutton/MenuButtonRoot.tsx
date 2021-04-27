@@ -38,13 +38,13 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
     }, 1000);
   };
 
-  // useEffect(() => {
-  //   animateIn(".rootmenuimage", ".rootmenutext", ".invisiblerootbtn");
-  // }, []);
+  useEffect(() => {
+    animateIn(".rootmenuimage", ".rootmenutext", ".invisiblerootbtn");
+  }, []);
 
   return (
     <div className="rootmenubutton">
-      <div className="absolute rootmenuitem rootmenuimage">
+      <div className="absolute rootmenuitem rootmenuimage opacity-0">
         <Image
           src="/2-images/1-index/1-enter-btn.png"
           layout="fill"
@@ -52,7 +52,7 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
           alt="enter"
         />
       </div>
-      <div className="absolute roottext rootmenuitem rootmenutext">
+      <div className="absolute roottext rootmenuitem rootmenutext opacity-0">
         <h3>enter</h3>
       </div>
       <button

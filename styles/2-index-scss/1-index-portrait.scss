@@ -1,8 +1,9 @@
 //  IPHONE 4 - CHROME DEVTOOLS - PORTRIAT - BASE STYLES
 @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
   .bvlogo {
-    width: 20rem;
-    height: 5.2rem;
+    width: 18rem;
+    height: 4.5rem;
+    // background-color: rgba(255, 192, 203, 0.534);
   }
 }
 
@@ -18,22 +19,22 @@
 
 // NEXUS 5 - CHROME DEV TOOLS - PORTRAIT
 @media (min-width: 360px) and (min-height: 512px) and (orientation: portrait) {
-  // NOTHING NEEDED
+  .bvlogo {
+    width: 20rem;
+    height: 5rem;
+  }
 }
 
 // NEXUS 5 - CHROME DEV TOOLS - PORTRAIT
 @media (min-width: 360px) and (min-height: 567px) and (orientation: portrait) {
-  .bvlogo {
-    width: 22.5rem;
-    height: 5.8rem;
-  }
+  //NOTHING NEEDED
 }
 
 // IPHONE 6 - TESTED W/ NGROK - PORTRAIT
 @media (min-width: 375px) and (min-height: 553px) and (orientation: portrait) {
   .bvlogo {
-    width: 23.5rem;
-    height: 6rem;
+    width: 21rem;
+    height: 5.5rem;
   }
 }
 
@@ -44,17 +45,14 @@
 
 // LG Optimus L70 - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 384px) and (min-height: 640px) and (orientation: portrait) {
-  .bvlogo {
-    width: 24rem;
-    height: 6.2rem;
-  }
+  // NOTHING NEEDED
 }
 
 // NEXUS 5X - CHORME DEVTOOLS - PORTRAIT
 @media (min-width: 412px) and (min-height: 604px) and (orientation: portrait) {
   .bvlogo {
-    width: 25.7rem;
-    height: 6.5rem;
+    width: 23rem;
+    height: 6rem;
   }
 }
 
@@ -70,10 +68,7 @@
 
 // IPHONE XR - TESTED W/ NGROK - PORTRAIT
 @media (min-width: 414px) and (min-height: 715px) and (orientation: portrait) {
-  .bvlogo {
-    width: 25.9rem;
-    height: 6.7rem;
-  }
+  // NOTHING NEEDED
 }
 
 // IPHONE X - CHROME DEVTOOLS - PORTRAIT
@@ -83,8 +78,8 @@
 // PIXEL 2 - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 411px) and (min-height: 731px) and (orientation: portrait) {
   .bvlogo {
-    width: 25.7rem;
-    height: 6.7rem;
+    width: 23rem;
+    height: 6rem;
   }
 }
 
@@ -106,31 +101,31 @@
 // NOKIA N9 - CHROME DEV TOOLS - PORTRAIT
 @media (min-width: 480px) and (min-height: 854px) and (orientation: portrait) {
   .bvlogo {
-    width: 30rem;
-    height: 7.5rem;
+    width: 26rem;
+    height: 6.5rem;
   }
 }
 
 // GALAXY FOLD - CHROME DEV TOOLS - PORTRAIT
 @media (min-width: 500px) and (min-height: 700px) and (orientation: portrait) {
   .bvlogo {
-    width: 32rem;
-    height: 8.2rem;
+    width: 28.5rem;
+    height: 7.5rem;
   }
 }
 
 // SURFACE DUO - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 540px) and (min-height: 720px) and (orientation: portrait) {
   .bvlogo {
-    width: 34rem;
-    height: 8.5rem;
+    width: 29.5rem;
+    height: 7.5rem;
   }
 }
 
 // NEXUS 7 - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 600px) and (min-height: 960px) and (orientation: portrait) {
   .bvlogo {
-    width: 36rem;
+    width: 34rem;
     height: 8.5rem;
   }
 }
@@ -138,29 +133,38 @@
 // IPAD MINI - TESTED WITH NGROK - PORTRAIT
 @media (min-width: 665px) and (min-height: 921px) and(orientation: portrait) {
   .bvlogo {
-    width: 41rem;
-    height: 10.5rem;
+    width: 38rem;
+    height: 9.5rem;
   }
 }
 
 // IPAD MINI - TESTED WITH NGROK - PORTRAIT
 @media (min-width: 768px) and (min-height: 921px) and(orientation: portrait) {
   .bvlogo {
-    width: 45rem;
-    height: 11.5rem;
+    width: 42rem;
+    height: 11rem;
   }
 }
 
 // IPAD 2019 - TESTED WITH NGROK - LANDSCAPE
 @media (min-width: 810px) and (min-height: 977px) and (orientation: portrait) {
+  .bvlogo {
+    width: 44rem;
+    height: 11rem;
+  }
 }
 
 // BLACKBERRY PLAYBOOK - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 600px) and (min-height: 1024px) and (orientation: portrait) {
+  // NOTHING NEEDED
 }
 
 // IPAD - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+  .bvlogo {
+    width: 45rem;
+    height: 11.5rem;
+  }
 }
 
 // IPAD PRO - CHROME DEVTOOLS - PORTRAIT
