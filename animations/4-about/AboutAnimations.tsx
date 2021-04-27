@@ -10,9 +10,10 @@ export const animateInInitialLoad = (
 ) => {
   gsap.fromTo(
     [inInitClassOne, inInitClassTwo],
-    { y: 1000 },
+    { y: 1000, opacity: 0 },
     {
       y: 0,
+      opacity: 1,
       delay: 1,
       duration: 2.3,
       ease: "back.out(1.07)",

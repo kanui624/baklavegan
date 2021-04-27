@@ -9,100 +9,107 @@
 
 // NOKIA LUMA 520 - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 533px) and (min-height: 320px) and (orientation: landscape) {
-  // NOTHING NEEDED
+  .bvlogo {
+    width: 27rem;
+    height: 7rem;
+  }
 }
 
 // IPHONE 5-SE - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 568px) and (min-height: 320px) and (orientation: landscape) {
-  // NOTHING NEEDED
+  .bvlogo {
+    width: 29rem;
+    height: 7.5rem;
+  }
 }
 
 // NEXUS 5 - CHROME DEV TOOLS - LANDSCAPE
 @media (min-width: 598px) and (min-height: 280px) and (orientation: landscape) {
   .bvlogo {
-    width: 25rem;
-    height: 6.2rem;
+    width: 29rem;
+    height: 7.5rem;
   }
 }
 
 // NEXUS 5 - CHROME DEV TOOLS - LANDSCAPE
 @media (min-width: 598px) and (min-height: 335px) and (orientation: landscape) {
+  .bvlogo {
+    width: 31rem;
+    height: 8rem;
+  }
 }
 
 // IPHONE 6 - TESTED W/ NGROK - LANDSCAPE
 @media (min-width: 553px) and (min-height: 375px) and (orientation: landscape) {
   .bvlogo {
-    width: 27rem;
-    height: 6.7rem;
+    width: 31rem;
+    height: 8rem;
   }
 }
 
 // Galaxy S5- CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 640px) and (min-height: 360px) and (orientation: landscape) {
   .bvlogo {
-    width: 28rem;
-    height: 7rem;
+    width: 33rem;
+    height: 8.5rem;
   }
 }
 
 // LG Optimus L70 - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 640px) and (min-height: 384px) and (orientation: landscape) {
-  .bvlogo {
-    width: 30rem;
-    height: 7.5rem;
-  }
+  // NOTHING NEEDED
 }
 
 // NEXUS 5X - CHORME DEVTOOLS - LANDSCAPE
 @media (min-width: 684px) and (min-height: 332px) and (orientation: landscape) {
   .bvlogo {
-    width: 32rem;
-    height: 8rem;
+    width: 35rem;
+    height: 9rem;
   }
 }
 
 // IPHONE 6/7/8 - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 667px) and (min-height: 375px) and (orientation: landscape) {
   .bvlogo {
-    width: 34rem;
-    height: 8.5rem;
+    width: 35rem;
+    height: 9rem;
   }
 }
 
 // NEXUS 5X - CHORME DEVTOOLS - LANDSCAPE
 @media (min-width: 684px) and (min-height: 388px) and (orientation: landscape) {
-  // NOTHING NEEDED
-}
-
-// IPHONE XR - TESTED W/ NGROK - LANDSCAPE
-@media (min-width: 715px) and (min-height: 414px) and (orientation: landscape) {
   .bvlogo {
-    width: 36rem;
-    height: 9rem;
+    width: 37rem;
+    height: 9.5rem;
   }
 }
 
 // IPHONE XR - TESTED W/ NGROK - LANDSCAPE
 @media (min-width: 715px) and (min-height: 414px) and (orientation: landscape) {
+  .bvlogo {
+    width: 39rem;
+    height: 10rem;
+  }
 }
 
 // IPHONE XR - TESTED W/ NGROK - LANDSCAPE
 @media (min-width: 800px) and (min-height: 364px) and (orientation: landscape) {
+  // NOTHING NEEDED
 }
 
 // IPHONE X - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 812px) and (min-height: 375px) and (orientation: landscape) {
   .bvlogo {
-    width: 36rem;
-    height: 9rem;
+    width: 39rem;
+    height: 10rem;
   }
 }
 
 // PIXEL 2 - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 731px) and (min-height: 411px) and (orientation: landscape) {
   .bvlogo {
-    width: 36rem;
-    height: 9rem;
+    width: 39rem;
+    height: 10rem;
   }
 }
 
@@ -119,16 +126,16 @@
 // PIXEL 2XL- CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 823px) and (min-height: 411px) and (orientation: landscape) {
   .bvlogo {
-    width: 38rem;
-    height: 10rem;
+    width: 40rem;
+    height: 10.5rem;
   }
 }
 
 //NOKIA 9 - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 854px) and (min-height: 480px) and (orientation: landscape) {
   .bvlogo {
-    width: 40rem;
-    height: 10.5rem;
+    width: 42rem;
+    height: 11rem;
   }
 }
 
@@ -139,10 +146,7 @@
 
 // SURFACE DUO - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 720px) and (min-height: 540px) and (orientation: landscape) {
-  .bvlogo {
-    width: 40rem;
-    height: 10.5rem;
-  }
+  // NOTHING NEEDED
 }
 
 // NEXUS 7 - CHROME DEVTOOLS - LANDSCAPE
@@ -180,24 +184,21 @@
 // BLACKBERRY PLAYBOOK - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 1024px) and (min-height: 600px) and (orientation: landscape) {
   .bvlogo {
-    width: 50rem;
-    height: 12.5rem;
+    width: 52rem;
+    height: 13.5rem;
   }
 }
 
 // IPAD - CHROME DEV TOOLS - LANDSCAPE
 @media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape) {
-  .bvlogo {
-    width: 52rem;
-    height: 13.5rem;
-  }
+  // NOTHING NEEDED
 }
 
 // 13" DELL - TESTED W/ NGROK - LANDSCAPE
 @media (min-width: 1280px) and (min-height: 578px) and (orientation: landscape) {
   .bvlogo {
-    width: 52rem;
-    height: 13.5rem;
+    width: 54rem;
+    height: 14rem;
   }
 }
 
