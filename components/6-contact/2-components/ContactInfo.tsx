@@ -20,11 +20,11 @@ const ContactInfo: FC<ContactInfoCardProps> = ({
   textThree = null,
 }) => {
   return (
-    <div className={`${name}card fixed`}>
-      <div className={`${name}bgpos ${name}to`}>
-        <Image src={image} alt={name} width={624} height={125} />
+    <div className={`${name}card contactcard`}>
+      <div className={`${name}bgimage ${name}to fixed bgimage`}>
+        <Image src={image} alt={name} layout="fill" objectFit="contain" />
       </div>
-      <div className={`${name}textpos ${name}to relative textpos opacity-0`}>
+      <div className={`${name}textpos ${name}to textpos fixed`}>
         <div
           className={`${name}textstyle textstyle flex flex-col justify-center items-center`}
         >
