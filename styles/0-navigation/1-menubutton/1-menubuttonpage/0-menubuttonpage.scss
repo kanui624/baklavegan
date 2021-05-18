@@ -1,5 +1,5 @@
 .menupagetext {
-  letter-spacing: 40%;
+  letter-spacing: 0.3rem;
   padding-left: 2%;
   letter-spacing: 0.4rem;
   opacity: 80%;
@@ -7,8 +7,10 @@
 }
 
 .invisiblemenubtn {
-  border-radius: 20%;
-  // background-color: rgba(0, 255, 0, 0.144);
+  background-color: rgba(0, 255, 0, 0.144);
+  border: none !important;
+  outline: none !important;
+  border-radius: 50%;
 }
 
 @import "./1-menubuttonpage-portrait.scss";

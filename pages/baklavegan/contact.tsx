@@ -39,29 +39,29 @@ const Contact: FC = () => {
     MenuTransition: { transition },
   } = useSelector<AppState, AppState>((state) => state);
 
-  // useEffect(() => {
-  //   if (transition) {
-  //     animateOut(
-  //       ".sociallinkanimate",
-  //       ".cardopacity",
-  //       ".questionsto",
-  //       ".businessto",
-  //       ".infoto",
-  //       ".socialto"
-  //     );
-  //   } else {
-  //     animateIn(
-  //       ".sociallinkanimate",
-  //       ".questionsto",
-  //       ".businessto",
-  //       ".infoto",
-  //       ".socialto"
-  //     );
-  //   }
-  // }, [transition]);
+  useEffect(() => {
+    if (transition) {
+      animateOut(
+        ".sociallinkanimate",
+        ".cardopacity",
+        ".questionsto",
+        ".businessto",
+        ".infoto",
+        ".socialto"
+      );
+    } else {
+      animateIn(
+        ".sociallinkanimate",
+        ".questionsto",
+        ".businessto",
+        ".infoto",
+        ".socialto"
+      );
+    }
+  }, [transition]);
 
   return (
-    <Fragment>
+    <div className="flex flex-col">
       <div className="contactcards">
         {contactData.map(
           ({
@@ -84,8 +84,8 @@ const Contact: FC = () => {
           )
         )}
       </div>
-      <div className={`sociallinks absolute -inset-x-0 container mx-auto`}>
-        <div className="flex flex-row justify-evenly socialcontainer">
+      <div className="sociallinks -inset-x-0 container mx-auto pl-4 pr-4 fixed">
+        <div className="flex flex-row justify-between socialcontainer">
           {socialData.map(
             ({ id, link, image, width, height }: SocialDataProps) => (
               <Link key={id} href={link}>
@@ -102,7 +102,7 @@ const Contact: FC = () => {
           )}
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 };
 
