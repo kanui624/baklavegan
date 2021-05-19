@@ -61,8 +61,8 @@ const Contact: FC = () => {
   }, [transition]);
 
   return (
-    <div className="flex flex-col">
-      <div className="contactcards">
+    <Fragment>
+      <div className="contactcardscontainer fixed">
         {contactData.map(
           ({
             id,
@@ -84,25 +84,23 @@ const Contact: FC = () => {
           )
         )}
       </div>
-      <div className="sociallinks -inset-x-0 container mx-auto pl-4 pr-4 fixed">
-        <div className="flex flex-row justify-between socialcontainer">
-          {socialData.map(
-            ({ id, link, image, width, height }: SocialDataProps) => (
-              <Link key={id} href={link}>
-                <a className="sociallinkanimate">
-                  <Image
-                    src={`/2-images/5-contact/0-socials/${image}.png`}
-                    alt={image}
-                    width={width}
-                    height={height}
-                  />
-                </a>
-              </Link>
-            )
-          )}
-        </div>
+      <div className="sociallinkcontainer flex flex-row justify-between">
+        {socialData.map(({ id, link, image }: SocialDataProps) => (
+          <div key={id} className="sociallinks">
+            <Link href={link}>
+              <a className={`sociallinks sociallinkanimate fixed ${image}`}>
+                <Image
+                  src={`/2-images/5-contact/0-socials/${image}.png`}
+                  alt={image}
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </a>
+            </Link>
+          </div>
+        ))}
       </div>
-    </div>
+    </Fragment>
   );
 };
 

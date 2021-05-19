@@ -1,4 +1,4 @@
-//  IPHONE 4 - CHROME DEVTOOLS - PORTRIAT - BASE STYLES
+//  IPHONE 4 - CHROME DEVTOOLS - PORTRAIT - BASE STYLES
 @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
   .invisiblemenubtn,
   .menupageimage {
@@ -53,7 +53,11 @@
 
 // IPHONE 6 - TESTED W/ NGROK - PORTRAIT
 @media (min-width: 375px) and (min-height: 553px) and (orientation: portrait) {
-  // NOTHING NEEDED
+  .menupageimage,
+  .menubtn,
+  .menupagetext {
+    bottom: -18.2rem;
+  }
 }
 
 // Galaxy S5- CHROME DEVTOOLS - PORTRAIT

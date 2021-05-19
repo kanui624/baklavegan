@@ -1,21 +1,21 @@
 //  IPHONE 4 - CHROME DEVTOOLS - LANDSCAPE - BASE STYLES
 @media (min-width: 480px) and (min-height: 320px) and (orientation: landscape) {
+  .invisiblemenubtn,
   .menupageimage {
-    bottom: -24rem;
+    height: 9rem;
+    width: 7.5rem;
   }
 
-  .menubtn {
-    bottom: -13rem;
+  .menupageimage,
+  .menubtn,
+  .menupagetext {
+    bottom: -18.7rem;
   }
 
   .menupagetext {
-    font-size: 2.8rem;
-    bottom: -13.4rem;
-  }
-
-  .invisiblemenubtn {
-    height: 2.8rem;
-    width: 7rem;
+    font-size: 250%;
+    padding-left: 0.4rem;
+    padding-bottom: 5.5rem;
   }
 }
 
@@ -31,126 +31,83 @@
 
 // NEXUS 5 - CHROME DEV TOOLS - LANDSCAPE
 @media (min-width: 598px) and (min-height: 280px) and (orientation: landscape) {
+  .invisiblemenubtn,
   .menupageimage {
-    bottom: -24.3rem;
+    height: 8rem;
+    width: 6.5rem;
+  }
+
+  .menupageimage,
+  .menubtn,
+  .menupagetext {
+    bottom: -18.1rem;
   }
 
   .menupagetext {
-    font-size: 2.5rem;
-    bottom: -13.3rem;
-  }
-
-  .invisiblemenubtn {
-    height: 3rem;
+    font-size: 200%;
+    padding-left: 0.4rem;
+    padding-bottom: 5.15rem;
   }
 }
 
 // NEXUS 5 - CHROME DEV TOOLS - LANDSCAPE
 @media (min-width: 567px) and (min-height: 335px) and (orientation: landscape) {
+  .invisiblemenubtn,
   .menupageimage {
-    bottom: -23.8rem;
+    height: 9rem;
+    width: 7.5rem;
+  }
+
+  .menupageimage,
+  .menubtn,
+  .menupagetext {
+    bottom: -18.7rem;
   }
 
   .menupagetext {
-    font-size: 2.9rem;
-    bottom: -13.4rem;
-  }
-
-  .invisiblemenubtn {
-    height: 3rem;
+    font-size: 250%;
+    padding-left: 0.4rem;
+    padding-bottom: 5.5rem;
   }
 }
 
 // IPHONE 6 - TESTED W/ NGROK - LANDSCAPE
 @media (min-width: 553px) and (min-height: 375px) and (orientation: landscape) {
-  .menupageimage {
-    bottom: -23.7rem;
-  }
-
-  .menubtn {
-    bottom: -13rem;
-  }
-
-  .menupagetext {
-    font-size: 3rem;
-  }
-
-  .invisiblemenubtn {
-    height: 3.2rem;
-  }
+  // NOTHING NEEDED
 }
 
 // Galaxy S5- CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 640px) and (min-height: 360px) and (orientation: landscape) {
-  // NOTHING NEEDED
+  .menupageimage,
+  .menubtn,
+  .menupagetext {
+    bottom: -18.5rem;
+  }
+
+  .menupagetext {
+    font-size: 260%;
+    padding-bottom: 5.3rem;
+  }
 }
 
 // LG Optimus L70 - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 640px) and (min-height: 384px) and (orientation: landscape) {
-  .menupageimage {
-    bottom: -23.6rem;
-  }
-
-  .menubtn {
-    bottom: -13rem;
-  }
-
-  .menupagetext {
-    font-size: 3rem;
-  }
-
-  .invisiblemenubtn {
-    height: 3.2rem;
-  }
 }
 
 // NEXUS 5X - CHORME DEVTOOLS - LANDSCAPE
 @media (min-width: 684px) and (min-height: 332px) and (orientation: landscape) {
-  .menupageimage {
-    bottom: -23.8rem;
-  }
-
-  .menubtn {
-    bottom: -13rem;
-  }
-
-  .menupagetext {
-    font-size: 3rem;
-  }
-
-  .invisiblemenubtn {
-    height: 3.1rem;
-  }
 }
 
 // IPHONE 6/7/8 - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 667px) and (min-height: 375px) and (orientation: landscape) {
-  // NOTHING NEEDED
 }
 
 // NEXUS 5X - CHORME DEVTOOLS - LANDSCAPE
 @media (min-width: 684px) and (min-height: 388px) and (orientation: landscape) {
-  // NOTHING NEEDED
 }
 
 // IPHONE XR - TESTED W/ NGROK - LANDSCAPE
 @media (min-width: 715px) and (min-height: 414px) and (orientation: landscape) {
-  .menupageimage {
-    bottom: -23.6rem;
-  }
-
-  .menubtn {
-    bottom: -13rem;
-  }
-
-  .menupagetext {
-    font-size: 3.1rem;
-    padding-left: 1.5%;
-  }
-
-  .invisiblemenubtn {
-    height: 3.3rem;
-  }
 }
 
 // NEXUS 6 - CHORME DEVTOOLS -LANDSCAPE

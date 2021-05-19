@@ -1,0 +1,145 @@
+//  IPHONE 4 - CHROME DEVTOOLS - LANDSCAPE - BASE STYLES
+@media (min-width: 480px) and (min-height: 320px) and (orientation: landscape) {
+  .contactcardscontainer {
+    margin-bottom: 3.5rem;
+  }
+
+  .contactcard,
+  .bgimage {
+    height: 20vh;
+    width: 60vw;
+  }
+
+  .textstyle {
+    font-size: 1.2rem;
+  }
+
+  .socialtextstyle {
+    padding-top: 0.2rem;
+  }
+
+  .sociallinkcontainer {
+    height: 10%;
+    width: 100vw;
+  }
+
+  .sociallinks {
+    width: 10%;
+    height: inherit;
+    bottom: 1.5rem;
+  }
+}
+
+// NOKIA LUMA 520 - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 533px) and (min-height: 320px) and (orientation: landscape) {
+  .contactcard,
+  .bgimage {
+    width: 55vw;
+  }
+}
+
+// IPHONE 5-SE - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 568px) and (min-height: 320px) and (orientation: landscape) {
+  .contactcard,
+  .bgimage {
+    width: 50vw;
+  }
+
+  .textstyle {
+    padding-top: 0.1rem;
+  }
+
+  .questionstextstyle {
+    padding-top: 0rem;
+  }
+
+  .socialtextstyle {
+    padding-top: 0.2rem;
+  }
+}
+
+// NEXUS 5 - CHROME DEV TOOLS - LANDSCAPE
+@media (min-width: 598px) and (min-height: 280px) and (orientation: landscape) {
+  .contactcardscontainer {
+    margin-bottom: 3.5rem;
+  }
+
+  .contactcard,
+  .bgimage {
+    height: 20vh;
+    width: 43vw;
+  }
+
+  .textstyle {
+    font-size: 1.1rem;
+  }
+
+  .socialtextstyle {
+    padding-top: 0.1rem;
+  }
+
+  .sociallinkcontainer {
+    height: 10%;
+    width: 80vw;
+  }
+
+  .sociallinks {
+    width: 7%;
+    height: inherit;
+    bottom: 1.5rem;
+  }
+}
+
+// NEXUS 5 - CHROME DEV TOOLS - LANDSCAPE
+@media (min-width: 567px) and (min-height: 335px) and (orientation: landscape) {
+  .contactcard,
+  .bgimage {
+    width: 50vw;
+  }
+
+  .textstyle {
+    font-size: 1.3rem;
+  }
+
+  .socialtextstyle {
+    padding-top: 0.15rem;
+  }
+
+  .sociallinkcontainer {
+    width: 85vw;
+  }
+
+  .sociallinks {
+    width: 8%;
+  }
+}
+
+// IPHONE 6 - TESTED W/ NGROK - LANDSCAPE
+@media (min-width: 553px) and (min-height: 375px) and (orientation: landscape) {
+  .contactcard,
+  .bgimage {
+    width: 60vw;
+  }
+
+  .textstyle {
+    font-size: 1.45rem;
+  }
+
+  .sociallinkcontainer {
+    width: 90vw;
+  }
+
+  .sociallinks {
+    width: 10%;
+  }
+}
+
+// Galaxy S5- CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 640px) and (min-height: 360px) and (orientation: landscape) {
+  .textstyle {
+    font-size: 1.4rem;
+  }
+  .sociallinks {
+    width: 8%;
+  }
+}

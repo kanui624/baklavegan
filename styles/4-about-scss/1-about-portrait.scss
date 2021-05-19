@@ -50,12 +50,24 @@
 
 // NOKIA LUMA 520 - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 320px) and (min-height: 533px) and (orientation: portrait) {
-  // NOTHING NEEDED
+  .spcontainer {
+    .booknavcontainersp {
+      .booknavssp {
+        margin-top: 3%;
+      }
+    }
+  }
 }
 
 // IPHONE 5-SE - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 320px) and (min-height: 568px) and (orientation: portrait) {
-  // NOTHING NEEDED
+  .spcontainer {
+    .booknavcontainersp {
+      .booknavssp {
+        margin-top: 3.5%;
+      }
+    }
+  }
 }
 
 // NEXUS 5 - CHROME DEV TOOLS - PORTRAIT
@@ -75,7 +87,7 @@
     .booknavcontainersp {
       margin-top: 0;
       .booknavssp {
-        margin-top: 2%;
+        margin-top: 1%;
         margin-bottom: 4%;
       }
     }
@@ -93,7 +105,7 @@
     .booknavcontainersp {
       margin-top: 0;
       .booknavssp {
-        margin-top: 2%;
+        margin-top: 2.5%;
         margin-bottom: 2%;
       }
     }
@@ -111,8 +123,8 @@
     .booknavcontainersp {
       margin-top: 0;
       .booknavssp {
-        margin-top: 1.5%;
-        margin-bottom: 1.5%;
+        margin-top: 2%;
+        margin-bottom: 2.5%;
       }
     }
   }
@@ -120,7 +132,13 @@
 
 // Galaxy S5- CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
-  // NOTHING NEEDED
+  .spcontainer {
+    .booknavcontainersp {
+      .booknavssp {
+        margin-top: 3.5%;
+      }
+    }
+  }
 }
 
 // LG Optimus L70 - CHROME DEVTOOLS - PORTRAIT
@@ -390,7 +408,7 @@
       border-radius: 5rem;
       //   background-color: pink;
       .booknavsdpp {
-        margin-top: 1rem;
+        margin-top: 1.3rem;
         width: 18%;
       }
     }

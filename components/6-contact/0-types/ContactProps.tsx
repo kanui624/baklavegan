@@ -2,8 +2,6 @@ export interface SocialDataProps {
   id: number;
   link: string;
   image: string;
-  width: number;
-  height: number;
 }
 
 export interface ContactInfoDataProps {
