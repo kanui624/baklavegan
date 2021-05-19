@@ -452,6 +452,7 @@
     }
     .booknavcontainerdp {
       margin-top: 2.5%;
+      margin-bottom: 2%;
     }
   }
 }
@@ -694,7 +695,7 @@
       }
 
       .page0textdp {
-        font-size: 450%;
+        font-size: 500%;
       }
 
       .page2textdp {
@@ -727,6 +728,11 @@
       .page17textdp {
         font-size: 200%;
         padding: 2rem;
+      }
+    }
+    .booknavcontainerdp {
+      .booknavsdp {
+        width: 15%;
       }
     }
   }

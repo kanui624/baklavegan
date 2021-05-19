@@ -6,9 +6,9 @@
 
   .contactcard,
   .bgimage {
-    height: 15%;
-    width: 100vw;
-    margin-bottom: 0.6rem;
+    height: 4.5rem;
+    width: 20rem;
+    margin-bottom: 0.2rem;
   }
 
   .textstyle {
@@ -16,12 +16,12 @@
     font-size: 1.4rem;
   }
 
-  .questionstextstyle {
-    padding-top: 0rem;
-  }
+  // .questionstextstyle {
+  //   padding-top: 0rem;
+  // }
 
   .socialtextstyle {
-    padding-top: 0.2rem;
+    padding-top: 0.1rem;
   }
 
   .sociallinkcontainer {
@@ -39,12 +39,13 @@
 
 // NOKIA LUMA 520 - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 320px) and (min-height: 533px) and (orientation: portrait) {
-  .textstyle {
-    padding-top: 0.3rem;
+  .contactcard,
+  .bgimage {
+    margin-bottom: 0.4rem;
   }
 
   .socialtextstyle {
-    padding-top: 0.4rem;
+    padding-top: 0.2rem;
   }
 
   .sociallinkcontainer {
@@ -132,287 +133,353 @@
   }
 }
 
-// // LG Optimus L70 - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 384px) and (min-height: 640px) and (orientation: portrait) {
-//   .contactcard {
-//     height: 16.7vh;
-//   }
+// LG Optimus L70 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 384px) and (min-height: 640px) and (orientation: portrait) {
+  .contactcard {
+    margin-bottom: 0.7rem;
+  }
 
-//   .textstyle {
-//     font-size: 1.75rem;
-//   }
+  .textstyle {
+    font-size: 1.7rem;
+    padding-top: 0.35rem;
+  }
 
-//   .sociallinks {
-//     bottom: 4.9rem;
-//   }
-// }
+  .socialtextstyle {
+    padding-top: 0.5rem;
+  }
 
-// // NEXUS 5X - CHORME DEVTOOLS - PORTRAIT
-// @media (min-width: 412px) and (min-height: 604px) and (orientation: portrait) {
-//   .contactcard {
-//     height: 17.5vh;
-//   }
+  .sociallinks {
+    width: 17%;
+    bottom: 4.7rem;
+  }
+}
 
-//   .textstyle {
-//     font-size: 1.8rem;
-//   }
+// NEXUS 5X - CHORME DEVTOOLS - PORTRAIT
+@media (min-width: 412px) and (min-height: 604px) and (orientation: portrait) {
+  .contactcard {
+    margin-bottom: 1rem;
+  }
 
-//   .sociallinks {
-//     bottom: 3.8rem;
-//   }
-// }
+  .textstyle {
+    font-size: 1.75rem;
+    padding: 0;
+  }
 
-// // NEXUS 5X - CHORME DEVTOOLS - PORTRAIT
-// @media (min-width: 412px) and (min-height: 660px) and (orientation: portrait) {
-//   .contactcard {
-//     height: 17vh;
-//   }
+  .socialtextstyle {
+    padding-top: 0.1rem;
+  }
 
-//   .sociallinks {
-//     bottom: 4.8rem;
-//   }
-// }
+  .sociallinks {
+    width: 15%;
+  }
+}
 
-// // IPHONE 6/7/8 - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
-//   .contactcard {
-//     height: 16.5vh;
-//   }
+// NEXUS 5X - CHORME DEVTOOLS - PORTRAIT
+@media (min-width: 412px) and (min-height: 660px) and (orientation: portrait) {
+  .contactcard {
+    margin-bottom: 0.6rem;
+  }
 
-//   .textstyle {
-//     font-size: 1.7rem;
-//   }
+  .textstyle {
+    font-size: 1.8rem;
+    padding-top: 0.2rem;
+  }
 
-//   .sociallinks {
-//     bottom: 5.2rem;
-//   }
-// }
+  .socialtextstyle {
+    padding-top: 0.4rem;
+  }
 
-// // IPHONE XR - TESTED W/ NGROK - PORTRAIT
-// @media (min-width: 414px) and (min-height: 715px) and (orientation: portrait) {
-//   .contactcard {
-//     height: 16.5vh;
-//   }
+  .sociallinks {
+    width: 16%;
+  }
+}
 
-//   .textstyle {
-//     font-size: 1.8rem;
-//   }
+// IPHONE 6/7/8 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
+  .contactcard {
+    margin-bottom: 0.4rem;
+  }
 
-//   .sociallinks {
-//     padding-top: 0.5rem;
-//   }
+  .textstyle {
+    font-size: 1.6rem;
+    padding-top: 0.5rem;
+  }
 
-//   .sociallinks {
-//     bottom: 5.4rem;
-//   }
-// }
+  .socialtextstyle {
+    padding-top: 0.6rem;
+  }
 
-// // IPHONE X - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 375px) and (min-height: 812px) and (orientation: portrait) {
-//   .contactcard {
-//     height: 15vh;
-//   }
-// }
+  .sociallinkcontainer {
+    height: 6%;
+  }
 
-// // PIXEL 2 - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 411px) and (min-height: 731px) and (orientation: portrait) {
-//   .contactcard {
-//     height: 16vh;
-//   }
+  .sociallinks {
+    width: 15%;
+  }
+}
 
-//   .textstyle {
-//     font-size: 1.8rem;
-//   }
-// }
+// IPHONE XR - TESTED W/ NGROK - PORTRAIT
+@media (min-width: 414px) and (min-height: 715px) and (orientation: portrait) {
+  .contactcard {
+    margin-bottom: 0.7rem;
+  }
 
-// // NEXUS 6 - CHORME DEVTOOLS - PORTRAIT
-// @media (min-width: 412px) and (min-height: 732px) and (orientation: portrait) {
-//   // NOTHING NEEDED
-// }
+  .textstyle {
+    padding-top: 0.6rem;
+    font-size: 1.7rem;
+  }
 
-// // IPHONE 6/7/8 PLUS - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 414px) and (min-height: 736px) and (orientation: portrait) {
-//   // NOTHING NEEDED
-// }
+  .socialtextstyle {
+    padding-top: 0.8rem;
+  }
+}
 
-// // PIXEL 2XL- CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 411px) and (min-height: 823px) and (orientation: portrait) {
-//   .contactcard {
-//     height: 15vh;
-//   }
-// }
+// IPHONE X - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 375px) and (min-height: 812px) and (orientation: portrait) {
+  .contactcard {
+    margin-bottom: 0.5rem;
+  }
 
-// // NOKIA N9 - CHROME DEV TOOLS - PORTRAIT
-// @media (min-width: 480px) and (min-height: 854px) and (orientation: portrait) {
-//   .bgimage {
-//     width: 85vw;
-//   }
+  .textstyle {
+    padding: 0;
+    padding-top: 1.2rem;
+  }
 
-//   .contactcard {
-//     height: 14vh;
-//   }
+  .socialtextstyle {
+    padding-top: 1.35rem;
+  }
 
-//   .sociallinks {
-//     width: 85vw;
-//   }
+  .sociallinkcontainer {
+    height: 5.5%;
+  }
 
-//   .textstyle {
-//     padding: 0;
-//     padding-bottom: 0.5rem;
-//   }
+  .sociallinks {
+    width: 17%;
+  }
+}
 
-//   .socialtextstyle {
-//     padding-bottom: 0.4rem;
-//   }
-// }
+// PIXEL 2 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 411px) and (min-height: 731px) and (orientation: portrait) {
+  .contactcard {
+    margin-bottom: 0.7rem;
+  }
 
-// // GALAXY FOLD - CHROME DEV TOOLS - PORTRAIT
-// @media (min-width: 500px) and (min-height: 700px) and (orientation: portrait) {
-//   .bgimage {
-//     width: 85vw;
-//   }
+  .textstyle {
+    font-size: 1.8rem;
+    padding-top: 0.5rem;
+  }
 
-//   .contactcard {
-//     height: 16vh;
-//   }
+  .socialtextstyle {
+    padding-top: 0.7rem;
+  }
 
-//   .sociallinks {
-//     width: 85vw;
-//   }
+  .sociallinkcontainer {
+    height: 5.5%;
+  }
 
-//   .sociallinks {
-//     bottom: 4.7rem;
-//   }
+  .sociallinks {
+    width: 17%;
+    bottom: 5rem;
+  }
+}
 
-//   .textstyle {
-//     font-size: 2rem;
-//     padding: 0;
-//     padding-bottom: 0.4rem;
-//   }
-// }
+// NEXUS 6 - CHORME DEVTOOLS - PORTRAIT
+@media (min-width: 412px) and (min-height: 732px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
 
-// // SURFACE DUO - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 540px) and (min-height: 720px) and (orientation: portrait) {
-//   .contactcard {
-//     height: 16vh;
-//   }
+// IPHONE 6/7/8 PLUS - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 414px) and (min-height: 736px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
 
-//   .textstyle {
-//     padding-bottom: 0.6rem;
-//   }
+// PIXEL 2XL- CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 411px) and (min-height: 823px) and (orientation: portrait) {
+  .contactcard {
+    margin-bottom: 0.9rem;
+  }
 
-//   .socialtextstyle {
-//     padding-bottom: 0.4rem;
-//   }
-// }
+  .textstyle {
+    padding-top: 1rem;
+    font-size: 1.8rem;
+  }
 
-// // NEXUS 7 - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 600px) and (min-height: 960px) and (orientation: portrait) {
-//   .contactcard {
-//     height: 15vh;
-//   }
+  .questionstextstyle {
+    padding-top: 0.8rem;
+  }
 
-//   .textstyle {
-//     font-size: 2.2rem;
-//     padding-bottom: 0.6rem;
-//   }
+  .socialtextstyle {
+    padding-top: 1.1rem;
+  }
 
-//   .socialtextstyle {
-//     padding-bottom: 0.4rem;
-//   }
+  .sociallinkcontainer {
+    height: 5.5%;
+  }
 
-//   .sociallinks {
-//     bottom: 6rem;
-//   }
-// }
+  .sociallinks {
+    width: 17%;
+    bottom: 5rem;
+  }
+}
 
-// // IPAD MINI - TESTED WITH NGROK - PORTRAIT
-// @media (min-width: 665px) and (min-height: 921px) and(orientation: portrait) {
-//   .bgimage {
-//     width: 80vw;
-//   }
+// NOKIA N9 - CHROME DEV TOOLS - PORTRAIT
+@media (min-width: 480px) and (min-height: 854px) and (orientation: portrait) {
+  .textstyle {
+    font-size: 2rem;
+    padding-top: 0.9rem;
+  }
 
-//   .contactcard {
-//     height: 15vh;
-//   }
+  .questionstextstyle {
+    padding-top: 0.7rem;
+  }
 
-//   .sociallinks {
-//     width: 75vw;
-//     bottom: 5.5rem;
-//   }
+  .sociallinks {
+    width: 14%;
+    bottom: 5.5rem;
+  }
+}
 
-//   .textstyle {
-//     padding-bottom: 1.4rem;
-//   }
+// GALAXY FOLD - CHROME DEV TOOLS - PORTRAIT
+@media (min-width: 500px) and (min-height: 700px) and (orientation: portrait) {
+  .contactcard,
+  .bgimage {
+    height: 15%;
+    width: 29rem;
+    margin-bottom: 1rem;
+  }
 
-//   .socialtextstyle {
-//     padding-bottom: 1.1rem;
-//   }
-// }
+  .textstyle {
+    padding-top: 0.35rem;
+    font-size: 1.9rem;
+  }
 
-// // IPAD MINI - TESTED WITH NGROK - PORTRAIT
-// @media (min-width: 768px) and (min-height: 921px) and(orientation: portrait) {
-//   .bgimage {
-//     width: 75vw;
-//   }
+  .questionstextstyle {
+    padding-top: 0.2rem;
+  }
 
-//   .contactcard {
-//     height: 15.5vh;
-//   }
+  .socialtextstyle {
+    padding-top: 0.5rem;
+  }
 
-//   .textstyle {
-//     padding-bottom: 2rem;
-//   }
+  .sociallinks {
+    width: 12%;
+  }
+}
 
-//   .socialtextstyle {
-//     padding-bottom: 1.7rem;
-//   }
-// }
+// SURFACE DUO - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 540px) and (min-height: 720px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
 
-// // IPAD 2019 - TESTED WITH NGROK - PORTRAIT
-// @media (min-width: 810px) and (min-height: 977px) and (orientation: portrait) {
-//   .textstyle {
-//     padding-bottom: 2rem;
-//   }
+// NEXUS 7 - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 600px) and (min-height: 960px) and (orientation: portrait) {
+  .contactcard,
+  .bgimage {
+    height: 15%;
+    width: 30rem;
+    margin-bottom: 0.6rem;
+  }
 
-//   .socialtextstyle {
-//     padding-bottom: 1.7rem;
-//   }
+  .textstyle {
+    padding-top: 1.1rem;
+    font-size: 2.1rem;
+  }
 
-//   .sociallinks {
-//     bottom: 6rem;
-//   }
-// }
+  .socialtextstyle {
+    padding-top: 1.3rem;
+  }
 
-// // BLACKBERRY PLAYBOOK - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 600px) and (min-height: 1024px) and (orientation: portrait) {
-//   .contactcard {
-//     height: 13.5vh;
-//   }
+  .sociallinks {
+    width: 13%;
+    bottom: 6rem;
+  }
+}
 
-//   .textstyle {
-//     padding-bottom: 0.8rem;
-//   }
+// IPAD MINI - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 665px) and (min-height: 921px) and(orientation: portrait) {
+  .contactcard,
+  .bgimage {
+    width: 30rem;
+    margin-bottom: 0.6rem;
+  }
 
-//   .socialtextstyle {
-//     padding-bottom: 0.5rem;
-//   }
+  .textstyle {
+    padding-top: 0.95rem;
+    font-size: 2.1rem;
+  }
 
-//   .sociallinks {
-//     bottom: 6.5rem;
-//   }
-// }
+  .questionstextstyle {
+    padding-top: 0.8rem;
+  }
 
-// // IPAD - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
-//   .textstyle {
-//     padding-bottom: 1.8rem;
-//   }
+  .socialtextstyle {
+    padding-top: 1.2rem;
+  }
 
-//   .socialtextstyle {
-//     padding-bottom: 1.5rem;
-//   }
-// }
+  .sociallinks {
+    width: 11%;
+    bottom: 6rem;
+  }
+}
+
+// IPAD MINI - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 768px) and (min-height: 921px) and(orientation: portrait) {
+  // NOTHING NEEDED
+}
+
+// IPAD 2019 - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 810px) and (min-height: 977px) and (orientation: portrait) {
+  .contactcard,
+  .bgimage {
+    width: 31rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .textstyle {
+    padding-top: 1.1rem;
+    font-size: 2.2rem;
+  }
+
+  .questionstextstyle {
+    padding-top: 0.9rem;
+  }
+
+  .sociallinks {
+    width: 12%;
+    bottom: 6rem;
+  }
+}
+
+// BLACKBERRY PLAYBOOK - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 600px) and (min-height: 1024px) and (orientation: portrait) {
+  .contactcard,
+  .bgimage {
+    width: 31rem;
+    margin-bottom: 0.1rem;
+  }
+  .textstyle {
+    padding-top: 1.5rem;
+  }
+
+  .questionstextstyle {
+    padding-top: 1.3rem;
+  }
+
+  .socialtextstyle {
+    padding-top: 1.5rem;
+  }
+
+  .sociallinks {
+    width: 16%;
+  }
+}
+
+// IPAD - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+  .sociallinks {
+    width: 11%;
+  }
+}
 
 // // IPAD PRO - CHROME DEVTOOLS - PORTRAIT
 // @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {

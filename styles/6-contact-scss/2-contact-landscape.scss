@@ -6,8 +6,8 @@
 
   .contactcard,
   .bgimage {
-    height: 20vh;
-    width: 60vw;
+    height: 4rem;
+    width: 18rem;
   }
 
   .textstyle {
@@ -32,9 +32,8 @@
 
 // NOKIA LUMA 520 - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 533px) and (min-height: 320px) and (orientation: landscape) {
-  .contactcard,
-  .bgimage {
-    width: 55vw;
+  .sociallinks {
+    width: 9%;
   }
 }
 
@@ -141,5 +140,446 @@
   }
   .sociallinks {
     width: 8%;
+  }
+}
+
+// LG Optimus L70 - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 640px) and (min-height: 384px) and (orientation: landscape) {
+  .contactcard,
+  .bgimage {
+    width: 55vw;
+  }
+
+  .textstyle {
+    padding-top: 0rem;
+    font-size: 1.5rem;
+  }
+
+  .socialtextstyle {
+    padding-top: 0.1rem;
+  }
+
+  .sociallinkcontainer {
+    width: 90vw;
+  }
+
+  .sociallinks {
+    width: 9%;
+  }
+}
+
+// NEXUS 5X - CHORME DEVTOOLS - LANDSCAPE
+@media (min-width: 684px) and (min-height: 332px) and (orientation: landscape) {
+  .contactcard,
+  .bgimage {
+    width: 45vw;
+  }
+
+  .textstyle {
+    padding-top: 0rem;
+    font-size: 1.3rem;
+  }
+
+  .socialtextstyle {
+    padding-top: 0.1rem;
+  }
+
+  .sociallinks {
+    width: 7%;
+  }
+}
+
+// IPHONE 6/7/8 - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 667px) and (min-height: 375px) and (orientation: landscape) {
+  .contactcard,
+  .bgimage {
+    width: 50vw;
+  }
+
+  .textstyle {
+    padding-top: 0.2rem;
+    font-size: 1.4rem;
+  }
+
+  .questionstextstyle {
+    padding-top: 0.1rem;
+  }
+  .socialtextstyle {
+    padding-top: 0.1rem;
+  }
+
+  .sociallinks {
+    width: 8%;
+  }
+}
+
+// NEXUS 5X - CHORME DEVTOOLS - LANDSCAPE
+@media (min-width: 684px) and (min-height: 388px) and (orientation: landscape) {
+  .textstyle {
+    padding-top: 0.2rem;
+  }
+
+  .socialtextstyle {
+    padding-top: 0.35rem;
+  }
+}
+
+// IPHONE XR - TESTED W/ NGROK - LANDSCAPE
+@media (min-width: 715px) and (min-height: 414px) and (orientation: landscape) {
+  .textstyle {
+    padding-top: 0.2rem;
+    font-size: 1.5rem;
+  }
+
+  .socialtextstyle {
+    padding-top: 0.25rem;
+  }
+  .sociallinkcontainer {
+    height: 9%;
+  }
+  .sociallinks {
+    width: 8%;
+  }
+}
+
+// PIXEL 2 - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 731px) and (min-height: 411px) and (orientation: landscape) {
+  .textstyle {
+    padding: 0;
+    font-size: 1.6rem;
+  }
+
+  .socialtextstyle {
+    padding-top: 0.1rem;
+  }
+
+  .sociallinkcontainer {
+    height: 9%;
+  }
+  .sociallinks {
+    width: 8%;
+  }
+}
+
+// IPHONE XR - TESTED W/ NGROK - LANDSCAPE
+@media (min-width: 800px) and (min-height: 364px) and (orientation: landscape) {
+  .contactcard,
+  .bgimage {
+    width: 40vw;
+  }
+
+  .textstyle {
+    padding: 0;
+    font-size: 1.45rem;
+  }
+
+  .sociallinkcontainer {
+    height: 9%;
+  }
+  .sociallinks {
+    width: 8%;
+  }
+}
+
+// IPHONE X - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 812px) and (min-height: 375px) and (orientation: landscape) {
+  .contactcard,
+  .bgimage {
+    width: 42vw;
+  }
+
+  .textstyle {
+    padding-top: 0.1rem;
+    font-size: 1.4rem;
+  }
+
+  .socialtextstyle {
+    padding-top: 0.2rem;
+  }
+
+  .sociallinks {
+    width: 8%;
+  }
+}
+
+// NEXUS 6 - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 732px) and (min-height: 412px) and (orientation: landscape) {
+  // NOTHING NEEDED
+}
+
+// IPHONE 6/7/8 PLUS - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 736px) and (min-height: 414px) and (orientation: landscape) {
+  // NOTHING NEEDED
+}
+
+// PIXEL 2XL- CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 823px) and (min-height: 411px) and (orientation: landscape) {
+  .textstyle {
+    font-size: 1.5rem;
+  }
+
+  .sociallinks {
+    width: 7%;
+  }
+}
+
+//NOKIA 9 - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 854px) and (min-height: 480px) and (orientation: landscape) {
+  .contactcard,
+  .bgimage {
+    width: 50vw;
+  }
+
+  .textstyle {
+    font-size: 1.8rem;
+    padding-top: 0.2rem;
+  }
+
+  .questionstextstyle {
+    padding-top: 0;
+  }
+
+  .socialtextstyle {
+    padding-top: 0.3rem;
+  }
+
+  .sociallinkcontainer {
+    width: 85vw;
+    height: 8%;
+  }
+  .sociallinks {
+    width: 8%;
+  }
+}
+
+// GALAXY FOLD - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 700px) and (min-height: 500px) and (orientation: landscape) {
+  .contactcard,
+  .bgimage {
+    width: 60vw;
+  }
+
+  .textstyle {
+    padding-top: 0.45rem;
+    font-size: 1.8rem;
+  }
+
+  .questionstextstyle {
+    padding-top: 0.3rem;
+  }
+
+  .sociallinkcontainer {
+    width: 100vw;
+    height: 8%;
+  }
+  .sociallinks {
+    width: 9%;
+  }
+}
+
+// SURFACE DUO - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 720px) and (min-height: 540px) and (orientation: landscape) {
+  .questionstextstyle {
+    padding-top: 0.45rem;
+  }
+  .socialtextstyle {
+    padding-top: 0.55rem;
+  }
+
+  .sociallinkcontainer {
+    width: 100vw;
+    height: 8%;
+  }
+  .sociallinks {
+    width: 9%;
+    bottom: 2rem;
+  }
+}
+
+// NEXUS 7 - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 960px) and (min-height: 600px) and (orientation: landscape) {
+  .contactcard,
+  .bgimage {
+    width: 55vw;
+  }
+
+  .textstyle {
+    padding-top: 0.4rem;
+    font-size: 2.1rem;
+  }
+
+  .socialtextstyle {
+    padding-top: 0.5rem;
+  }
+
+  .sociallinkcontainer {
+    width: 100vw;
+    height: 7%;
+  }
+  .sociallinks {
+    width: 7%;
+  }
+}
+
+// IPAD MINI - TESTED WITH NGROK - LANDSCAPE
+@media (min-width: 921px) and (min-height: 665px) and (orientation: landscape) {
+  .contactcard,
+  .bgimage {
+    width: 55vw;
+    height: 18vh;
+  }
+
+  .textstyle {
+    padding-top: 0.4rem;
+    font-size: 2.1rem;
+  }
+
+  .questionstextstyle {
+    padding-top: 0.3rem;
+  }
+
+  .socialtextstyle {
+    padding-top: 0.5rem;
+  }
+
+  .sociallinkcontainer {
+    width: 100vw;
+    height: 7%;
+  }
+  .sociallinks {
+    width: 7%;
+    bottom: 3rem;
+  }
+}
+
+// IPAD MINI 2 - TESTED WITH NGROK - LANDSCAPE
+@media (min-width: 921px) and (min-height: 768px) and (orientation: landscape) {
+  .contactcard,
+  .bgimage {
+    width: 55vw;
+    height: 17vh;
+  }
+
+  .textstyle {
+    padding-top: 0.65rem;
+    font-size: 2.1rem;
+  }
+
+  .socialtextstyle {
+    padding-top: 0.85rem;
+  }
+
+  .sociallinkcontainer {
+    width: 100vw;
+    height: 6.5%;
+  }
+  .sociallinks {
+    width: 9%;
+    bottom: 4rem;
+  }
+}
+
+// IPAD 2019 - TESTED WITH NGROK - LANDSCAPE
+@media (min-width: 977px) and (min-height: 810px) and (orientation: landscape) {
+  .textstyle {
+    font-size: 2.2rem;
+    padding-top: 0.75rem;
+  }
+
+  .questionstextstyle {
+    padding-top: 0.65rem;
+  }
+
+  .socialtextstyle {
+    padding-top: 0.9rem;
+  }
+
+  .sociallinks {
+    margin-right: 1.5rem;
+  }
+}
+
+// BLACKBERRY PLAYBOOK - CHROME DEVTOOLS - LANDSCAPE
+@media (min-width: 1024px) and (min-height: 600px) and (orientation: landscape) {
+  .contactcard,
+  .bgimage {
+    width: 50vw;
+    height: 20vh;
+  }
+
+  .textstyle {
+    padding-top: 0.4rem;
+  }
+
+  .questionstextstyle {
+    padding-top: 0.3rem;
+  }
+
+  .socialtextstyle {
+    padding-top: 0.6rem;
+  }
+
+  .sociallinkcontainer {
+    width: 80vw;
+    height: 7%;
+    margin-right: 1rem;
+  }
+  .sociallinks {
+    width: 7%;
+    bottom: 2rem;
+  }
+}
+
+// IPAD - CHROME DEV TOOLS - LANDSCAPE
+@media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape) {
+  .contactcard,
+  .bgimage {
+    width: 50vw;
+    height: 16vh;
+  }
+
+  .sociallinks {
+    width: 9%;
+    bottom: 4rem;
+  }
+}
+
+// 13" DELL - TESTED W/ NGROK - LANDSCAPE
+@media (min-width: 1280px) and (min-height: 578px) and (orientation: landscape) {
+  .contactcard,
+  .bgimage {
+    width: 40rem;
+    height: 5.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .textstyle {
+    padding: 0;
+  }
+
+  .socialtextstyle {
+    padding-top: 0.1rem;
+  }
+
+  .sociallinkcontainer {
+    width: 75vw;
+    height: 7%;
+    margin-right: 1.5rem;
+  }
+  .sociallinks {
+    width: 9%;
+    bottom: 2rem;
+  }
+}
+
+// LOW-RES 32INCH MONITOR - TESTED W/ LOCAL MACHINE
+@media (min-width: 1360px) and (min-height: 689px) and (orientation: landscape) {
+  .socialtextstyle {
+    padding-top: 0.2rem;
+  }
+
+  .sociallinks {
+    width: 10%;
+    bottom: 3rem;
   }
 }
