@@ -16,7 +16,6 @@ import {
 
 // Components
 import ContactInfo from "@/components/6-contact/2-components/ContactInfo";
-import ViewInPortrait from "@/components/1-layout/ViewInPortrait";
 
 // Data
 import { socialData } from "@/components/6-contact/1-data/SocialData";

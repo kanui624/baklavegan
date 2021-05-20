@@ -16,7 +16,6 @@ import {
 import { showDevNote } from "@/animations/1-layout/DevNoteAnimations";
 
 // Components
-import ClientPass from "./ClientPass";
 import MemoBVCanvas from "../0-navigation/0-menu/5-canvas/BVCanvas";
 import MenuButtonRoot from "../0-navigation/1-menubutton/MenuButtonRoot";
 import MenuButtonPage from "../0-navigation/1-menubutton/MenuButtonPage";
@@ -117,9 +116,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         />
       </div>
       <DevNote devPageClicked={devPageClicked} />
-      <span className="fixed text-4xl bottom-20">
+      {/* <span className="fixed text-4xl bottom-20">
         {width} x {height}
-      </span>
+      </span> */}
     </Fragment>
   );
 };

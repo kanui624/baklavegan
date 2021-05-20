@@ -330,22 +330,20 @@
 
 // SURFACE DUO - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 720px) and (min-height: 540px) and (orientation: landscape) {
-  .sociallinks {
-    bottom: 4.5rem;
-  }
+  // NOTHING NEEDED
 }
 
 // NEXUS 7 - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 960px) and (min-height: 600px) and (orientation: landscape) {
   .contactcard,
   .bgimage {
-    height: 5.8rem;
+    height: 5.5rem;
     width: 26rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.8rem;
   }
 
   .textstyle {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
   }
 }
 
