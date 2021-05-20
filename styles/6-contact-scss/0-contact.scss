@@ -1,6 +1,14 @@
 .textstyle {
   text-shadow: 3.5px 2.5px 3px #39311d;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.06rem;
+}
+
+.textpos {
+  top: 0;
+  left: 0;
+  // position: absolute;
+  text-align: center;
+  width: 100%;
 }
 
 @import "./1-contact-portrait";

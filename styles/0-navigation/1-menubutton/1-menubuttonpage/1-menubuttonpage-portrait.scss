@@ -2,20 +2,20 @@
 @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
   .invisiblemenubtn,
   .menupageimage {
-    height: 9rem;
-    width: 7.5rem;
+    height: 8rem;
+    width: 6.5rem;
   }
 
   .menupageimage,
   .menubtn,
   .menupagetext {
-    bottom: -18.5rem;
+    bottom: -17.7rem;
   }
 
   .menupagetext {
-    font-size: 250%;
+    font-size: 220%;
     padding-left: 0.4rem;
-    padding-bottom: 5.4rem;
+    padding-bottom: 4.7rem;
   }
 }
 
@@ -24,21 +24,18 @@
   .menupageimage,
   .menubtn,
   .menupagetext {
-    bottom: -18rem;
+    bottom: -17.8rem;
   }
 
   .menupagetext {
-    font-size: 270%;
-    padding-bottom: 5rem;
+    font-size: 220%;
+    padding-bottom: 4.8rem;
   }
 }
 
 // IPHONE 5-SE - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 320px) and (min-height: 568px) and (orientation: portrait) {
-  .menupagetext {
-    font-size: 270%;
-    padding-bottom: 5rem;
-  }
+  // NOTHING NEEDED
 }
 
 // NEXUS 5 - CHROME DEV TOOLS - PORTRAIT
@@ -56,27 +53,26 @@
   .menupageimage,
   .menubtn,
   .menupagetext {
-    bottom: -18.2rem;
+    bottom: -17.5rem;
+  }
+
+  .menupagetext {
+    font-size: 230%;
+    padding-bottom: 4.5rem;
   }
 }
 
 // Galaxy S5- CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
-  .invisiblemenubtn,
-  .menupageimage {
-    height: 10rem;
-    width: 8.5rem;
-  }
-
   .menupageimage,
   .menubtn,
   .menupagetext {
-    bottom: -18.3rem;
+    bottom: -17.2rem;
   }
 
   .menupagetext {
-    font-size: 310%;
-    padding-bottom: 5.3rem;
+    font-size: 240%;
+    padding-bottom: 4.25rem;
   }
 }
 
@@ -129,34 +125,25 @@
 @media (min-width: 411px) and (min-height: 823px) and (orientation: portrait) {
   .invisiblemenubtn,
   .menupageimage {
-    height: 11rem;
-    width: 9.5rem;
+    height: 9rem;
+    width: 7.5rem;
   }
 
   .menupageimage,
   .menubtn,
   .menupagetext {
-    bottom: -19rem;
+    bottom: -17.6rem;
   }
 
   .menupagetext {
-    font-size: 350%;
-    padding-bottom: 5.7rem;
+    font-size: 270%;
+    padding-bottom: 4.8rem;
   }
 }
 
 // NOKIA N9 - CHROME DEV TOOLS - PORTRAIT
 @media (min-width: 480px) and (min-height: 854px) and (orientation: portrait) {
-  .menupageimage,
-  .menubtn,
-  .menupagetext {
-    bottom: -18.5rem;
-  }
-
-  .menupagetext {
-    font-size: 370%;
-    padding-bottom: 5.3rem;
-  }
+  // NOTHING NEEDED
 }
 
 // GALAXY FOLD - CHROME DEV TOOLS - PORTRAIT
@@ -171,22 +158,7 @@
 
 // NEXUS 7 - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 600px) and (min-height: 960px) and (orientation: portrait) {
-  .invisiblemenubtn,
-  .menupageimage {
-    height: 12rem;
-    width: 10.5rem;
-  }
-
-  .menupageimage,
-  .menubtn,
-  .menupagetext {
-    bottom: -19.5rem;
-  }
-
-  .menupagetext {
-    font-size: 400%;
-    padding-bottom: 6.2rem;
-  }
+  // NOTHING NEEDED
 }
 
 // IPAD MINI - TESTED WITH NGROK - PORTRAIT
@@ -201,23 +173,7 @@
 
 // IPAD 2019 - TESTED WITH NGROK - PORTRAIT
 @media (min-width: 810px) and (min-height: 977px) and (orientation: portrait) {
-  .invisiblemenubtn,
-  .menupageimage {
-    height: 13rem;
-    width: 11.5rem;
-  }
-
-  .menupageimage,
-  .menubtn,
-  .menupagetext {
-    bottom: -20.2rem;
-  }
-
-  .menupagetext {
-    font-size: 410%;
-    padding-left: 0rem;
-    padding-bottom: 6.8rem;
-  }
+  // NOTHING NEEDED
 }
 
 // BLACKBERRY PLAYBOOK - CHROME DEVTOOLS - PORTRAIT
@@ -232,25 +188,5 @@
 
 // IPAD PRO - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
-  .invisiblemenubtn,
-  .menupageimage {
-    height: 14rem;
-    width: 12.5rem;
-  }
-
-  .invisiblemenubtn {
-    margin-right: 1.5rem;
-  }
-
-  .menupageimage,
-  .menubtn,
-  .menupagetext {
-    bottom: -20.5rem;
-  }
-
-  .menupagetext {
-    font-size: 450%;
-    padding-right: 1rem;
-    padding-bottom: 7rem;
-  }
+  // NOTHING NEEDED
 }

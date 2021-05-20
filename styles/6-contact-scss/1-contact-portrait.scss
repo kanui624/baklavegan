@@ -1,13 +1,16 @@
 //  IPHONE 4 - CHROME DEVTOOLS - PORTRAIT - BASE STYLES
 @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
   .contactcardscontainer {
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
   }
 
   .contactcard,
   .bgimage {
     height: 4.5rem;
     width: 20rem;
+  }
+
+  .contactcard {
     margin-bottom: 0.2rem;
   }
 
@@ -60,7 +63,7 @@
 // NEXUS 5 - CHROME DEV TOOLS - PORTRAIT
 @media (min-width: 360px) and (min-height: 512px) and (orientation: portrait) {
   .contactcardscontainer {
-    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
   }
   .contactcard,
   .bgimage {
@@ -183,7 +186,9 @@
 
 // IPHONE XR - TESTED W/ NGROK - PORTRAIT
 @media (min-width: 414px) and (min-height: 715px) and (orientation: portrait) {
-  // NOTHING NEEDED
+  .sociallinks {
+    bottom: 4.5rem;
+  }
 }
 
 // IPHONE X - CHROME DEVTOOLS - PORTRAIT
@@ -224,7 +229,7 @@
 // NOKIA N9 - CHROME DEV TOOLS - PORTRAIT
 @media (min-width: 480px) and (min-height: 854px) and (orientation: portrait) {
   .contactcardscontainer {
-    margin: 0;
+    padding: 0;
   }
   .contactcard,
   .bgimage {
@@ -244,7 +249,7 @@
 // GALAXY FOLD - CHROME DEV TOOLS - PORTRAIT
 @media (min-width: 500px) and (min-height: 700px) and (orientation: portrait) {
   .contactcardscontainer {
-    margin: 0;
+    padding: 0;
   }
 }
 
@@ -273,88 +278,51 @@
 
 // IPAD MINI - TESTED WITH NGROK - PORTRAIT
 @media (min-width: 665px) and (min-height: 921px) and(orientation: portrait) {
+  .contactcard,
+  .bgimage {
+    height: 5.5rem;
+    width: 26rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sociallinkcontainer {
+    width: 85vw;
+  }
+
+  .sociallinks {
+    bottom: 6.5rem;
+  }
 }
 
-// // IPAD MINI - TESTED WITH NGROK - PORTRAIT
-// @media (min-width: 768px) and (min-height: 921px) and(orientation: portrait) {
-//   // NOTHING NEEDED
-// }
+// IPAD MINI - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 768px) and (min-height: 921px) and(orientation: portrait) {
+  // NOTHING NEEDED
+}
 
-// // IPAD 2019 - TESTED WITH NGROK - PORTRAIT
-// @media (min-width: 810px) and (min-height: 977px) and (orientation: portrait) {
-//   .contactcard,
-//   .bgimage {
-//     width: 31rem;
-//     margin-bottom: 0.4rem;
-//   }
+// IPAD 2019 - TESTED WITH NGROK - PORTRAIT
+@media (min-width: 810px) and (min-height: 977px) and (orientation: portrait) {
+}
 
-//   .textstyle {
-//     padding-top: 1.1rem;
-//     font-size: 2.2rem;
-//   }
+// BLACKBERRY PLAYBOOK - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 600px) and (min-height: 1024px) and (orientation: portrait) {
+  .contactcard,
+  .bgimage {
+    margin-bottom: 1.3rem;
+  }
+}
 
-//   .questionstextstyle {
-//     padding-top: 0.9rem;
-//   }
+// IPAD - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+  // NOTHING NEEDED
+}
 
-//   .sociallinks {
-//     width: 12%;
-//     bottom: 6rem;
-//   }
-// }
-
-// // BLACKBERRY PLAYBOOK - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 600px) and (min-height: 1024px) and (orientation: portrait) {
-//   .contactcard,
-//   .bgimage {
-//     width: 31rem;
-//     margin-bottom: 0.1rem;
-//   }
-//   .textstyle {
-//     padding-top: 1.5rem;
-//   }
-
-//   .questionstextstyle {
-//     padding-top: 1.3rem;
-//   }
-
-//   .socialtextstyle {
-//     padding-top: 1.5rem;
-//   }
-
-//   .sociallinks {
-//     width: 16%;
-//   }
-// }
-
-// // IPAD - CHROME DEVTOOLS - PORTRAIT
-// @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
-//   .sociallinks {
-//     width: 11%;
-//   }
-// }
-
-// // // IPAD PRO - CHROME DEVTOOLS - PORTRAIT
-// // @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
-// //   .bgimage {
-// //     width: 70vw;
-// //   }
-
-// //   .contactcard {
-// //     height: 13.5vh;
-// //   }
-
-// //   .sociallinks {
-// //     bottom: 7.5rem;
-// //     width: 70vw;
-// //   }
-
-// //   .textstyle {
-// //     font-size: 2.5rem;
-// //     padding-bottom: 2.8rem;
-// //   }
-
-// //   .socialtextstyle {
-// //     padding-bottom: 2.4rem;
-// //   }
-// // }
+// IPAD PRO - CHROME DEVTOOLS - PORTRAIT
+@media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+  .contactcard,
+  .bgimage {
+    margin-bottom: 2rem;
+  }
+  .sociallinks {
+    bottom: 8rem;
+  }
+}

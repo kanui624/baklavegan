@@ -117,9 +117,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         />
       </div>
       <DevNote devPageClicked={devPageClicked} />
-      {/* <span className="fixed text-4xl bottom-20">
+      <span className="fixed text-4xl bottom-20">
         {width} x {height}
-      </span> */}
+      </span>
     </Fragment>
   );
 };
