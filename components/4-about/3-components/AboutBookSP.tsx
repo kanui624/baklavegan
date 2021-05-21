@@ -192,17 +192,25 @@ const AboutBookSP: FC = () => {
       >
         <button
           disabled={pageCount === 0 ? true : disabled}
-          className="booknavssp booknavbackwardsp ml-4"
+          className="booknavssp ml-4"
           onClick={(e) => handleNavSP(e, false)}
         >
-          <img src="/3-svgs/about/book-nav.svg" alt="book-nav-backward-sp" />
+          <img
+            className="booknavbackwardsp"
+            src="/3-svgs/about/book-nav.svg"
+            alt="book-nav-backward-sp"
+          />
         </button>
         <button
           disabled={pageCount === 8 ? true : disabled}
-          className="booknavssp booknavforwardsp mr-4"
+          className="booknavssp mr-4"
           onClick={(e) => handleNavSP(e, true)}
         >
-          <img src="/3-svgs/about/book-nav.svg" alt="book-nav-forward-sp" />
+          <img
+            className="booknavforwardsp"
+            src="/3-svgs/about/book-nav.svg"
+            alt="book-nav-forward-sp"
+          />
         </button>
       </div>
     </div>

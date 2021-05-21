@@ -188,17 +188,25 @@ const AboutBookDP: FC = () => {
       <div className="booknavcontainerdp flex justify-between">
         <button
           disabled={pageCount === 0 ? true : disabled}
-          className="booknavsdp booknavbackwarddp ml-4"
+          className="booknavsdp ml-4"
           onClick={(e) => handleNavDP(e, false)}
         >
-          <img src="/3-svgs/about/book-nav.svg" alt="book-nav-backward-dp" />
+          <img
+            className="booknavbackwarddp"
+            src="/3-svgs/about/book-nav.svg"
+            alt="book-nav-backward-dp"
+          />
         </button>
         <button
           disabled={pageCount === 8 ? true : disabled}
-          className="booknavsdp booknavforwarddp mr-4"
+          className="booknavsdp mr-4"
           onClick={(e) => handleNavDP(e, true)}
         >
-          <img src="/3-svgs/about/book-nav.svg" alt="book-nav-forward-dp" />
+          <img
+            className="booknavforwarddp"
+            src="/3-svgs/about/book-nav.svg"
+            alt="book-nav-forward-dp"
+          />
         </button>
       </div>
     </div>

@@ -184,17 +184,25 @@ const AboutBookDPP: FC = () => {
       >
         <button
           disabled={pageCount === 0 ? true : disabled}
-          className="booknavsdpp booknavbackwarddpp ml-4"
+          className="booknavsdpp ml-4"
           onClick={(e) => handleNavDPP(e, false)}
         >
-          <img src="/3-svgs/about/book-nav.svg" alt="book-nav-backward-dpp" />
+          <img
+            className="booknavbackwarddpp"
+            src="/3-svgs/about/book-nav.svg"
+            alt="book-nav-backward-dpp"
+          />
         </button>
         <button
           disabled={pageCount === 8 ? true : disabled}
-          className="booknavsdpp booknavforwarddpp mr-4"
+          className="booknavsdpp mr-4"
           onClick={(e) => handleNavDPP(e, true)}
         >
-          <img src="/3-svgs/about/book-nav.svg" alt="book-nav-forward-dpp" />
+          <img
+            className="booknavforwarddpp"
+            src="/3-svgs/about/book-nav.svg"
+            alt="book-nav-forward-dpp"
+          />
         </button>
       </div>
     </div>

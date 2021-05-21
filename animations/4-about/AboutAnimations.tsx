@@ -1,4 +1,4 @@
-import gsap from "gsap";
+import gsap from 'gsap';
 
 gsap.config({
   nullTargetWarn: false,
@@ -16,7 +16,7 @@ export const animateInInitialLoad = (
       opacity: 1,
       delay: 1,
       duration: 2.3,
-      ease: "back.out(1.07)",
+      ease: 'back.out(1.07)',
       stagger: 0.15,
     }
   );
@@ -75,15 +75,16 @@ export const animateOut = (outClassOne: string, outClassTwo: string) => {
   gsap.to([outClassOne, outClassTwo], {
     y: 1000,
     duration: 2,
-    ease: "back.in(1.1)",
+    ease: 'back.in(1.1)',
     stagger: 0.15,
   });
 };
 
 export const addNav = (addNavClass: string) => {
   gsap.to(addNavClass, {
-    visibility: "visible",
+    visibility: 'visible',
   });
+
   gsap.to(addNavClass, {
     opacity: 1,
     duration: 1,
@@ -98,7 +99,7 @@ export const removeNav = (removeNavClass: string) => {
     delay: 0.7,
   });
   gsap.to(removeNavClass, {
-    visibility: "hidden",
+    visibility: 'hidden',
     delay: 1,
   });
 };
@@ -109,11 +110,11 @@ export const bounceNav = (bounceClass: string) => {
     scale: 0.8,
     duration: 0.1,
     delay: 0.1,
-    ease: "elastic.out(1, 0.1)",
+    ease: 'elastic.out(1, 0.1)',
   });
   bounceTl.to(bounceClass, {
     scale: 1,
     duration: 1.5,
-    ease: "elastic.out(1, 0.1)",
+    ease: 'elastic.out(1, 0.1)',
   });
 };

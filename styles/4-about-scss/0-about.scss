@@ -1,6 +1,6 @@
 // UNIVERSAL BASE STYLES
 .aboutpage {
-  background: url("/2-images/3-about/0-aboutpage.png") no-repeat center center;
+  background: url('/2-images/3-about/0-aboutpage.png') no-repeat center center;
   background-size: cover;
 }
 
@@ -28,7 +28,6 @@
 .booknavbackwardsp,
 .booknavforwarddpp,
 .booknavbackwarddpp {
-  opacity: 0;
   visibility: hidden;
 }
 
@@ -38,5 +37,5 @@
   transform: rotateY(180deg);
 }
 
-@import "./1-about-portrait";
-@import "./2-about-landscape";
+@import './1-about-portrait';
+@import './2-about-landscape';
