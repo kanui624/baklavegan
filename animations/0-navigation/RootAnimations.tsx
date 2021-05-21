@@ -1,5 +1,5 @@
 // GSAP
-import gsap from "gsap";
+import gsap from 'gsap';
 
 const inTl = gsap.timeline();
 
@@ -10,12 +10,12 @@ export const animateIn = (
 ) => {
   gsap.fromTo(
     [rootImageIn, rootTextIn, rootInvisiIn],
-    { y: 300 },
+    { y: 350 },
     {
       y: 0,
       delay: 2,
       duration: 3,
-      ease: "back.out(1.2)",
+      ease: 'back.out(1.2)',
       stagger: 0.1,
     }
   );
@@ -30,13 +30,24 @@ export const animateIn = (
   });
 };
 
+const outTl = gsap.timeline();
+
 export const animateOut = (rootBtnOut: string) => {
   gsap.to(rootBtnOut, {
-    y: 50,
-    opacity: 0,
+    y: 350,
     stagger: 0.15,
+    duration: 1.5,
+    ease: 'back.in(1.5)',
+  });
+  outTl.to(rootBtnOut, {
+    opacity: 0.8,
+    // delay: 0.5,
     duration: 1,
-    ease: "back.in(1.5)",
+  });
+
+  outTl.to(rootBtnOut, {
+    opacity: 0,
+    duration: 0.5,
   });
 };
 
@@ -45,7 +56,7 @@ export const onHoverIn = (rootMenuHoverIn: string) => {
     y: -10,
     stagger: 0.15,
     duration: 0.8,
-    ease: "back.out(2.5)",
+    ease: 'back.out(2.5)',
   });
 };
 
@@ -54,6 +65,6 @@ export const onHoverOut = (rootMenuHoverOut: string) => {
     y: 0,
     stagger: 0.15,
     duration: 0.8,
-    ease: "back.out(2.5)",
+    ease: 'back.out(2.5)',
   });
 };
