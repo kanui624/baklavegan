@@ -1,20 +1,23 @@
 // React
-import { useState, useEffect, useRef, Fragment } from "react";
+import { useState, useEffect, useRef, Fragment } from 'react';
+
+// Next
+import { useRouter } from 'next/router';
 
 // Redux
-import { useDispatch, useSelector } from "react-redux";
-import { loadPage, unloadPage } from "@/redux/slices/AboutPageLoadedSlice";
+import { useDispatch, useSelector } from 'react-redux';
+import { loadPage, unloadPage } from '@/redux/slices/AboutPageLoadedSlice';
 import {
   nextPage,
   prevPage,
   initializePage,
-} from "@/redux/slices/AboutPageCountSlice";
+} from '@/redux/slices/AboutPageCountSlice';
 
 // Components
-import AboutPage from "./AboutPage";
+import AboutPage from './AboutPage';
 
 // Helpers
-import { handleNavBounce } from "../2-helpers/AboutBookHelpers";
+import { handleNavBounce } from '../2-helpers/AboutBookHelpers';
 
 // GSAP Animations
 import {
@@ -23,23 +26,23 @@ import {
   animateOut,
   addNav,
   removeNav,
-} from "@/animations/4-about/AboutAnimations";
+} from '@/animations/4-about/AboutAnimations';
 
 // Page Flip
 // @ts-ignore
-import HTMLFlipBook from "react-pageflip";
+import HTMLFlipBook from 'react-pageflip';
 
 // Data
-import { AboutBookSPData } from "@/components/4-about/1-data/AboutBookSPData";
+import { AboutBookSPData } from '@/components/4-about/1-data/AboutBookSPData';
 
 // React Types
-import { FC } from "react";
+import { FC } from 'react';
 
 // Redux Types
-import { AppState } from "@/redux/store";
+import { AppState } from '@/redux/store';
 
 // Component Level Types
-import { AboutPageDataProps } from "../0-types/AboutPageDataProps";
+import { AboutPageDataProps } from '../0-types/AboutPageDataProps';
 
 const AboutBookSP: FC = () => {
   const dispatch = useDispatch();
@@ -47,7 +50,8 @@ const AboutBookSP: FC = () => {
     AboutPageLoaded: { pageLoaded },
     AboutPageCount: { pageCount },
     MenuTransition: { transition },
-    WindowSize: { width, height },
+    WindowSize: { width },
+    PageClicked: { pageClicked },
   } = useSelector<AppState, AppState>((state) => state);
 
   const aboutBookSP = useRef();
@@ -83,11 +87,11 @@ const AboutBookSP: FC = () => {
     handleDisable();
     handleDispatchPageCount(next);
     handlePageFlip(next);
-    handleNavBounce(e.target.alt, "sp");
+    handleNavBounce(e.target.alt, 'sp');
   };
 
   const handleInitializeBook = () => {
-    animateOut(".aboutbookcontainersp", ".booknavssp");
+    animateOut('.aboutbookcontainersp', '.booknavssp');
     setTimeout(() => {
       dispatch(unloadPage({ pageLoaded: false }));
       dispatch(initializePage({ pageCount: 0 }));
@@ -96,7 +100,7 @@ const AboutBookSP: FC = () => {
   };
 
   const handleInitialLoad = () => {
-    animateInInitialLoad(".aboutbookcontainersp", ".booknavssp");
+    animateInInitialLoad('.aboutbookcontainersp', '.booknavssp');
     setTimeout(() => {
       dispatch(loadPage({ pageLoaded: true }));
     }, 2000);
@@ -113,14 +117,17 @@ const AboutBookSP: FC = () => {
 
   useEffect(() => {
     let mounted = true;
+
     if (transition && mounted) {
       handleInitializeBook();
     }
 
     if (!transition && !pageLoaded && mounted) {
-      handleInitialLoad();
+      if (pageClicked === 'about' || pageClicked === '') {
+        handleInitialLoad();
+      }
     } else {
-      animateInIsLoaded(".aboutbookcontainersp", ".booknavssp");
+      animateInIsLoaded('.aboutbookcontainersp', '.booknavssp');
     }
 
     return () => {
@@ -131,14 +138,14 @@ const AboutBookSP: FC = () => {
   useEffect(() => {
     let mounted = true;
     if (mounted && pageCount === 8) {
-      removeNav(".booknavforwardsp");
+      removeNav('.booknavforwardsp');
     } else {
-      addNav(".booknavforwardsp");
+      addNav('.booknavforwardsp');
     }
     if (mounted && pageCount === 0) {
-      removeNav(".booknavbackwardsp");
+      removeNav('.booknavbackwardsp');
     } else {
-      addNav(".booknavbackwardsp");
+      addNav('.booknavbackwardsp');
     }
     return () => {
       mounted = false;
@@ -154,7 +161,7 @@ const AboutBookSP: FC = () => {
           useMouseEvents={false}
           flippingTime={1500}
           maxShadowOpacity={0}
-          size={"stretch"}
+          size={'stretch'}
           width={400}
           height={535}
           minWidth={80}
@@ -172,7 +179,7 @@ const AboutBookSP: FC = () => {
                   textb={textb}
                   svg={svg}
                   link={link}
-                  tag={"sp"}
+                  tag={'sp'}
                 />
               );
             }

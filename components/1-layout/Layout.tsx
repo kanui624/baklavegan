@@ -1,34 +1,38 @@
 // React
-import { useState, Fragment, useEffect } from "react";
+import { useState, Fragment, useEffect } from 'react';
 
 // Next
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 
 // Redux
-import { useDispatch } from "react-redux";
-import { exitMenu } from "@/redux/slices/MenuTransitionSlice";
+import { useDispatch, useSelector } from 'react-redux';
+import { exitMenu } from '@/redux/slices/MenuTransitionSlice';
+import { setPageClicked } from '@/redux/slices/PageClickedSlice';
 
 // GSAP Animations
 import {
   animateMenuIn,
   animateMenuOut,
-} from "@/animations/1-layout/LayoutAnimations";
-import { showDevNote } from "@/animations/1-layout/DevNoteAnimations";
+} from '@/animations/1-layout/LayoutAnimations';
+import { showDevNote } from '@/animations/1-layout/DevNoteAnimations';
 
 // Components
-import MemoBVCanvas from "../0-navigation/0-menu/5-canvas/BVCanvas";
-import MenuButtonRoot from "../0-navigation/1-menubutton/MenuButtonRoot";
-import MenuButtonPage from "../0-navigation/1-menubutton/MenuButtonPage";
-import DevNote from "./DevNote";
+import MemoBVCanvas from '../0-navigation/0-menu/5-canvas/BVCanvas';
+import MenuButtonRoot from '../0-navigation/1-menubutton/MenuButtonRoot';
+import MenuButtonPage from '../0-navigation/1-menubutton/MenuButtonPage';
+import DevNote from './DevNote';
 
 // Custom Hooks
-import { useWindowResize } from "../../customhooks/useWindowResize";
+import { useWindowResize } from '../../customhooks/useWindowResize';
 
 // Styles
-import styles from "@/styles/1-layout-scss/layout.module.scss";
+import styles from '@/styles/1-layout-scss/layout.module.scss';
 
 // React Types
-import { ReactNode, FC } from "react";
+import { ReactNode, FC } from 'react';
+
+// Redux Types
+import { AppState } from '@/redux/store';
 
 // Component Level Types
 interface LayoutProps {
@@ -36,15 +40,26 @@ interface LayoutProps {
 }
 
 const Layout: FC<LayoutProps> = ({ children }) => {
+  // Global State
+  const {
+    PageClicked: { pageClicked },
+  } = useSelector<AppState, AppState>((state) => state);
+
+  // Define Global State Dispatch
+  const dispatch = useDispatch();
+
+  // Local State
   const [ready, setReady] = useState(false);
   const [clicked, setClicked] = useState(false);
   const [disabled, setDisabled] = useState(true);
-  const [devPageClicked, setDevPageClicked] = useState("");
+
+  // Custom Hooks
   const [width, height] = useWindowResize();
 
-  const root = useRouter().pathname === "/" ? true : false;
-  const dispatch = useDispatch();
+  // Determine Root URL Path
+  const root = useRouter().pathname === '/' ? true : false;
 
+  // Initiate Menu Transition
   const toggleClick = () => {
     if (!disabled) {
       setClicked(!clicked);
@@ -55,16 +70,22 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     }
   };
 
+  // Define Global State Dispatch Function
+  const dispatchPageClicked = (selectedPage: string) => {
+    dispatch(setPageClicked({ pageClicked: selectedPage }));
+  };
+
   // const handleTransition = (devLink?: string) => {
   //     dispatch(exitMenu({ transition: false }));
   // };
 
-  const handleTransition = (devLink?: string) => {
-    if (devLink) {
-      showDevNote(".devnotetext");
-      setDevPageClicked(devLink);
-    } else {
+  // Handle Transition in and out of Menu
+  const handleTransition = (devLink: string) => {
+    dispatchPageClicked(devLink);
+    if (devLink === 'about' || devLink === 'contact') {
       dispatch(exitMenu({ transition: false }));
+    } else {
+      showDevNote('.devnotetext');
     }
   };
 
@@ -80,9 +101,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 
   useEffect(() => {
     if (ready && clicked) {
-      animateMenuIn("#canvas", "#canvasbg");
+      animateMenuIn('#canvas', '#canvasbg');
     } else {
-      animateMenuOut("#canvas", "#canvasbg");
+      animateMenuOut('#canvas', '#canvasbg');
     }
   }, [clicked, ready]);
 
@@ -115,7 +136,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
           onCompile={() => setReady(true)}
         />
       </div>
-      <DevNote devPageClicked={devPageClicked} />
+      <DevNote pageClicked={pageClicked} />
       {/* <span className="fixed text-4xl bottom-20">
         {width} x {height}
       </span> */}

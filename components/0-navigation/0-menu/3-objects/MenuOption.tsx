@@ -75,7 +75,7 @@ const MenuOption: FC<MenuOptionProps> = ({
   const devHandlePointerUp = (e: any) => {
     setPushed(false);
     if (link in prodReadyLinks) {
-      handleTransition();
+      handleTransition(link);
       if (clicked) {
         Router.push(`/baklavegan/${link}`);
         setTimeout(() => {

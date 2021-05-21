@@ -1,6 +1,6 @@
 export interface CanvasProps {
   clicked: boolean;
   toggleClick: () => void;
-  handleTransition: (devLink?: string) => void;
+  handleTransition: (devLink: string) => void;
   onCompile: () => void;
 }

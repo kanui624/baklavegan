@@ -1,5 +1,5 @@
 export interface MenuProps {
   clicked: boolean;
   toggleClick: () => void;
-  handleTransition: (devLink?: string) => void;
+  handleTransition: (devLink: string) => void;
 }
