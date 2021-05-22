@@ -68,13 +68,13 @@ const AboutBookSP: FC = () => {
     }
   };
 
-  // const handlePageFlip = (pageFlip: boolean) => {
-  //   if (pageFlip) {
-  //     (aboutBookSP.current as any).pageFlip.flipNext();
-  //   } else {
-  //     (aboutBookSP.current as any).pageFlip.flipPrev();
-  //   }
-  // };
+  const handlePageFlip = (pageFlip: boolean) => {
+    if (pageFlip) {
+      (aboutBookSP.current as any).pageFlip.flipNext();
+    } else {
+      (aboutBookSP.current as any).pageFlip.flipPrev();
+    }
+  };
 
   const handleDisable = () => {
     setDisabled(true);
@@ -135,24 +135,8 @@ const AboutBookSP: FC = () => {
     };
   }, [transition]);
 
-  const [tempPageCount, setTempPageCount] = useState(1);
-
-  const handlePageFlip = (pageFlip: boolean) => {
-    if (pageFlip) {
-      (aboutBookSP.current as any).pageFlip.flipNext();
-      setTempPageCount(tempPageCount + 2);
-      console.log(tempPageCount);
-    } else {
-      (aboutBookSP.current as any).pageFlip.flipPrev();
-      setTempPageCount(tempPageCount - 2);
-      console.log(tempPageCount);
-    }
-  };
-
   useEffect(() => {
     let mounted = true;
-
-    console.log(tempPageCount);
 
     if (mounted && pageCount === 8) {
       removeNav('.booknavforwardsp');

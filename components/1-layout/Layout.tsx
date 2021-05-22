@@ -89,6 +89,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     }
   };
 
+  // Disable Status on Component Mount
   const initialDisableStatus = () => {
     setTimeout(() => {
       setDisabled(false);
