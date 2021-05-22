@@ -32,6 +32,10 @@
       font-size: 160%;
     }
 
+    .page12textdp {
+      padding: 2rem;
+    }
+
     .page14textdp {
       font-size: 200%;
     }
@@ -45,10 +49,10 @@
     }
   }
   .booknavcontainerdp {
-    margin-top: 2.5%;
+    margin-top: 3%;
     margin-bottom: 1%;
     .booknavsdp {
-      width: 20%;
+      width: 18%;
     }
   }
 }
@@ -88,11 +92,14 @@
         font-size: 110%;
       }
       .page17textdp {
-        font-size: 100%;
+        font-size: 95%;
       }
     }
     .booknavcontainerdp {
       margin-top: 2%;
+      .booknavsdp {
+        margin-bottom: 2%;
+      }
     }
   }
 }
@@ -114,20 +121,26 @@
       }
 
       .page10textdp,
-      .page14textdp,
       .page12textdp {
         font-size: 180%;
+      }
+
+      .page14textdp {
+        font-size: 190%;
       }
 
       .page16textdp {
         font-size: 130%;
       }
       .page17textdp {
-        font-size: 120%;
+        font-size: 116%;
       }
     }
     .booknavcontainerdp {
       margin-top: 2.5%;
+      .booknavsdp {
+        margin-bottom: 0.5%;
+      }
     }
   }
 }
@@ -136,6 +149,9 @@
 @media (min-width: 553px) and (min-height: 375px) and (orientation: landscape) {
   .dpcontainer {
     .aboutbookcontainerdp {
+      .svg1dp {
+        height: 28%;
+      }
       .abouttextdp {
         font-size: 160%;
       }
@@ -144,13 +160,13 @@
         font-size: 350%;
       }
 
-      .page2textdp {
-        font-size: 170%;
+      .page10textdp {
+        font-size: 190%;
       }
 
-      .page10textdp,
       .page12textdp {
-        font-size: 190%;
+        font-size: 170%;
+        padding: 1.8rem;
       }
 
       .page14textdp {
@@ -162,13 +178,13 @@
       }
 
       .page17textdp {
-        font-size: 135%;
+        font-size: 131%;
       }
     }
     .booknavcontainerdp {
-      margin-top: 2.3%;
+      margin-top: 2.5%;
       .booknavsdp {
-        width: 18%;
+        width: 17%;
       }
     }
   }
@@ -178,21 +194,26 @@
 @media (min-width: 640px) and (min-height: 360px) and (orientation: landscape) {
   .dpcontainer {
     .aboutbookcontainerdp {
+      .svg1dp {
+        height: 28%;
+      }
+
       .abouttextdp {
-        font-size: 160%;
+        font-size: 145%;
+        padding-left: 2rem;
+        padding-right: 2rem;
       }
 
       .page0textdp {
-        font-size: 300%;
+        font-size: 310%;
       }
 
-      .page6textdp {
-        padding: 0;
+      .page10textdp {
+        font-size: 180%;
       }
 
-      .page10textdp,
       .page12textdp {
-        font-size: 190%;
+        font-size: 170%;
       }
 
       .page14textdp {
@@ -200,7 +221,7 @@
       }
 
       .page16textdp {
-        font-size: 140%;
+        font-size: 135%;
       }
 
       .page17textdp {
@@ -210,6 +231,10 @@
     }
     .booknavcontainerdp {
       margin-top: 2.5%;
+      .booknavsdp {
+        width: 17%;
+        margin-bottom: 1%;
+      }
     }
   }
 }
@@ -219,7 +244,7 @@
   .dpcontainer {
     .aboutbookcontainerdp {
       .abouttextdp {
-        font-size: 170%;
+        font-size: 160%;
       }
 
       .page0textdp {
@@ -230,24 +255,32 @@
         padding: 0.5rem;
       }
 
-      .page10textdp,
+      .page10textdp {
+        font-size: 190%;
+      }
+
       .page12textdp {
-        font-size: 200%;
+        font-size: 170%;
       }
 
       .page14textdp {
-        font-size: 230%;
+        font-size: 200%;
       }
+
       .page16textdp {
         font-size: 140%;
         padding: 1rem;
       }
       .page17textdp {
-        font-size: 145%;
+        font-size: 140%;
       }
     }
     .booknavcontainerdp {
       margin-top: 2.5%;
+      .booknavsdp {
+        width: 16%;
+        margin-bottom: 1%;
+      }
     }
   }
 }
@@ -265,9 +298,13 @@
       }
 
       .page10textdp,
-      .page12textdp,
       .page14textdp {
-        font-size: 180%;
+        font-size: 170%;
+      }
+
+      .page12textdp {
+        font-size: 150%;
+        padding: 1rem;
       }
 
       .page16textdp {
@@ -277,6 +314,11 @@
       .page17textdp {
         font-size: 120%;
         padding: 0.5rem;
+      }
+    }
+    .booknavcontainerdp {
+      .booknavsdp {
+        width: 16%;
       }
     }
   }
@@ -289,6 +331,10 @@
     .aboutbookcontainerdp {
       width: 29.2rem;
 
+      .svg1dp {
+        height: 27%;
+      }
+
       .page6textdp {
         padding: 0.5rem;
       }
@@ -297,7 +343,8 @@
         font-size: 140%;
       }
       .page17textdp {
-        font-size: 140%;
+        font-size: 131%;
+        padding: 1rem;
       }
     }
     .booknavcontainerdp {
@@ -335,7 +382,7 @@
         padding: 1rem;
       }
       .page17textdp {
-        font-size: 145%;
+        font-size: 134%;
       }
     }
     .booknavcontainerdp {
@@ -354,7 +401,7 @@
       }
 
       .abouttextdp {
-        font-size: 180%;
+        font-size: 160%;
       }
       .page0textdp {
         font-size: 375%;
@@ -362,11 +409,11 @@
 
       .page10textdp,
       .page14textdp {
-        font-size: 220%;
+        font-size: 200%;
       }
 
       .page12textdp {
-        font-size: 200%;
+        font-size: 180%;
       }
 
       .page16textdp {
@@ -374,43 +421,12 @@
       }
 
       .page17textdp {
-        font-size: 150%;
+        font-size: 146%;
       }
     }
-  }
-}
-
-// NEXUS 6 - CHORME DEVTOOLS -LANDSCAPE
-@media (min-width: 732px) and (min-height: 412px) and (orientation: landscape) {
-  .dpcontainer {
-    .aboutbookcontainerdp {
-      .aboutsvgdp {
-        padding-left: 0.6rem;
-        padding-right: 0.6rem;
-      }
-
-      .abouttextdp {
-        font-size: 180%;
-      }
-      .page0textdp {
-        font-size: 375%;
-      }
-
-      .page10textdp,
-      .page14textdp {
-        font-size: 220%;
-      }
-
-      .page12textdp {
-        font-size: 200%;
-      }
-
-      .page16textdp {
-        font-size: 160%;
-      }
-
-      .page17textdp {
-        font-size: 150%;
+    .booknavcontainerdp {
+      .booknavsdp {
+        width: 15%;
       }
     }
   }
@@ -426,28 +442,28 @@
       }
 
       .abouttextdp {
-        font-size: 180%;
+        font-size: 150%;
       }
 
       .page0textdp {
-        font-size: 375%;
+        font-size: 340%;
       }
 
       .page10textdp,
       .page14textdp {
-        font-size: 220%;
+        font-size: 180%;
       }
 
       .page12textdp {
-        font-size: 200%;
+        font-size: 170%;
       }
 
       .page16textdp {
-        font-size: 160%;
+        font-size: 140%;
       }
 
       .page17textdp {
-        font-size: 150%;
+        font-size: 130%;
       }
     }
     .booknavcontainerdp {
@@ -467,10 +483,10 @@
       }
 
       .abouttextdp {
-        font-size: 180%;
+        font-size: 150%;
       }
       .page0textdp {
-        font-size: 375%;
+        font-size: 350%;
       }
 
       .page8textdp {
@@ -479,11 +495,11 @@
 
       .page10textdp,
       .page14textdp {
-        font-size: 220%;
+        font-size: 180%;
       }
 
       .page12textdp {
-        font-size: 200%;
+        font-size: 180%;
       }
 
       .page16textdp {
@@ -501,47 +517,79 @@
 @media (min-width: 731px) and (min-height: 411px) and (orientation: landscape) {
   .dpcontainer {
     .aboutbookcontainerdp {
-      .page2textdp {
-        font-size: 180%;
-      }
-      .page10textdp {
-        font-size: 220%;
+      .aboutsvgdp {
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
       }
 
       .page12textdp {
         font-size: 190%;
       }
-      .page14textdp {
-        font-size: 230%;
-      }
 
       .page16textdp {
-        font-size: 160%;
+        font-size: 150%;
       }
 
       .page17textdp {
-        font-size: 150%;
+        font-size: 140%;
+      }
+    }
+
+    .booknavcontainerdp {
+      margin-top: 2.5%;
+      margin-bottom: 0%;
+      .booknavsdp {
+        width: 14%;
       }
     }
   }
 }
 
-// NEXUS 6 - CHROME DEVTOOLS - LANDSCAPE
+// NEXUS 6 - CHORME DEVTOOLS -LANDSCAPE
 @media (min-width: 732px) and (min-height: 412px) and (orientation: landscape) {
   // NOTHING NEEDED
 }
 
 // IPHONE 6/7/8 PLUS - CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 736px) and (min-height: 414px) and (orientation: landscape) {
-  // NOTHING NEEDED
+  .dpcontainer {
+    .booknavcontainerdp {
+      margin-bottom: 1.5%;
+    }
+  }
 }
 
 // PIXEL 2XL- CHROME DEVTOOLS - LANDSCAPE
 @media (min-width: 823px) and (min-height: 411px) and (orientation: landscape) {
   .dpcontainer {
     .aboutbookcontainerdp {
+      .abouttextdp {
+        font-size: 155%;
+      }
+
+      .page0textdp {
+        font-size: 350%;
+      }
+
+      .page6textdp {
+        padding: 1.5rem;
+      }
+
       .page8textdp {
         padding: 1.5rem;
+      }
+
+      .page10textdp,
+      .page14textdp {
+        font-size: 200%;
+      }
+
+      .page12textdp {
+        font-size: 180%;
+      }
+
+      .page17textdp {
+        font-size: 140%;
       }
     }
     .booknavcontainerdp {
@@ -555,29 +603,35 @@
 @media (min-width: 854px) and (min-height: 480px) and (orientation: landscape) {
   .dpcontainer {
     .aboutbookcontainerdp {
+      .svg1dp {
+        height: 25%;
+      }
+
+      .aboutsvgdp {
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+      }
+
       .abouttextdp {
-        font-size: 200%;
+        font-size: 180%;
+        padding: 2.5rem;
       }
 
       .page0textdp {
-        font-size: 450%;
+        font-size: 400%;
       }
 
-      .page2textdp {
-        padding: 2rem;
-      }
       .page8textdp {
-        font-size: 210%;
-        padding: 2rem;
+        padding: 3rem;
       }
 
       .page10textdp {
-        font-size: 240%;
+        font-size: 230%;
       }
 
       .page12textdp {
-        font-size: 230%;
-        padding: 2.5rem;
+        font-size: 200%;
+        padding: 1.5rem;
       }
 
       .page14textdp {
@@ -585,11 +639,12 @@
       }
 
       .page16textdp {
-        font-size: 180%;
+        font-size: 160%;
       }
 
       .page17textdp {
-        font-size: 175%;
+        font-size: 159%;
+        padding: 1.5rem;
       }
     }
     .booknavcontainerdp {
@@ -603,30 +658,39 @@
 @media (min-width: 700px) and (min-height: 500px) and (orientation: landscape) {
   .dpcontainer {
     .aboutbookcontainerdp {
+      .aboutsvgdp {
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+      }
+
       .abouttextdp {
-        font-size: 210%;
+        font-size: 190%;
+        padding: 3rem;
       }
 
       .page0textdp {
         font-size: 450%;
       }
 
-      .page2textdp,
-      .page6textdp {
+      .page4textdp {
+        font-size: 180%;
         padding: 2rem;
       }
 
+      .page6textdp {
+        font-size: 180%;
+      }
+
       .page8textdp {
-        font-size: 220%;
         padding: 2rem;
       }
 
       .page10textdp {
-        font-size: 260%;
+        font-size: 230%;
       }
 
       .page12textdp {
-        font-size: 250%;
+        font-size: 200%;
         padding: 2.5rem;
       }
 
@@ -635,18 +699,21 @@
       }
 
       .page16textdp {
-        font-size: 190%;
+        font-size: 180%;
       }
 
       .page17textdp {
-        font-size: 185%;
+        font-size: 170%;
+        padding: 0;
+        padding: 1.5rem;
       }
     }
     .booknavcontainerdp {
-      margin-top: 2%;
+      margin-top: 3%;
       margin-bottom: 0%;
       .booknavsdp {
-        width: 16%;
+        width: 14%;
+        margin-bottom: 0;
       }
     }
   }
@@ -657,15 +724,11 @@
   .dpcontainer {
     .aboutbookcontainerdp {
       .abouttextdp {
-        font-size: 220%;
+        font-size: 200%;
       }
 
       .page0textdp {
         font-size: 450%;
-      }
-
-      .page8textdp {
-        padding: 2.5rem;
       }
 
       .page10textdp {
@@ -673,8 +736,8 @@
       }
 
       .page12textdp {
-        font-size: 250%;
-        padding: 3rem;
+        font-size: 210%;
+        padding: 2rem;
       }
 
       .page14textdp {
@@ -682,11 +745,17 @@
       }
 
       .page16textdp {
-        font-size: 190%;
+        font-size: 180%;
       }
 
       .page17textdp {
-        font-size: 195%;
+        font-size: 180%;
+      }
+    }
+    .booknavcontainerdp {
+      .booknavsdp {
+        width: 13%;
+        margin-bottom: 0;
       }
     }
   }
@@ -701,48 +770,30 @@
         padding-right: 0.8rem;
       }
       .abouttextdp {
-        font-size: 230%;
-      }
-
-      .page0textdp {
-        font-size: 500%;
-      }
-
-      .page2textdp {
-        padding: 3rem;
-      }
-
-      .page8textdp {
-        font-size: 240%;
-        padding: 3rem;
+        font-size: 210%;
+        padding: 2rem;
       }
 
       .page10textdp {
-        font-size: 280%;
+        font-size: 240%;
       }
 
       .page12textdp {
-        font-size: 260%;
-        padding: 4rem;
+        font-size: 240%;
       }
 
       .page14textdp {
-        font-size: 300%;
+        font-size: 250%;
       }
 
       .page16textdp {
-        font-size: 220%;
-        padding: 2rem;
+        font-size: 200%;
+        padding: 2.5rem;
       }
 
       .page17textdp {
         font-size: 200%;
-        padding: 2rem;
-      }
-    }
-    .booknavcontainerdp {
-      .booknavsdp {
-        width: 15%;
+        padding: 2.5rem;
       }
     }
   }
@@ -793,11 +844,12 @@
 
       .page16textdp,
       .page17textdp {
-        font-size: 220%;
+        font-size: 212%;
         padding: 2rem;
       }
     }
     .booknavcontainerdp {
+      margin-top: 3%;
       .booknavsdp {
         width: 14%;
       }
@@ -822,6 +874,11 @@
         font-size: 270%;
       }
     }
+    .booknavcontainerdp {
+      .booknavsdp {
+        width: 13%;
+      }
+    }
   }
 }
 
@@ -829,9 +886,16 @@
 @media (min-width: 1024px) and (min-height: 600px) and (orientation: landscape) {
   .dpcontainer {
     .aboutbookcontainerdp {
+      .page0textdp {
+        font-size: 500%;
+      }
       .page12textdp {
-        font-size: 270%;
+        font-size: 250%;
         padding: 1rem;
+      }
+
+      .page14textdp {
+        font-size: 270%;
       }
     }
   }
@@ -839,7 +903,25 @@
 
 // IPAD - CHROME DEV TOOLS - LANDSCAPE
 @media (min-width: 1024px) and (min-height: 768px) and (orientation: landscape) {
-  // NOTHING NEEDED
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .page0textdp {
+        font-size: 500%;
+      }
+      .page12textdp {
+        font-size: 270%;
+        padding: 1rem;
+      }
+
+      .page14textdp {
+        font-size: 300%;
+      }
+
+      .page16textdp {
+        font-size: 230%;
+      }
+    }
+  }
 }
 
 // 13" DELL - TESTED W/ NGROK - LANDSCAPE
@@ -850,8 +932,9 @@
         padding-left: 0.8rem;
         padding-right: 0.8rem;
       }
+
       .page2textdp {
-        padding: 0.5rem;
+        padding: 1rem;
       }
 
       .page8textdp {
@@ -859,15 +942,14 @@
       }
 
       .page12textdp {
-        padding: 0;
-        font-size: 250%;
+        font-size: 230%;
       }
       .page16textdp {
-        font-size: 220%;
+        font-size: 200%;
       }
       .page17textdp {
         padding: 1.5rem;
-        font-size: 200%;
+        font-size: 190%;
       }
     }
   }
@@ -877,9 +959,24 @@
 @media (min-width: 1360px) and (min-height: 689px) and (orientation: landscape) {
   .dpcontainer {
     .aboutbookcontainerdp {
+      .abouttextdp {
+        padding: 3rem;
+      }
+      .page0textdp {
+        font-size: 550%;
+      }
+
+      .page12textdp {
+        font-size: 260%;
+      }
+
+      .page14textdp {
+        font-size: 300%;
+      }
       .page16textdp,
       .page17textdp {
-        font-size: 240%;
+        font-size: 220%;
+        padding: 2rem;
       }
     }
   }
@@ -889,8 +986,33 @@
 @media (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
   .dpcontainer {
     .aboutbookcontainerdp {
-      .page12textdp {
+      .abouttextdp {
+        font-size: 260%;
+        padding: 3rem;
+      }
+      .page0textdp {
+        font-size: 550%;
+      }
+
+      .page4textdp {
+        padding: 1rem;
+      }
+
+      .page10textdp {
         font-size: 300%;
+      }
+
+      .page12textdp {
+        font-size: 260%;
+      }
+
+      .page14textdp {
+        font-size: 300%;
+      }
+      .page16textdp,
+      .page17textdp {
+        font-size: 220%;
+        padding: 2rem;
       }
     }
   }
@@ -900,8 +1022,33 @@
 @media (min-width: 1440px) and (min-height: 769px) and (orientation: landscape) {
   .dpcontainer {
     .aboutbookcontainerdp {
+      .abouttextdp {
+        font-size: 260%;
+        padding: 3rem;
+      }
+      .page0textdp {
+        font-size: 550%;
+      }
+
+      .page4textdp {
+        padding: 1rem;
+      }
+
+      .page10textdp {
+        font-size: 300%;
+      }
+
       .page12textdp {
-        font-size: 310%;
+        font-size: 260%;
+      }
+
+      .page14textdp {
+        font-size: 300%;
+      }
+      .page16textdp,
+      .page17textdp {
+        font-size: 220%;
+        padding: 2rem;
       }
     }
   }
@@ -909,7 +1056,38 @@
 
 // HIGH-RES 32 INCH MONITOR - TESTED W/ LOCAL MACHINE
 @media (min-width: 1920px) and (min-height: 969px) and (orientation: landscape) {
-  // NOTHING NEEDED
+  .dpcontainer {
+    .aboutbookcontainerdp {
+      .abouttextdp {
+        font-size: 260%;
+        padding: 3rem;
+      }
+      .page0textdp {
+        font-size: 550%;
+      }
+
+      .page4textdp {
+        padding: 1rem;
+      }
+
+      .page10textdp {
+        font-size: 300%;
+      }
+
+      .page12textdp {
+        font-size: 260%;
+      }
+
+      .page14textdp {
+        font-size: 300%;
+      }
+      .page16textdp,
+      .page17textdp {
+        font-size: 220%;
+        padding: 2rem;
+      }
+    }
+  }
 }
 
 // ULTRA-WIDESCREEN - TESTED ON LOCAL MACHINE

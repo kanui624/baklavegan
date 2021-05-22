@@ -3,38 +3,39 @@
   right: 0;
   .aboutbookcontainersp {
     .svg1sp {
-      width: 70%;
+      width: 65%;
     }
     .aboutsvgsp {
       padding-left: 0.8rem;
       padding-right: 0.8rem;
     }
     .abouttextsp {
-      font-size: 200%;
+      font-size: 180%;
       padding: 0.5rem;
       padding-right: 1rem;
     }
 
     .page1textsp {
-      font-size: 500%;
+      font-size: 480%;
     }
 
-    .page5textsp,
-    .page7textsp {
-      font-size: 190%;
+    .page11textsp,
+    .page13textsp {
+      font-size: 200%;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 1rem;
     }
 
-    .page11textsp {
+    .page15textsp {
+      padding-left: 2rem;
+      padding-right: 2rem;
       font-size: 230%;
     }
-    .page13textsp {
-      font-size: 220%;
-    }
-    .page15textsp {
-      font-size: 250%;
-    }
     .page17textsp {
-      font-size: 160%;
+      font-size: 140%;
+      padding-left: 1.8rem;
+      padding-right: 1.8rem;
     }
   }
   .booknavcontainersp {
@@ -42,8 +43,8 @@
     margin-top: 0.5%;
     .booknavssp {
       margin-top: 2.5%;
-      margin-bottom: 3%;
-      width: 26%;
+      margin-bottom: 2.5%;
+      width: 24%;
     }
   }
 }
@@ -51,6 +52,13 @@
 // NOKIA LUMA 520 - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 320px) and (min-height: 533px) and (orientation: portrait) {
   .spcontainer {
+    .aboutbookcontainersp {
+      .page17textsp {
+        font-size: 150%;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+      }
+    }
     .booknavcontainersp {
       .booknavssp {
         margin-top: 3%;
@@ -65,6 +73,7 @@
     .booknavcontainersp {
       .booknavssp {
         margin-top: 3.5%;
+        width: 26%;
       }
     }
   }
@@ -77,18 +86,41 @@
       .svg1sp {
         width: 60%;
       }
+
+      .abouttextsp {
+        font-size: 190%;
+        padding-bottom: 1rem;
+      }
+
+      .page1textsp {
+        font-size: 490%;
+      }
+
+      .page3textsp {
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+      }
+
+      .page13textsp {
+        font-size: 200%;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        padding-bottom: 2rem;
+      }
+
       .page15textsp {
-        font-size: 290%;
+        font-size: 250%;
+        padding-bottom: 0rem;
       }
       .page17textsp {
-        font-size: 180%;
+        font-size: 160%;
       }
     }
     .booknavcontainersp {
       margin-top: 0;
       .booknavssp {
-        margin-top: 1%;
-        margin-bottom: 4%;
+        margin-top: 2%;
+        margin-bottom: 5%;
       }
     }
   }
@@ -98,15 +130,26 @@
 @media (min-width: 360px) and (min-height: 567px) and (orientation: portrait) {
   .spcontainer {
     .aboutbookcontainersp {
-      .svg1sp {
-        width: 60%;
+      .page9textsp {
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
       }
-    }
-    .booknavcontainersp {
-      margin-top: 0;
-      .booknavssp {
-        margin-top: 2.5%;
-        margin-bottom: 2%;
+
+      .page11textsp {
+        font-size: 220%;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+      }
+
+      .page13textsp {
+        font-size: 210%;
+      }
+
+      .page15textsp {
+        font-size: 240%;
+      }
+      .page17textsp {
+        font-size: 170%;
       }
     }
   }
@@ -117,14 +160,29 @@
   .spcontainer {
     .aboutbookcontainersp {
       .svg1sp {
-        width: 60%;
+        width: 50%;
+      }
+      .page9textsp {
+        padding-left: 1.8rem;
+        padding-right: 1.8rem;
+      }
+
+      .page11textsp {
+        font-size: 220%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+
+      .page17textsp {
+        font-size: 170%;
       }
     }
     .booknavcontainersp {
       margin-top: 0;
       .booknavssp {
-        margin-top: 2%;
-        margin-bottom: 2.5%;
+        width: 22%;
+        margin-top: 2.5%;
+        margin-bottom: 2%;
       }
     }
   }
@@ -133,8 +191,14 @@
 // Galaxy S5- CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 360px) and (min-height: 640px) and (orientation: portrait) {
   .spcontainer {
+    .aboutbookcontainersp {
+      .page11textsp {
+        font-size: 240%;
+      }
+    }
     .booknavcontainersp {
       .booknavssp {
+        width: 23%;
         margin-top: 3.5%;
       }
     }
@@ -146,17 +210,22 @@
   .spcontainer {
     .aboutbookcontainersp {
       .svg1sp {
-        width: 60%;
+        width: 55%;
       }
       .abouttextsp {
-        font-size: 220%;
+        font-size: 200%;
       }
       .aboutsvgsp {
         padding-left: 1rem;
         padding-right: 1rem;
       }
       .page1textsp {
-        font-size: 550%;
+        font-size: 500%;
+      }
+
+      .page7textsp {
+        padding-left: 2rem;
+        padding-right: 2rem;
       }
       .page11textsp,
       .page13textsp {
@@ -167,7 +236,7 @@
         font-size: 290%;
       }
       .page17textsp {
-        font-size: 190%;
+        font-size: 175%;
       }
     }
     .booknavcontainersp {
@@ -197,11 +266,11 @@
       }
       .page11textsp,
       .page13textsp {
-        font-size: 250%;
+        font-size: 260%;
       }
 
       .page15textsp {
-        font-size: 320%;
+        font-size: 300%;
       }
       .page17textsp {
         font-size: 200%;
@@ -224,12 +293,52 @@
 @media (min-width: 375px) and (min-height: 667px) and (orientation: portrait) {
   .spcontainer {
     .aboutbookcontainersp {
+      .svg1sp {
+        width: 60%;
+      }
       .abouttextsp {
-        font-size: 220%;
+        font-size: 200%;
       }
       .aboutsvgsp {
         padding-left: 1rem;
         padding-right: 1rem;
+      }
+      .page1textsp {
+        font-size: 550%;
+      }
+      .page11textsp {
+        font-size: 250%;
+      }
+
+      .page13textsp {
+        font-size: 230%;
+      }
+
+      .page15textsp {
+        font-size: 270%;
+      }
+      .page17textsp {
+        font-size: 180%;
+      }
+    }
+    .booknavcontainersp {
+      .booknavssp {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+// IPHONE XR - TESTED W/ NGROK - PORTRAIT
+@media (min-width: 414px) and (min-height: 715px) and (orientation: portrait) {
+  .spcontainer {
+    .aboutbookcontainersp {
+      .svg1sp {
+        width: 55%;
+      }
+
+      .abouttextsp {
+        font-size: 210%;
       }
       .page1textsp {
         font-size: 550%;
@@ -243,48 +352,12 @@
         font-size: 300%;
       }
       .page17textsp {
-        font-size: 185%;
-      }
-    }
-    .booknavcontainersp {
-      .booknavbackwardsp {
-        margin-left: 1.5rem;
-      }
-      .booknavforwardsp {
-        margin-right: 1.5rem;
-      }
-      .booknavssp {
-        margin-top: 1rem;
-      }
-    }
-  }
-}
-
-// IPHONE XR - TESTED W/ NGROK - PORTRAIT
-@media (min-width: 414px) and (min-height: 715px) and (orientation: portrait) {
-  .spcontainer {
-    .aboutbookcontainersp {
-      .abouttextsp {
-        font-size: 250%;
-      }
-      .page1textsp {
-        font-size: 600%;
-      }
-      .page11textsp,
-      .page13textsp {
-        font-size: 300%;
-      }
-
-      .page15textsp {
-        font-size: 350%;
-      }
-      .page17textsp {
         font-size: 200%;
       }
     }
     .booknavcontainersp {
       .booknavssp {
-        width: 25%;
+        width: 23%;
       }
     }
   }
@@ -299,17 +372,28 @@
 @media (min-width: 411px) and (min-height: 731px) and (orientation: portrait) {
   .spcontainer {
     .aboutbookcontainersp {
+      .svg1sp {
+        width: 55%;
+      }
       .abouttextsp {
         font-size: 230%;
         padding: 1rem;
       }
       .page1textsp {
-        font-size: 600%;
+        font-size: 550%;
       }
 
-      .page11textsp,
+      .page3textsp {
+        padding: 0;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+
+      .page11textsp {
+        font-size: 290%;
+      }
       .page13textsp {
-        font-size: 300%;
+        font-size: 270%;
       }
 
       .page15textsp {
@@ -321,7 +405,7 @@
     }
     .booknavcontainersp {
       .booknavssp {
-        width: 25%;
+        width: 23%;
       }
     }
   }
@@ -334,7 +418,13 @@
 
 // IPHONE 6/7/8 PLUS - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 414px) and (min-height: 736px) and (orientation: portrait) {
-  // NOTHING NEEDED
+  .spcontainer {
+    .aboutbookcontainersp {
+      .page11textsp {
+        padding: 2rem;
+      }
+    }
+  }
 }
 
 // PIXEL 2XL- CHROME DEVTOOLS - PORTRAIT
@@ -348,23 +438,28 @@
     .aboutbookcontainersp {
       .abouttextsp {
         font-size: 270%;
-        padding: 1rem;
+        padding: 1.5rem;
       }
       .page1textsp {
-        font-size: 750%;
+        font-size: 700%;
       }
 
       .page11textsp,
       .page13textsp {
-        font-size: 350%;
+        font-size: 300%;
+        padding: 3rem;
       }
 
       .page15textsp {
-        font-size: 370%;
+        font-size: 320%;
       }
       .page17textsp {
-        font-size: 240%;
+        font-size: 225%;
       }
+    }
+
+    .booknavcontainersp {
+      margin-top: 2%;
     }
   }
 }
@@ -377,39 +472,47 @@
         width: 70%;
       }
       .aboutsvgdpp {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
       }
       .abouttextdpp {
-        font-size: 180%;
-        padding: 1rem;
+        font-size: 160%;
+        padding: 2rem;
       }
       .page0textdpp {
-        font-size: 400%;
+        font-size: 350%;
       }
 
-      .page10textdpp,
-      .page12textdpp {
+      .page8textdpp {
+        padding: 2.5rem;
+      }
+
+      .page10textdpp {
         font-size: 200%;
       }
 
+      .page12textdpp {
+        font-size: 170%;
+        padding: 1rem;
+      }
+
       .page14textdpp {
-        font-size: 250%;
+        font-size: 220%;
       }
 
       .page16textdpp {
-        font-size: 160%;
+        font-size: 150%;
       }
       .page17textdpp {
-        font-size: 150%;
+        font-size: 140%;
+        padding: 1rem;
       }
     }
     .booknavcontainerdpp {
       border-radius: 5rem;
-      //   background-color: pink;
       .booknavsdpp {
         margin-top: 1.3rem;
-        width: 18%;
+        width: 17%;
       }
     }
   }
@@ -420,26 +523,39 @@
   .dppcontainer {
     .aboutbookcontainerdpp {
       .svg1dpp {
-        width: 80%;
+        width: 70%;
       }
       .aboutsvgdpp {
         padding-left: 0.7rem;
         padding-right: 0.7rem;
       }
       .abouttextdpp {
-        padding: 1.5rem;
+        padding: 3rem;
       }
 
       .page4textdpp {
         padding: 1rem;
       }
 
-      .page8textdpp {
+      .page6textdpp {
         padding: 2rem;
       }
 
+      .page8textdpp {
+        padding: 2.7rem;
+      }
+
+      .page10textdpp {
+        padding: 2rem;
+      }
+
+      .page12textdpp {
+        font-size: 180%;
+      }
+
       .page16textdpp {
-        font-size: 170%;
+        padding: 2rem;
+        font-size: 160%;
       }
       .page17textdpp {
         font-size: 155%;
@@ -449,7 +565,7 @@
     .booknavcontainerdpp {
       .booknavsdpp {
         margin-top: 1.3rem;
-        width: 17%;
+        width: 16%;
       }
     }
   }
@@ -460,23 +576,41 @@
   .dppcontainer {
     .aboutbookcontainerdpp {
       .svg1dpp {
-        width: 80%;
+        width: 60%;
       }
       .aboutsvgdpp {
         padding-left: 0.7rem;
         padding-right: 0.7rem;
       }
       .abouttextdpp {
+        font-size: 180%;
         padding: 2.5rem;
+      }
+
+      .page0textdpp {
+        font-size: 350%;
       }
 
       .page10textdpp {
         font-size: 210%;
       }
 
+      .page12textdpp {
+        font-size: 200%;
+        padding: 1rem;
+      }
+
+      .page14textdpp {
+        font-size: 230%;
+      }
+
+      .page16textdpp {
+        font-size: 170%;
+      }
+
       .page17textdpp {
-        font-size: 175%;
-        padding: 0.7rem;
+        font-size: 165%;
+        padding: 1.5rem;
       }
     }
   }
@@ -487,33 +621,38 @@
   .dppcontainer {
     .aboutbookcontainerdpp {
       .abouttextdpp {
-        font-size: 210%;
-        padding: 2.5rem;
+        font-size: 200%;
+        padding: 3rem;
       }
       .page0textdpp {
         font-size: 500%;
       }
 
       .page10textdpp {
-        font-size: 270%;
+        font-size: 230%;
       }
 
       .page12textdpp {
-        font-size: 250%;
+        font-size: 210%;
         padding: 2.5rem;
       }
 
       .page14textdpp {
-        font-size: 300%;
+        font-size: 250%;
       }
 
       .page16textdpp {
-        font-size: 190%;
+        font-size: 170%;
       }
 
       .page17textdpp {
-        font-size: 190%;
-        padding: 0.7rem;
+        font-size: 170%;
+        padding: 2rem;
+      }
+    }
+    .booknavcontainerdpp {
+      .booknavsdpp {
+        width: 14%;
       }
     }
   }
@@ -532,11 +671,16 @@
         padding-right: 1rem;
       }
       .abouttextdpp {
-        font-size: 250%;
+        font-size: 220%;
         padding: 3.5rem;
       }
       .page0textdpp {
         font-size: 500%;
+      }
+
+      .page8textdpp {
+        font-size: 220%;
+        padding: 2rem;
       }
 
       .page10textdpp {
@@ -544,26 +688,21 @@
       }
 
       .page12textdpp {
-        font-size: 270%;
+        font-size: 240%;
+        padding: 2rem;
       }
 
       .page14textdpp {
-        font-size: 320%;
+        font-size: 300%;
       }
 
       .page16textdpp {
-        font-size: 220%;
+        font-size: 200%;
       }
 
       .page17textdpp {
-        font-size: 220%;
-        padding: 1rem;
-      }
-    }
-    .booknavcontainerdpp {
-      margin-top: 0.7rem;
-      .booknavsdpp {
-        width: 16%;
+        font-size: 200%;
+        padding: 1.8rem;
       }
     }
   }
@@ -574,8 +713,8 @@
   .dppcontainer {
     .aboutbookcontainerdpp {
       .abouttextdpp {
-        font-size: 270%;
-        padding: 3.5rem;
+        font-size: 230%;
+        padding: 4rem;
       }
 
       .page0textdpp {
@@ -586,7 +725,8 @@
         font-size: 300%;
       }
       .page12textdpp {
-        font-size: 300%;
+        font-size: 280%;
+        padding: 2rem;
       }
 
       .page14textdpp {
@@ -594,20 +734,12 @@
       }
 
       .page16textdpp {
-        font-size: 230%;
+        font-size: 220%;
       }
 
       .page17textdpp {
-        font-size: 230%;
-        padding: 1rem;
-      }
-    }
-    .booknavcontainerdpp {
-      .booknavforwarddpp {
-        margin-right: 2rem;
-      }
-      .booknavbackwarddpp {
-        margin-left: 2rem;
+        font-size: 220%;
+        padding: 2rem;
       }
     }
   }
@@ -615,18 +747,101 @@
 
 // BLACKBERRY PLAYBOOK - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 600px) and (min-height: 1024px) and (orientation: portrait) {
-  // NOTHING NEEDED
+  .dppcontainer {
+    .aboutbookcontainerdpp {
+      .svg1dpp {
+        width: 60%;
+      }
+      .aboutsvgdpp {
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+      }
+      .abouttextdpp {
+        font-size: 180%;
+        padding: 2.5rem;
+      }
+
+      .page0textdpp {
+        font-size: 400%;
+      }
+
+      .page10textdpp {
+        font-size: 210%;
+      }
+
+      .page12textdpp {
+        font-size: 200%;
+        padding: 1rem;
+      }
+
+      .page14textdpp {
+        font-size: 230%;
+      }
+
+      .page16textdpp {
+        font-size: 170%;
+      }
+
+      .page17textdpp {
+        font-size: 165%;
+        padding: 1.5rem;
+      }
+    }
+  }
 }
 
 // IPAD - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
-  // NOTHING NEEDED
+  .dppcontainer {
+    .aboutbookcontainerdpp {
+      .svg1dpp {
+        width: 60%;
+      }
+      .aboutsvgdpp {
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+      }
+      .abouttextdpp {
+        font-size: 210%;
+        padding: 2rem;
+      }
+
+      .page0textdpp {
+        font-size: 500%;
+      }
+
+      .page10textdpp {
+        font-size: 250%;
+      }
+
+      .page12textdpp {
+        font-size: 250%;
+        padding: 1rem;
+      }
+
+      .page14textdpp {
+        font-size: 290%;
+      }
+
+      .page16textdpp {
+        font-size: 210%;
+      }
+
+      .page17textdpp {
+        font-size: 210%;
+        padding: 1.5rem;
+      }
+    }
+  }
 }
 
 // IPAD PRO - CHROME DEVTOOLS - PORTRAIT
 @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
   .dppcontainer {
     .aboutbookcontainerdpp {
+      .svg1dpp {
+        height: 70%;
+      }
       .aboutsvgdpp {
         padding-left: 1.2rem;
         padding-right: 1.2rem;
