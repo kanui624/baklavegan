@@ -22,39 +22,6 @@ export const animateInInitialLoad = (
   );
 };
 
-// export const animateInInitialLoad = (
-//   inInitClassOne: string,
-//   inInitClassTwo: string
-// ) => {
-//   gsap.fromTo(
-//     [inInitClassOne, inInitClassTwo],
-//     { y: 1000, opacity: 0 },
-//     {
-//       y: 0,
-//       opacity: 1,
-//       delay: 1,
-//       duration: 2.3,
-//       ease: "back.out(1.07)",
-//       stagger: 0.15,
-//     }
-//   );
-// };
-
-// export const animateInIsLoaded = (
-//   inLoadedClassOne: string,
-//   inLoadedClassTwo?: string
-// ) => {
-//   const isLoadedTL = gsap.timeline();
-//   isLoadedTL.fromTo(
-//     [inLoadedClassOne, inLoadedClassTwo],
-//     { opacity: 0 },
-//     {
-//       opacity: 1,
-//       duration: 0,
-//     }
-//   );
-// };
-
 export const animateInIsLoaded = (
   inLoadedClassOne: string,
   inLoadedClassTwo?: string
