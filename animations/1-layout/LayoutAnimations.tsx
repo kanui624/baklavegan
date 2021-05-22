@@ -19,7 +19,7 @@ const canvasTl = gsap.timeline();
 
 export const animateMenuIn = (canvasIn: string, canvasBgIn: string) => {
   canvasTl.to(canvasIn, { display: 'block' });
-  canvasTl.to(canvasIn, { opacity: '1', duration: 2 });
+  canvasTl.to(canvasIn, { opacity: '1', duration: 2, delay: 0.5 });
   // gsap.fromTo(
   //   canvasIn,
   //   { y: 1000, opacity: 0 },
