@@ -15,7 +15,7 @@ import { FC } from 'react';
 
 // Component Level Types
 import { CanvasProps } from '../0-types/CanvasProps';
-import { ResizeOptions } from 'react-three-fiber/canvas';
+import { Options as ResizeOptions } from 'react-use-measure';
 
 const Precompile = ({ onCompile = () => {} }) => {
   const { gl, scene, camera } = useThree();
