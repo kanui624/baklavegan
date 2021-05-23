@@ -14,7 +14,10 @@ import {
   animateMenuIn,
   animateMenuOut,
 } from '@/animations/1-layout/LayoutAnimations';
-import { showDevNote } from '@/animations/1-layout/DevNoteAnimations';
+import {
+  showDevNote,
+  hideDevNote,
+} from '@/animations/1-layout/DevNoteAnimations';
 
 // Components
 import MemoBVCanvas from '../0-navigation/0-menu/5-canvas/BVCanvas';
@@ -84,6 +87,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     dispatchPageClicked(devLink);
     if (devLink === 'about' || devLink === 'contact') {
       dispatch(exitMenu({ transition: false }));
+      hideDevNote('.devnotetext');
     } else {
       showDevNote('.devnotetext');
     }
