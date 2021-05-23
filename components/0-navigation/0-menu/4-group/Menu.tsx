@@ -1,5 +1,5 @@
 // React
-import { useState, useEffect, lazy, Fragment, memo } from 'react';
+import { useState, lazy, Fragment, memo } from 'react';
 
 // React Spring
 import { useSpring } from '@react-spring/core';
@@ -24,17 +24,9 @@ import { MenuProps } from '../0-types/MenuProps';
 import { MenuDataProps } from '../0-types/MenuDataProps';
 
 const Menu: FC<MenuProps> = ({ clicked, toggleClick, handleTransition }) => {
-  const [animateState, setAnimateState] = useState(0);
   const [orbitSpeed, setOrbitSpeed] = useState(-1.6);
 
-  useEffect(() => {
-    clicked ? setAnimateState(1) : setAnimateState(0);
-    console.log(clicked);
-    console.log(animateState);
-  }, [clicked]);
-
-  const { spring }: any = useSpring({
-    spring: animateState,
+  const { position, rotation }: any = useSpring({
     config: {
       mass: 35,
       velocity: 0,
@@ -42,26 +34,10 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick, handleTransition }) => {
       friction: clicked ? 120 : 127,
       precision: -0.002,
     },
-    // position: clicked ? [0, 0.031, 0] : [0, -0.72, 0],
-    // rotation: clicked ? [0, 0, 0] : [0, 3, 0],
+    position: clicked ? [0, 0.031, 0] : [0, -0.72, 0],
+    rotation: clicked ? [0, 0, 0] : [0, 3, 0],
   });
 
-  const position = spring.to(
-    [0, 0.5, 1],
-    [
-      [0, -0.72, 0],
-      [0, 0.04, 0],
-      [0, 0.031, 0],
-    ]
-  );
-
-  const rotation = spring.to(
-    [0, 1],
-    [
-      [0, 0, 0],
-      [0, 3, 0],
-    ]
-  );
   return (
     <Fragment>
       <Orbit orbitSpeed={orbitSpeed} />
