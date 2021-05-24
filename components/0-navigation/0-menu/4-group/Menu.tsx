@@ -2,7 +2,8 @@
 import { useState, lazy, Fragment, memo } from 'react';
 
 // React Spring
-import { useSpring, a } from 'react-spring/three';
+import { useSpring } from '@react-spring/core';
+import { a } from '@react-spring/three';
 
 // Objects
 const Sapling = lazy(() => import('../3-objects/Sapling'));
