@@ -1,9 +1,12 @@
 // React
-import { useState, lazy, Fragment, memo } from 'react';
+import { useState, useRef, useEffect, lazy, Fragment, memo } from 'react';
 
 // React Spring
 import { useSpring } from '@react-spring/core';
 import { a } from '@react-spring/three';
+
+// Gsap
+import gsap from 'gsap';
 
 // Objects
 const Sapling = lazy(() => import('../3-objects/Sapling'));
@@ -24,9 +27,10 @@ import { MenuProps } from '../0-types/MenuProps';
 import { MenuDataProps } from '../0-types/MenuDataProps';
 
 const Menu: FC<MenuProps> = ({ clicked, toggleClick, handleTransition }) => {
+  const menuRef = useRef();
   const [orbitSpeed, setOrbitSpeed] = useState(-1.6);
 
-  const { position, rotation }: any = useSpring({
+  const { rotation }: any = useSpring({
     config: {
       mass: 35,
       velocity: 0,
@@ -34,15 +38,36 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick, handleTransition }) => {
       friction: clicked ? 120 : 127,
       precision: -0.002,
     },
-    position: clicked ? [0, 0.031, 0] : [0, -0.72, 0],
     rotation: clicked ? [0, 0, 0] : [0, 3, 0],
   });
+
+  const menuModelIn = (modelPosition: number[]) => {
+    gsap.to(modelPosition, {
+      delay: 0.8,
+      duration: 3,
+      y: 0.031,
+      ease: 'back.out(1.07)',
+    });
+  };
+
+  const menuModelOut = (modelPositon: number[]) => {
+    gsap.to(modelPositon, { duration: 2, y: -0.72, ease: 'back.in(1.1)' });
+  };
+
+  useEffect(() => {
+    if (clicked) {
+      menuModelIn((menuRef.current as any).position);
+    } else {
+      menuModelOut((menuRef.current as any).position);
+    }
+    console.log(menuRef.current);
+  }, [clicked]);
 
   return (
     <Fragment>
       <Orbit orbitSpeed={orbitSpeed} />
       <Lights />
-      <a.group position={position} rotation={rotation}>
+      <a.group ref={menuRef} position-y={0.031} rotation={rotation}>
         <Sapling />
         {menuData.map(
           ({

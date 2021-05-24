@@ -13,6 +13,7 @@ import { setPageClicked } from '@/redux/slices/PageClickedSlice';
 import {
   animateMenuIn,
   animateMenuOut,
+  initialMenuOut,
 } from '@/animations/1-layout/LayoutAnimations';
 import {
   showDevNote,
@@ -54,6 +55,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   // Local State
   const [ready, setReady] = useState(false);
   const [clicked, setClicked] = useState(false);
+  const [canvasLoaded, setCanvasLoaded] = useState(false);
   const [disabled, setDisabled] = useState(true);
 
   // Custom Hooks
@@ -70,6 +72,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       setTimeout(() => {
         setDisabled(false);
       }, 2000);
+      7;
     }
   };
 
@@ -102,12 +105,16 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 
   useEffect(() => {
     initialDisableStatus();
+    initialMenuOut('#canvas');
   }, []);
 
   useEffect(() => {
+    if (clicked) {
+      setCanvasLoaded(true);
+    }
     if (ready && clicked) {
       animateMenuIn('#canvas', '#canvasbg');
-    } else {
+    } else if (!clicked && canvasLoaded) {
       animateMenuOut('#canvas', '#canvasbg');
     }
   }, [clicked, ready]);
