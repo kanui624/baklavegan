@@ -18,7 +18,7 @@ export const animateIn = (
     {
       y: 0,
       duration: 1,
-      delay: 1.6,
+      delay: 2.4,
       stagger: 0.15,
       ease: 'back.out(1.02)',
     }
@@ -29,7 +29,7 @@ export const animateIn = (
     {
       x: 20,
       opacity: 1,
-      delay: 0.6,
+      delay: 1.4,
       stagger: 0.15,
       duration: 1.5,
       ease: 'back.out(.75)',
@@ -41,7 +41,7 @@ export const animateIn = (
     {
       x: -20,
       opacity: 1,
-      delay: 0.6,
+      delay: 1.4,
       stagger: 0.15,
       duration: 1.5,
       ease: 'back.out(.75)',
@@ -63,13 +63,13 @@ export const animateOut = (
     delay: 0.5,
     ease: 'back.in(.75)',
   });
-  gsap.to(cardOpacityOut, { opacity: 0, delay: 0.4, stagger: 0.1 });
+  gsap.to(cardOpacityOut, { opacity: 0, delay: 0.6, stagger: 0.1 });
   gsap.to([questionsOut, businessOut], {
     x: -500,
     opacity: 0,
     stagger: 0.15,
     duration: 1,
-    delay: 0.3,
+    delay: 0.5,
     ease: 'back.in(.75)',
   });
   gsap.to([infoOut, socialOut], {
@@ -77,7 +77,7 @@ export const animateOut = (
     opacity: 0,
     stagger: 0.15,
     duration: 1,
-    delay: 0.3,
+    delay: 0.5,
     ease: 'back.in(.75)',
   });
 };
