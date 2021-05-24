@@ -1,9 +1,8 @@
 // React
-import { useState, lazy, Fragment, memo } from 'react';
+import { useState, useRef, lazy, Fragment, memo } from 'react';
 
 // React Spring
-import { useSpring } from '@react-spring/core';
-import { a } from '@react-spring/three';
+import { a, useSpring } from '@react-spring/three';
 
 // Objects
 const Sapling = lazy(() => import('../3-objects/Sapling'));
@@ -26,7 +25,7 @@ import { MenuDataProps } from '../0-types/MenuDataProps';
 const Menu: FC<MenuProps> = ({ clicked, toggleClick, handleTransition }) => {
   const [orbitSpeed, setOrbitSpeed] = useState(-1.6);
 
-  const { position, rotation }: any = useSpring({
+  const { rotationY }: any = useSpring({
     config: {
       mass: 35,
       velocity: 0,
@@ -34,15 +33,31 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick, handleTransition }) => {
       friction: clicked ? 120 : 127,
       precision: -0.002,
     },
-    position: clicked ? [0, 0.031, 0] : [0, -0.72, 0],
-    rotation: clicked ? [0, 0, 0] : [0, 3, 0],
+    rotationY: clicked ? 0 : 3,
   });
+
+  const { spring }: any = useSpring({
+    spring: Number(clicked),
+    config: {
+      mass: 1,
+      tension: 8,
+      friction: 14,
+      precision: 0.002,
+      //      // velocity: 0,
+      // // tension: 70,
+      // friction: 30,
+      // // frequency: 2,
+      // duration: 3000,
+    },
+  });
+
+  let positionY = spring.to([0, 0.8, 1], [-0.72, 0.08, 0.031]);
 
   return (
     <Fragment>
       <Orbit orbitSpeed={orbitSpeed} />
       <Lights />
-      <a.group position={position} rotation={rotation}>
+      <a.group ref={} position-y={positionY} rotation-y={rotationY}>
         <Sapling />
         {menuData.map(
           ({
