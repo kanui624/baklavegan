@@ -1,15 +1,12 @@
-// React
-import { Fragment } from "react";
-
 //Next
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
 // React Types
-import { FC } from "react";
+import { FC } from 'react';
 
 // Component Level Types
-import { ContactInfoCardProps } from "../0-types/ContactProps";
+import { ContactInfoCardProps } from '../0-types/ContactProps';
 
 const ContactInfo: FC<ContactInfoCardProps> = ({
   name,
@@ -30,7 +27,7 @@ const ContactInfo: FC<ContactInfoCardProps> = ({
         >
           <p>{textOne}</p>
           <p>
-            {textTwo && textTwo}{" "}
+            {textTwo && textTwo}{' '}
             {link && (
               // <Link href="/baklavegan/faq">
               //   <a>
@@ -42,7 +39,7 @@ const ContactInfo: FC<ContactInfoCardProps> = ({
                   <u>{link}</u>
                 </a>
               </Link>
-            )}{" "}
+            )}{' '}
             {textThree && textThree}
           </p>
         </div>

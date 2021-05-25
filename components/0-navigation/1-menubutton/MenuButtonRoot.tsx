@@ -1,12 +1,12 @@
 // React
-import { Fragment, useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 // Next
-import Image from "next/image";
+import Image from 'next/image';
 
 // Redux
-import { useDispatch } from "react-redux";
-import { enterMenu } from "@/redux/slices/MenuTransitionSlice";
+import { useDispatch } from 'react-redux';
+import { enterMenu } from '@/redux/slices/MenuTransitionSlice';
 
 // GSAP Animations
 import {
@@ -14,10 +14,10 @@ import {
   animateOut,
   onHoverIn,
   onHoverOut,
-} from "@/animations/0-navigation/RootAnimations";
+} from '@/animations/0-navigation/RootAnimations';
 
 // React Types
-import { FC } from "react";
+import { FC } from 'react';
 
 // Component Level Types
 interface MenuButtonRootProps {
@@ -31,7 +31,7 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
 
   const handleEnterClick = () => {
     setRootTrigger(!rootTrigger);
-    animateOut(".rootmenuitem");
+    animateOut('.rootmenuitem');
     dispatch(enterMenu({ transition: true }));
     setTimeout(() => {
       toggleClick();
@@ -39,12 +39,12 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
   };
 
   useEffect(() => {
-    animateIn(".rootmenuimage", ".rootmenutext", ".invisiblerootbtn");
+    animateIn('.rootmenuimage', '.rootmenutext', '.invisiblerootbtn');
   }, []);
 
   return (
     <div className="rootmenubutton">
-      <div className="absolute rootmenuitem rootmenuimage opacity-0">
+      <div className="absolute rootmenuitem rootmenuimage">
         <Image
           src="/2-images/1-index/1-enter-btn.png"
           layout="fill"
@@ -58,8 +58,8 @@ const MenuButtonRoot: FC<MenuButtonRootProps> = ({ disabled, toggleClick }) => {
       <button
         disabled={disabled}
         className="absolute invisiblerootbtn rootmenuitem"
-        onPointerOver={() => (rootTrigger ? null : onHoverIn(".rootmenuitem"))}
-        onPointerOut={() => (rootTrigger ? null : onHoverOut(".rootmenuitem"))}
+        onPointerOver={() => (rootTrigger ? null : onHoverIn('.rootmenuitem'))}
+        onPointerOut={() => (rootTrigger ? null : onHoverOut('.rootmenuitem'))}
         onClick={() => {
           handleEnterClick();
         }}

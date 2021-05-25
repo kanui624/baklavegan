@@ -13,41 +13,29 @@ export const animateIn = (
     { y: 350 },
     {
       y: 0,
-      delay: 2,
-      duration: 3,
+      delay: 2.5,
+      duration: 2.6,
       ease: 'back.out(1.2)',
       stagger: 0.1,
     }
   );
   inTl.to(rootImageIn, {
-    opacity: 1,
     delay: 2,
     duration: 2.3,
   });
   inTl.to(rootTextIn, {
     opacity: 0.8,
+    delay: 0.9,
     duration: 2,
   });
 };
-
-const outTl = gsap.timeline();
 
 export const animateOut = (rootBtnOut: string) => {
   gsap.to(rootBtnOut, {
     y: 350,
     stagger: 0.15,
-    duration: 1.5,
-    ease: 'back.in(1.5)',
-  });
-  outTl.to(rootBtnOut, {
-    opacity: 0.8,
-    // delay: 0.5,
-    duration: 1,
-  });
-
-  outTl.to(rootBtnOut, {
-    opacity: 0,
-    duration: 0.5,
+    duration: 1.2,
+    ease: 'back.in(1.8)',
   });
 };
 
