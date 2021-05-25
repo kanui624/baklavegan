@@ -40,7 +40,6 @@ const BVCanvas: FC<CanvasProps> = ({
     <Canvas
       resize={{ polyfill: ResizeObserver } as ResizeOptions}
       camera={{ position: [1, 1, 1], fov: 15 }}
-      // camera={{ position: [1, 1, 1], fov: 25 }}
       pixelRatio={2}
     >
       <Suspense fallback={null}>

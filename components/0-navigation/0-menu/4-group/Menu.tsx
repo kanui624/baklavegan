@@ -41,8 +41,8 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick, handleTransition }) => {
     rotation: clicked ? [0, 0, 0] : [0, 3, 0],
   });
 
-  const menuModelIn = (modelPosition: number[]) => {
-    gsap.to(modelPosition, {
+  const menuModelIn = (modelPositionIn: number[]) => {
+    gsap.to(modelPositionIn, {
       delay: 0.8,
       duration: 3,
       y: 0.031,
@@ -50,8 +50,8 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick, handleTransition }) => {
     });
   };
 
-  const menuModelOut = (modelPositon: number[]) => {
-    gsap.to(modelPositon, { duration: 2, y: -0.72, ease: 'back.in(1.1)' });
+  const menuModelOut = (modelPositonOut: number[]) => {
+    gsap.to(modelPositonOut, { duration: 2, y: -0.72, ease: 'back.in(1.1)' });
   };
 
   useEffect(() => {
