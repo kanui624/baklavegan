@@ -1,6 +1,3 @@
-// React
-import { Fragment } from 'react';
-
 //Next
 import Link from 'next/link';
 import Image from 'next/image';
@@ -37,7 +34,7 @@ const ContactInfo: FC<ContactInfoCardProps> = ({
               //     <u>{link}</u>
               //   </a>
               // </Link>
-              <Link href="/">
+              <Link href="#">
                 <a>
                   <u>{link}</u>
                 </a>

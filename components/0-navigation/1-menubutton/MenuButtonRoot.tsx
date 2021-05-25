@@ -1,5 +1,5 @@
 // React
-import { Fragment, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 // Next
 import Image from 'next/image';
