@@ -1,13 +1,13 @@
 // React
-import { forwardRef } from "react";
+import { forwardRef } from 'react';
 // Next
-import Link from "next/link";
+import Link from 'next/link';
 
 // React Types
-import { FC } from "react";
+import { FC } from 'react';
 
 // Component Level Types
-import { AboutPageDataProps } from "@/components/4-about/0-types/AboutPageDataProps";
+import { AboutPageDataProps } from '@/components/4-about/0-types/AboutPageDataProps';
 
 interface AboutPageProps extends AboutPageDataProps {
   tag: string;
@@ -26,14 +26,19 @@ const AboutPage: FC<AboutPageProps> = forwardRef(
             <div
               className={`abouttext abouttext${tag} page${id}text${tag} px-8 py-8`}
             >
-              {texta}{" "}
+              {texta}{' '}
               {link && (
-                <Link href={`/baklavegan/${link}`}>
+                // <Link href={`/baklavegan/${link}`}>
+                //   <a className={`aboutbooklink${tag}`}>
+                //     <u>{link}</u>
+                //   </a>
+                // </Link>
+                <Link href="#">
                   <a className={`aboutbooklink${tag}`}>
                     <u>{link}</u>
                   </a>
                 </Link>
-              )}{" "}
+              )}{' '}
               {textb && textb}
             </div>
           )}

@@ -10,11 +10,11 @@ export const animateInInitialLoad = (
 ) => {
   gsap.fromTo(
     [inInitClassOne, inInitClassTwo],
-    { y: 1000 },
+    { y: 1200 },
     {
       y: 0,
-      delay: 1.8,
-      duration: 2.3,
+      delay: 1.5,
+      duration: 2,
       ease: 'back.out(1.07)',
       stagger: 0.15,
     }
@@ -28,7 +28,7 @@ export const animateInIsLoaded = (
   const isLoadedTL = gsap.timeline();
   isLoadedTL.fromTo(
     [inLoadedClassOne, inLoadedClassTwo],
-    { y: 1000, opacity: 0 },
+    { y: 1200, opacity: 0 },
     { y: 0, duration: 0 }
   );
   isLoadedTL.to([inLoadedClassOne, inLoadedClassTwo], {
@@ -39,7 +39,7 @@ export const animateInIsLoaded = (
 
 export const animateOut = (outClassOne: string, outClassTwo: string) => {
   gsap.to([outClassOne, outClassTwo], {
-    y: 1000,
+    y: 1200,
     duration: 1.8,
     ease: 'back.in(1.1)',
     stagger: 0.15,

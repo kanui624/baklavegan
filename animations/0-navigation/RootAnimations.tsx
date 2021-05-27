@@ -10,11 +10,11 @@ export const animateIn = (
 ) => {
   gsap.fromTo(
     [rootImageIn, rootTextIn, rootInvisiIn],
-    { y: 350 },
+    { y: 600 },
     {
       y: 0,
-      delay: 2.5,
-      duration: 2.6,
+      delay: 2,
+      duration: 3.5,
       ease: 'back.out(1.2)',
       stagger: 0.1,
     }
@@ -32,10 +32,10 @@ export const animateIn = (
 
 export const animateOut = (rootBtnOut: string) => {
   gsap.to(rootBtnOut, {
-    y: 350,
+    y: 600,
     stagger: 0.15,
-    duration: 1.2,
-    ease: 'back.in(1.8)',
+    duration: 2,
+    ease: 'back.in(1.6)',
   });
 };
 
