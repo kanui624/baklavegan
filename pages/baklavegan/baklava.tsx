@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 
 // Components
 import BaklavaCard from "@/components/3-baklava/2-components/BaklavaCard";
+import BaklaTree from "@/components/3-baklava/2-components/Baklatree";
 
 // GSAP Animations
 import {
@@ -20,6 +21,7 @@ import { FC } from "react";
 
 // Redux Types
 import { AppState } from "@/redux/store";
+import Baklatree from "@/components/3-baklava/2-components/Baklatree";
 
 const Baklava: FC = () => {
   // const {
@@ -42,7 +44,12 @@ const Baklava: FC = () => {
   //   }
   // }, [transition]);
 
-  return <BaklavaCard />;
+  return (
+    <Fragment>
+      <Baklatree />
+      <BaklavaCard />
+    </Fragment>
+  );
 };
 
 export default Baklava;
