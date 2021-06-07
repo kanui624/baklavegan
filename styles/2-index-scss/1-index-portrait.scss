@@ -1,3 +1,11 @@
+// SMALLER THAN IPHONE 4
+@media (max-width: 320px) and (orientation: portrait) {
+  .bvlogo {
+    width: 16rem;
+    height: 4rem;
+  }
+}
+
 //  IPHONE 4 - CHROME DEVTOOLS - PORTRIAT - BASE STYLES
 @media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
   .bvlogo {

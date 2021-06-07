@@ -1,20 +1,17 @@
-//  IPHONE 4 - CHROME DEVTOOLS - PORTRIAT - BASE STYLES
-@media (min-width: 320px) and (min-height: 480px) and (orientation: portrait) {
-  .rootmenubutton {
-    margin-top: 6rem;
-  }
+.rootmenubutton {
+  margin-top: 6rem;
+}
 
-  .rootmenuimage,
-  .invisiblerootbtn {
-    height: 6rem;
-    width: 4.5rem;
-  }
+.rootmenuimage,
+.invisiblerootbtn {
+  height: 6rem;
+  width: 4.5rem;
+}
 
-  .roottext {
-    padding-left: 0.2rem;
-    padding-top: 1.5rem;
-    font-size: 165%;
-  }
+.roottext {
+  padding-left: 0.2rem;
+  padding-top: 1.5rem;
+  font-size: 165%;
 }
 
 // NOKIA LUMA 520 - CHROME DEVTOOLS - PORTRAIT

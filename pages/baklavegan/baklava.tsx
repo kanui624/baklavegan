@@ -1,119 +1,48 @@
-// // React
-// import { useEffect, Fragment } from "react";
+// React
+import { useEffect, Fragment } from "react";
 
-// // Next
-// import Image from "next/image";
+// Redux
+import { useSelector } from "react-redux";
 
-// // Redux
-// import { useSelector } from "react-redux";
+// Components
+import BaklavaCard from "@/components/3-baklava/2-components/BaklavaCard";
 
-// // GSAP
-// import gsap from "gsap";
+// GSAP Animations
+import {
+  animateIn,
+  animateOut,
+  spinAttributes,
+  stopSpinAttributes,
+} from "@/animations/3-baklava/BaklatreeAnimations";
 
-// // Components
-// import BabyWalnut from "@/components/3-baklava/BabyWalnut";
+// React Types
+import { FC } from "react";
 
-// // React Types
-// import { FC } from "react";
+// Redux Types
+import { AppState } from "@/redux/store";
 
-// // Redux Types
-// import { AppState } from "@/redux/store";
+const Baklava: FC = () => {
+  // const {
+  //   MenuTransition: { transition },
+  // } = useSelector<AppState, AppState>((state) => state);
 
-// const Baklava: FC = () => {
-//   const {
-//     MenuTransition: { transition },
-//   } = useSelector<AppState, AppState>((state) => state);
-//   const treeWalnutTl = gsap.timeline();
-//   const animateIn = () => {
-//     treeWalnutTl.to([".treeattribs", ".babywalnuts"], {
-//       y: -1000,
-//       delay: 1,
-//       duration: 2.3,
-//       ease: "back.out(1.07)",
-//     });
-//     gsap.fromTo(
-//       ".babywalnuts",
-//       { scale: 0 },
-//       {
-//         scale: 1,
-//         duration: 1,
-//         stagger: 0.2,
-//         delay: 3,
-//         ease: "bounce.out",
-//       }
-//     );
-//   };
-//   const animateOut = () => {
-//     gsap.to([".treeattribs", ".babywalnuts"], {
-//       y: 100,
-//       duration: 2,
-//       ease: "back.in(1.1)",
-//     });
-//   };
+  // useEffect(() => {
+  //   spinAttributes(".attribanimation");
 
-//   useEffect(() => {
-//     gsap.to(".attribanimation", {
-//       rotationZ: -360,
-//       duration: 20,
-//       ease: "none",
-//       repeat: -1,
-//     });
+  //   return () => {
+  //     stopSpinAttributes(".attribanimation");
+  //   };
+  // }, []);
 
-//     return () => {
-//       gsap.to(".attribanimation", {
-//         rotationZ: 0,
-//         ease: "none",
-//       });
-//     };
-//   }, []);
+  // useEffect(() => {
+  //   if (transition) {
+  //     animateOut(".baklatree", ".treeattribs", ".babywalnuts");
+  //   } else {
+  //     animateIn(".baklatree", ".treeattribs", ".babywalnuts");
+  //   }
+  // }, [transition]);
 
-//   useEffect(() => {
-//     if (transition) {
-//       animateOut();
-//     } else {
-//       animateIn();
-//     }
-//   }, [transition]);
-
-//   return (
-//     <Fragment>
-//       <div className="fixed treeattribs">
-//         <div className="spinnerparent">
-//           <div className="spinnerchild">
-//             <div className="attribanimation">
-//               <Image
-//                 src="/2-images/2-baklava/0-attribs.png"
-//                 alt="Baklavegan Product Attributes"
-//                 width={700}
-//                 height={592}
-//               />
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="fixed baklatree treeattribs">
-//         <Image
-//           src="/2-images/2-baklava/1-baklatreegan.png"
-//           alt="Baklatreegan Tree"
-//           width={749}
-//           height={850}
-//         />
-//       </div>
-//       <BabyWalnut />
-//     </Fragment>
-//   );
-// };
-
-// export default Baklava;
-
-const Baklava = () => {
-  return (
-    <div className="flex flex-col">
-      <div className="baklavaquadrant">1</div>
-      <div className="baklavaquadrant">2</div>
-      <div className="baklavaquadrant">3</div>
-    </div>
-  );
+  return <BaklavaCard />;
 };
 
 export default Baklava;
