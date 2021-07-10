@@ -8,7 +8,7 @@ import Router from 'next/router';
 import { TextureLoader } from 'three';
 
 // React Spring
-import { useSpring, a } from 'react-spring/three';
+import { useSpring, a } from '@react-spring/three';
 
 // React Types
 import { FC } from 'react';

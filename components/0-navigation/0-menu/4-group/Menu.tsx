@@ -1,30 +1,30 @@
 // React
-import { useState, useRef, useEffect, lazy, Fragment, memo } from "react";
+import { useState, useRef, useEffect, Fragment } from 'react';
 
 // React Spring
-import { useSpring } from "@react-spring/core";
-import { a } from "@react-spring/three";
+import { useSpring } from '@react-spring/core';
+import { a } from '@react-spring/three';
 
 // Gsap
-import gsap from "gsap";
+import gsap from 'gsap';
 
 // Objects
-const Sapling = lazy(() => import("../3-objects/Sapling"));
-const MenuOption = lazy(() => import("../3-objects/MenuOption"));
+import Sapling from '../3-objects/Sapling';
+import MenuOption from '../3-objects/MenuOption';
 
 // Controls
-import Orbit from "../2-controls/Orbit";
-import Lights from "../2-controls/Lights";
+import Orbit from '../2-controls/Orbit';
+import Lights from '../2-controls/Lights';
 
 // Data
-import { menuData } from "../1-data/MenuData";
+import { menuData } from '../1-data/MenuData';
 
 // React Types
-import { FC } from "react";
+import { FC } from 'react';
 
 // Component Level Types
-import { MenuProps } from "../0-types/MenuProps";
-import { MenuDataProps } from "../0-types/MenuDataProps";
+import { MenuProps } from '../0-types/MenuProps';
+import { MenuDataProps } from '../0-types/MenuDataProps';
 
 const Menu: FC<MenuProps> = ({ clicked, toggleClick, handleTransition }) => {
   const menuRef = useRef();
@@ -46,12 +46,12 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick, handleTransition }) => {
       delay: 0.8,
       duration: 3,
       y: 0.031,
-      ease: "back.out(1.07)",
+      ease: 'back.out(1.07)',
     });
   };
 
   const menuModelOut = (modelPositonOut: number[]) => {
-    gsap.to(modelPositonOut, { duration: 2, y: -0.72, ease: "back.in(1.1)" });
+    gsap.to(modelPositonOut, { duration: 2, y: -0.72, ease: 'back.in(1.1)' });
   };
 
   useEffect(() => {
@@ -104,6 +104,4 @@ const Menu: FC<MenuProps> = ({ clicked, toggleClick, handleTransition }) => {
   );
 };
 
-const MemoMenu = memo(Menu);
-
-export default MemoMenu;
+export default Menu;

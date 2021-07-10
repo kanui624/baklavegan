@@ -1,5 +1,5 @@
 // React-Three-Fiber Types
-import { Euler, Vector3 } from 'react-three-fiber/three-types';
+import { Euler, Vector3 } from '@react-three/fiber';
 
 export interface MenuDataProps {
   id: number;
