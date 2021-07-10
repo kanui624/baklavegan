@@ -1,5 +1,5 @@
 // React
-import { useState, useEffect, useRef, Fragment } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 // Redux
 import { useDispatch, useSelector } from 'react-redux';
@@ -65,9 +65,9 @@ const AboutBookDPP: FC = () => {
 
   const handlePageFlip = (pageFlip: boolean) => {
     if (pageFlip) {
-      (aboutBookDPP.current as any).pageFlip.flipNext();
+      (aboutBookDPP.current as any).pageFlip().flipNext();
     } else {
-      (aboutBookDPP.current as any).pageFlip.flipPrev();
+      (aboutBookDPP.current as any).pageFlip().flipPrev();
     }
   };
 
@@ -90,7 +90,7 @@ const AboutBookDPP: FC = () => {
     setTimeout(() => {
       dispatch(unloadPage({ pageLoaded: false }));
       dispatch(initializePage({ pageCount: 0 }));
-      (aboutBookDPP.current as any).pageFlip.turnToPage(0);
+      (aboutBookDPP.current as any).pageFlip().turnToPage(0);
     }, 3000);
   };
 
@@ -101,7 +101,7 @@ const AboutBookDPP: FC = () => {
 
   useEffect(() => {
     if (pageCount !== 0) {
-      (aboutBookDPP.current as any).pageFlip.turnToPage(pageCount * 2);
+      (aboutBookDPP.current as any).pageFlip().turnToPage(pageCount * 2);
     }
     return () => {
       setDisabled(false);
@@ -147,12 +147,14 @@ const AboutBookDPP: FC = () => {
   return (
     <div className="dppcontainer fixed">
       <div className="aboutbookcontainerdpp" style={{ width: width }}>
+        {/* @ts-ignore */}
         <HTMLFlipBook
           ref={aboutBookDPP}
           className="aboutbook inset-0 h-full max-w-full"
+          drawShadow={false}
           useMouseEvents={false}
+          usePortrait={false}
           flippingTime={1500}
-          maxShadowOpacity={1}
           size={'stretch'}
           width={400}
           height={535}

@@ -68,9 +68,9 @@ const AboutBookDP: FC = () => {
 
   const handlePageFlip = (pageFlip: boolean) => {
     if (pageFlip) {
-      (aboutBookDP.current as any).pageFlip.flipNext();
+      (aboutBookDP.current as any).pageFlip().flipNext();
     } else {
-      (aboutBookDP.current as any).pageFlip.flipPrev();
+      (aboutBookDP.current as any).pageFlip().flipPrev();
     }
   };
 
@@ -93,7 +93,7 @@ const AboutBookDP: FC = () => {
     setTimeout(() => {
       dispatch(unloadPage({ pageLoaded: false }));
       dispatch(initializePage({ pageCount: 0 }));
-      (aboutBookDP.current as any).pageFlip.turnToPage(0);
+      (aboutBookDP.current as any).pageFlip().turnToPage(0);
     }, 3000);
   };
 
@@ -104,7 +104,7 @@ const AboutBookDP: FC = () => {
 
   useEffect(() => {
     if (pageCount !== 0) {
-      (aboutBookDP.current as any).pageFlip.turnToPage(pageCount * 2);
+      (aboutBookDP.current as any).pageFlip().turnToPage(pageCount * 2);
     }
     return () => {
       setDisabled(false);
@@ -153,13 +153,14 @@ const AboutBookDP: FC = () => {
         className="aboutbookcontainerdp"
         style={{ width: `${conditionalSize}rem` }}
       >
+        {/* @ts-ignore */}
         <HTMLFlipBook
           ref={aboutBookDP}
           className="aboutbookdp"
+          drawShadow={false}
           useMouseEvents={false}
           usePortrait={false}
           flippingTime={1500}
-          maxShadowOpacity={0}
           size={'stretch'}
           width={400}
           height={535}

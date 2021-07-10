@@ -8,6 +8,7 @@ import AboutBookDPP from '@/components/4-about/3-components/AboutBookDPP';
 
 // Custom Hooks
 import { useWindowResize } from '../../customhooks/useWindowResize';
+
 // React Types
 import { FC } from 'react';
 

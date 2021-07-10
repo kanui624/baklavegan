@@ -67,9 +67,9 @@ const AboutBookSP: FC = () => {
 
   const handlePageFlip = (pageFlip: boolean) => {
     if (pageFlip) {
-      (aboutBookSP.current as any).pageFlip.flipNext();
+      (aboutBookSP.current as any).pageFlip().flipNext();
     } else {
-      (aboutBookSP.current as any).pageFlip.flipPrev();
+      (aboutBookSP.current as any).pageFlip().flipPrev();
     }
   };
 
@@ -92,7 +92,7 @@ const AboutBookSP: FC = () => {
     setTimeout(() => {
       dispatch(unloadPage({ pageLoaded: false }));
       dispatch(initializePage({ pageCount: 0 }));
-      (aboutBookSP.current as any).pageFlip.turnToPage(0);
+      (aboutBookSP.current as any).pageFlip().turnToPage(0);
     }, 3000);
   };
 
@@ -105,7 +105,7 @@ const AboutBookSP: FC = () => {
 
   useEffect(() => {
     if (pageCount !== 0) {
-      (aboutBookSP.current as any).pageFlip.turnToPage(pageCount * 2);
+      (aboutBookSP.current as any).pageFlip().turnToPage(pageCount * 2);
     }
     return () => {
       setDisabled(false);
@@ -153,12 +153,14 @@ const AboutBookSP: FC = () => {
   return (
     <div className="spcontainer fixed">
       <div className="aboutbookcontainersp" style={{ width: `${remWidth}rem` }}>
+        {/* @ts-ignore */}
         <HTMLFlipBook
           ref={aboutBookSP}
           className="aboutbooksp h-full max-w-full"
+          drawShadow={false}
           useMouseEvents={false}
+          usePortrait={false}
           flippingTime={1500}
-          maxShadowOpacity={0}
           size={'stretch'}
           width={400}
           height={535}
