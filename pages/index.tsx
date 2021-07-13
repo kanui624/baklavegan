@@ -38,6 +38,7 @@ const BaklaHome: FC = () => {
         className="opacity-0 animatelogo"
         src="/2-images/1-index/0-bv-logo.png"
         alt="Baklavegan"
+        priority={true}
         layout="fill"
         objectFit="cover"
       />

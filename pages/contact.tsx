@@ -91,6 +91,7 @@ const Contact: FC = () => {
                 <Image
                   src={`/2-images/5-contact/0-socials/${image}.png`}
                   alt={image}
+                  priority={true}
                   layout="fill"
                   objectFit="contain"
                 />
