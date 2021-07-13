@@ -87,10 +87,10 @@ const AboutBookSP: FC = () => {
   };
 
   const handleNavSP = (e: any, next: boolean) => {
-    handleDisable();
     handleDispatchPageCount(next);
     handlePageFlip(next);
     handleNavBounce(e.target.alt, "sp");
+    handleDisable();
   };
 
   const handleInitializeBook = () => {
@@ -134,15 +134,19 @@ const AboutBookSP: FC = () => {
     let mounted = true;
 
     if (mounted && pageCount === 8) {
+      console.log("remove");
       removeNav(".booknavforwardsp");
     } else {
+      console.log("add");
       addNav(".booknavforwardsp");
     }
+
     if (mounted && pageCount === 0) {
       removeNav(".booknavbackwardsp");
     } else {
       addNav(".booknavbackwardsp");
     }
+
     return () => {
       mounted = false;
     };

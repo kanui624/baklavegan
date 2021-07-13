@@ -109,6 +109,7 @@ const AboutBookDP: FC = () => {
 
   useEffect(() => {
     let mounted = true;
+
     if (transition && mounted) {
       handleInitializeBook();
     }
@@ -129,16 +130,19 @@ const AboutBookDP: FC = () => {
 
   useEffect(() => {
     let mounted = true;
+
     if (mounted && pageCount === 8) {
       removeNav(".booknavforwarddp");
     } else {
       addNav(".booknavforwarddp");
     }
+
     if (mounted && pageCount === 0) {
       removeNav(".booknavbackwarddp");
     } else {
       addNav(".booknavbackwarddp");
     }
+
     return () => {
       mounted = false;
     };
