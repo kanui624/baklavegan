@@ -1,20 +1,20 @@
 // React
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef } from "react";
 
 // Redux
-import { useDispatch, useSelector } from 'react-redux';
-import { loadPage, unloadPage } from '@/redux/slices/AboutPageLoadedSlice';
+import { useDispatch, useSelector } from "react-redux";
+import { loadPage, unloadPage } from "@/redux/slices/AboutPageLoadedSlice";
 import {
   nextPage,
   prevPage,
   initializePage,
-} from '@/redux/slices/AboutPageCountSlice';
+} from "@/redux/slices/AboutPageCountSlice";
 
 // Components
-import AboutPage from './AboutPage';
+import AboutPage from "./AboutPage";
 
 // Helpers
-import { handleNavBounce } from '../2-helpers/AboutBookHelpers';
+import { handleNavBounce } from "../2-helpers/AboutBookHelpers";
 
 // GSAP Animations
 import {
@@ -23,23 +23,23 @@ import {
   animateOut,
   addNav,
   removeNav,
-} from '@/animations/4-about/AboutAnimations';
+} from "@/animations/4-about/AboutAnimations";
 
 // Page Flip
 // @ts-ignore
-import HTMLFlipBook from 'react-pageflip';
+import HTMLFlipBook from "react-pageflip";
 
 // Data
-import { AboutBookDPData } from '@/components/4-about/1-data/AboutBookDPData';
+import { AboutBookDPData } from "@/components/4-about/1-data/AboutBookDPData";
 
 // React Types
-import { FC } from 'react';
+import { FC } from "react";
 
 // Redux Types
-import { AppState } from '@/redux/store';
+import { AppState } from "@/redux/store";
 
 // Component Level Types
-import { AboutPageDataProps } from '../0-types/AboutPageDataProps';
+import { AboutPageDataProps } from "../0-types/AboutPageDataProps";
 
 const AboutBookDP: FC = () => {
   const dispatch = useDispatch();
@@ -52,6 +52,12 @@ const AboutBookDP: FC = () => {
   } = useSelector<AppState, AppState>((state) => state);
 
   const aboutBookDP = useRef();
+
+  const aboutBookDPPageInit = useCallback((e) => {
+    if (pageCount !== 0) {
+      e.object.turnToPage(pageCount * 2);
+    }
+  }, []);
 
   const calcSize = (height * 1.25) / 16;
   const conditionalSize = calcSize >= 52 ? 52 : Math.round(calcSize * 2) / 2;
@@ -84,12 +90,12 @@ const AboutBookDP: FC = () => {
   const handleNavDP = (e: any, next: boolean) => {
     handleDispatchPageCount(next);
     handlePageFlip(next);
-    handleNavBounce(e.target.alt, 'dp');
+    handleNavBounce(e.target.alt, "dp");
     handleDisable();
   };
 
   const handleInitializeBook = () => {
-    animateOut('.aboutbookcontainerdp', '.booknavsdp');
+    animateOut(".aboutbookcontainerdp", ".booknavsdp");
     setTimeout(() => {
       dispatch(unloadPage({ pageLoaded: false }));
       dispatch(initializePage({ pageCount: 0 }));
@@ -98,18 +104,9 @@ const AboutBookDP: FC = () => {
   };
 
   const handleInitialLoad = () => {
-    animateInInitialLoad('.aboutbookcontainerdp', '.booknavsdp');
+    animateInInitialLoad(".aboutbookcontainerdp", ".booknavsdp");
     dispatch(loadPage({ pageLoaded: true }));
   };
-
-  useEffect(() => {
-    if (pageCount !== 0) {
-      (aboutBookDP.current as any).pageFlip().turnToPage(pageCount * 2);
-    }
-    return () => {
-      setDisabled(false);
-    };
-  }, []);
 
   useEffect(() => {
     let mounted = true;
@@ -118,29 +115,30 @@ const AboutBookDP: FC = () => {
     }
 
     if (!transition && !pageLoaded && mounted) {
-      if (pageClicked === 'about' || pageClicked === '') {
+      if (pageClicked === "about" || pageClicked === "") {
         handleInitialLoad();
       }
     } else {
-      animateInIsLoaded('.aboutbookcontainerdp', '.booknavsdp');
+      animateInIsLoaded(".aboutbookcontainerdp", ".booknavsdp");
     }
 
     return () => {
       mounted = false;
+      setDisabled(false);
     };
   }, [transition]);
 
   useEffect(() => {
     let mounted = true;
     if (mounted && pageCount === 8) {
-      removeNav('.booknavforwarddp');
+      removeNav(".booknavforwarddp");
     } else {
-      addNav('.booknavforwarddp');
+      addNav(".booknavforwarddp");
     }
     if (mounted && pageCount === 0) {
-      removeNav('.booknavbackwarddp');
+      removeNav(".booknavbackwarddp");
     } else {
-      addNav('.booknavbackwarddp');
+      addNav(".booknavbackwarddp");
     }
     return () => {
       mounted = false;
@@ -157,11 +155,12 @@ const AboutBookDP: FC = () => {
         <HTMLFlipBook
           ref={aboutBookDP}
           className="aboutbookdp"
+          onInit={aboutBookDPPageInit}
           drawShadow={false}
           useMouseEvents={false}
           usePortrait={false}
           flippingTime={1500}
-          size={'stretch'}
+          size={"stretch"}
           width={400}
           height={535}
           minWidth={80}
@@ -179,7 +178,7 @@ const AboutBookDP: FC = () => {
                   textb={textb}
                   svg={svg}
                   link={link}
-                  tag={'dp'}
+                  tag={"dp"}
                 />
               );
             }
