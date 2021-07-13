@@ -10,10 +10,8 @@
 
 .invisiblerootbtn {
   // background-color: rgba(0, 255, 0, 0.144);
-  border: none !important;
-  outline: none !important;
   border-radius: 50%;
 }
 
-@import './1-menubuttonroot-portrait.scss';
-@import './2-menubuttonroot-landscape.scss';
+@import "./1-menubuttonroot-portrait.scss";
+@import "./2-menubuttonroot-landscape.scss";

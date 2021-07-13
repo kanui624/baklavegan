@@ -14,3 +14,11 @@ body {
   font-family: "Annie Use Your Telescope", cursive !important;
   color: white;
 }
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
