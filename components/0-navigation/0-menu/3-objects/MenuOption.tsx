@@ -1,22 +1,22 @@
 // React
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo } from "react";
 
 // Next
-import Router from 'next/router';
+import Router from "next/router";
 
 // Three
-import { TextureLoader } from 'three';
+import { TextureLoader } from "three";
 
 // React Spring
-import { useSpring, a } from '@react-spring/three';
+import { useSpring, a } from "@react-spring/three";
 
 // React Types
-import { FC } from 'react';
+import { FC } from "react";
 
 // Component Level Types
-import { MenuOptionProps } from '../0-types/MenuOptionProps';
+import { MenuOptionProps } from "../0-types/MenuOptionProps";
 
-const prodReadyLinks = { about: 'about', contact: 'contact' };
+const prodReadyLinks = { about: "about", contact: "contact" };
 
 const MenuOption: FC<MenuOptionProps> = ({
   link,
@@ -36,7 +36,7 @@ const MenuOption: FC<MenuOptionProps> = ({
   clicked,
 }) => {
   useEffect(() => {
-    Router.prefetch(`/baklavegan/${link}`);
+    Router.prefetch(`/${link}`);
   }, [link]);
 
   const [menuRipFront, menuRipBack, menuRipLabel] = useMemo(() => {
@@ -77,7 +77,7 @@ const MenuOption: FC<MenuOptionProps> = ({
     if (link in prodReadyLinks) {
       handleTransition(link);
       if (clicked) {
-        Router.push(`/baklavegan/${link}`);
+        Router.push(`/${link}`);
         setTimeout(() => {
           toggleClick();
         }, 100);
@@ -92,10 +92,10 @@ const MenuOption: FC<MenuOptionProps> = ({
     setScaleState(!scaleState);
     if (cursor) {
       setOrbitSpeed(0);
-      document.body.style.cursor = 'pointer';
+      document.body.style.cursor = "pointer";
     } else {
       setOrbitSpeed(-1.6);
-      document.body.style.cursor = 'default';
+      document.body.style.cursor = "default";
     }
   };
 

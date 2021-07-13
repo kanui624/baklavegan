@@ -26,7 +26,6 @@ import {
 } from "@/animations/4-about/AboutAnimations";
 
 // Page Flip
-// @ts-ignore
 import HTMLFlipBook from "react-pageflip";
 
 // Data

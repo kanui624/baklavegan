@@ -31,7 +31,7 @@ import { AppState } from "@/redux/store";
 import {
   SocialDataProps,
   ContactInfoDataProps,
-} from "../../components/6-contact/0-types/ContactProps";
+} from "@/components/6-contact/0-types/ContactProps";
 
 const Contact: FC = () => {
   const {
